@@ -1,0 +1,9 @@
+nav{
+    background-color: #4285F4;
+}
+@media #{$small-and-down} {
+    nav{
+        
+    }
+   
+  }

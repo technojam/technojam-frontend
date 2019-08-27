@@ -1,0 +1,13 @@
+nav{
+    background-color: #4285F4;
+}
+.nav-wrapper .brand-logo
+{
+    margin: 1 em
+}
+@media #{$small-and-down} {
+    nav{
+        
+    }
+   
+  }
