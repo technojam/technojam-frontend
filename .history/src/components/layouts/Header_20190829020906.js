@@ -80,19 +80,19 @@ export default function ScrollableTabsButtonAuto() {
       <TabPanel value={value} index={0}>
       About Page
       </TabPanel>
-      <TabPanel value={value} index={1}>
+      <TabPanel value={value} index={0}>
       Team Page
       </TabPanel>
-      <TabPanel value={value} index={2}>
+      <TabPanel value={value} index={0}>
       Mentorship Page
       </TabPanel>
-      <TabPanel value={value} index={3}>
+      <TabPanel value={value} index={0}>
       Speciality Page
       </TabPanel>
-      <TabPanel value={value} index={4}>
+      <TabPanel value={value} index={0}>
       Resources Page
       </TabPanel>
-      <TabPanel value={value} index={5}>
+      <TabPanel value={value} index={0}>
       Achievement Page
       </TabPanel>
     </div>

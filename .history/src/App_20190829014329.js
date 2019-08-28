@@ -13,8 +13,8 @@ import {Route,Switch} from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <Route exact path="/AboutUs/" component={AboutUs} />
-      <Route exact path="./components/Pages/Team/" component={Team} />
+      <Route exact path="/" component={AboutUs} />
+      <Route exact path="/Team/" component={Team} />
       <Route exact path="/Speciality/" component={Speciality} />
       <Route exact path="/Resources/" component={Resources} />
       <Route exact path="Achievement/" component={Achievement} />

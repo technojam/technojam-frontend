@@ -68,6 +68,7 @@ export default function ScrollableTabsButtonAuto() {
           aria-label="scrollable auto tabs example"
           centered
         >
+          
           <Tab label="About Us" {...a11yProps(0)} />
           <Tab label="Team" {...a11yProps(1)} />
           <Tab label="Mentorship" {...a11yProps(2)} />
@@ -77,24 +78,6 @@ export default function ScrollableTabsButtonAuto() {
         
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-      About Page
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-      Team Page
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-      Mentorship Page
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-      Speciality Page
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-      Resources Page
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-      Achievement Page
-      </TabPanel>
     </div>
   );
 }

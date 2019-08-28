@@ -6,7 +6,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import {Route} from 'react-router-dom';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -67,7 +66,7 @@ export default function ScrollableTabsButtonAuto() {
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
           centered
-        >
+        ><Route path="/Pages/AboutUS" component="AboutUs" />
           <Tab label="About Us" {...a11yProps(0)} />
           <Tab label="Team" {...a11yProps(1)} />
           <Tab label="Mentorship" {...a11yProps(2)} />
@@ -77,24 +76,6 @@ export default function ScrollableTabsButtonAuto() {
         
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-      About Page
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-      Team Page
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-      Mentorship Page
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-      Speciality Page
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-      Resources Page
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-      Achievement Page
-      </TabPanel>
     </div>
   );
 }
