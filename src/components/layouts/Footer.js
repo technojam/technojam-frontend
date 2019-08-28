@@ -12,6 +12,9 @@ import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { Icon, InlineIcon } from '@iconify/react';
 import githubCircle from '@iconify/icons-mdi/github-circle';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 const styles = {
   // these buttons will be aligned to right side of abbBar
   toolbarButtons: {
@@ -24,28 +27,11 @@ const styles = {
   }
 };
 
-const Navbar = withStyles(styles)(({ classes }) => (
+const Footer = withStyles(styles)(({ classes }) => (
   <AppBar position="static">
     <Toolbar>
-      <IconButton
-        className={classes.menuButton}
-        color="inherit"
-        aria-label="Menu"
-      >
-        <MenuIcon />
-      </IconButton>
-      <Typography variant="title" color="inherit">
-        My Title
-      </Typography>
-      <span className={classes.toolbarButtons}>
-        <IconButton color="inherit" aria-label="darktheme">
-        <WbIncandescentIcon />
-        </IconButton>
-        <IconButton edge="end" color="inherit" aria-label="login">
-          <AccountCircleIcon />
-        </IconButton>
-      </span>
+
     </Toolbar>
   </AppBar>
 ));
-export default Navbar;
+export default Footer;
