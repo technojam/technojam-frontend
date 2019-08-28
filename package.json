@@ -1,10 +1,12 @@
 {
-  "name": "technojam",
+  "name": "technojam-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.3.3",
+    "@material-ui/icons": "^4.2.1",
     "contentful": "^7.9.1",
+    "npm": "^6.11.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
@@ -29,5 +31,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@iconify/icons-mdi": "^1.0.9",
+    "@iconify/react": "^1.1.1"
   }
 }
