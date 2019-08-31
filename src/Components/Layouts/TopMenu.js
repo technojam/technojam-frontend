@@ -9,19 +9,23 @@ import AndroidIcon from '@material-ui/icons/Android';
 import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
 import PersonIcon from '@material-ui/icons/Person';
 import Tooltip from '@material-ui/core/Tooltip';
+import Drawer from '@material-ui/core/Drawer';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
+const drawerWidth = 240;
 
 const style = {
     marginleft: 2000,
     toolbarButtons: {
         marginLeft: "auto",
         marginRight: -12
-      }
+    }
 }
 
+
 export default props =>
-<div style={{ color: '#fff' }}>
-    <AppBar position="static">
+    <div style={{ color: '#fff' }}>
+        <AppBar position="static">
 
             <Toolbar>
                 <Hidden mdUp>
@@ -31,45 +35,45 @@ export default props =>
                 </Hidden>
                 <Grid alignItems="flex-start" justify="flex-start" >
                     <Button color="inherit" component={Link} to={'/'}>
-                        <img src={Logo} alt="TechnoJam.tech" height="50px" align="center"/>TechnoJam
+                        <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />TechnoJam
                     </Button>
                 </Grid>
-                <div style={{ marginLeft: 'auto'}}>
+                <div style={{ marginLeft: 'auto' }}>
                     <Tooltip title="Night Mode">
-                        <IconButton color="inherit" aria-label="Night Mode" style={{ style }}  component={Link} to={'/'}>
+                        <IconButton color="inherit" aria-label="Night Mode" style={{ style }} component={Link} to={'/'}>
                             <WbIncandescentIcon />
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="Our Projects">
-                        <IconButton color="inherit" aria-label="Github" style={{ style }}  component={Link} to={'/'}>
+                        <IconButton color="inherit" aria-label="Github" style={{ style }} component={Link} to={'/'}>
                             <AndroidIcon />
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="Log-in">
-                        <IconButton color="inherit" aria-label="Login" style={{ style }}  component={Link} to={'/login'}>
+                        <IconButton color="inherit" aria-label="Login" style={{ style }} component={Link} to={'/login'}>
                             <PersonIcon />
                         </IconButton>
                     </Tooltip>
                 </div>
-     
+
             </Toolbar>
-           
-        <Hidden smDown>
-            <Toolbar style={{ backgroundColor: '#faf9f8',minHeight:'40px'}}>
-                 <div style={{ marginLeft: 'auto', marginRight:'auto'}}>
+
+            <Hidden smDown>
+                <Toolbar style={{ backgroundColor: '#faf9f8', minHeight: '40px' }}>
+                    <div style={{ marginLeft: 'auto', marginRight: 'auto' }}>
                         <Grid alignItems="flex-end" justify="flex-end" spacing={80}>
-                            <Button style={{ style }}  component={Link} to={'/aboutus'}>About Us</Button>
-                            <Button style={{ style }}  component={Link} to={'/achievements'}>Achievements</Button>
-                            <Button style={{ style }}  component={Link} to={'/team'}>Team</Button>
+                            <Button style={{ style }} component={Link} to={'/aboutus'}>About Us</Button>
+                            <Button style={{ style }} component={Link} to={'/achievements'}>Achievements</Button>
+                            <Button style={{ style }} component={Link} to={'/team'}>Team</Button>
                             <Badge badgeContent={'New'} color="secondary">
                                 <Button style={{ style }} component={Link} to={'/mentorship'}>Mentorship</Button></Badge>
                             <Button style={{ style }} component={Link} to={'/groups'}>Groups</Button>
-                            <Button style={{ style }}  component={Link} to={'/contactus'}>Contact Us</Button>
-                            
+                            <Button style={{ style }} component={Link} to={'/contactus'}>Contact Us</Button>
+
                         </Grid>
-                  </div>
-            </Toolbar>
-        </Hidden>
-            
-    </AppBar>
-</div>
+                    </div>
+                </Toolbar>
+            </Hidden>
+
+        </AppBar>
+    </div>
