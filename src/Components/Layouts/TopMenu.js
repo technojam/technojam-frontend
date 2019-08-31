@@ -65,8 +65,7 @@ export default props =>
                             <Button style={{ style }} component={Link} to={'/aboutus'}>About Us</Button>
                             <Button style={{ style }} component={Link} to={'/achievements'}>Achievements</Button>
                             <Button style={{ style }} component={Link} to={'/team'}>Team</Button>
-                            <Badge badgeContent={'New'} color="secondary">
-                                <Button style={{ style }} component={Link} to={'/mentorship'}>Mentorship</Button></Badge>
+                            <Button style={{ style }} component={Link} to={'/mentorship'}>Mentorship</Button>
                             <Button style={{ style }} component={Link} to={'/groups'}>Groups</Button>
                             <Button style={{ style }} component={Link} to={'/contactus'}>Contact Us</Button>
 
