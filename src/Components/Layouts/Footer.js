@@ -25,10 +25,10 @@ export default props =>
                 </Grid>
                 <Grid container direction="row" >
                     <div style={{ paddingLeft:'200px' }} >
-                        <a className="btn btn-social-icon btn-twitter" href=" https://twitter.com/technojam_gu"><i className="fab fa-twitter fa-lg"></i></a>
-                        <a className="btn btn-social-icon btn-facebook" href="facebook.com/technojam.scse "><i className="fab fa-facebook fa-lg"></i></a>
-                        <a className="btn btn-social-icon btn-instagram" href="https://instagram.com/technojam_galgotias"><i className="fab fa-instagram fa-lg"></i></a>
-                        <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/company/technojam/"><i className="fab fa-linkedin fa-lg"></i></a>
+                        <a className="btn btn-social-icon btn-twitter" href=" https://twitter.com/technojam_gu"><i className="fab fa-twitter fa-lg"style={{color:'#28aae1'}}></i></a>
+                        <a className="btn btn-social-icon btn-facebook" href="facebook.com/technojam.scse "><i className="fab fa-facebook fa-lg"style={{color:'#3b5998'}}></i></a>
+                        <a className="btn btn-social-icon btn-instagram" href="https://instagram.com/technojam_galgotias"><i className="fab fa-instagram fa-lg"style={{color:'#e41a2b'}}></i></a>
+                        <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/company/technojam/"><i className="fab fa-linkedin fa-lg" style={{color:'#0077b5'}}></i></a>
                         
                     </div>
                 </Grid>
