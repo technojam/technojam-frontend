@@ -45,9 +45,8 @@ export default props =>
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="Our Projects">
-                        <IconButton color="inherit" aria-label="Github" style={{ style }} component={Link} to={'/'}>
-                            <AndroidIcon />
-                        </IconButton>
+                    <a className="btn btn-social-icon btn-github" href="https://github.com/technojam"><i className="fab fa-github fa-lg"style={{color:'#fcfcfc'}}></i></a>
+                       
                     </Tooltip>
                     <Tooltip title="Log-in">
                         <IconButton color="inherit" aria-label="Login" style={{ style }} component={Link} to={'/login'}>
