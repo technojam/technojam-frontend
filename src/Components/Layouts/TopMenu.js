@@ -6,11 +6,14 @@ import ResponsiveDrawer from './ResponsiveDrawer';
 import { AppBar, Toolbar, Button, Badge, IconButton, Hidden } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import Grid from '@material-ui/core/Grid';
-import AndroidIcon from '@material-ui/icons/Android';
 import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
 import PersonIcon from '@material-ui/icons/Person';
 import Tooltip from '@material-ui/core/Tooltip';
+<<<<<<< HEAD
+
+=======
 import CssBaseline from '@material-ui/core/CssBaseline';
+>>>>>>> 681ad48189711d87f72b7b5477e2a716276d106c
 
 const drawerWidth = 240;
 
