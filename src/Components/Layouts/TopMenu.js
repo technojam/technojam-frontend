@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../images/logo_small.png'
+import ResponsiveDrawer from './ResponsiveDrawer';
 
 import { AppBar, Toolbar, Button, Badge, IconButton, Hidden } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -8,7 +9,11 @@ import Grid from '@material-ui/core/Grid';
 import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
 import PersonIcon from '@material-ui/icons/Person';
 import Tooltip from '@material-ui/core/Tooltip';
+<<<<<<< HEAD
 
+=======
+import CssBaseline from '@material-ui/core/CssBaseline';
+>>>>>>> 681ad48189711d87f72b7b5477e2a716276d106c
 
 const drawerWidth = 240;
 
@@ -26,10 +31,8 @@ export default props =>
         <AppBar position="static">
 
             <Toolbar>
-                <Hidden mdUp>
-                    <IconButton edge="start" color="inherit" aria-label="menu">
-                        <MenuIcon />
-                    </IconButton>
+                <Hidden mdUp>    
+                    <ResponsiveDrawer />
                 </Hidden>
                 <Grid alignItems="flex-start" justify="flex-start" >
                     <Button color="inherit" component={Link} to={'/'}>
