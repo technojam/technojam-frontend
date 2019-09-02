@@ -11,6 +11,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Badge from '@material-ui/core/Badge';
 
 /* Icons */
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
@@ -79,6 +80,14 @@ function ResponsiveDrawer(props) {
           </ListItemIcon>
           <ListItemText primary="About Us" />
         </ListItem>
+        
+        <Badge style={{marginLeft:'150px', marginTop:'30px'}} badgeContent={'New'} color="secondary"></Badge>
+          <ListItem button component={Link} to={'/events'} onClick={handleDrawerToggle}>
+            <ListItemIcon>
+              <DashboardRoundedIcon />
+            </ListItemIcon>
+            <ListItemText primary="Events" />
+          </ListItem>
 
         <ListItem button component={Link} to={'/achievements'} onClick={handleDrawerToggle}>
           <ListItemIcon>
@@ -114,12 +123,19 @@ function ResponsiveDrawer(props) {
           <ListItemText primary="Groups" />
         </ListItem>
 
+        <ListItem button component={Link} to={'/resources'} onClick={handleDrawerToggle}>
+          <ListItemIcon>
+            <ContactsRoundedIcon />
+          </ListItemIcon>
+          <ListItemText primary="Resources" />
+        </ListItem>
         <ListItem button component={Link} to={'/contactus'} onClick={handleDrawerToggle}>
           <ListItemIcon>
             <ContactsRoundedIcon />
           </ListItemIcon>
           <ListItemText primary="Contact Us" />
         </ListItem>
+
 
       </List>
     </div>

@@ -1,0 +1,18 @@
+
+
+achie: [
+    {
+        "id": 1,
+        "title": "First Gsocer",
+        "Description":"rahul chuhan Member of Team Teachnojam is the first Gsoc cleared person of Galgotias University",
+        "Image": "../images/gsoc.png"
+    },
+
+    {
+        "id": 2,
+        "title": "First Ideathon",
+        "Description":"Conducted Ideathon in Galgotias's Induction Program",
+        "Image": "../images/induction.png"
+    }
+
+]   
