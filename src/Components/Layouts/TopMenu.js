@@ -9,11 +9,12 @@ import Grid from '@material-ui/core/Grid';
 import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
 import PersonIcon from '@material-ui/icons/Person';
 import Tooltip from '@material-ui/core/Tooltip';
-<<<<<<< HEAD
 
-=======
+
+
+
 import CssBaseline from '@material-ui/core/CssBaseline';
->>>>>>> 681ad48189711d87f72b7b5477e2a716276d106c
+
 
 const drawerWidth = 240;
 
@@ -61,12 +62,15 @@ export default props =>
             <Hidden smDown>
                 <Toolbar style={{ backgroundColor: '#faf9f8', minHeight: '40px' }}>
                     <div style={{ marginLeft: 'auto', marginRight: 'auto' }}>
-                        <Grid alignItems="flex-end" justify="flex-end" spacing={80}>
+                        <Grid alignItems="flex-end" justify="flex-end" spacing={800}>
                             <Button style={{ style }} component={Link} to={'/aboutus'}>About Us</Button>
+                            <Button style={{ style }} component={Link} to={'/events'}>Events</Button>
+                            <Badge style={{marginBottom:'30px',marginRight:'5px'}} badgeContent={'New'} color="secondary"></Badge>
                             <Button style={{ style }} component={Link} to={'/achievements'}>Achievements</Button>
                             <Button style={{ style }} component={Link} to={'/team'}>Team</Button>
                             <Button style={{ style }} component={Link} to={'/mentorship'}>Mentorship</Button>
                             <Button style={{ style }} component={Link} to={'/groups'}>Groups</Button>
+                            <Button style={{ style }} component={Link} to={'/resources'}>Resources</Button>
                             <Button style={{ style }} component={Link} to={'/contactus'}>Contact Us</Button>
 
                         </Grid>
