@@ -4,19 +4,10 @@ import Logo from '../../images/logo_small.png'
 import ResponsiveDrawer from './ResponsiveDrawer';
 
 import { AppBar, Toolbar, Button, Badge, IconButton, Hidden } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
 import Grid from '@material-ui/core/Grid';
 import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
 import PersonIcon from '@material-ui/icons/Person';
 import Tooltip from '@material-ui/core/Tooltip';
-
-
-
-
-import CssBaseline from '@material-ui/core/CssBaseline';
-
-
-const drawerWidth = 240;
 
 const style = {
     marginleft: 2000,
