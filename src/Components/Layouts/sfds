@@ -1,96 +1,23 @@
- <Badge style={{marginBottom:'30px',marginRight:'5px'}} badgeContent={'New'} color="secondary"></Badge>
-
-
- <Grid alignItems="flex-end" justify="flex-end" spacing={80}>
-                            <Button style={{ style }} component={Link} to={'/aboutus'}>About Us</Button>
-                            <Button style={{ style }} component={Link} to={'/events'}>Events</Button>
-                            <Button style={{ style }} component={Link} to={'/achievements'}>Achievements</Button>
-                            <Button style={{ style }} component={Link} to={'/team'}>Team</Button>
-                            <Button style={{ style }} component={Link} to={'/mentorship'}>Mentorship</Button>
-                            <Button style={{ style }} component={Link} to={'/groups'}>Groups</Button>
-                            <Button style={{ style }} component={Link} to={'/resources'}>Resources</Button>
-                            <Button style={{ style }} component={Link} to={'/contactus'}>Contact Us</Button>
-
-                        </Grid>
-
-
-
- <List>
-
-        <ListItem button component={Link} to={'/'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            <HomeRoundedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Home" />
-        </ListItem>
-
-      </List>      
-
-      <Divider />
-      
-      <List>
-        
-        <ListItem button component={Link} to={'/aboutus'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            <DashboardRoundedIcon />
-          </ListItemIcon>
-          <ListItemText primary="About Us" />
-        </ListItem>
-        
-        <Badge style={{marginLeft:'150px', marginTop:'30px'}} badgeContent={'New'} color="secondary"></Badge>
-          <ListItem button component={Link} to={'/events'} onClick={handleDrawerToggle}>
-            <ListItemIcon>
-              <DashboardRoundedIcon />
-            </ListItemIcon>
-            <ListItemText primary="Events" />
-          </ListItem>
-
-        <ListItem button component={Link} to={'/achievements'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            <EqualizerRoundedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Achievements" />
-        </ListItem>
-
-        <ListItem button component={Link} to={'/team'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            <PeopleRoundedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Team" />
-        </ListItem>
-
-        <ListItem button component={Link} to={'/mentorship'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            <PersonRoundedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Mentorship" />
-        </ListItem>
-
-      </List>
-
-      <Divider />
-
-      <List>
-
-        <ListItem button component={Link} to={'/groups'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            <PeopleRoundedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Groups" />
-        </ListItem>
-
-        <ListItem button component={Link} to={'/resources'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            <ContactsRoundedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Resources" />
-        </ListItem>
-        <ListItem button component={Link} to={'/contactus'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            <ContactsRoundedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Contact Us" />
-        </ListItem>
-
-
-      </List>
+  <div style={{marginBottom:"10px"}}>
+                                <Grid   container
+                                        direction="row"
+                                        justify="center"
+                                        alignItems="center"
+                                     >
+                                    <div style={{padding:'10px'}}>
+                                    <Grid  item >
+                                        
+                                        <Button variant="contained" color="secondary" size="medium" >
+                                            <NavigateBeforeIcon/>Previous
+                                        </Button>
+                                    </Grid>
+                                    </div>
+                                    <div>
+                                    <Grid item>
+                                        <Button variant="contained" color="secondary" size="medium">
+                                            Next<NavigateNextIcon/>
+                                        </Button>
+                                    </Grid>
+                                    </div>
+                                </Grid>
+                            </div>

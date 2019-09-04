@@ -131,29 +131,7 @@ class Achievements extends Component {
                         </Grid>
                     </div>
                     
-                            <div style={{marginBottom:"10px"}}>
-                                <Grid   container
-                                        direction="row"
-                                        justify="center"
-                                        alignItems="center"
-                                     >
-                                    <div style={{padding:'10px'}}>
-                                    <Grid  item >
-                                        
-                                        <Button variant="contained" color="secondary" size="medium" >
-                                            <NavigateBeforeIcon/>Previous
-                                        </Button>
-                                    </Grid>
-                                    </div>
-                                    <div>
-                                    <Grid item>
-                                        <Button variant="contained" color="secondary" size="medium">
-                                            Next<NavigateNextIcon/>
-                                        </Button>
-                                    </Grid>
-                                    </div>
-                                </Grid>
-                            </div>
+                          
                  </div>
             </div>
         );
