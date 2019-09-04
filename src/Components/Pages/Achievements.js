@@ -29,8 +29,8 @@ class Achievements extends Component {
                     by: "Darshan Baid",
                     date: "Spetember 15, 2019",
                     Description: "Technojam conducting 24 hours hackthon in delhi region at galgotias university. it is recognized by NASA",
-                    Image: "https://storage.cloud.google.com/tjtempimg/space.jpg",
-                    avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg"
+                    Image: "https://storage.cloud.google.com/tjtempimg/space.jpg?authuser=1",
+                    avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg?authuser=1"
 
 
                 },
@@ -41,8 +41,8 @@ class Achievements extends Component {
                     by: "Shwetank",
                     date: "26 August, 2019",
                     Description: "Conducted Ideathon in Galgotias's Induction Program.alomst 300 students took part.crowd was really enthusiastic",
-                    Image: "https://storage.cloud.google.com/tjtempimg/ideathon.jpg",
-                    avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg"
+                    Image: "https://storage.cloud.google.com/tjtempimg/ideathon.jpg?authuser=1",
+                    avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg?authuser=1"
                 },
 
                 {
@@ -52,8 +52,8 @@ class Achievements extends Component {
                     date: "May 12, 2018",
                     Description: "rahul chuhan Member of Team Teachnojam is the first Gsoc cleared person of Galgotias University",
                     Description: "Technojam conducting 24 hours hackthon in delhi region at galgotias university. it is recognized by NASA",
-                    Image: 'https://storage.cloud.google.com/tjtempimg/Gsoc.JPG',
-                    avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg"
+                    Image: 'https://storage.cloud.google.com/tjtempimg/Gsoc.JPG?authuser=1',
+                    avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg?authuser=1"
                 },
 
                 {
@@ -62,8 +62,8 @@ class Achievements extends Component {
                     by: "Team Technojam",
                     date: "26 August, 2018",
                     Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
-                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG",
-                    avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg"
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg?authuser=1"
                 }
             ]
         }
