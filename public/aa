@@ -11,3 +11,9 @@
                         </div>
 
                     </Grid>
+ <img src="https://storage.cloud.google.com/tjtempimg/backachie.jpg" width="1700px"/>
+   var section={
+            backgroundSize:'contain',
+            backgroundImage: "url('https://storage.cloud.google.com/tjtempimg/Sky.jpg')",
+            backgroundRepeat: 'no-repeat'
+        };

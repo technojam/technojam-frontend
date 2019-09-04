@@ -5,7 +5,7 @@ import React from 'react'
 import { AppBar, Toolbar, Hidden } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import CopyrightIcon from '@material-ui/icons/Copyright';
+
 
 
 
@@ -19,7 +19,7 @@ export default props =>
                 <Grid container direction="row" justify="flex-start" alignItems="flex-end">
                     
                     <Typography variant="body2" style={{fontSize:'0.92rem'}}>
-                        Copyright <CopyrightIcon /> 2019 Team TechnoJam 
+                        Copyright © 2019 Team TechnoJam 
                                         </Typography> 
                 </Grid>
                 <Grid container direction="row" spacing={80} >

@@ -6,17 +6,12 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { Grid, Container } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
+import Button from '@material-ui/core/Button';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 
 
@@ -79,55 +74,91 @@ class Achievements extends Component {
 
 
         const achie = this.state.achie;
+
         console.log(achie);
         return (
+            <div style={{
 
-            <div style={{ flexGrow: 1, display: 'inline' }}>
-                <div style={{ marginLeft: "30px", marginRight: "30px", marginTop: "20px", padding: "20px" }}>
-                    <Grid container
-                        spacing={2}
-                        direction="row"
-                        justify="flex-start"
-                        alignItems="flex-start">
-                        {achie.map(achie => (
+
+                background: '#076585',
+                background: '-webkit-linear-gradient(to top, #076585 , #fff)',
+                background: 'linear-gradient(to top, #076585,#fff)',
+                marginTop: '-20px'
+                        }}>
+
                             
-                            <Grid item xs={12} sm={4} md={4} >
-                                <Card>
-                                    <CardHeader
-                                        avatar={
-                                            <Avatar alt="Remy Sharp" src={achie.avatar} />
-                                        }
+                <div style={{ flexGrow: 1, display: 'inline' }}>
+                    <div style={{ marginLeft: "20px", marginRight: "30px", marginTop: "20px", padding: "20px" }}>
 
-                                        title={achie.by}
-                                        subheader={achie.date}
-                                    />
-                                    <CardMedia>
+                        <Grid container
+                            spacing={2}
+                            direction="row"
+                            justify="flex-start"
+                            alignItems="flex-start">
 
-                                        <img src={achie.Image} width="100%" height="auto" />
+                            {achie.map(achie => (
 
-                                    </CardMedia>
+                                <Grid item xs={12} sm={3} md={4} >
+                                    <Card>
+                                        <CardHeader
+                                            avatar={
+                                                <Avatar alt="Remy Sharp" src={achie.avatar} />
+                                            }
 
-                                    <CardContent>
-                                        <Typography variant="h5" color="textSecondary" component="p">
-                                            {achie.title}
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">
-                                            {achie.Description}
-                                        </Typography>
-                                    </CardContent>
+                                            title={achie.by}
+                                            subheader={achie.date}
+                                        />
+                                        <CardMedia>
 
-                                </Card>
-                            </Grid>
-                           
-                        ))}
-                        
-                    </Grid>
-                </div>
+                                            <img src={achie.Image} width="100%" height="auto" />
+
+                                        </CardMedia>
+
+                                        <CardContent>
+                                            <Typography variant="h5" color="textSecondary" component="p">
+                                                {achie.title}
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary" component="p">
+                                                {achie.Description}
+                                            </Typography>
+                                        </CardContent>
+
+                                    </Card>
+                                </Grid>
+
+                            ))}
+
+                        </Grid>
+                    </div>
+                    
+                            <div style={{marginBottom:"10px"}}>
+                                <Grid   container
+                                        direction="row"
+                                        justify="center"
+                                        alignItems="center"
+                                     >
+                                    <div style={{padding:'10px'}}>
+                                    <Grid  item >
+                                        
+                                        <Button variant="contained" color="secondary" size="medium" >
+                                            <NavigateBeforeIcon/>Previous
+                                        </Button>
+                                    </Grid>
+                                    </div>
+                                    <div>
+                                    <Grid item>
+                                        <Button variant="contained" color="secondary" size="medium">
+                                            Next<NavigateNextIcon/>
+                                        </Button>
+                                    </Grid>
+                                    </div>
+                                </Grid>
+                            </div>
+                 </div>
             </div>
-            
         );
     }
-}
+} 
 
 
 export default Achievements;
