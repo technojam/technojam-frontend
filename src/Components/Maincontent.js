@@ -3,10 +3,12 @@ import { Switch, Route} from 'react-router-dom';
 import { aboutus, achievements, contactus, groups, homepage, mentorship, team } from './Pages/'
 import Events from './Pages/Events';
 import Resources from './Pages/Resources';
+import Login from './Pages/Login';
 function Maincontent() {
     return(
         <div className="main-content" >
             <Switch>
+                <Route exact path="/login" component={Login} /> 
                 <Route exact path="/" component={homepage} />
                 <Route exact path="/aboutus" component={aboutus} />
                 <Route exact path="/events" component={Events} />
