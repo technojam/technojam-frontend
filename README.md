@@ -37,6 +37,12 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+### View map of the frontend is given here
+This section has moved here: https://docs.google.com/spreadsheets/d/1lcwsAChRc2UOdvfuPohoHo5MZwpFQ3CZ3PhNc7pUKwo/edit?usp=sharing
+
+### Requirments of the frontend is given here
+This section has moved here: https://docs.google.com/document/d/1zsNa42tBbcOsZJql_ueDOcIj1K3p6qlIwLLzdAjahlI/edit?usp=sharing
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -67,9 +73,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-### View map of the frontend is given here
-This section has moved here: https://docs.google.com/spreadsheets/d/1lcwsAChRc2UOdvfuPohoHo5MZwpFQ3CZ3PhNc7pUKwo/edit?usp=sharing
 
-### Requirments of the frontend is given here
-This section has moved here: https://docs.google.com/document/d/1zsNa42tBbcOsZJql_ueDOcIj1K3p6qlIwLLzdAjahlI/edit?usp=sharing
 
