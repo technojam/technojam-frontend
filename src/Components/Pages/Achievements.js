@@ -22,11 +22,11 @@ class Achievements extends Component {
 
                 {
                     id: 1,
-                    title: "NASA space Challenge",
+                    title: "Nasa space Challenge",
                     by: "Darshan Baid",
                     date: "Spetember 15, 2019",
                     Description: "Technojam conducting 24 hours hackthon in delhi region at galgotias university. it is recognized by NASA",
-                    Image: "https://storage.cloud.google.com/tjtempimg/space.jpg?authuser=1",
+                    Image: "https://storage.cloud.google.com/tjimage/space.jpg",
                     avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg?authuser=1"
 
 
@@ -38,7 +38,7 @@ class Achievements extends Component {
                     by: "Shwetank",
                     date: "26 August, 2019",
                     Description: "Conducted Ideathon in Galgotias's Induction Program.alomst 300 students took part.crowd was really enthusiastic",
-                    Image: "https://storage.cloud.google.com/tjtempimg/ideathon.jpg?authuser=1",
+                    Image:  "https://storage.cloud.google.com/tjimage/DSC_2620.JPG",
                     avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg?authuser=1"
                 },
 
@@ -79,25 +79,38 @@ class Achievements extends Component {
             <Container maxWidth="lg">
                 <div style={{ marginTop: "30px", marginBottom: "20px", }}>
                     <div >
+                    <h2 style={{color:"#007FFF",textAlign:"center"}}>
+                            Our Achievements
+                            </h2>
+                        <hr style={{
+                            maxWidth: "120px",
+                            borderWidth: "1px",
+                            opacity: "1",
+                            marginTop: "25px",
+                            marginBottom: "25px",
+                            borderColor: "#007FFF"
+                        }}>
+
+                        </hr>
+                        <br></br>
 
                         <Grid container
-                            spacing={2}
+                            spacing={3}
                             direction="row"
                             justify="flex-start"
-                            alignItems="flex-start">
+                            alignItems="flex-start"
+                          >
 
                             {achie.map(achie => (
 
-                                    <Grid item xs={12} sm={3} md={4} >
+                                    <Grid item xs={12} sm={3} md={4}>
                                                 <Card style={{
-                                                    maxHeight: "190px", minHeight: "190px",
+                                                    maxHeight: "410px", minHeight: "410px",
                                                     boxShadow: " 0 30px 35px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19)",
-                                                    borderRadius: "20px"
+                                                    borderRadius: "20px",
+                                                    
                                                 }}>
-                                                    <CardHeader
-
-
-                                                    />
+                                                    
                                                     <CardMedia>
 
                                                         <img src={achie.Image} width="100%" height="auto" />
@@ -105,13 +118,16 @@ class Achievements extends Component {
                                                     </CardMedia>
 
                                                     <CardContent>
-                                                        <Typography variant="h5" color="textSecondary" component="p">
+                                                        <Typography variant="h5"  component="p" style={{fontFamily:"Linotte"}}>
                                                             {achie.title}
                                                         </Typography>
-                                                        <Typography variant="body2" color="textSecondary" component="p">
+                                                    </CardContent>
+                                                    <CardContent style={{marginTop:"-20px"}}>
+                                                        <Typography variant="body2" color="textSecondary" component="p" >
                                                             {achie.Description}
                                                         </Typography>
-                                                    </CardContent>
+                                                        </CardContent>
+                                                  
 
                                                 </Card>
                                     </Grid>
