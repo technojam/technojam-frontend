@@ -77,7 +77,8 @@ export default function TopMenu() {
                         </Tooltip>
 
                         <Tooltip title="Our Projects">
-                            <a className="btn btn-social-icon btn-github" href="https://github.com/technojam"><i className="fab fa-github fa-lg" style={{ color: '#fcfcfc' }}></i></a>
+                            <a className="btn btn-social-icon btn-github" href="https://github.com/technojam" target="_blank">
+                                <i className="fab fa-github fa-lg" style={{ color: '#fcfcfc' }}></i></a>
                         </Tooltip>
 
 
