@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../images/logo_small.png'
 import ResponsiveDrawer from './ResponsiveDrawer';
+import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
 
 import { AppBar, Toolbar, Button, Badge, IconButton, Hidden } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
@@ -11,6 +13,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Modal from '@material-ui/core/Modal';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 
 
 const style = {
@@ -28,6 +31,9 @@ export default function TopMenu() {
     const [open, setOpen] = React.useState(false);
     const [on, setOn] = React.useState(false);
 
+
+
+
     const handleOpen = () => {
         setOpen(true);
     };
@@ -42,6 +48,11 @@ export default function TopMenu() {
     const registerClose = () => {
         setOn(false);
     };
+    const responseGoogle = (response) => {
+        console.log(response);
+    };
+
+
 
 
 
@@ -88,8 +99,8 @@ export default function TopMenu() {
 
 
                                 <div style={{
-                                    width: "500px", height: "300px", backgroundColor: "#fafafa",
-                                    borderRadius: "4px", textAlign: "center"
+                                    width: "500px", height: "290px", backgroundColor: "#fafafa",
+                                    borderRadius: "7px", textAlign: "center"
                                 }}>
 
 
@@ -125,7 +136,7 @@ export default function TopMenu() {
                                                 />
                                             </Grid>
                                         </Grid>
-                                        <br></br>
+                                        <br></br><br></br>
 
                                         <Grid container
                                             direction="row"
@@ -152,9 +163,125 @@ export default function TopMenu() {
                             open={on}
                             onClose={registerClose}
                         >
-                            <div>
+
+                            <div style={{
+                                width: "100%", height: "100%",
+                                backgroundColor: "black",
+                                position: "absolute", top: "0", display: "flex",
+                                alignItems: "center", justifyContent: "center"
+                            }}>
+                               
+                                <div style={{
+                                    width: "600px", height: "500px", backgroundColor: "#fafafa",
+                                    borderRadius: "7px", textAlign: "center"
+                                    
+                                }}>
+
+                                    <FormControl component="fieldset">
+                                        <Grid container spacing={1} alignItems="flex-end">
+                                            <Grid item xs={12} sm={12} md={12}>
+                                            <Typography variant="h5" gutterBottom>
+                                                    Register Here
+                                             </Typography>
 
 
+                                                <TextField
+                                                    id="outlined-name"
+                                                    label="Name"
+                                                    margin="normal"
+                                                    variant="outlined"
+                                                />
+                                            </Grid>
+
+                                            <Grid item xs={6} sm={6} md={6}>
+
+                                                <TextField
+                                                    id="outlined-email-input"
+                                                    label="Email"
+                                                    type="email"
+                                                    name="email"
+                                                    autoComplete="email"
+                                                    margin="normal"
+                                                    variant="outlined"
+                                                />
+                                            </Grid>
+                                            <Grid item xs={6} sm={6} md={6}>
+
+                                                <TextField
+                                                    id="outlined-email-input"
+                                                    label="Confirm-Email"
+                                                    type="email"
+                                                    name="email"
+                                                    autoComplete="email"
+                                                    margin="normal"
+                                                    variant="outlined"
+                                                />
+                                            </Grid>
+
+                                            <Grid item xs={6} sm={6} md={6}>
+
+                                                <TextField
+                                                    id="outlined-password-input"
+                                                    label="password"
+                                                    type="password"
+                                                    autoComplete="current-password"
+                                                    margin="normal"
+                                                    variant="outlined"
+                                                />
+                                            </Grid>
+                                            <Grid item xs={6} sm={6} md={6}>
+
+                                                <TextField
+                                                    id="outlined-password-input"
+                                                    label=" Confirm-password"
+                                                    type="password"
+                                                    autoComplete="current-password"
+                                                    margin="normal"
+                                                    variant="outlined"
+                                                />
+                                            </Grid>
+
+                                        </Grid>
+                                        <br></br><br></br>
+
+                                        <Grid container
+                                            direction="row"
+                                            justify="center"
+                                            alignItems="center"
+
+                                        >
+                                            <Button variant="contained" color="secondary" onClick={registerOpen}>
+                                                Register
+                                            </Button>
+                                        </Grid>
+
+
+                                    </FormControl>
+
+                                    <Grid container
+                                        direction="row"
+                                        justify="center"
+                                        alignItems="center"
+
+                                    >
+                                        <Grid item xs={6} sm={6} md={6}>
+
+                                            <div style={{ width: "60px", height: "50px", marginTop: "30px" }}>
+                                                <GoogleLogin
+                                                    clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+                                                    buttonText="Login"
+                                                    onSuccess={responseGoogle}
+                                                    onFailure={responseGoogle}
+                                                    cookiePolicy={'single_host_origin'}
+                                                />
+
+                                            </div>
+                                        </Grid>
+                                       
+                                    </Grid>
+
+
+                                </div>
                             </div>
 
                         </Modal>
