@@ -6,9 +6,9 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import { Grid } from "@material-ui/core";
+import Container from '@material-ui/core/Container';
 
 
 
@@ -16,7 +16,7 @@ class Achievements extends Component {
 
     constructor(props) {
         super(props);
-        //temproray data
+        //Until backend add data here cards will be created automatically.
         this.state = {
             achie: [
 
@@ -74,18 +74,11 @@ class Achievements extends Component {
 
         console.log(achie);
         return (
-            <div style={{
 
 
-                background: '#076585',
-                background: '-webkit-linear-gradient(to top, #076585 , #fff)',
-                background: 'linear-gradient(to top, #076585,#fff)',
-                marginTop: '-20px'
-                        }}>
-
-                            
-                <div style={{ flexGrow: 1, display: 'inline' }}>
-                    <div style={{ marginLeft: "20px", marginRight: "30px", marginTop: "20px", padding: "20px" }}>
+            <Container maxWidth="lg">
+                <div style={{ marginTop: "30px", marginBottom: "20px", }}>
+                    <div >
 
                         <Grid container
                             spacing={2}
@@ -95,45 +88,45 @@ class Achievements extends Component {
 
                             {achie.map(achie => (
 
-                                <Grid item xs={12} sm={3} md={4} >
-                                    <Card>
-                                        <CardHeader
-                                            avatar={
-                                                <Avatar alt="Remy Sharp" src={achie.avatar} />
-                                            }
+                                    <Grid item xs={12} sm={3} md={4} >
+                                                <Card style={{
+                                                    maxHeight: "190px", minHeight: "190px",
+                                                    boxShadow: " 0 30px 35px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19)",
+                                                    borderRadius: "20px"
+                                                }}>
+                                                    <CardHeader
 
-                                            title={achie.by}
-                                            subheader={achie.date}
-                                        />
-                                        <CardMedia>
 
-                                            <img src={achie.Image} width="100%" height="auto" />
+                                                    />
+                                                    <CardMedia>
 
-                                        </CardMedia>
+                                                        <img src={achie.Image} width="100%" height="auto" />
 
-                                        <CardContent>
-                                            <Typography variant="h5" color="textSecondary" component="p">
-                                                {achie.title}
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p">
-                                                {achie.Description}
-                                            </Typography>
-                                        </CardContent>
+                                                    </CardMedia>
 
-                                    </Card>
-                                </Grid>
+                                                    <CardContent>
+                                                        <Typography variant="h5" color="textSecondary" component="p">
+                                                            {achie.title}
+                                                        </Typography>
+                                                        <Typography variant="body2" color="textSecondary" component="p">
+                                                            {achie.Description}
+                                                        </Typography>
+                                                    </CardContent>
+
+                                                </Card>
+                                    </Grid>
 
                             ))}
 
                         </Grid>
                     </div>
-                    
-                          
-                 </div>
-            </div>
+
+
+                </div>
+            </Container>
         );
     }
-} 
+}
 
 
 export default Achievements;

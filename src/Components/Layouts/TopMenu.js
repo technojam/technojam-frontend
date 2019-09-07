@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../images/logo_small.png'
 import ResponsiveDrawer from './ResponsiveDrawer';
+import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
 
 import { AppBar, Toolbar, Button, Badge, IconButton, Hidden } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
@@ -11,6 +13,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Modal from '@material-ui/core/Modal';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 
 
 const style = {
@@ -28,6 +31,9 @@ export default function TopMenu() {
     const [open, setOpen] = React.useState(false);
     const [on, setOn] = React.useState(false);
 
+
+
+
     const handleOpen = () => {
         setOpen(true);
     };
@@ -42,6 +48,11 @@ export default function TopMenu() {
     const registerClose = () => {
         setOn(false);
     };
+    const responseGoogle = (response) => {
+        console.log(response);
+    };
+
+
 
 
 
@@ -88,8 +99,8 @@ export default function TopMenu() {
 
 
                                 <div style={{
-                                    width: "500px", height: "300px", backgroundColor: "#fafafa",
-                                    borderRadius: "4px", textAlign: "center"
+                                    width: "500px", height: "290px", backgroundColor: "#fafafa",
+                                    borderRadius: "7px", textAlign: "center"
                                 }}>
 
 
@@ -125,7 +136,7 @@ export default function TopMenu() {
                                                 />
                                             </Grid>
                                         </Grid>
-                                        <br></br>
+                                        <br></br><br></br>
 
                                         <Grid container
                                             direction="row"
@@ -136,9 +147,6 @@ export default function TopMenu() {
                                             <Button variant="contained" color="primary" onClick={handleClose} component={Link} to={'/login'} >
                                                 Login
                                             </Button>
-                                            <Button variant="contained" color="secondary" onClick={registerOpen}>
-                                                Register
-                                            </Button>
                                         </Grid>
 
 
@@ -147,19 +155,6 @@ export default function TopMenu() {
                                 </div>
                             </div>
                         </Modal>
-
-                        <Modal
-                            open={on}
-                            onClose={registerClose}
-                        >
-                            <div>
-
-
-                            </div>
-
-                        </Modal>
-
-
                     </div>
 
 
