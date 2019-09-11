@@ -52,7 +52,7 @@ class Events extends Component {
                                                     
                                                     <CardMedia>
 
-                                                        <img src={event.Image} width="100%" height="100%" />
+                                                       
 
                                                     </CardMedia>
                                                     </div>
