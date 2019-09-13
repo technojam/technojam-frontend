@@ -170,6 +170,7 @@ export default function TopMenu() {
                                 <Badge style={{ marginBottom: '30px', marginRight: '5px' }} badgeContent={'New'} color="secondary"></Badge>
                                 <Button style={{ style }} component={Link} to={'/achievements'}>Achievements</Button>
                                 <Button style={{ style }} component={Link} to={'/team'}>Team</Button>
+                                <Button style={{ style }} component={Link} to={'/alumni'}>Alumni</Button>
                                 <Button style={{ style }} component={Link} to={'/mentorship'}>Mentorship</Button>
                                 <Button style={{ style }} component={Link} to={'/groups'}>Groups</Button>
                                 <Button style={{ style }} component={Link} to={'/resources'}>Resources</Button>

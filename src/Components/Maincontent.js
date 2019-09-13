@@ -4,6 +4,7 @@ import { aboutus, achievements, contactus, groups, homepage, mentorship, team } 
 import Events from './Pages/Events';
 import Resources from './Pages/Resources';
 import Login from './Pages/Login';
+import Alumni from './Pages/Alumni';
 function Maincontent() {
     return(
         <div className="main-content" >
@@ -15,6 +16,7 @@ function Maincontent() {
                 <Route exact path="/achievements" component={achievements} />
                 <Route exact path="/contactus" component={contactus} />
                 <Route exact path="/mentorship" component={mentorship} />
+                <Route exact path="/Alumni" component={Alumni} />
                 <Route exact path="/team" component={team} />
                 <Route exact path="/groups" component={groups} />
                 <Route exact path="/resources" component={Resources} />
