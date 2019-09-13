@@ -18,250 +18,225 @@ const circle={
 
 const tileData = [
   {
-    img: Placeholder,
-    title: "Image",
-    Name: "Shivam Mittal"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Kritika Saxena"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Anubhav Raj Singh"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Satyam Bharti"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Shivam Sharma"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Sakshi Gupta"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Darshan Baid"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Honey Sharma"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Rahul Chauhan"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Ankush Shrivastava"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Deepanshu Goyal"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Lokesh Tiwari"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Neham soni"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Prakhar Srivastava"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Naman Jain"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Anshika soni"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Ravi "
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Vidit Varshney"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Rohith Kandi"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "rahul godella"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Aman"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Rahul Singh "
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Vishal Kumar"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Shreyansh Deep"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Shashwat Singh"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "DANISH JAMAL"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "PRIYANSHU TRIVEDI"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Ayush Tiwari"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Astha Singh"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Abhimanyu Dwivedi.jpg",
+    tilte: "Image",
     Name: "Abhimanyu Dwivedi"
   },
   {
-    img: Placeholder,
-    title: "Image",
-    Name: "Manas Khurana"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Vineeta chaudhary"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Saloni mehra"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Himanshu Singh"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Ayush Gupta"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Kushagra Singhal"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Ashwani Tripathi"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Neham soni"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Vineeta chaudhary"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Shashwat Singh"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/AKSHAT AKARSH.jpg",
+    tilte: "Image",
     Name: "Akshat akarsh"
   },
   {
-    img: Placeholder,
-    title: "Image",
-    Name: "Pradeep"
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Aman.jpg",
+    tilte: "Image",
+    Name: "Aman"
   },
   {
-    img: Placeholder,
-    title: "Image",
-    Name: "Anurag Verma"
-  },
-  {
-    img: Placeholder,
-    title: "Image",
-    Name: "Mayank Jain "
-  },
-  {
-    img: Placeholder,
-    title: "image",
-    Name: "Saurabh kumar"
-  },
-  {
-    img: Placeholder,
-    title: "image",
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anil Kumar.jpg",
+    tilte: "Image",
     Name: "Anil kumar yadav"
   },
   {
-    img: Placeholder,
-    title: "image",
-    Name: "Saloni mehra"
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Ankit Srivastava.jpg ",
+    tilte: "Image",
+    Name: "ANKIT ANMOL SRIVASTAVA "
   },
   {
-    img: Placeholder,
-    title: "image",
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Ankush Shrivastava.jpg",
+    tilte: "Image",
+    Name: "Ankush Shrivastava"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anshika Soni.jpg",
+    tilte: "Image",
+    Name: "Anshika soni"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anubhav Raj Singh.jpeg",
+    tilte: "Image",
+    Name: "Anubhav Raj Singh"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anurag Verma.png",
+    tilte: "Image.jpg",
+    Name: "Anurag Verma"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/ASHWANI TRIPATHI.jpg",
+    tilte: "Image",
+    Name: "Ashwani Tripathi"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Astha Singh.jpg",
+    tilte: "Image",
+    Name: "Astha Singh"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Ayush Gupta.jpg",
+    tilte: "Image",
+    Name: "Ayush Gupta"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Ayush Tiwari.jpg",
+    tilte: "Image",
+    Name: "Ayush Tiwari"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Danish Jamal.jpeg",
+    tilte: "Image",
+    Name: "DANISH JAMAL"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Darshan Baid.jpg",
+    tilte: "Image",
+    Name: "Darshan Baid"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Deepanshu Goyal.jpg",
+    tilte: "Image",
+    Name: "Deepanshu Goyal"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Himanshu Singh.jpg",
+    tilte: "Image",
+    Name: "Himanshu Singh"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Kritika Saxena.jpg",
+    tilte: "Image",
+    Name: "Kritika Saxena"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Kushagra Singhal.jpg",
+    tilte: "Image",
+    Name: "Kushagra Singhal"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Lokesh.jpg",
+    tilte: "Image",
+    Name: "Lokesh Tiwari"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Manas.jpg",
+    tilte: "Image",
+    Name: "Manas Khurana"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Mayank Jain.jpeg ",
+    tilte: "Image",
+    Name: "Mayank Jain "
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Naman Jain.jpg",
+    tilte: "Image",
+    Name: "Naman Jain"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Neham soni.jpg",
+    tilte: "Image",
+    Name: "Neham soni"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Pradeep Parajuli.jpg",
+    tilte: "Image",
+    Name: "Pradeep"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Prakhar Srivastava.jpg",
+    tilte: "Image",
+    Name: "Prakhar Srivastava"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Praveen Singh.jpg",
+    tilte: "Image",
     Name: "Praveen singh"
   },
   {
-    img: Placeholder,
-    title: "Image",
-    Name: "ANKIT ANMOL SRIVASTAVA "
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Priyanshu Trivedi.jpg",
+    tilte: "Image",
+    Name: "PRIYANSHU TRIVEDI"
   },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Rahul Chauhan.jpeg",
+    tilte: "Image",
+    Name: "Rahul Chauhan"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Rahul Godella.jpg",
+    tilte: "Image",
+    Name: "rahul godella"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Rahul Singh.jpg ",
+    tilte: "Image",
+    Name: "Rahul Singh "
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Ravi Saxena.jpeg ",
+    tilte: "Image",
+    Name: "Ravi "
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Rohith Kandi.jpg",
+    tilte: "Image",
+    Name: "Rohith Kandi"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/sakshi gupta.jpg",
+    tilte: "Image",
+    Name: "Sakshi Gupta"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Saloni Mehra.jpg",
+    tilte: "Image",
+    Name: "Saloni mehra"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Satyam Bharti.jpeg",
+    tilte: "Image",
+    Name: "Satyam Bharti"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/saurabh kumar.jpg",
+    tilte: "Image",
+    Name: "Saurabh kumar"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/SHASHWAT SINGH.jpg",
+    tilte: "Image",
+    Name: "Shashwat Singh"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Shivam Mittal.JPG",
+    tilte: "Image",
+    Name: "Shivam Mittal"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Shivam Sharma.jpg",
+    tilte: "Image",
+    Name: "Shivam Sharma"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Shreyansh Deep.jpg",
+    tilte: "Image",
+    Name: "Shreyansh Deep"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Vidit.jpg",
+    tilte: "Image",
+    Name: "Vidit Varshney"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/vineeta singh.jpg",
+    tilte: "Image",
+    Name: "Vineeta chaudhary"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Vishal Kumar.jpg",
+    tilte: "Image",
+    Name: "Vishal Kumar"
+  }
  ];
 
   
@@ -275,7 +250,7 @@ export default function Team() {
       </h2>
       <hr style={{
       maxWidth: "120px",
-      borderWidth: "1px",
+      borderWidth: "0.5px",
       opacity: "1",
       marginTop: "25px",
       marginBottom: "25px",
