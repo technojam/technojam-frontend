@@ -60,7 +60,7 @@ export default function TopMenu() {
         <div style={{ color: '#fff' }}>
             <AppBar position="static">
 
-                <Toolbar>
+                <Toolbar style={{backgroundColor:"#24292e"}}>
                     <Hidden mdUp>
                         <ResponsiveDrawer />
                     </Hidden>
