@@ -270,9 +270,20 @@ export default function Team() {
 
   return (
     <div className={classes.root}>
-      <h1 style={{color:"rgb(19, 20, 21)",textAlign:"center"}}>
+      <h2 style={{color:"#007FFF",textAlign:"center"}}>
       Our Team
-      </h1>
+      </h2>
+      <hr style={{
+      maxWidth: "120px",
+      borderWidth: "1px",
+      opacity: "1",
+      marginTop: "25px",
+      marginBottom: "25px",
+      borderColor: "#007FFF"
+      }}>
+      </hr>
+      <br></br>
+
       <Container fixed >
        <Grid container spacing={3} >
         {tileData.map(tile => (
