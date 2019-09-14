@@ -18,6 +18,21 @@ const circle={
 
 const tileData = [
   {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anubhav Raj Singh.jpeg",
+    tilte: "Image",
+    Name: "Anubhav Raj Singh"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/swetank.jpg",
+    tilte: "Image",
+    Name: "Swetank"
+  },
+  {
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Ravi Saxena.jpeg ",
+    tilte: "Image",
+    Name: "Ravi "
+  },
+  {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Abhimanyu Dwivedi.jpg",
     tilte: "Image",
     Name: "Abhimanyu Dwivedi"
@@ -51,11 +66,6 @@ const tileData = [
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anshika Soni.jpg",
     tilte: "Image",
     Name: "Anshika soni"
-  },
-  {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anubhav Raj Singh.jpeg",
-    tilte: "Image",
-    Name: "Anubhav Raj Singh"
   },
   {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anurag Verma.png",
@@ -118,7 +128,7 @@ const tileData = [
     Name: "Lokesh Tiwari"
   },
   {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Manas.jpg",
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Manas Khurana.JPG",
     tilte: "Image",
     Name: "Manas Khurana"
   },
@@ -131,11 +141,6 @@ const tileData = [
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Naman Jain.jpg",
     tilte: "Image",
     Name: "Naman Jain"
-  },
-  {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Neham soni.jpg",
-    tilte: "Image",
-    Name: "Neham soni"
   },
   {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Pradeep Parajuli.jpg",
@@ -171,16 +176,6 @@ const tileData = [
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Rahul Singh.jpg ",
     tilte: "Image",
     Name: "Rahul Singh "
-  },
-  {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Ravi Saxena.jpeg ",
-    tilte: "Image",
-    Name: "Ravi "
-  },
-  {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Rohith Kandi.jpg",
-    tilte: "Image",
-    Name: "Rohith Kandi"
   },
   {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/sakshi gupta.jpg",
