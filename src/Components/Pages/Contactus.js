@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import { Hidden } from '@material-ui/core';
 /* @person who is assigned this page set your styles here. height 600 is just for layout.*/
 const style ={
-  marginTop:"20px",
+  
   
    
 }
@@ -11,7 +11,7 @@ const style ={
 function Contactus() {
     return(
         <Container maxWidth="sm">
-        <div className="contactus" style={style}>
+        <div className="contactus" >
             <Hidden smUp>
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeaesLCX8qedDLQVu3qLrP9xQX-NpaN3ZUzKDwMSJjf59vRTg/viewform?embedded=true" width="auto" height="700px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </Hidden>
