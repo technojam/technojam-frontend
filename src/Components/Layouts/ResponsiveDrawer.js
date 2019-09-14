@@ -103,40 +103,13 @@ function ResponsiveDrawer(props) {
           <ListItemText primary="Team" />
         </ListItem>
 
-        <ListItem button component={Link} to={'/Alumni'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            <PersonRoundedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Alumin" />
-        </ListItem>
-
-
-        <ListItem button component={Link} to={'/mentorship'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            <PersonRoundedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Mentorship" />
-        </ListItem>
-
       </List>
 
       <Divider />
 
       <List>
 
-        <ListItem button component={Link} to={'/groups'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            <PeopleRoundedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Groups" />
-        </ListItem>
-
-        <ListItem button component={Link} to={'/resources'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            <ContactsRoundedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Resources" />
-        </ListItem>
+      
         <ListItem button component={Link} to={'/contactus'} onClick={handleDrawerToggle}>
           <ListItemIcon>
             <ContactsRoundedIcon />
@@ -186,3 +159,34 @@ function ResponsiveDrawer(props) {
 }
 
 export default ResponsiveDrawer;
+
+
+/*<ListItem button component={Link} to={'/Alumni'} onClick={handleDrawerToggle}>
+<ListItemIcon>
+  <PersonRoundedIcon />
+</ListItemIcon>
+<ListItemText primary="Alumin" />
+</ListItem>
+
+
+<ListItem button component={Link} to={'/mentorship'} onClick={handleDrawerToggle}>
+<ListItemIcon>
+  <PersonRoundedIcon />
+</ListItemIcon>
+<ListItemText primary="Mentorship" />
+</ListItem>
+
+  <ListItem button component={Link} to={'/resources'} onClick={handleDrawerToggle}>
+  <ListItemIcon>
+    <ContactsRoundedIcon />
+  </ListItemIcon>
+  <ListItemText primary="Resources" />
+</ListItem>
+
+<ListItem button component={Link} to={'/groups'} onClick={handleDrawerToggle}>
+<ListItemIcon>
+  <PeopleRoundedIcon />
+</ListItemIcon>
+<ListItemText primary="Groups" />
+</ListItem>*/
+

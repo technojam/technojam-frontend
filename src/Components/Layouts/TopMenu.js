@@ -17,7 +17,7 @@ import Typography from '@material-ui/core/Typography';
 
 
 const style = {
-    marginleft: 2000,
+    marginleft: 200,
     toolbarButtons: {
         marginLeft: "auto",
         marginRight: -12
@@ -41,17 +41,8 @@ export default function TopMenu() {
     const handleClose = () => {
         setOpen(false);
     };
-    const registerOpen = () => {
-        setOn(true);
-    };
 
-    const registerClose = () => {
-        setOn(false);
-    };
-    const responseGoogle = (response) => {
-        console.log(response);
-    };
-
+  
 
 
 
@@ -170,10 +161,10 @@ export default function TopMenu() {
                                 <Badge style={{ marginBottom: '30px', marginRight: '5px' }} badgeContent={'New'} color="secondary"></Badge>
                                 <Button style={{ style }} component={Link} to={'/achievements'}>Achievements</Button>
                                 <Button style={{ style }} component={Link} to={'/team'}>Team</Button>
-                                <Button style={{ style }} component={Link} to={'/alumni'}>Alumni</Button>
-                                <Button style={{ style }} component={Link} to={'/mentorship'}>Mentorship</Button>
-                                <Button style={{ style }} component={Link} to={'/groups'}>Groups</Button>
-                                <Button style={{ style }} component={Link} to={'/resources'}>Resources</Button>
+                               
+                               
+                                
+                               
                                 <Button style={{ style }} component={Link} to={'/contactus'}>Contact Us</Button>
 
                             </Grid>
@@ -185,3 +176,8 @@ export default function TopMenu() {
         </div>
     )
 }
+
+//<Button style={{ style }} component={Link} to={'/alumni'}>Alumni</Button>
+//<Button style={{ style }} component={Link} to={'/resources'}>Resources</Button>
+//<Button style={{ style }} component={Link} to={'/mentorship'}>Mentorship</Button>
+//<Button style={{ style }} component={Link} to={'/groups'}>Groups</Button>
