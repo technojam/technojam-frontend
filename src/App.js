@@ -1,18 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './App.css';
 import { TopMenu, Footer} from './Components/Layouts'
 import Maincontent from './Components/Maincontent'
 
 function App() {
   return (
-    <div className="App">
-      <Fragment>
+      <>
       <TopMenu />
       <Maincontent />
       <Footer/>
-        </Fragment>
- </div>
-    
+      </>
   );
 }
 

@@ -1,14 +1,24 @@
 import React from 'react'
-/* @person who is assigned Homepage set your styles here. height 600 is just for layout.*/
-const style ={
-   
-}
-
+import {FullScreenFigure} from '../Generics'
+import {createStyles,makeStyles} from '@material-ui/styles'
+const hero=require('./../../bg.jpg')
+const useStyle=makeStyles(theme=>createStyles({
+	homepage: {
+		marginTop: '-1em',
+	}
+}))
 function Homepage() {
+	const classes=useStyle()
     return(
-        <div className="homepage" style={style}>
-            Homepage
+        <div className={classes.homepage}>
+		<FullScreenFigure
+			action={event=>console.log('I am clicked')}
+			ctaText={'Lorem Ipsum'}
+			fig={{
+				backgroundImage: `url(${hero})`,
+			}}
+		/>
         </div>
     );
 }
-export default Homepage;
+export default Homepage

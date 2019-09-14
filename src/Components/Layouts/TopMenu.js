@@ -58,9 +58,9 @@ export default function TopMenu() {
 
     return (
         <div style={{ color: '#fff' }}>
-            <AppBar position="static">
+		<AppBar position="static" style={{backgroundColor: 'transparent'}}>
 
-                <Toolbar>
+                <Toolbar style={{backgroundColor: '#000'}}>
                     <Hidden mdUp>
                         <ResponsiveDrawer />
                     </Hidden>
@@ -162,7 +162,7 @@ export default function TopMenu() {
                 </Toolbar>
 
                 <Hidden smDown>
-                    <Toolbar style={{ backgroundColor: '#faf9f8', minHeight: '40px' }}>
+                    <Toolbar style={{ backgroundColor: '#faf9f8de', minHeight: '40px', backdropFilter: 'blur(10px)'}}>
                         <div style={{ marginLeft: 'auto', marginRight: 'auto' }}>
                             <Grid alignItems="flex-end" justify="flex-end" spacing={800}>
                                 <Button style={{ style }} component={Link} to={'/aboutus'}>About Us</Button>
