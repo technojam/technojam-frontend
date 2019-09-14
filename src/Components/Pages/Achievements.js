@@ -25,8 +25,8 @@ class Achievements extends Component {
                     by: "Darshan Baid",
                     date: "Spetember 15, 2019",
                     Description: "Technojam conducting 24 hours hackthon in delhi region at galgotias university. it is recognized by NASA",
-                    Image: "https://storage.cloud.google.com/tjimage/space.jpg",
-                    avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg?authuser=1"
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/spaceapps.jpg",
+                   
 
 
                 },
@@ -37,8 +37,8 @@ class Achievements extends Component {
                     by: "Shwetank",
                     date: "26 August, 2019",
                     Description: "Conducted Ideathon in Galgotias's Induction Program.alomst 300 students took part.crowd was really enthusiastic",
-                    Image:  "https://storage.cloud.google.com/tjimage/DSC_2620.JPG",
-                    avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg?authuser=1"
+                    Image:  " https://tj-static.s3.ap-south-1.amazonaws.com/etc/ideathon.JPG",
+                   
                 },
 
                 {
@@ -48,8 +48,8 @@ class Achievements extends Component {
                     date: "May 12, 2018",
                     Description: "rahul chuhan Member of Team Teachnojam is the first Gsoc cleared person of Galgotias University",
                     Description: "Technojam conducting 24 hours hackthon in delhi region at galgotias university. it is recognized by NASA",
-                    Image: 'https://storage.cloud.google.com/tjtempimg/Gsoc.JPG?authuser=1',
-                    avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg?authuser=1"
+                    Image: 'https://tj-static.s3.ap-south-1.amazonaws.com/etc/rahul.jpg',
+                    
                 },
 
                 {
