@@ -3,7 +3,6 @@ import React, { Component } from "react";
 
 //material ui component
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
@@ -80,7 +79,7 @@ class Achievements extends Component {
                 <div style={{ marginTop: "30px", marginBottom: "20px", }}>
                     <div >
                     <h2 style={{color:"#007FFF",textAlign:"center"}}>
-                            Our Achievements
+                            Our Achievements    
                             </h2>
                         <hr style={{
                             maxWidth: "120px",
