@@ -76,7 +76,8 @@ class Achievements extends Component {
 
 
             <Container maxWidth="lg">
-                <div style={{ marginTop: "30px", marginBottom: "20px", }}>
+                <div style={{ marginTop: "30px",
+                               }}>
                     <div >
                     <h2 style={{color:"#007FFF",textAlign:"center"}}>
                             Our Achievements    
@@ -135,7 +136,7 @@ class Achievements extends Component {
 
                         </Grid>
                     </div>
-
+                                                <br></br><br></br>
 
                 </div>
             </Container>

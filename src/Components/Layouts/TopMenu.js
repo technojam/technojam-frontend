@@ -42,7 +42,7 @@ export default function TopMenu() {
         setOpen(false);
     };
 
-  
+
 
 
 
@@ -51,7 +51,7 @@ export default function TopMenu() {
         <div style={{ color: '#fff' }}>
             <AppBar position="static">
 
-                <Toolbar style={{backgroundColor:"#24292e"}}>
+                <Toolbar style={{ backgroundColor: "#24292e" }}>
                     <Hidden mdUp>
                         <ResponsiveDrawer />
                     </Hidden>
@@ -158,13 +158,13 @@ export default function TopMenu() {
                             <Grid alignItems="flex-end" justify="flex-end" spacing={800}>
                                 <Button style={{ style }} component={Link} to={'/aboutus'}>About Us</Button>
                                 <Button style={{ style }} component={Link} to={'/events'}>Events</Button>
-                                <Badge style={{ marginBottom: '30px', marginRight: '5px' }} badgeContent={'New'} color="secondary"></Badge>
+                                    <Badge style={{ marginBottom: '30px', marginRight: '5px' }} badgeContent={'New'} color="secondary"></Badge>
                                 <Button style={{ style }} component={Link} to={'/achievements'}>Achievements</Button>
                                 <Button style={{ style }} component={Link} to={'/team'}>Team</Button>
-                               
-                               
-                                
-                               
+                                <Button style={{ style }} component={Link} to={'/alumni'}>Alumni</Button>
+                                <Button style={{ style }} component={Link} to={'/resources'}>Resources</Button>
+                                <Button style={{ style }} component={Link} to={'/mentorship'}>Mentorship</Button>
+                                <Button style={{ style }} component={Link} to={'/groups'}>Groups</Button>
                                 <Button style={{ style }} component={Link} to={'/contactus'}>Contact Us</Button>
 
                             </Grid>
@@ -176,8 +176,3 @@ export default function TopMenu() {
         </div>
     )
 }
-
-//<Button style={{ style }} component={Link} to={'/alumni'}>Alumni</Button>
-//<Button style={{ style }} component={Link} to={'/resources'}>Resources</Button>
-//<Button style={{ style }} component={Link} to={'/mentorship'}>Mentorship</Button>
-//<Button style={{ style }} component={Link} to={'/groups'}>Groups</Button>
