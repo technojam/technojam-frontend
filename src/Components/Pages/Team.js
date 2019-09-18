@@ -18,7 +18,7 @@ const circle={
 
 const tileData = [
   {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anubhav Raj Singh.jpeg",
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anubhav Raj Singh.jpg",
     tilte: "Image",
     Name: "Anubhav Raj Singh"
   },
