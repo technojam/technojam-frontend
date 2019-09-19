@@ -63,7 +63,7 @@ function ResponsiveDrawer(props) {
 
         <ListItem button component={Link} to={'/'} onClick={handleDrawerToggle}>
           <ListItemIcon>
-            <HomeRoundedIcon />
+           
           </ListItemIcon>
           <ListItemText primary="Home" />
         </ListItem>
@@ -76,36 +76,36 @@ function ResponsiveDrawer(props) {
 
         <ListItem button component={Link} to={'/aboutus'} onClick={handleDrawerToggle}>
           <ListItemIcon>
-            <DashboardRoundedIcon />
+            
           </ListItemIcon>
           <ListItemText primary="About Us" />
         </ListItem>
 
-        <Badge style={{ marginLeft: '150px', marginTop: '30px' }} badgeContent={'New'} color="secondary"></Badge>
+        
         <ListItem button component={Link} to={'/events'} onClick={handleDrawerToggle}>
           <ListItemIcon>
-            <DashboardRoundedIcon />
+           
           </ListItemIcon>
           <ListItemText primary="Events" />
         </ListItem>
 
         <ListItem button component={Link} to={'/achievements'} onClick={handleDrawerToggle}>
           <ListItemIcon>
-            <EqualizerRoundedIcon />
+            
           </ListItemIcon>
           <ListItemText primary="Achievements" />
         </ListItem>
 
         <ListItem button component={Link} to={'/team'} onClick={handleDrawerToggle}>
           <ListItemIcon>
-            <PeopleRoundedIcon />
+           
           </ListItemIcon>
           <ListItemText primary="Team" />
         </ListItem>
 
         <ListItem button component={Link} to={'/Alumni'} onClick={handleDrawerToggle}>
           <ListItemIcon>
-            <PersonRoundedIcon />
+            
           </ListItemIcon>
           <ListItemText primary="Alumin" />
         </ListItem>
@@ -113,21 +113,21 @@ function ResponsiveDrawer(props) {
 
         <ListItem button component={Link} to={'/mentorship'} onClick={handleDrawerToggle}>
           <ListItemIcon>
-            <PersonRoundedIcon />
+           
           </ListItemIcon>
           <ListItemText primary="Mentorship" />
         </ListItem>
 
         <ListItem button component={Link} to={'/resources'} onClick={handleDrawerToggle}>
           <ListItemIcon>
-            <ContactsRoundedIcon />
+            
           </ListItemIcon>
           <ListItemText primary="Resources" />
         </ListItem>
 
         <ListItem button component={Link} to={'/groups'} onClick={handleDrawerToggle}>
           <ListItemIcon>
-            <PeopleRoundedIcon />
+           
           </ListItemIcon>
           <ListItemText primary="Groups" />
         </ListItem>
@@ -141,7 +141,7 @@ function ResponsiveDrawer(props) {
 
         <ListItem button component={Link} to={'/contactus'} onClick={handleDrawerToggle}>
           <ListItemIcon>
-            <ContactsRoundedIcon />
+           
           </ListItemIcon>
           <ListItemText primary="Contact Us" />
         </ListItem>

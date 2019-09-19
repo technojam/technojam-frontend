@@ -25,7 +25,7 @@ class Achievements extends Component {
                     by: "Darshan Baid",
                     date: "Spetember 15, 2019",
                     Description: "Technojam conducting 24 hours hackthon in delhi region at galgotias university. it is recognized by NASA",
-                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/spaceapps.jpg",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/space.jpg",
                    
 
 
@@ -59,7 +59,7 @@ class Achievements extends Component {
                     date: "26 August, 2018",
                     Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
                     Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
-                    avatar: "https://storage.cloud.google.com/tjtempimg/avatar.jpg?authuser=1"
+                    
                 }
             ]
         }
@@ -118,12 +118,12 @@ class Achievements extends Component {
                                                     </CardMedia>
 
                                                     <CardContent>
-                                                        <Typography variant="h5"  component="p" style={{fontFamily:"Linotte"}}>
+                                                        <Typography variant="h5"  component="p" style={{fontFamily:"Proza",letterSpacing:"2px"}}>
                                                             {achie.title}
                                                         </Typography>
                                                     </CardContent>
-                                                    <CardContent style={{marginTop:"-20px"}}>
-                                                        <Typography variant="body2" color="textSecondary" component="p" >
+                                                    <CardContent style={{marginTop:"-20px",letterSpacing:"2px"}}>
+                                                        <Typography variant="body2" color="textSecondary" component="p" style={{letterSpacing:"0.9px"}} >
                                                             {achie.Description}
                                                         </Typography>
                                                         </CardContent>
