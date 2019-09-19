@@ -16,6 +16,7 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 
 
+
 const style = {
     marginleft: 200,
     toolbarButtons: {
@@ -51,7 +52,7 @@ export default function TopMenu() {
         <div style={{ color: '#fff' }}>
             <AppBar position="static">
 
-                <Toolbar style={{ backgroundColor: "#24292e" }}>
+                <Toolbar style={{ backgroundColor: "#4285f4" }}>
                     <Hidden mdUp>
                         <ResponsiveDrawer />
                     </Hidden>
@@ -59,7 +60,7 @@ export default function TopMenu() {
                         <Button color="inherit" component={Link} to={'/'}>
                             <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />
 
-                            <Typography style={{ fontFamily: "Aileron",letterSpacing:"1px" }}>TechnoJam</Typography>
+                            <Hidden smDown> <Typography style={{ fontFamily: "Aileron",letterSpacing:"1px" }}>TechnoJam</Typography></Hidden>
                         </Button>
                     </Grid>
                     <div style={{ marginLeft: 'auto' }}>
