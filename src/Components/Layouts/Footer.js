@@ -36,7 +36,7 @@ export default props =>
                 <Grid container direction="row" >
                 <div style={{ paddingLeft:'100px',paddingRight:'auto' }}>
                     <Typography>
-                        Email us : TechnoJam@galgotiasuniversity.edu.in
+                        Email us : Technojam@galgotiasuniversity.edu.in
                      </Typography>
                 </div>
                 </Grid>
