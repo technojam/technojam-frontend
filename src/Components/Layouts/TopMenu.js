@@ -16,6 +16,7 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 
 
+
 const style = {
     marginleft: 200,
     toolbarButtons: {
@@ -42,7 +43,7 @@ export default function TopMenu() {
         setOpen(false);
     };
 
-  
+
 
 
 
@@ -51,14 +52,16 @@ export default function TopMenu() {
         <div style={{ color: '#fff' }}>
             <AppBar position="static">
 
-                <Toolbar style={{backgroundColor:"#24292e"}}>
+                <Toolbar style={{ backgroundColor: "#4285f4" }}>
                     <Hidden mdUp>
                         <ResponsiveDrawer />
                     </Hidden>
                     <Grid alignItems="flex-start" justify="flex-start" >
                         <Button color="inherit" component={Link} to={'/'}>
-                            <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />TechnoJam
-                    </Button>
+                            <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />
+
+                            <Hidden smDown> <Typography style={{ fontFamily: "Aileron",letterSpacing:"1px" }}>TechnoJam</Typography></Hidden>
+                        </Button>
                     </Grid>
                     <div style={{ marginLeft: 'auto' }}>
                         <Tooltip title="Night Mode">
@@ -84,7 +87,7 @@ export default function TopMenu() {
                         >
                             <div style={{
                                 width: "100%", height: "100%",
-                                backgroundColor: "black", opacity: "0.7",
+                                backgroundColor: "black", opacity: "0.98",
                                 position: "absolute", top: "0", display: "flex",
                                 alignItems: "center", justifyContent: "center"
                             }}>
@@ -102,9 +105,9 @@ export default function TopMenu() {
 
 
                                     <FormControl component="fieldset">
-                                        <Grid container spacing={1} alignItems="flex-end">
+                                        <Grid container alignItems="flex-start">
 
-                                            <Grid item xs={6} sm={6} md={6}>
+                                            <Grid item xs={12} sm={12} md={12}>
 
                                                 <TextField
                                                     id="outlined-email-input"
@@ -114,9 +117,10 @@ export default function TopMenu() {
                                                     autoComplete="email"
                                                     margin="normal"
                                                     variant="outlined"
+                                                    
                                                 />
                                             </Grid>
-                                            <Grid item xs={6} sm={6} md={6}>
+                                            <Grid item xs={12} sm={12} md={12}>
 
                                                 <TextField
                                                     id="outlined-password-input"
@@ -128,7 +132,7 @@ export default function TopMenu() {
                                                 />
                                             </Grid>
                                         </Grid>
-                                        <br></br><br></br>
+                                        <br></br>
 
                                         <Grid container
                                             direction="row"
@@ -154,17 +158,27 @@ export default function TopMenu() {
 
                 <Hidden smDown>
                     <Toolbar style={{ backgroundColor: '#faf9f8', minHeight: '40px' }}>
-                        <div style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+                        <div style={{ marginLeft: 'auto', marginRight: 'auto',padding:"5px" }}>
+                            
                             <Grid alignItems="flex-end" justify="flex-end" spacing={800}>
-                                <Button style={{ style }} component={Link} to={'/aboutus'}>About Us</Button>
-                                <Button style={{ style }} component={Link} to={'/events'}>Events</Button>
+                                <Button style={{ style }} component={Link} to={'/aboutus'}>
+                                <Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>About Us</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/events'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>
+                                  Events</Typography></Button>
                                 <Badge style={{ marginBottom: '30px', marginRight: '5px' }} badgeContent={'New'} color="secondary"></Badge>
-                                <Button style={{ style }} component={Link} to={'/achievements'}>Achievements</Button>
-                                <Button style={{ style }} component={Link} to={'/team'}>Team</Button>
-                                <Button style={{ style }} component={Link} to={'/Alumni'}>Alumni</Button>                               
-                                <Button style={{ style }} component={Link} to={'/contactus'}>Contact Us</Button>
 
-                            </Grid>
+                                <Button style={{ style }} component={Link} to={'/achievements'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Achievements
+                                </Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/team'}> <Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>
+                                    Team</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/alumni'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Alumni</Typography></Button>
+                               
+                                <Button style={{ style }} component={Link} to={'/mentorship'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Mentorship</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/groups'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Groups</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/contactus'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Contact Us</Typography></Button>
+                            
+                            </Grid> 
+                           
                         </div>
                     </Toolbar>
                 </Hidden>
@@ -174,7 +188,4 @@ export default function TopMenu() {
     )
 }
 
-//<Button style={{ style }} component={Link} to={'/alumni'}>Alumni</Button>
 //<Button style={{ style }} component={Link} to={'/resources'}>Resources</Button>
-//<Button style={{ style }} component={Link} to={'/mentorship'}>Mentorship</Button>
-//<Button style={{ style }} component={Link} to={'/groups'}>Groups</Button>
