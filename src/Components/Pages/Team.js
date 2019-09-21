@@ -243,7 +243,7 @@ export default function Team() {
 
   return (
     <div className={classes.root}>
-      <h2 style={{color:"#007FFF",textAlign:"center"}}>
+      <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
       Our Team
       </h2>
       <hr style={{

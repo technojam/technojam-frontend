@@ -73,7 +73,7 @@ class Groups extends Component {
                 <div style={{ marginTop: "30px", marginBottom: "20px", }}>
                     <div >
 
-                        <h2 style={{color:"#007FFF",textAlign:"center"}}>
+                        <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
                             Our speciality Groups
                             </h2>
                         <hr style={{
@@ -96,7 +96,7 @@ class Groups extends Component {
                                     <Card style={{
                                         position: "relative", border: "1px solid rgba(0, 0, 0, 0.04)",
                                         padding: "15px 20px", fontSize: "18px", fontWeight: "600",
-                                        marginBottom: "30px", borderRadius: "4px",
+                                        marginBottom: "30px", borderRadius: "15px",
                                         boxShadow: "9px 9px 45px rgba(0, 0, 0, 0.4)"
                                     }}>
 

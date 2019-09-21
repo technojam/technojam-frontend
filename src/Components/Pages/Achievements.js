@@ -80,7 +80,7 @@ class Achievements extends Component {
                 <div style={{ marginTop: "30px",
                                }}>
                     <div >
-                    <h2 style={{color:"#007FFF",textAlign:"center"}}>
+                    <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
                             Our Achievements    
                             </h2>
                         <hr style={{
