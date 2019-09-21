@@ -118,10 +118,10 @@ class Events extends Component {
                             <div style={{display:"inline",display:"inlineblock",float:"left"}}>
 
                                 {upevent.map(upevent => (
-                                    <Timeline style={{ border: "black", }}>
+                                    <Timeline  style={{ border: "black", }}>
                                         <TimelineEvent>
                                             <CardContent>
-                                                <Typography variant="h5" component="p" style={{ fontFamily: "Linotte", letterSpacing: "2px" }}>
+                                                <Typography variant="h5" component="p" style={{ fontFamily: "Roboto", letterSpacing: "2px" }}>
                                                     {upevent.title}
                                                 </Typography>
                                             </CardContent>
@@ -178,7 +178,7 @@ class Events extends Component {
 
 
                                             <CardContent>
-                                                <Typography variant="h5" component="p" style={{ fontFamily: "Linotte", letterSpacing: "2px" }}>
+                                                <Typography variant="h5" component="p" style={{ fontFamily: "Roboto", letterSpacing: "2px" }}>
                                                     {paevent.title}
                                                 </Typography>
                                             </CardContent>

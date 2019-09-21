@@ -52,7 +52,7 @@ export default function TopMenu() {
         <div style={{ color: '#fff' }}>
             <AppBar position="static">
 
-                <Toolbar style={{ backgroundColor: "#4285f4" }}>
+                <Toolbar style={{ backgroundColor: "#24292e" }}>
                     <Hidden mdUp>
                         <ResponsiveDrawer />
                     </Hidden>
@@ -63,6 +63,30 @@ export default function TopMenu() {
                             <Hidden smDown> <Typography style={{ fontFamily: "Aileron",letterSpacing:"1px" }}>TechnoJam</Typography></Hidden>
                         </Button>
                     </Grid>
+                    <Hidden smDown>
+                    <div style={{ marginLeft: 'auto', marginRight: 'auto',padding:"5px" }}>
+                            
+                            <Grid alignItems="flex-end" justify="flex-end" spacing={800} style={{marginLeft:"75px"}}>
+                                
+                                <Button style={{ style }} component={Link} to={'/events'}><Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px",textTransform: 'none',color:"#fafafa" }}>
+                                  Events</Typography></Button>
+                                <Badge style={{ marginBottom: '30px', marginRight: '5px' }} badgeContent={'New'} color="secondary"></Badge>
+                                <Button style={{ style }} component={Link} to={'/achievements'}><Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px",textTransform: 'none' ,color:"#fafafa"}}>Achievements
+                                </Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/team'}> <Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px",textTransform: 'none' ,color:"#fafafa"}}>
+                                    Team</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/alumni'}><Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px",textTransform: 'none' ,color:"#fafafa"}}>Alumni</Typography></Button>
+                               
+                                <Button style={{ style }} component={Link} to={'/mentorship'}><Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px",textTransform: 'none' ,color:"#fafafa"}}>Mentorship</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/groups'}><Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px",textTransform: 'none',color:"#fafafa" }}>Groups</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/aboutus'}>
+                                <Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px" ,textTransform: 'none',color:"#fafafa"}}>About Us</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/contactus'}><Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px",textTransform: 'none',color:"#fafafa" }}>Contact Us</Typography></Button>
+                            
+                            </Grid>
+                           
+                        </div>
+                        </Hidden>
                     <div style={{ marginLeft: 'auto' }}>
                         <Tooltip title="Night Mode">
                             <IconButton color="inherit" aria-label="Night Mode" style={{ style }} component={Link} to={'/'}>
@@ -155,32 +179,6 @@ export default function TopMenu() {
 
 
                 </Toolbar>
-
-                <Hidden smDown>
-                    <Toolbar style={{ backgroundColor: '#faf9f8', minHeight: '40px' }}>
-                        <div style={{ marginLeft: 'auto', marginRight: 'auto',padding:"5px"}}>
-                            
-                            <Grid alignItems="flex-end" justify="flex-end" spacing={800}>
-                                <Button style={{ style }} component={Link} to={'/aboutus'}>
-                                <Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px", textTransform: 'none' }}>About Us</Typography></Button>
-                                <Button style={{ style }} component={Link} to={'/events'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px", textTransform: 'none' }}>
-                                  Events</Typography></Button>
-                                <Badge style={{ marginBottom: '30px', marginRight: '5px' }} badgeContent={'New'} color="secondary"></Badge>
-                                <Button style={{ style }} component={Link} to={'/achievements'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px", textTransform: 'none'}}>Achievements
-                                </Typography></Button>
-                                <Button style={{ style }} component={Link} to={'/team'}> <Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px", textTransform: 'none' }}>
-                                    Team</Typography></Button>
-                                <Button style={{ style }} component={Link} to={'/alumni'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px", textTransform: 'none' }}>Alumni</Typography></Button>
-                               
-                                <Button style={{ style }} component={Link} to={'/mentorship'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px", textTransform: 'none' }}>Mentorship</Typography></Button>
-                                <Button style={{ style }} component={Link} to={'/groups'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px", textTransform: 'none' }}>Groups</Typography></Button>
-                                <Button style={{ style }} component={Link} to={'/contactus'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px", textTransform: 'none' }}>Contact Us</Typography></Button>
-                            
-                            </Grid>
-                           
-                        </div>
-                    </Toolbar>
-                </Hidden>
 
             </AppBar>
         </div>

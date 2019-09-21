@@ -70,7 +70,7 @@ function Aboutus() {
                         alignItems="center"
                         spacing={6}>
                         <Grid item lg={6} md={6} sm={12} alignItems="center">
-                            <Card style={{backgroundColor:" #e44034",opacity:"0.9",minHeight:"530px",
+                            <Card style={{backgroundColor:" #e03030",opacity:"0.9",minHeight:"530px",
                                            boxShadow: " 0 30px 35px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19)",
                                            borderRadius: "20px"}}> 
 
@@ -116,7 +116,7 @@ function Aboutus() {
                                      them into reality.</p>
                                    <p>4. Work on live projects to make the institute high-tech.</p>
                                    <p>5. Represent our institute by participating at National level Tech-Fest and other technical events all around the nation.</p>    
-                                    <br></br>
+                                        <p></p> <br></br>
                                 </Typography>
                                 </CardContent>
                             </Card>
