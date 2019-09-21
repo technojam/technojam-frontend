@@ -161,8 +161,7 @@ export default function TopMenu() {
                         <div style={{ marginLeft: 'auto', marginRight: 'auto',padding:"5px" }}>
                             
                             <Grid alignItems="flex-end" justify="flex-end" spacing={800}>
-                                <Button style={{ style }} component={Link} to={'/aboutus'}>
-                                <Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>About Us</Typography></Button>
+                                
                                 <Button style={{ style }} component={Link} to={'/events'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>
                                   Events</Typography></Button>
                                 <Badge style={{ marginBottom: '30px', marginRight: '5px' }} badgeContent={'New'} color="secondary"></Badge>
@@ -174,6 +173,8 @@ export default function TopMenu() {
                                
                                 <Button style={{ style }} component={Link} to={'/mentorship'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Mentorship</Typography></Button>
                                 <Button style={{ style }} component={Link} to={'/groups'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Groups</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/aboutus'}>
+                                <Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>About Us</Typography></Button>
                                 <Button style={{ style }} component={Link} to={'/contactus'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Contact Us</Typography></Button>
                             
                             </Grid>
