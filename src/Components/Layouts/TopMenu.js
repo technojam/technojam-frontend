@@ -162,20 +162,20 @@ export default function TopMenu() {
                             
                             <Grid alignItems="flex-end" justify="flex-end" spacing={800}>
                                 
-                                <Button style={{ style }} component={Link} to={'/events'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>
+                                <Button style={{ style }} component={Link} to={'/events'}><Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px" }}>
                                   Events</Typography></Button>
                                 <Badge style={{ marginBottom: '30px', marginRight: '5px' }} badgeContent={'New'} color="secondary"></Badge>
-                                <Button style={{ style }} component={Link} to={'/achievements'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Achievements
+                                <Button style={{ style }} component={Link} to={'/achievements'}><Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px" }}>Achievements
                                 </Typography></Button>
-                                <Button style={{ style }} component={Link} to={'/team'}> <Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>
+                                <Button style={{ style }} component={Link} to={'/team'}> <Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px" }}>
                                     Team</Typography></Button>
-                                <Button style={{ style }} component={Link} to={'/alumni'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Alumni</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/alumni'}><Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px" }}>Alumni</Typography></Button>
                                
-                                <Button style={{ style }} component={Link} to={'/mentorship'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Mentorship</Typography></Button>
-                                <Button style={{ style }} component={Link} to={'/groups'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Groups</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/mentorship'}><Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px" }}>Mentorship</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/groups'}><Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px" }}>Groups</Typography></Button>
                                 <Button style={{ style }} component={Link} to={'/aboutus'}>
-                                <Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>About Us</Typography></Button>
-                                <Button style={{ style }} component={Link} to={'/contactus'}><Typography style={{ fontFamily: "DyeLine",letterSpacing:"0.9px" }}>Contact Us</Typography></Button>
+                                <Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px" }}>About Us</Typography></Button>
+                                <Button style={{ style }} component={Link} to={'/contactus'}><Typography style={{ fontFamily: "Roboto",letterSpacing:"0.9px" }}>Contact Us</Typography></Button>
                             
                             </Grid>
                            

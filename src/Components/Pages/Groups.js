@@ -101,7 +101,7 @@ class Groups extends Component {
                                     }}>
 
                                         <CardContent>
-                                            <Typography variant="h5" style={{ fontFamily: "Linotte" }}>
+                                            <Typography variant="h5" style={{ fontFamily: "Roboto" }}>
                                                 {Groups.title}
                                             </Typography>
                                         </CardContent>

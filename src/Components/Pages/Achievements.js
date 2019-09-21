@@ -119,7 +119,7 @@ class Achievements extends Component {
                                                     </CardMedia>
 
                                                     <CardContent>
-                                                        <Typography variant="h5"  component="p" style={{fontFamily:"Proza",letterSpacing:"2px"}}>
+                                                        <Typography variant="h5"  component="p" style={{fontFamily:"Roboto",letterSpacing:"2px"}}>
                                                             {achie.title}
                                                         </Typography>
                                                     </CardContent>
