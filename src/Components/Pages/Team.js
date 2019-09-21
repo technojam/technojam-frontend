@@ -26,7 +26,7 @@ const tileData = [
     Name: "Anubhav Raj Singh"
   },
   {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/swetank.jpg",
+    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Swetank.jpg",
     tilte: "Image",
     Name: "Swetank"
   },
@@ -81,7 +81,7 @@ const tileData = [
     Name: "Ashwani Tripathi"
   },
   {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Astha Singh.jpg",
+    img: "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Astha+Singh.jpg",
     tilte: "Image",
     Name: "Astha Singh"
   },
@@ -166,12 +166,12 @@ const tileData = [
     Name: "PRIYANSHU TRIVEDI"
   },
   {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Rahul Chauhan.jpeg",
+    img: "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Rahul+Chauhan.jpeg",
     tilte: "Image",
     Name: "Rahul Chauhan"
   },
   {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Rahul Godella.jpg",
+    img: "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Rahul+Godella.jpg",
     tilte: "Image",
     Name: "rahul godella"
   },
