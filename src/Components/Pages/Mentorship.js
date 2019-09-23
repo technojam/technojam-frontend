@@ -38,7 +38,7 @@ class Mentorship extends Component {
                     info: "Technojam-Frontend is a web application. It is build on React. It also contain night mode and backend services.",
                     repolink: "https://github.com/technojam/technojam-frontend",
                     slack: "#",
-                    mentor: "Ravi and Aman",
+                    mentor: "Ravi, Aman and Prakhar",
                     Skills:"ReactJS, HTML, CSS, JAVASCRIPT",
                     telegram:"#"
 
