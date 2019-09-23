@@ -70,7 +70,7 @@ class Groups extends Component {
 
 
             <Container maxWidth="lg">
-                <div style={{ marginTop: "30px", marginBottom: "20px", }}>
+                <div style={{ marginTop: "100px", marginBottom: "20px", }}>
                     <div >
 
                         <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
@@ -78,7 +78,7 @@ class Groups extends Component {
                             </h2>
                         <hr style={{
                             maxWidth: "120px",
-                            borderWidth: "1px",
+                            borderWidth: "0.6px",
                             opacity: "1",
                             marginTop: "25px",
                             marginBottom: "25px",
