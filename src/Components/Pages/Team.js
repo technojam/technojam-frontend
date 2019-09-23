@@ -8,9 +8,10 @@ import shadows from '@material-ui/core/styles/shadows';
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
-    marginTop:20,
+    marginTop:"100px",
     marginBottom:20,
     minHeight:"555px",
+
     
   },  
 }));
@@ -248,7 +249,7 @@ export default function Team() {
       </h2>
       <hr style={{
       maxWidth: "120px",
-      borderWidth: "0.5px",
+      borderWidth: "0.6px",
       opacity: "1",
       marginTop: "25px",
       marginBottom: "25px",
