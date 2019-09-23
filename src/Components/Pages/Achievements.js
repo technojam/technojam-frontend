@@ -8,6 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { Grid } from "@material-ui/core";
 import Container from '@material-ui/core/Container';
+import Divider from '@material-ui/core/Divider';
 
 
 
@@ -76,15 +77,15 @@ class Achievements extends Component {
 
 
             <Container maxWidth="lg">
-                <div style={{ marginTop: "30px",
+                <div style={{ marginTop: "100px",
                                }}>
                     <div >
-                    <h2 style={{color:"#007FFF",textAlign:"center"}}>
+                    <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
                             Our Achievements    
                             </h2>
                         <hr style={{
                             maxWidth: "120px",
-                            borderWidth: "1px",
+                            borderWidth: "0.6px",
                             opacity: "1",
                             marginTop: "25px",
                             marginBottom: "25px",
@@ -118,7 +119,7 @@ class Achievements extends Component {
                                                     </CardMedia>
 
                                                     <CardContent>
-                                                        <Typography variant="h5"  component="p" style={{fontFamily:"Proza",letterSpacing:"2px"}}>
+                                                        <Typography variant="h5"  component="p" style={{fontFamily:"Roboto",letterSpacing:"2px"}}>
                                                             {achie.title}
                                                         </Typography>
                                                     </CardContent>
