@@ -13,35 +13,63 @@ class Alumni extends Component {
         //Until backend add data here cards will be created automatically.
         this.state = {
             achie: [
-
                 {
                     id: 1,
-                    title: "Anubhav Raj Singh",
-                    date: "Spetember 15, 2019",
-                    Description: "",
-                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anubhav Raj Singh.jpg",
+                    title: "Name",
+                    Google: "#",
+                    Linkedin: "#",
+                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
                 },
                 {
-                    id: 1,
-                    title: "Anubhav Raj Singh",
-                    date: "Spetember 15, 2019",
-                    Description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. .",
-                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anubhav Raj Singh.jpg",
+                    id: 2,
+                    title: "Name",
+                    Google: "#",
+                    Linkedin: "#",
+                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
                 },
                 {
-                    id: 1,
-                    title: "Anubhav Raj Singh",
-                    date: "Spetember 15, 2019",
-                    Description: "",
-                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anubhav Raj Singh.jpg",
+                    id: 3,
+                    title: "Name",
+                    Google: "#",
+                    Linkedin: "#",
+                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
                 },
                 {
-                    id: 1,
-                    title: "Anubhav Raj Singh",
-                    date: "Spetember 15, 2019",
-                    Description: "",
-                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anubhav Raj Singh.jpg",
+                    id: 4,
+                    title: "Name",
+                    Google: "#",
+                    Linkedin: "#",
+                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
+                },
+                {
+                    id: 5,
+                    title: "Name",
+                    Google: "#",
+                    Linkedin: "#",
+                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
+                },
+                {
+                    id: 6,
+                    title: "Name",
+                    Google: "#",
+                    Linkedin: "#",
+                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
+                },
+                {
+                    id: 7,
+                    title: "Name",
+                    Google: "#",
+                    Linkedin: "#",
+                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
+                },
+                {
+                    id: 8,
+                    title: "Name",
+                    Google: "#",
+                    Linkedin: "#",
+                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
                 }
+               
             ]
         }
     }
@@ -87,7 +115,7 @@ class Alumni extends Component {
                                                 <Card style={{ 
                                                     minWidth: "50px",
                                                     boxShadow: " 0 30px 35px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19)",
-                                                    borderRadius: "40px",
+                                                    borderRadius: "20px",
                                                     
                                                 }}>
                                                     
@@ -98,22 +126,21 @@ class Alumni extends Component {
                                                     </CardMedia>
 
                                                     <CardContent>
-                                                        <Typography variant="h5"  component="p" style={{fontFamily:"Linotte"}}>
+                                                        <Typography variant="h7"  component="p" style={{fontFamily:"Linotte"}}>
                                                             {achie.title}
                                                         </Typography>
                                                     </CardContent>
                                                     <CardContent style={{marginTop:"-20px"}}>
-                                                        <Typography variant="body2" color="textSecondary" component="p" >
-                                                            {achie.Description}
-                                                        </Typography>
-                                                        </CardContent>
-                                                  
-
+                                                    <div style={{alignItems:'center',justifyContent: 'center'}}>
+                                                        <a className="btn btn-social-icon btn-google" href={achie.Google} target="_blank"><i className="fab fa-google fa-lg"style={{color:'#28aae1'}}></i></a>&#8194;
+                                                        <a className="btn btn-social-icon btn-linkedin" href={achie.Linkedin} target="_blank"><i className="fab fa-linkedin fa-lg" style={{color:'#0077b5'}}></i></a>&#8194;       
+                                                    </div>
+                                                    </CardContent>
+                                                     <Grid container direction="row" spacing={80} >                                                            
+                                                    </Grid>
                                                 </Card>
-                                    </Grid>
-
+                                     </Grid>
                             ))}
-
                         </Grid>
                     </div>
 
