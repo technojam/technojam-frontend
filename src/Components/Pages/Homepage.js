@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 const Style = {
     marginTop: "60px",
     maxHeight:"720px",
-
+    height:'90vh',
    
     square: {
 
