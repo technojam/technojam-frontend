@@ -8,17 +8,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { Grid, Hidden } from "@material-ui/core";
 
-var sectionStyle = {
-    width: "100%",
-    height: "auto",
-    backgroundImage: "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.PNG)",
-    backgroundRepeat: "no-repeat",
-    marginTop: "-10px",
-    backgroundPositionX: "center",
-    minHeight: "1000px"
-
-};
-
 class Alumni extends Component {
 
     constructor(props) {
@@ -96,7 +85,6 @@ class Alumni extends Component {
         console.log(achie);
         return (
 
-            <div style={sectionStyle}>
             <Container maxWidth="lg">
                 <div style={{ marginTop: "80px", marginBottom: "20px", maxWidth:"sm"}}>
                     <div >
@@ -160,7 +148,6 @@ class Alumni extends Component {
 
                 </div>
             </Container>
-            </div>
         );
     }
 }

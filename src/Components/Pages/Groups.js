@@ -8,13 +8,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
 
-var sectionStyle = {
-    backgroundImage: "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.PNG)",
-    backgroundRepeat: "on-repeat",
-    marginTop: "-40px",
-    backgroundPositionX: "center"
-};
-
 class Groups extends Component {
 
     constructor(props) {
@@ -73,10 +66,7 @@ class Groups extends Component {
         console.log(Groups);
         return (
 
-
-<div style={sectionStyle}>
            <Container maxWidth="lg">
-               <br></br>
                 <div style={{ marginTop: "100px", marginBottom: "20px", }}>
                     <div >
 
@@ -126,8 +116,7 @@ class Groups extends Component {
                     </div>
                 </div>
             </Container>
-            
-</div>
+        
         );
     }
 }
