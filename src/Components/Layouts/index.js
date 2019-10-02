@@ -1,4 +1,4 @@
-import TopMenu from './TopMenu'
-import Footer from './Footer'
+import TopMenu from "./TopMenu";
+import Footer from "./Footer";
 
-export { TopMenu, Footer }
+export { TopMenu, Footer };
