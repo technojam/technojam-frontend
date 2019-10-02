@@ -1,10 +1,10 @@
 import React from 'react';
+
+//material ui component
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
 import Container from '@material-ui/core/Container';
-import Placeholder from '../../images/Placeholder.jpg';
-import shadows from '@material-ui/core/styles/shadows';
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,

@@ -7,7 +7,6 @@ import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-
 import Typography from '@material-ui/core/Typography';
 
 
@@ -52,7 +51,7 @@ function Aboutus() {
                             <CardMedia style={{ textAlign: "center" }}>
                                 <img src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/team.svg" width="50%" height="auto" />
                             </CardMedia><br></br>
-                            <Typography style={{ alignItems: "Center" }}>
+                            <Typography style={{ alignItems: "Center",fontFamily: "Roboto" }}>
                                 Team TechnoJam consist of 50 people and we all work together like a strong team.
                            </Typography>
                         </CardContent>
@@ -62,7 +61,7 @@ function Aboutus() {
                             <CardMedia style={{ textAlign: "center" }}>
                                 <img src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/attendees.svg" width="50%" height="auto" />
                             </CardMedia><br></br>
-                            <Typography style={{ alignItems: "Center" }}>
+                            <Typography style={{ alignItems: "Center",fontFamily: "Roboto" }}>
                                 Technojam conducts more than 40+ events at Galgotias institution per year.
                            </Typography>
                         </CardContent>
@@ -72,7 +71,7 @@ function Aboutus() {
                             <CardMedia style={{ textAlign: "center" }}>
                                 <img src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/event-management.svg" width="50%" height="auto" />
                             </CardMedia><br></br>
-                            <Typography style={{ alignItems: "Center" }}>
+                            <Typography style={{ alignItems: "Center",fontFamily: "Roboto" }}>
                                 TechnoJam has Reached upto 3000+ attendee through its workshops, Hackathons.
                            </Typography>
                         </CardContent>
@@ -98,12 +97,12 @@ function Aboutus() {
                             }}>
 
                                 <CardContent >
-                                    <Typography variant="h3" style={{ textAlign: "center", fontFamily: "Simplifica", color: "#fafafa", letterSpacing: "2px" }} >
+                                    <Typography variant="h3" style={{ textAlign: "center", fontFamily: "Roboto", color: "#fafafa", letterSpacing: "2px" }} >
                                         Our Vision
                                 </Typography>
                                 </CardContent>
                                 <CardContent >
-                                    <Typography variant="body1" style={{ color: "#fafafa", letterSpacing: "0.8px" }} >
+                                    <Typography variant="body1" style={{ color: "#fafafa", letterSpacing: "0.8px",fontFamily: "Roboto" }} >
                                         <p>To work on various innovative projects which will bestow creative minds thinking patterns
                                         to the upcoming future engineer/scientist so that our mind can boost enough so that we can
                                     face any hurdles in the way of learning new tactics to deal with ever changing or dynamic technology.</p>
@@ -125,12 +124,12 @@ function Aboutus() {
                                 borderRadius: "20px", minHeight: "530px"
                             }}>
                                 <CardContent >
-                                    <Typography variant="h3" style={{ textAlign: "center", fontFamily: "Simplifica", color: "#fafafa", letterSpacing: "2px" }} >
+                                    <Typography variant="h3" style={{ textAlign: "center", fontFamily: "Roboto", color: "#fafafa", letterSpacing: "2px" }} >
                                         Our Mission
                                 </Typography>
                                 </CardContent>
                                 <CardContent >
-                                    <Typography variant="body1" style={{ color: "#fafafa", letterSpacing: "0.8px" }} >
+                                    <Typography variant="body1" style={{ color: "#fafafa", letterSpacing: "0.8px",fontFamily: "Roboto" }} >
                                         <p>1. To develop a platform where the technical innovativeness of students could be nurtured and given
                                          a practical shape so as to improve the technical abilities of students as well as the reputation of
                                     institute as a leader in innovation and creativity.</p>

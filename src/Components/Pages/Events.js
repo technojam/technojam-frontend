@@ -4,15 +4,12 @@ import React, { Component } from "react";
 
 //material ui component
 import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { Grid } from "@material-ui/core";
 import Container from '@material-ui/core/Container';
-
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
-import Slider from '@material-ui/core/Slider';
 import { Timeline, TimelineEvent } from "react-event-timeline";
 
 
@@ -127,21 +124,21 @@ class Events extends Component {
                                             </CardContent>
                                             <Divider></Divider>
                                             <CardContent>
-                                                <Typography variant="body2" color="Secondary" component="p" >
+                                                <Typography variant="body2" color="Secondary" component="p"style={{fontFamily: "Roboto"}} >
                                                     <b>{upevent.date}</b>
                                                 </Typography>
                                             </CardContent>
                                             <CardContent style={{ marginTop: "-20px" }}>
-                                                <Typography variant="body2" color="textSecondary" component="p" style={{ letterSpacing: "0.9px" }} >
+                                                <Typography variant="body2" color="textSecondary" component="p" style={{ letterSpacing: "0.9px",fontFamily: "Roboto" }} >
                                                     {upevent.Description}
                                                 </Typography>
                                             </CardContent>
                                             <Divider />
                                             <CardContent >
-                                                <Typography variant="body2" color="textSecondary" component="p" >
+                                                <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: "Roboto"}} >
                                                     <b>Venue:</b> {upevent.venue}
                                                 </Typography>
-                                                <Button variant="contained" color="secondary" size="small" style={{ marginTop: "5px" }} src={upevent.Register}>
+                                                <Button variant="contained" color="secondary" size="small" style={{ marginTop: "5px",fontFamily: "Roboto" }} src={upevent.Register}>
                                                     Register Now
                                                      </Button>
                                             </CardContent>
@@ -185,12 +182,12 @@ class Events extends Component {
                                             <Divider></Divider>
                                             <br></br>
                                             <CardContent style={{ marginTop: "-20px" }}>
-                                                <Typography variant="body2" color="Secondary" component="p" >
+                                                <Typography variant="body2" color="Secondary" component="p" style={{fontFamily: "Roboto"}} >
                                                     <b>{paevent.date}</b>
                                                 </Typography>
                                             </CardContent>
                                             <CardContent style={{ marginTop: "-20px" }}>
-                                                <Typography variant="body2" color="textSecondary" component="p" style={{ letterSpacing: "0.9px" }}>
+                                                <Typography variant="body2" color="textSecondary" component="p" style={{ letterSpacing: "0.9px",fontFamily: "Roboto" }}>
                                                     {paevent.Description}
                                                 </Typography>
                                             </CardContent>
@@ -199,7 +196,7 @@ class Events extends Component {
                                             <CardContent style={{ marginLeft: "50px" }}>
                                                 <a className="btn btn-social-icon btn-github" href={paevent.Todo} target="_blank">
                                                     <i className="fab fa-github fa-lg" style={{color:"black"}} ></i></a>
-                                                <Button variant="outlined" color="primary" style={{ marginLeft: "10px" }} href={paevent.Feedback} >
+                                                <Button variant="outlined" color="primary" style={{ marginLeft: "10px",fontFamily: "Roboto" }} href={paevent.Feedback} >
                                                     Feedback
                                                  </Button>
                                             </CardContent>

@@ -19,7 +19,7 @@ function Maincontent() {
                 <Route exact path="/Alumni" component={Alumni} />
                 <Route exact path="/team" component={team} />
                 <Route exact path="/groups" component={groups} />
-                <Route exact path="/resources" component={Resources} />
+                
             </Switch>
         </div>
     );
