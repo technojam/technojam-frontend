@@ -83,7 +83,7 @@ class Mentorship extends Component {
                             <div style={{ paddingTop: "20px", right: "", marginLeft: "auto", marginRight: "auto", maxWidth: "550px", paddingLeft: "20px" }}>
 
                                 <Typography variant="h6" style={{ fontFamily: "Roboto", letterSpacing: "2px" }}>
-                                    Know More :&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;
+                                    Know More&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;
                                     <Hidden smDown>
                                         Designed by
                                     <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />

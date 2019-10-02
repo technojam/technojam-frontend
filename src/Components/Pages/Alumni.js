@@ -4,7 +4,7 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import { Grid } from "@material-ui/core";
+import { Grid, Hidden } from "@material-ui/core";
 
 class Alumni extends Component {
 
@@ -85,14 +85,14 @@ class Alumni extends Component {
 
 
             <Container maxWidth="lg">
-                <div style={{ marginTop: "30px", marginBottom: "20px", maxWidth:"sm"}}>
+                <div style={{ marginTop: "80px", marginBottom: "20px", maxWidth:"sm"}}>
                     <div >
                     <h2 style={{color:"#007FFF",textAlign:"center"}}>
                             Our Alumni 
                     </h2>
                         <hr style={{
                             maxWidth: "120px",
-                            borderWidth: "1px",
+                            borderWidth: "0.6px",
                             opacity: "1",
                             marginTop: "25px",
                             marginBottom: "25px",
@@ -126,18 +126,18 @@ class Alumni extends Component {
                                                     </CardMedia>
 
                                                     <CardContent>
+                                                       
+                                                    
                                                         <Typography variant="h7"  component="p" style={{fontFamily:"Linotte"}}>
                                                             {achie.title}
-                                                        </Typography>
-                                                    </CardContent>
-                                                    <CardContent style={{marginTop:"-20px"}}>
-                                                    <div style={{alignItems:'center',justifyContent: 'center'}}>
+                                                            <Hidden smDown>
+                                                            &#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;
+                                                            </Hidden>
                                                         <a className="btn btn-social-icon btn-google" href={achie.Google} target="_blank"><i className="fab fa-google fa-lg"style={{color:'#28aae1'}}></i></a>&#8194;
                                                         <a className="btn btn-social-icon btn-linkedin" href={achie.Linkedin} target="_blank"><i className="fab fa-linkedin fa-lg" style={{color:'#0077b5'}}></i></a>&#8194;       
-                                                    </div>
+                                                    </Typography>
                                                     </CardContent>
-                                                     <Grid container direction="row" spacing={80} >                                                            
-                                                    </Grid>
+                                                
                                                 </Card>
                                      </Grid>
                             ))}
