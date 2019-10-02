@@ -10,12 +10,9 @@ import Typography from '@material-ui/core/Typography';
 
 var sectionStyle = {
     width: "100%",
-    height: "auto",
     backgroundImage: "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.PNG)",
-    backgroundRepeat: "no-repeat",
-    marginTop: "40px",
-    backgroundPositionX: "center",
-    minHeight: "1000px"
+    backgroundRepeat: "repeat-y",
+    minHeight:'1000px',
 
 };
 
@@ -77,10 +74,10 @@ class Groups extends Component {
         console.log(Groups);
         return (
 
-
-<div style={sectionStyle}>
+<section >
+<div >
            <Container maxWidth="lg">
-                <div style={{ marginTop: "100px", marginBottom: "20px", }}>
+                <div style={{ marginBottom: "20px", }}>
                     <div >
 
                         <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
@@ -131,6 +128,7 @@ class Groups extends Component {
             </Container>
             
 </div>
+</section>      
         );
     }
 }
