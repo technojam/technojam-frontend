@@ -118,13 +118,6 @@ function ResponsiveDrawer(props) {
           <ListItemText primary="Mentorship" />
         </ListItem>
 
-        <ListItem button component={Link} to={'/resources'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            
-          </ListItemIcon>
-          <ListItemText primary="Resources" />
-        </ListItem>
-
         <ListItem button component={Link} to={'/groups'} onClick={handleDrawerToggle}>
           <ListItemIcon>
            
