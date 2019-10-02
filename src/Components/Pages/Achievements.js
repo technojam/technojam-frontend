@@ -124,7 +124,7 @@ class Achievements extends Component {
                                                         </Typography>
                                                     </CardContent>
                                                     <CardContent style={{marginTop:"-20px",letterSpacing:"2px"}}>
-                                                        <Typography variant="body2" color="textSecondary" component="p" style={{letterSpacing:"0.9px"}} >
+                                                        <Typography variant="body2" color="textSecondary" component="p" style={{letterSpacing:"0.9px",fontFamily: "Roboto"}} >
                                                             {achie.Description}
                                                         </Typography>
                                                         </CardContent>

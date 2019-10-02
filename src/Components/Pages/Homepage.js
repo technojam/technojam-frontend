@@ -1,21 +1,32 @@
 import React, { Component } from "react";
-import { Grid, Container, Divider, Typography } from "@material-ui/core";
+
+//material ui component
+import { Grid,  Typography, Hidden } from "@material-ui/core";
 import Button from '@material-ui/core/Button';
-import { homedir } from "os";
+
 const Style = {
     marginTop: "60px",
+    maxHeight:"720px",
 
-    maxHeight: "720px",
+   
     square: {
 
         border: "4px solid yellow",
         padding: "20px",
-        width: "auto",
-        height: "auto",
+        
         position: "absolute",
         marginTop: "180px",
         left: "46px",
-        marginRight:"40px"
+        marginRight:"40px",
+    },
+    square1: {
+
+        border: "4px solid yellow",
+        padding: "20px",
+        position: "absolute",
+        marginTop: "18px",
+        left: "46px",
+        marginRight:"40px",
     },
     back: {
         width: "100%",
@@ -34,28 +45,7 @@ const Style = {
         backgroundColor:"yellow",
 
     },
-    webkitScrollbarTrack:{
-        webkitBoxShadow:"inset 0 0 6px rgba(0,0,0,0.3)",
-        backgroundColor:"#F5F5F5",
-        borderRadius:"10px"
-    },
-    webkitScrollbar:{
-        width: "10px",
-        backgroundColor: "#f5f5f5",
-    },
-    webkitScrollbarThumb:{
-        borderRadius:"10px",
-        backgroundImage:{
-            webkitGradient:{
-                
-			     left: "bottom",
-				 left: "top",
-				 colorStop:"(0.44, rgb(122,153,217))",
-				 colorStop:"(0.72, rgb(73,125,189))",
-				 colorStop:"(0.86, rgb(28,58,148))",
-            }
-        }
-    }
+    
 }
 
 class Homepage extends Component {
@@ -94,7 +84,7 @@ class Homepage extends Component {
 
 
                         <Grid container xs={6} sm={3} md={3}>
-
+                            <Hidden smDown>
                             <div style={Style.square}>
                             <div style={{ marginLeft: "auto", marginRight: "auto", maxWidth: "550px", paddingLeft: "20px", paddingRight: "20px" }}>
                             <Typography variant="h3" style={{ fontFamily: "Roboto", letterSpacing: "2px",color:"white"}}>
@@ -109,6 +99,24 @@ class Homepage extends Component {
                                 </Button>
                                 </div>
                              </div>
+                             </Hidden>
+                             
+                             <Hidden     mdUp>
+                            <div style={Style.square1}>
+                            <div style={{ marginLeft: "auto", marginRight: "auto", maxWidth: "550px", paddingLeft: "20px", paddingRight: "20px" }}>
+                            <Typography variant="h3" style={{ fontFamily: "Roboto", letterSpacing: "2px",color:"white",fontSize: "28px"}}>
+                                {Home.title}
+                             </Typography><br></br>
+                                <Typography variant="body2" style={{ fontFamily: "Roboto", letterSpacing: "1px", fontSize: "14px", lineHeight: "28px", wordSpacing: "5px",color:"white"}}>
+                                    {Home.content}
+                                </Typography>
+                                <br></br>
+                                <Button variant="contained" style={Style.button}>
+                                      {Home.buttonname}  <a  href={Home.cta} target="_blank"></a>
+                                </Button>
+                                </div>
+                             </div>
+                             </Hidden>
 
                         </Grid>
                     </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Logo from '../../images/logo_small.png';
+
 
 //material ui component
 import Container from '@material-ui/core/Container';
@@ -7,9 +7,6 @@ import { Typography, Hidden, Grid } from '@material-ui/core';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
 
 
 
@@ -84,10 +81,7 @@ class Mentorship extends Component {
 
                                 <Typography variant="h6" style={{ fontFamily: "Roboto", letterSpacing: "2px" }}>
                                     Know More&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;
-                                    <Hidden smDown>
-                                        Designed by
-                                    <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />
-                                    </Hidden>
+                                  
 
                                 </Typography><br></br>
 
@@ -100,13 +94,6 @@ class Mentorship extends Component {
                                     <a  href="https://instagram.com/technojam_galgotias" target="_blank"><i className="fab fa-instagram fa-lg" style={{ color: '#e44134' }}></i></a>&#8194;
                                 </Typography>
 
-                                <Hidden smUp>
-                                    <br></br>
-                                    <Typography variant="h6" style={{ fontFamily: "Roboto", letterSpacing: "2px" }}>
-                                        Designed by
-                                    <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />
-                                    </Typography><br></br>
-                                </Hidden>
 
 
 
