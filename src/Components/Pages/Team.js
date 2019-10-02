@@ -11,15 +11,21 @@ const useStyles = makeStyles(() => ({
     marginTop:"100px",
     marginBottom:20,
     minHeight:"580px",
-    
-    
   },  
 }));
 const circle={
     width: 80,
     borderRadius: 40,
 }
+var sectionStyle = {
+  width: "100%",
+  height: "auto",
+  backgroundImage: "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.PNG)",
+  backgroundRepeat: "on-repeat",
+  marginTop: "-40px",
+  backgroundPositionX: "center"
 
+};
 const tileData = [
   {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anubhav Raj Singh.jpeg",
@@ -243,6 +249,7 @@ export default function Team() {
   const classes = useStyles();
 
   return (
+    <div style={sectionStyle}>
     <div className={classes.root}>
       <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
       Our Team
@@ -270,6 +277,7 @@ export default function Team() {
         ))}
        </Grid>
       </Container>
+      </div>
       </div>
   );
 }

@@ -10,10 +10,19 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 
-
+var sectionStyle = {
+    width: "100%",
+    height: "auto",
+    backgroundImage: "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.PNG)",
+    backgroundRepeat: "no-repeat",
+    marginTop: "40px",
+    backgroundPositionX: "center"
+  
+  };
 
 function Aboutus() {
     return (
+        <div style={sectionStyle}>
         <Container maxWidth="lg">
             <div className="aboutus" style={{ marginTop: "100px" }}>
                 <h2 style={{ color: "#007FFF", textAlign: "center", fontFamily: "Roboto" }}>
@@ -142,7 +151,7 @@ function Aboutus() {
             </div>
             <br></br><br></br>
         </Container>
-
+        </div>
     );
 }
 export default Aboutus;
