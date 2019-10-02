@@ -5,6 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
 import Container from '@material-ui/core/Container';
+const style = {
+  height:'83vh'
+}
+
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
@@ -240,7 +244,7 @@ export default function Team() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={style}>
       <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
       Our Team
       </h2>

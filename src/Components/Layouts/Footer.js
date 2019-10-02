@@ -12,8 +12,9 @@ import Typography from '@material-ui/core/Typography';
 
 
 export default props =>
-    <div style={{ marginBottom: 'auto', marginTop: 'auto', marginLeft: 'auto', marginRight: 'auto', padding: 'auto' }}>
-        <AppBar position="static" color="default">
+<container>
+    <div style={{ marginBottom: 'auto', marginTop: 'auto', marginLeft: 'auto', marginRight: 'auto', padding: 'auto' , }}>
+        <AppBar position="static" color="default" >
             <Toolbar>
 
                 <Grid container direction="row" justify="flex-start" alignItems="flex-end">
@@ -53,3 +54,4 @@ export default props =>
             </Toolbar>
         </AppBar>
     </div>
+    </container>

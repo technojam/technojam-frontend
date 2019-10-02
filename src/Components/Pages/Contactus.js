@@ -15,7 +15,7 @@ import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterH
 
 var sectionStyle = {
     width: "100%",
-    height: "auto",
+    height:'85vh',
     backgroundRepeat: "no-repeat",
     marginTop: "100px",
     backgroundPositionX: "center",

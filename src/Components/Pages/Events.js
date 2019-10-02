@@ -14,7 +14,9 @@ import { Timeline, TimelineEvent } from "react-event-timeline";
 
 
 
-
+const style = {
+    height:'85vh'
+}
 
 
 class Events extends Component {
@@ -92,7 +94,7 @@ class Events extends Component {
 
 
         return (
-
+            <div style={style}>
             <Container>
                 <section style={{ marginBottom: "15px",marginTop:"65px" }}>
 
@@ -215,6 +217,7 @@ class Events extends Component {
                     <br></br><br></br>
                 </section>
             </Container>
+            </div>
         )
     }
 }

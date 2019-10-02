@@ -59,6 +59,114 @@ class Achievements extends Component {
                     Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
                     Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
                     
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
                 }
             ]
         }

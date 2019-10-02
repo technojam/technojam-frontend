@@ -7,6 +7,9 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
+const style = {
+    height:'85vh'
+}
 
 class Groups extends Component {
 
@@ -65,7 +68,7 @@ class Groups extends Component {
 
         console.log(Groups);
         return (
-
+            <div style={style}>
            <Container maxWidth="lg">
                 <div style={{ marginTop: "100px", marginBottom: "20px", }}>
                     <div >
@@ -116,7 +119,7 @@ class Groups extends Component {
                     </div>
                 </div>
             </Container>
-        
+        </div>
         );
     }
 }
