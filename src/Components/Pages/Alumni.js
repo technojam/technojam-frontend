@@ -36,6 +36,49 @@ class Alumni extends Component {
                     Linkedin: "https://www.linkedin.com/in/rohith-kandi-77a671108/",
                     Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg",
                 },
+                {
+                    id: 4,
+                    title: "Kaustubh",
+                    Google: "kausr2595@gmail.com",
+                    Linkedin: "https://www.linkedin.com/in/kausr2595/",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg",
+                },
+                {
+                    id: 5,
+                    title: "Aditya Kumar ",
+                    Google: "Aditya12.official@gmail.com ",
+                    Linkedin: "#",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg\",
+                },
+                {
+                    id: 6,
+                    title: "Shivashish Ratnam",
+                    Google: "shivashishratnam@gmail.com",
+                    Linkedin: "https://www.linkedin.com/in/shivashish-ratnam/",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg",
+                },
+                {
+                    id: 7,
+                    title: "Satya Tripathi",
+                    Google: "satya06.official@gmail.com",
+                    Linkedin: "#",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg",
+                },
+                {
+                    id: 8,
+                    title: "shashank sharma",
+                    Google: "shashank@thelattice.in",
+                    Linkedin: "https://www.linkedin.com/in/storytellerr/",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg",
+                },
+                {
+                    id: 9,
+                    title: "Shaurya Chauhan",
+                    Google: "scshaurya@gmail.com",
+                    Linkedin: "https://www.linkedin.com/in/shauryachauhan/",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg",
+                },
+               
                
             ]
         }
