@@ -1,0 +1,13 @@
+.stickyFooter {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.appContent {
+  width: 100%;
+  background-image: url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.png);
+  background-repeat: repeat-y;
+  background-position-x: center;
+  flex: 1 0 auto
+}

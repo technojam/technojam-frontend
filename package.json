@@ -8,7 +8,6 @@
     "@material-ui/styles": "^4.3.3",
     "bootstrap-social": "5.1.1",
     "font-awesome": "4.7.0",
-    "material-ui-icons": "^1.0.0-beta.36",
     "react": "^16.9.0",
     "react-chronos": "^1.0.5",
     "react-dom": "^16.9.0",
