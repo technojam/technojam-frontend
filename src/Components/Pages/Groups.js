@@ -20,36 +20,36 @@ class Groups extends Component {
                 {
                     id: 1,
                     title: "Gaming and VR",
-                    Description: "Technojam Gaming and VR speciality Group is Dedicated to devellopment of games",
+                    Description: "Technojam Gaming and VR speciality Group is Dedicated to development of games",
                 },
                 {
                     id: 2,
-                    title: "Gaming and VR",
-                    Description: "Technojam Gaming and VR speciality Group is Dedicated to devellopment of games",
+                    title: "Cloud",
+                    Description: "Technojam Cloud speciality Group is Dedicated to development on Cloud",
 
                 },
                 {
                     id: 3,
-                    title: "Gaming and VR",
-                    Description: "Technojam Gaming and VR speciality Group is Dedicated to devellopment of games",
+                    title: "Web",
+                    Description: "Technojam Web speciality Group is Dedicated to development of Websites",
 
                 },
                 {
                     id: 4,
-                    title: "Gaming and VR",
-                    Description: "Technojam Gaming and VR speciality Group is Dedicated to devellopment of games",
+                    title: "Android",
+                    Description: "Technojam Android speciality Group is Dedicated to development of Apps",
 
                 },
                 {
                     id: 5,
-                    title: "Gaming and VR",
-                    Description: "Technojam Gaming and VR speciality Group is Dedicated to devellopment of games",
+                    title: "CyberSecruity",
+                    Description: "Technojam CyberSecurity speciality Group is Dedicated to development of games",
 
                 },
                 {
                     id: 6,
-                    title: "Gaming and VR",
-                    Description: "Technojam Gaming and VR speciality Group is Dedicated to devellopment of games",
+                    title: "Competitive Coding",
+                    Description: "Technojam Competitive Coding speciality Group is Dedicated to Data Structures",
 
                 },
 
@@ -76,7 +76,7 @@ class Groups extends Component {
                     <div >
 
                         <Typography variant="h3" style={{ fontFamily: "Roboto", letterSpacing: "1px", lineHeight: "28px", wordSpacing: "5px",textAlign:"center",color:"#073fff"}}>
-                            S`peciality Groups
+                            Speciality Groups
                             </Typography>
                         <hr style={{
                             maxWidth: "120px",
