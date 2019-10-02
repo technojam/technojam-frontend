@@ -14,7 +14,9 @@ import { Timeline, TimelineEvent } from "react-event-timeline";
 
 
 
-
+const style = {
+    height:'85vh'
+}
 
 
 class Events extends Component {
@@ -96,6 +98,7 @@ class Events extends Component {
             <Container maxWidth="xl" style={{width:"100%",top:"0"}}>
                   
                 <section style={{ marginBottom: "15px",marginTop:"65px",width:"100%"}}>
+
 
                     <Grid container
                         direction="row"
@@ -216,6 +219,7 @@ class Events extends Component {
                     <br></br><br></br>
                 </section>
             </Container>
+            </div>
         )
     }
 }

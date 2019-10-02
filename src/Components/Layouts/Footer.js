@@ -25,6 +25,7 @@ export default props =>
     }}>
         <AppBar position="static" color="default">
 
+
             <Toolbar>
 
                 <Grid container direction="row" justify="flex-start" alignItems="flex-end">
@@ -64,3 +65,4 @@ export default props =>
             </Toolbar>
         </AppBar>
     </div>
+    </container>

@@ -5,6 +5,7 @@ import Events from './Pages/Events';
 import Resources from './Pages/Resources';
 import Login from './Pages/Login';
 import Alumni from './Pages/Alumni';
+
 function Maincontent() {
     return(
         <div className="main-content" >

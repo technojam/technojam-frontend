@@ -6,6 +6,12 @@ import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+const style = {
+  height:'83vh'
+}
+
+
+
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
@@ -40,11 +46,6 @@ const tileData = [
     Name: "Abhimanyu Dwivedi"
   },
   {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/AKSHAT AKARSH.jpg",
-    tilte: "Image",
-    Name: "Akshat akarsh"
-  },
-  {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Aman.jpg",
     tilte: "Image",
     Name: "Aman"
@@ -58,11 +59,6 @@ const tileData = [
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Ankit Srivastava.jpg ",
     tilte: "Image",
     Name: "ANKIT ANMOL SRIVASTAVA "
-  },
-  {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Ankush Shrivastava.jpg",
-    tilte: "Image",
-    Name: "Ankush Shrivastava"
   },
   {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anshika Soni.jpg",
@@ -145,11 +141,6 @@ const tileData = [
     Name: "Naman Jain"
   },
   {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Pradeep Parajuli.jpg",
-    tilte: "Image",
-    Name: "Pradeep"
-  },
-  {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Prakhar Srivastava.jpg",
     tilte: "Image",
     Name: "Prakhar Srivastava"
@@ -195,19 +186,9 @@ const tileData = [
     Name: "Satyam Bharti"
   },
   {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/saurabh kumar.jpg",
-    tilte: "Image",
-    Name: "Saurabh kumar"
-  },
-  {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/SHASHWAT SINGH.jpg",
     tilte: "Image",
     Name: "Shashwat Singh"
-  },
-  {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Shivam Mittal.JPG",
-    tilte: "Image",
-    Name: "Shivam Mittal"
   },
   {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Shivam Sharma.jpg",
@@ -225,11 +206,6 @@ const tileData = [
     Name: "Vidit Varshney"
   },
   {
-    img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/vineeta singh.jpg",
-    tilte: "Image",
-    Name: "Vineeta chaudhary"
-  },
-  {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Vishal Kumar.jpg",
     tilte: "Image",
     Name: "Vishal Kumar"
@@ -241,8 +217,10 @@ export default function Team() {
   const classes = useStyles();
 
   return (
+
     <div className={classes.root}>
       <Typography variant="h3" style={{ fontFamily: "Roboto", letterSpacing: "1px", lineHeight: "28px", wordSpacing: "5px",textAlign:"center",color:"#073fff"}}>
+
       Our Team
       </Typography>
       <hr style={{
