@@ -88,8 +88,8 @@ class Alumni extends Component {
                 <div style={{ marginTop: "30px", marginBottom: "20px", maxWidth:"sm"}}>
                     <div >
                     <h2 style={{color:"#007FFF",textAlign:"center"}}>
-                            Our Alumni's    
-                            </h2>
+                            Our Alumni 
+                    </h2>
                         <hr style={{
                             maxWidth: "120px",
                             borderWidth: "1px",
