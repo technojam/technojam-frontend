@@ -32,7 +32,7 @@ const Style = {
         width: "100%",
         height: "100%",
         //Put new background Image here of Size 1550 * 720 px
-        backgroundImage: "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/951.png)",
+        backgroundImage: "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png)",
         //Good Boy don't touch anything else
         backgroundRepeat: "no-repeat",
         
