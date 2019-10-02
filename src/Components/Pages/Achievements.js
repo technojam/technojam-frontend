@@ -10,16 +10,6 @@ import { Grid } from "@material-ui/core";
 import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
 
-var sectionStyle = {
-    width: "100%",
-    height: "auto",
-    backgroundImage: "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.PNG)",
-    backgroundRepeat: "no-repeat",
-    marginTop: "-40px",
-    backgroundPositionX: "center"
-  
-  };
-
 class Achievements extends Component {
 
     constructor(props) {
@@ -83,9 +73,7 @@ class Achievements extends Component {
         console.log(achie);
         return (
 
-            <div style={sectionStyle}>
             <Container maxWidth="lg">
-                <br></br>
                 <div style={{ marginTop: "100px",
                                }}>
                     <div >
@@ -150,7 +138,6 @@ class Achievements extends Component {
 
                 </div>
             </Container>
-            </div>
         );
     }
 }
