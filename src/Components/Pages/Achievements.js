@@ -185,9 +185,9 @@ class Achievements extends Component {
                 <div style={{ marginTop: "100px",
                                }}>
                     <div >
-                    <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
+                    <Typography variant="h3" style={{ fontFamily: "Roboto", letterSpacing: "1px", lineHeight: "28px", wordSpacing: "5px",textAlign:"center",color:"#073fff"}}>
                             Our Achievements    
-                            </h2>
+                            </Typography>
                         <hr style={{
                             maxWidth: "120px",
                             borderWidth: "0.6px",

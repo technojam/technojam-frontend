@@ -59,7 +59,6 @@ export default function TopMenu() {
                         <Button color="inherit" component={Link} to={'/'}>
                             <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />
 
-                            <Hidden smDown> <Typography style={{ fontFamily: "Roboto",letterSpacing:"1px" }}>TechnoJam</Typography></Hidden>
                         </Button>
                     </Grid>
                     <Hidden smDown>

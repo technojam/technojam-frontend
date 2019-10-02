@@ -35,7 +35,7 @@ const Style = {
         backgroundImage: "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png)",
         //Good Boy don't touch anything else
         backgroundRepeat: "no-repeat",
-        marginTop: "40px",
+        
         backgroundPositionX: "center",
         minHeight: "750px",
    

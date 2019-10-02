@@ -15,60 +15,27 @@ class Alumni extends Component {
             achie: [
                 {
                     id: 1,
-                    title: "Name",
-                    Google: "#",
-                    Linkedin: "#",
-                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
+                    title: "Honey Sharma",
+                    Google: "honey.singhroi@gmail.com",
+                    Linkedin: "https://www.linkedin.com/in/honey-sharma-77198314b/",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Honey+Sharma.jpg",
                 },
+             
+              
                 {
                     id: 2,
-                    title: "Name",
-                    Google: "#",
-                    Linkedin: "#",
-                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
+                    title: "Shivam Mittal",
+                    Google: "shivammittal114@gmail.com",
+                    Linkedin: "https://www.linkedin.com/in/shivammittal121",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Shivam+Mittal.JPG",
                 },
                 {
                     id: 3,
-                    title: "Name",
-                    Google: "#",
-                    Linkedin: "#",
-                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
+                    title: "Rohith Kandi",
+                    Google: "kandirohith09@gmail.com",
+                    Linkedin: "https://www.linkedin.com/in/rohith-kandi-77a671108/",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg",
                 },
-                {
-                    id: 4,
-                    title: "Name",
-                    Google: "#",
-                    Linkedin: "#",
-                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
-                },
-                {
-                    id: 5,
-                    title: "Name",
-                    Google: "#",
-                    Linkedin: "#",
-                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
-                },
-                {
-                    id: 6,
-                    title: "Name",
-                    Google: "#",
-                    Linkedin: "#",
-                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
-                },
-                {
-                    id: 7,
-                    title: "Name",
-                    Google: "#",
-                    Linkedin: "#",
-                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
-                },
-                {
-                    id: 8,
-                    title: "Name",
-                    Google: "#",
-                    Linkedin: "#",
-                    Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Placeholder.jpg",
-                }
                
             ]
         }
@@ -86,9 +53,10 @@ class Alumni extends Component {
             <Container maxWidth="lg">
                 <div style={{ marginTop: "80px", marginBottom: "20px", maxWidth:"sm"}}>
                     <div >
-                    <h2 style={{color:"#007FFF",textAlign:"center"}}>
+                        <br></br>
+                    <Typography variant="h3" style={{ fontFamily: "Roboto", letterSpacing: "1px", lineHeight: "28px", wordSpacing: "5px",textAlign:"center",color:"#073fff"}}>
                             Our Alumni 
-                    </h2>
+                    </Typography>
                         <hr style={{
                             maxWidth: "120px",
                             borderWidth: "0.6px",
@@ -112,9 +80,9 @@ class Alumni extends Component {
 
                                     <Grid item xs={6} sm={4} md={3}>
                                                 <Card style={{ 
-                                                    minWidth: "50px",
-                                                    boxShadow: " 0 30px 35px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19)",
-                                                    borderRadius: "20px",
+                                                    minWidth: "30px",
+                                                    boxShadow: " 0 20px 25px 0 rgba(0, 0, 0, 0.1), 0 10px 20px 0 rgba(0, 0, 0, 0.09)",
+                                                    borderRadius: "20px",maxHeight:"500px"
                                                     
                                                 }}>
                                                     
@@ -130,10 +98,10 @@ class Alumni extends Component {
                                                         <Typography variant="h7"  component="p" style={{fontFamily:"Linotte"}}>
                                                             {achie.title}
                                                             <Hidden smDown>
-                                                            &#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;
+                                                            &#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;
                                                             </Hidden>
-                                                        <a className="btn btn-social-icon btn-google" href={achie.Google} target="_blank"><i className="fab fa-google fa-lg"style={{color:'#28aae1'}}></i></a>&#8194;
-                                                        <a className="btn btn-social-icon btn-linkedin" href={achie.Linkedin} target="_blank"><i className="fab fa-linkedin fa-lg" style={{color:'#0077b5'}}></i></a>&#8194;       
+                                                        <a  href={achie.Google} target="_blank"><i class="fas fa-envelope-open-text fa-lg"  style={{color:'#24292e'}}></i></a>&#8194;
+                                                        <a  href={achie.Linkedin} target="_blank"><i className="fab fa-linkedin fa-lg" style={{color:'#0077b5'}}></i></a>&#8194;       
                                                     </Typography>
                                                     </CardContent>
                                                 

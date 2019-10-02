@@ -11,6 +11,7 @@ const style = {
     height:'85vh'
 }
 
+
 class Groups extends Component {
 
     constructor(props) {
@@ -22,36 +23,36 @@ class Groups extends Component {
                 {
                     id: 1,
                     title: "Gaming and VR",
-                    Description: "Technojam Gaming and VR speciality Group is Dedicated to devellopment of games",
+                    Description: "Technojam Gaming and VR speciality Group is Dedicated to development of games",
                 },
                 {
                     id: 2,
-                    title: "Gaming and VR",
-                    Description: "Technojam Gaming and VR speciality Group is Dedicated to devellopment of games",
+                    title: "Cloud",
+                    Description: "Technojam Cloud speciality Group is Dedicated to development on Cloud",
 
                 },
                 {
                     id: 3,
-                    title: "Gaming and VR",
-                    Description: "Technojam Gaming and VR speciality Group is Dedicated to devellopment of games",
+                    title: "Web",
+                    Description: "Technojam Web speciality Group is Dedicated to development of Websites",
 
                 },
                 {
                     id: 4,
-                    title: "Gaming and VR",
-                    Description: "Technojam Gaming and VR speciality Group is Dedicated to devellopment of games",
+                    title: "Android",
+                    Description: "Technojam Android speciality Group is Dedicated to development of Apps",
 
                 },
                 {
                     id: 5,
-                    title: "Gaming and VR",
-                    Description: "Technojam Gaming and VR speciality Group is Dedicated to devellopment of games",
+                    title: "CyberSecruity",
+                    Description: "Technojam CyberSecurity speciality Group is Dedicated to development of games",
 
                 },
                 {
                     id: 6,
-                    title: "Gaming and VR",
-                    Description: "Technojam Gaming and VR speciality Group is Dedicated to devellopment of games",
+                    title: "Competitive Coding",
+                    Description: "Technojam Competitive Coding speciality Group is Dedicated to Data Structures",
 
                 },
 
@@ -68,14 +69,20 @@ class Groups extends Component {
 
         console.log(Groups);
         return (
-            <div style={style}>
+
+
+
+<section >
+<div >
+
+
            <Container maxWidth="lg">
-                <div style={{ marginTop: "100px", marginBottom: "20px", }}>
+                <div style={{ marginBottom: "20px", marginTop:"90px"}}>
                     <div >
 
-                        <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
-                            Our speciality Groups
-                            </h2>
+                        <Typography variant="h3" style={{ fontFamily: "Roboto", letterSpacing: "1px", lineHeight: "28px", wordSpacing: "5px",textAlign:"center",color:"#073fff"}}>
+                            Speciality Groups
+                            </Typography>
                         <hr style={{
                             maxWidth: "120px",
                             borderWidth: "0.6px",
@@ -119,7 +126,13 @@ class Groups extends Component {
                     </div>
                 </div>
             </Container>
+
         </div>
+
+</div>
+</section>      
+
+
         );
     }
 }

@@ -94,9 +94,11 @@ class Events extends Component {
 
 
         return (
-            <div style={style}>
-            <Container>
-                <section style={{ marginBottom: "15px",marginTop:"65px" }}>
+
+            <Container maxWidth="xl" style={{width:"100%",top:"0"}}>
+                  
+                <section style={{ marginBottom: "15px",marginTop:"65px",width:"100%"}}>
+
 
                     <Grid container
                         direction="row"

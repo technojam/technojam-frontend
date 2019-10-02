@@ -5,9 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
 import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
 const style = {
   height:'83vh'
 }
+
+
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -214,10 +217,12 @@ export default function Team() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root} style={style}>
-      <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
+
+    <div className={classes.root}>
+      <Typography variant="h3" style={{ fontFamily: "Roboto", letterSpacing: "1px", lineHeight: "28px", wordSpacing: "5px",textAlign:"center",color:"#073fff"}}>
+
       Our Team
-      </h2>
+      </Typography>
       <hr style={{
       maxWidth: "120px",
       borderWidth: "0.6px",
