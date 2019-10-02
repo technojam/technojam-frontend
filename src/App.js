@@ -16,13 +16,12 @@ function App() {
   return (
     <div className="App" style={sectionStyle}>
       <Fragment>
-      <TopMenu />
-     
-      <Maincontent />
-      <Footer/>
-        </Fragment>
- </div>
-    
+        <TopMenu />
+      
+        <Maincontent />
+        <Footer/>
+      </Fragment>
+    </div>
   );
 }
 
