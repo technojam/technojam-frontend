@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     flexGrow: 1,
     marginTop:"100px",
     marginBottom:20,
-    minHeight:"555px",
+    minHeight:"580px",
 
     
   },  
