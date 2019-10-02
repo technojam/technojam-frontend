@@ -11,15 +11,12 @@ const useStyles = makeStyles(() => ({
     marginTop:"100px",
     marginBottom:20,
     minHeight:"580px",
-    
-    
   },  
 }));
 const circle={
     width: 80,
     borderRadius: 40,
 }
-
 const tileData = [
   {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anubhav Raj Singh.jpeg",

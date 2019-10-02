@@ -85,13 +85,12 @@ class Alumni extends Component {
         console.log(achie);
         return (
 
-
             <Container maxWidth="lg">
                 <div style={{ marginTop: "80px", marginBottom: "20px", maxWidth:"sm"}}>
                     <div >
                     <h2 style={{color:"#007FFF",textAlign:"center"}}>
-                            Our Alumni's    
-                            </h2>
+                            Our Alumni 
+                    </h2>
                         <hr style={{
                             maxWidth: "120px",
                             borderWidth: "0.6px",

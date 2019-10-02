@@ -10,8 +10,6 @@ import { Grid } from "@material-ui/core";
 import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
 
-
-
 class Achievements extends Component {
 
     constructor(props) {
@@ -74,7 +72,6 @@ class Achievements extends Component {
 
         console.log(achie);
         return (
-
 
             <Container maxWidth="lg">
                 <div style={{ marginTop: "100px",

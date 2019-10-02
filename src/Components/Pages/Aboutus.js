@@ -10,10 +10,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 
-
-
 function Aboutus() {
     return (
+
         <Container maxWidth="lg">
             <div className="aboutus" style={{ marginTop: "100px" }}>
                 <h2 style={{ color: "#007FFF", textAlign: "center", fontFamily: "Roboto" }}>
@@ -142,7 +141,6 @@ function Aboutus() {
             </div>
             <br></br><br></br>
         </Container>
-
     );
 }
 export default Aboutus;
