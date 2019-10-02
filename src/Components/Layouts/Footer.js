@@ -65,4 +65,3 @@ export default props =>
             </Toolbar>
         </AppBar>
     </div>
-    </container>

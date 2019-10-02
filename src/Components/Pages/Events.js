@@ -94,7 +94,7 @@ class Events extends Component {
 
 
         return (
-
+                <div>
             <Container maxWidth="xl" style={{width:"100%",top:"0"}}>
                   
                 <section style={{ marginBottom: "15px",marginTop:"65px",width:"100%"}}>
@@ -219,7 +219,7 @@ class Events extends Component {
                     <br></br><br></br>
                 </section>
             </Container>
-            </div>
+           </div>
         )
     }
 }
