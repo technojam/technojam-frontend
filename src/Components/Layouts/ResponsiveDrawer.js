@@ -107,7 +107,7 @@ function ResponsiveDrawer(props) {
           <ListItemIcon>
             
           </ListItemIcon>
-          <ListItemText primary="Alumin" />
+          <ListItemText primary="Alumni" />
         </ListItem>
 
 
