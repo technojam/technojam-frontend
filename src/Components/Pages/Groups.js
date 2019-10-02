@@ -73,7 +73,7 @@ class Groups extends Component {
 
 
 <section >
-<div >
+
 
 
            <Container maxWidth="lg">
@@ -127,9 +127,9 @@ class Groups extends Component {
                 </div>
             </Container>
 
-        </div>
+     
 
-</div>
+
 </section>      
 
 
