@@ -2,9 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../images/logo_small.png'
 import ResponsiveDrawer from './ResponsiveDrawer';
-import GoogleLogin from 'react-google-login';
-import FacebookLogin from 'react-facebook-login';
 
+//material ui component
 import { AppBar, Toolbar, Button, Badge, IconButton, Hidden } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
@@ -60,7 +59,7 @@ export default function TopMenu() {
                         <Button color="inherit" component={Link} to={'/'}>
                             <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />
 
-                            <Hidden smDown> <Typography style={{ fontFamily: "Aileron",letterSpacing:"1px" }}>TechnoJam</Typography></Hidden>
+                            <Hidden smDown> <Typography style={{ fontFamily: "Roboto",letterSpacing:"1px" }}>TechnoJam</Typography></Hidden>
                         </Button>
                     </Grid>
                     <Hidden smDown>
@@ -183,5 +182,3 @@ export default function TopMenu() {
         </div>
     )
 }
-
-//<Button style={{ style }} component={Link} to={'/resources'}>Resources</Button>

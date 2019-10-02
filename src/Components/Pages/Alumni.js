@@ -1,4 +1,6 @@
 import React,{ Component } from 'react'
+
+//material ui coomponent
 import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -127,7 +129,7 @@ class Alumni extends Component {
                                                     <CardContent>
                                                        
                                                     
-                                                        <Typography variant="h7"  component="p" style={{fontFamily:"Linotte"}}>
+                                                        <Typography variant="h7"  component="p" style={{fontFamily: "Roboto"}}>
                                                             {achie.title}
                                                             <Hidden smDown>
                                                             &#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;

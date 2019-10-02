@@ -4,8 +4,6 @@ import React, { Component } from "react";
 //material ui component
 import { Grid, Container, Divider } from "@material-ui/core";
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
@@ -105,7 +103,7 @@ class Groups extends Component {
                                             </Typography>
                                         </CardContent>
                                         <CardContent style={{ marginTop: "-20px" }}>
-                                            <Typography variant="body2" color="textSecondary" component="p" >
+                                            <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily: "Roboto"}} >
                                                 {Groups.Description}
                                             </Typography>
                                         </CardContent>
