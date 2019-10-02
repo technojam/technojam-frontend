@@ -13,20 +13,18 @@ var sectionStyle = {
 };
 
 function App() {
-    return (
-        <Fragment>
-            <div className="App" style={sectionStyle}>
-                <Fragment>
-                    <TopMenu />
 
-                    <Maincontent />
+  return (
+    <div className="App" style={sectionStyle}>
+      <Fragment>
+        <TopMenu />
+      
+        <Maincontent />
+        <Footer/>
+      </Fragment>
+    </div>
+  );
 
-                </Fragment>
-
-            </div>
-            <Footer />
-        </Fragment>
-    );
 }
 
 export default App;
