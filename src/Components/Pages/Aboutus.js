@@ -15,19 +15,7 @@ function Aboutus() {
 
         <Container maxWidth="lg">
             <div className="aboutus" style={{ marginTop: "100px" }}>
-                <h2 style={{ color: "#007FFF", textAlign: "center", fontFamily: "Roboto" }}>
-                    Our Team
-      </h2>
-                <hr style={{
-                    maxWidth: "120px",
-                    borderWidth: "0.6px",
-                    opacity: "1",
-                    marginTop: "25px",
-                    marginBottom: "25px",
-                    borderColor: "#007FFF"
-                }}>
-                </hr>
-                <br></br>
+
 
 
                 <Grid

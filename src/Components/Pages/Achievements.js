@@ -59,6 +59,114 @@ class Achievements extends Component {
                     Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
                     Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
                     
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
+                },
+                {
+                    id: 4,
+                    title: "Dextrix 1.0",
+                    by: "Team Technojam",
+                    date: "26 August, 2018",
+                    Description: "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
+                    Image: "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1",
+                    
                 }
             ]
         }
@@ -77,9 +185,9 @@ class Achievements extends Component {
                 <div style={{ marginTop: "100px",
                                }}>
                     <div >
-                    <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
+                    <Typography variant="h3" style={{ fontFamily: "Roboto", letterSpacing: "1px", lineHeight: "28px", wordSpacing: "5px",textAlign:"center",color:"#073fff"}}>
                             Our Achievements    
-                            </h2>
+                            </Typography>
                         <hr style={{
                             maxWidth: "120px",
                             borderWidth: "0.6px",

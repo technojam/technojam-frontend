@@ -1,15 +1,9 @@
 import React from 'react'
 
-
 //material ui component
 import { AppBar, Toolbar, Hidden } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-
-
-
-
-
 
 export default props =>
     <AppBar position="static" color="default">

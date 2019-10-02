@@ -15,14 +15,12 @@ import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterH
 
 var sectionStyle = {
     width: "100%",
-    height: "auto",
+    height:'85vh',
     backgroundRepeat: "no-repeat",
     marginTop: "100px",
     backgroundPositionX: "center",
-   
-   
-
-};
+    Height: "100%"
+   };
 const style={
     form:{ 
         padding:"20px",
@@ -127,6 +125,7 @@ class Mentorship extends Component {
                                 sourceType="profile"
                                 screenName="technojam_gu"
                                 options={{height: 440,}}
+                                size="20px"
                             /> 
                           
                             </Card>
@@ -137,7 +136,7 @@ class Mentorship extends Component {
                 </Grid>
                 <br></br>
             </div>
-            <br></br>
+            
             </Container>
     
 

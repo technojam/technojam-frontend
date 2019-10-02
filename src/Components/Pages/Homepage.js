@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 const Style = {
     marginTop: "60px",
     maxHeight:"720px",
-
+    height:'90vh',
    
     square: {
 
@@ -35,7 +35,7 @@ const Style = {
         backgroundImage: "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png)",
         //Good Boy don't touch anything else
         backgroundRepeat: "no-repeat",
-        marginTop: "40px",
+        
         backgroundPositionX: "center",
         minHeight: "750px",
    
