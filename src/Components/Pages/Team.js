@@ -5,21 +5,19 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
 import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
     marginTop:"100px",
     marginBottom:20,
     minHeight:"580px",
-    
-    
   },  
 }));
 const circle={
     width: 80,
     borderRadius: 40,
 }
-
 const tileData = [
   {
     img: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Anubhav Raj Singh.jpeg",
@@ -244,9 +242,9 @@ export default function Team() {
 
   return (
     <div className={classes.root}>
-      <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
+      <Typography variant="h3" style={{ fontFamily: "Roboto", letterSpacing: "1px", lineHeight: "28px", wordSpacing: "5px",textAlign:"center",color:"#073fff"}}>
       Our Team
-      </h2>
+      </Typography>
       <hr style={{
       maxWidth: "120px",
       borderWidth: "0.6px",

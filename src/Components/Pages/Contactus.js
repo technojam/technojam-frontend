@@ -19,7 +19,7 @@ var sectionStyle = {
     backgroundRepeat: "no-repeat",
     marginTop: "100px",
     backgroundPositionX: "center",
-    minHeight:"620px"
+    Height: "100%"
    };
 const style={
     form:{ 

@@ -10,8 +10,6 @@ import { Grid } from "@material-ui/core";
 import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
 
-
-
 class Achievements extends Component {
 
     constructor(props) {
@@ -75,14 +73,13 @@ class Achievements extends Component {
         console.log(achie);
         return (
 
-
             <Container maxWidth="lg">
                 <div style={{ marginTop: "100px",
                                }}>
                     <div >
-                    <h2 style={{color:"#007FFF",textAlign:"center",fontFamily: "Roboto"}}>
+                    <Typography variant="h3" style={{ fontFamily: "Roboto", letterSpacing: "1px", lineHeight: "28px", wordSpacing: "5px",textAlign:"center",color:"#073fff"}}>
                             Our Achievements    
-                            </h2>
+                            </Typography>
                         <hr style={{
                             maxWidth: "120px",
                             borderWidth: "0.6px",
