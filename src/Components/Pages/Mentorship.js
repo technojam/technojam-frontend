@@ -17,7 +17,7 @@ var sectionStyle = {
     backgroundRepeat: "no-repeat",
     marginTop: "40px",
     backgroundPositionX: "center",
-    minHeight: "1000px"
+   
 
 };
 

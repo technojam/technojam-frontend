@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 
 
 export default props =>
+
     <div style={{ 
         marginBottom: 'auto', 
         marginTop: 'auto', 
@@ -23,6 +24,7 @@ export default props =>
         width: 'inherit' 
     }}>
         <AppBar position="static" color="default">
+
             <Toolbar>
 
                 <Grid container direction="row" justify="flex-start" alignItems="flex-end">
