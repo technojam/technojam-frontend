@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 //material ui component
 import Container from "@material-ui/core/Container";
-import { Typography, Hidden, Grid } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
@@ -112,21 +112,29 @@ class Mentorship extends Component {
                   variant="h5"
                   style={{ fontFamily: "Roboto", letterSpacing: "2px" }}
                 >
-                  <a href=" https://twitter.com/technojam_gu" target="_blank">
+                  <a
+                    href=" https://twitter.com/technojam_gu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i
                       className="fab fa-twitter fa-lg"
                       style={{ color: "#28aae1" }}
                     ></i>
                   </a>
                   &#8194;
-                  <a href=" https://tjosc.slack.com/" target="_blank">
+                  <a
+                    href=" https://tjosc.slack.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i
                       className="fab fa-slack fa-lg"
                       style={{ color: "#e44134" }}
                     ></i>
                   </a>
                   &#8194;
-                  <a href="#" target="_blank">
+                  <a href="#" target="_blank" rel="noopener noreferrer">
                     <i
                       className="fab fa-telegram-plane fa-lg"
                       style={{ color: "#f4b602" }}
@@ -136,6 +144,7 @@ class Mentorship extends Component {
                   <a
                     href="https://www.linkedin.com/company/technojam/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i
                       className="fab fa-linkedin fa-lg"
@@ -146,6 +155,7 @@ class Mentorship extends Component {
                   <a
                     href="https://www.facebook.com/technojam.scse/?ref=br_rs"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i
                       className="fab fa-facebook fa-lg"
@@ -156,6 +166,7 @@ class Mentorship extends Component {
                   <a
                     href="https://instagram.com/technojam_galgotias"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i
                       className="fab fa-instagram fa-lg"
@@ -303,14 +314,22 @@ class Mentorship extends Component {
                             paddingTop: "4px"
                           }}
                         >
-                          <a href={project.slack} target="_blank">
+                          <a
+                            href={project.slack}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <i
                               className="fab fa-slack fa-2x"
                               style={{ color: "#e44134" }}
                             ></i>
                           </a>
                           &#8194;
-                          <a href={project.telegram} target="_blank">
+                          <a
+                            href={project.telegram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <i
                               className="fab fa-telegram fa-2x"
                               style={{ color: "#f4b602" }}
@@ -342,7 +361,11 @@ class Mentorship extends Component {
                             paddingTop: "4px"
                           }}
                         >
-                          <a href={project.repolink} target="_blank">
+                          <a
+                            href={project.repolink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <i
                               className="fa fa-link fa-2x"
                               style={{ color: "#be38ae" }}

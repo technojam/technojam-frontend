@@ -24,6 +24,7 @@ function Aboutus() {
             <CardContent>
               <CardMedia style={{ textAlign: "center" }}>
                 <img
+                  alt="alt_text"
                   src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/team.svg"
                   width="50%"
                   height="auto"
@@ -42,6 +43,7 @@ function Aboutus() {
             <CardContent>
               <CardMedia style={{ textAlign: "center" }}>
                 <img
+                  alt="alt_text"
                   src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/attendees.svg"
                   width="50%"
                   height="auto"
@@ -60,6 +62,7 @@ function Aboutus() {
             <CardContent>
               <CardMedia style={{ textAlign: "center" }}>
                 <img
+                  alt="alt_text"
                   src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/event-management.svg"
                   width="50%"
                   height="auto"

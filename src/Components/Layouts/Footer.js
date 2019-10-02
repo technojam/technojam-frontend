@@ -40,6 +40,7 @@ export default props => (
                 className="btn btn-social-icon btn-twitter"
                 href=" https://twitter.com/technojam_gu"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i
                   className="fab fa-twitter fa-lg"
@@ -51,6 +52,7 @@ export default props => (
                 className="btn btn-social-icon btn-facebook"
                 href="facebook.com/technojam.scse "
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i
                   className="fab fa-facebook fa-lg"
@@ -62,6 +64,7 @@ export default props => (
                 className="btn btn-social-icon btn-instagram"
                 href="https://instagram.com/technojam_galgotias"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i
                   className="fab fa-instagram fa-lg"
@@ -73,6 +76,7 @@ export default props => (
                 className="btn btn-social-icon btn-linkedin"
                 href="https://www.linkedin.com/company/technojam/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i
                   className="fab fa-linkedin fa-lg"
@@ -94,6 +98,7 @@ export default props => (
                 className="btn btn-social-icon btn-twitter"
                 href=" https://twitter.com/technojam_gu"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i
                   className="fab fa-twitter fa-lg"
@@ -105,6 +110,7 @@ export default props => (
                 className="btn btn-social-icon btn-facebook"
                 href="facebook.com/technojam.scse "
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i
                   className="fab fa-facebook fa-lg"
@@ -116,6 +122,7 @@ export default props => (
                 className="btn btn-social-icon btn-instagram"
                 href="https://instagram.com/technojam_galgotias"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i
                   className="fab fa-instagram fa-lg"
@@ -127,6 +134,7 @@ export default props => (
                 className="btn btn-social-icon btn-linkedin"
                 href="https://www.linkedin.com/company/technojam/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i
                   className="fab fa-linkedin fa-lg"

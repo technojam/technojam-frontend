@@ -10,10 +10,6 @@ import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
 import { Timeline, TimelineEvent } from "react-event-timeline";
 
-const style = {
-  height: "85vh"
-};
-
 class Events extends Component {
   constructor(props) {
     super(props);
@@ -94,7 +90,6 @@ class Events extends Component {
               >
                 <div
                   style={{
-                    display: "inline",
                     display: "inlineblock",
                     float: "left"
                   }}
@@ -230,6 +225,7 @@ class Events extends Component {
                             className="btn btn-social-icon btn-github"
                             href={paevent.Todo}
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <i
                               className="fab fa-github fa-lg"
@@ -262,5 +258,5 @@ class Events extends Component {
 
 export default Events;
 
-/*<a className="btn btn-social-icon btn-github" src={upevent.Todo} target="_blank">
+/*<a className="btn btn-social-icon btn-github" src={upevent.Todo} target="_blank" rel="noopener noreferrer">
 <i className="fab fa-github fa-lg" ></i></a>*/

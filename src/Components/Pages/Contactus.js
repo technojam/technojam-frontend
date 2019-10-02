@@ -7,26 +7,12 @@ import {
   Hidden,
   Grid,
   Button,
-  CardHeader,
   CardContent
 } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
-import TextField from "@material-ui/core/TextField";
-import clsx from "clsx";
 import { FormGroup } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
-import {
-  TwitterTimelineEmbed,
-  TwitterShareButton,
-  TwitterFollowButton,
-  TwitterHashtagButton,
-  TwitterMentionButton,
-  TwitterTweetEmbed,
-  TwitterMomentShare,
-  TwitterDMButton,
-  TwitterVideoEmbed,
-  TwitterOnAirButton
-} from "react-twitter-embed";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 var sectionStyle = {
   width: "100%",
@@ -168,7 +154,12 @@ class Mentorship extends Component {
                         variant="contained"
                         style={{ backgroundColor: " #e03030", color: "white" }}
                       >
-                        Submit <a href="#" target="_blank"></a>
+                        Submit{" "}
+                        <a
+                          href="#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        ></a>
                       </Button>
                     </Typography>
                   </form>

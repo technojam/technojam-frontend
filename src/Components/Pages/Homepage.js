@@ -107,7 +107,12 @@ class Homepage extends Component {
                     </Typography>
                     <br></br>
                     <Button variant="contained" style={Style.button}>
-                      {Home.buttonname} <a src={Home.cta} target="_blank"></a>
+                      {Home.buttonname}{" "}
+                      <a
+                        src={Home.cta}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      ></a>
                     </Button>
                   </div>
                 </div>
@@ -151,7 +156,12 @@ class Homepage extends Component {
                     </Typography>
                     <br></br>
                     <Button variant="contained" style={Style.button}>
-                      {Home.buttonname} <a href={Home.cta} target="_blank"></a>
+                      {Home.buttonname}{" "}
+                      <a
+                        href={Home.cta}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      ></a>
                     </Button>
                   </div>
                 </div>

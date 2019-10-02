@@ -31,7 +31,6 @@ const style = {
 
 export default function TopMenu() {
   const [open, setOpen] = React.useState(false);
-  const [on, setOn] = React.useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -196,6 +195,7 @@ export default function TopMenu() {
                 className="btn btn-social-icon btn-github"
                 href="https://github.com/technojam"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i
                   className="fab fa-github fa-lg"

@@ -7,7 +7,6 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { Grid } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
-import Divider from "@material-ui/core/Divider";
 
 class Achievements extends Component {
   constructor(props) {
@@ -41,8 +40,6 @@ class Achievements extends Component {
           title: "First Gsocer",
           by: "Rahul Chuhan",
           date: "May 12, 2018",
-          Description:
-            "rahul chuhan Member of Team Teachnojam is the first Gsoc cleared person of Galgotias University",
           Description:
             "Technojam conducting 24 hours hackthon in delhi region at galgotias university. it is recognized by NASA",
           Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/rahul.jpg"
@@ -114,7 +111,12 @@ class Achievements extends Component {
                     }}
                   >
                     <CardMedia>
-                      <img src={achie.Image} width="100%" height="auto" />
+                      <img
+                        alt="alt_text"
+                        src={achie.Image}
+                        width="100%"
+                        height="auto"
+                      />
                     </CardMedia>
 
                     <CardContent>

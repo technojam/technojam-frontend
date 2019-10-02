@@ -10,7 +10,6 @@ import {
   team
 } from "./Pages/";
 import Events from "./Pages/Events";
-import Resources from "./Pages/Resources";
 import Login from "./Pages/Login";
 import Alumni from "./Pages/Alumni";
 

@@ -6,9 +6,6 @@ import Grid from "@material-ui/core/Grid";
 import Tooltip from "@material-ui/core/Tooltip";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-const style = {
-  height: "83vh"
-};
 
 const useStyles = makeStyles(() => ({
   root: {
