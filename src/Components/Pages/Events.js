@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 
 //material ui component
@@ -216,9 +217,12 @@ class Events extends Component {
 			</div>
 		);
 	}
+
 }
 
 export default Events;
 
-/*<a className="btn btn-social-icon btn-github" src={upevent.Todo} target="_blank">
+
+/*<a className="btn btn-social-icon btn-github" src={upevent.Todo} target="_blank" rel="noopener noreferrer">
+
 <i className="fab fa-github fa-lg" ></i></a>*/

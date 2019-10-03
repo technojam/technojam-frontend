@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 //material ui component
+
 import { Grid, Typography, Hidden } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 
@@ -157,6 +158,7 @@ class Homepage extends Component {
 			</div>
 		);
 	}
+
 }
 
 export default Homepage;

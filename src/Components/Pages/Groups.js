@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 
 //material ui component
@@ -123,6 +124,7 @@ class Groups extends Component {
 			</section>
 		);
 	}
+
 }
 
 export default Groups;

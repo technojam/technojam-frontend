@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Container from '@material-ui/core/Container';
 /* @person who is assigned this page set your styles here. height 600 is just for layout.*/
@@ -14,5 +15,6 @@ function Resources() {
 			</div>
 		</Container>
 	);
+
 }
 export default Resources;
