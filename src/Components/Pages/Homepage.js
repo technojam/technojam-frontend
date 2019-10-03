@@ -59,7 +59,8 @@ class Homepage extends Component {
                     content: "Technojam Mentorship initiative is a global program focused on introducing students to open source software development. Since its inception program aims on giving the very best experince of GSOC to enthusiast.",
                     title: "DEXTRIX 2.0",
                     cta: "#",
-                    buttonname:"Register here"
+                    buttonname:"Register here",
+                    Image:"https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png"
                 }
 
             ]
