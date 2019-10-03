@@ -1,48 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 /* Material Components */
-import Divider from '@material-ui/core/Divider';
-import Drawer from '@material-ui/core/Drawer';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Badge from '@material-ui/core/Badge';
+import Divider from "@material-ui/core/Divider";
+import Drawer from "@material-ui/core/Drawer";
+import Hidden from "@material-ui/core/Hidden";
+import IconButton from "@material-ui/core/IconButton";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 /* Icons */
-import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
-import MenuIcon from '@material-ui/icons/Menu';
-import EqualizerRoundedIcon from '@material-ui/icons/EqualizerRounded';
-import PeopleRoundedIcon from '@material-ui/icons/PeopleRounded';
-import PersonRoundedIcon from '@material-ui/icons/PersonRounded';
-import ContactsRoundedIcon from '@material-ui/icons/ContactsRounded';
-import DashboardRoundedIcon from '@material-ui/icons/DashboardRounded';
+import MenuIcon from "@material-ui/icons/Menu";
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
   root: {
-    display: 'flex',
+    display: "flex"
   },
   drawer: {
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       width: drawerWidth,
-      flexShrink: 0,
-    },
+      flexShrink: 0
+    }
   },
   menuButton: {
     marginRight: theme.spacing(0),
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
-    },
+    [theme.breakpoints.up("md")]: {
+      display: "none"
+    }
   },
   drawerPaper: {
-    width: drawerWidth,
-  },
+    width: drawerWidth
+  }
 }));
 
 function ResponsiveDrawer(props) {
@@ -60,86 +53,98 @@ function ResponsiveDrawer(props) {
       <div className={classes.toolbar} />
 
       <List>
-
-        <ListItem button component={Link} to={'/'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-           
-          </ListItemIcon>
+        <ListItem button component={Link} to={"/"} onClick={handleDrawerToggle}>
+          <ListItemIcon></ListItemIcon>
           <ListItemText primary="Home" />
         </ListItem>
-
       </List>
 
       <Divider />
 
       <List>
-
-        <ListItem button component={Link} to={'/aboutus'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            
-          </ListItemIcon>
+        <ListItem
+          button
+          component={Link}
+          to={"/aboutus"}
+          onClick={handleDrawerToggle}
+        >
+          <ListItemIcon></ListItemIcon>
           <ListItemText primary="About Us" />
         </ListItem>
 
-        
-        <ListItem button component={Link} to={'/events'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-           
-          </ListItemIcon>
+        <ListItem
+          button
+          component={Link}
+          to={"/events"}
+          onClick={handleDrawerToggle}
+        >
+          <ListItemIcon></ListItemIcon>
           <ListItemText primary="Events" />
         </ListItem>
 
-        <ListItem button component={Link} to={'/achievements'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            
-          </ListItemIcon>
+        <ListItem
+          button
+          component={Link}
+          to={"/achievements"}
+          onClick={handleDrawerToggle}
+        >
+          <ListItemIcon></ListItemIcon>
           <ListItemText primary="Achievements" />
         </ListItem>
 
-        <ListItem button component={Link} to={'/team'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-           
-          </ListItemIcon>
+        <ListItem
+          button
+          component={Link}
+          to={"/team"}
+          onClick={handleDrawerToggle}
+        >
+          <ListItemIcon></ListItemIcon>
           <ListItemText primary="Team" />
         </ListItem>
 
-        <ListItem button component={Link} to={'/Alumni'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-            
-          </ListItemIcon>
+        <ListItem
+          button
+          component={Link}
+          to={"/Alumni"}
+          onClick={handleDrawerToggle}
+        >
+          <ListItemIcon></ListItemIcon>
           <ListItemText primary="Alumni" />
         </ListItem>
 
-
-        <ListItem button component={Link} to={'/mentorship'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-           
-          </ListItemIcon>
+        <ListItem
+          button
+          component={Link}
+          to={"/mentorship"}
+          onClick={handleDrawerToggle}
+        >
+          <ListItemIcon></ListItemIcon>
           <ListItemText primary="Mentorship" />
         </ListItem>
 
-        <ListItem button component={Link} to={'/groups'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-           
-          </ListItemIcon>
+        <ListItem
+          button
+          component={Link}
+          to={"/groups"}
+          onClick={handleDrawerToggle}
+        >
+          <ListItemIcon></ListItemIcon>
           <ListItemText primary="Groups" />
         </ListItem>
-
       </List>
 
       <Divider />
 
       <List>
-
-
-        <ListItem button component={Link} to={'/contactus'} onClick={handleDrawerToggle}>
-          <ListItemIcon>
-           
-          </ListItemIcon>
+        <ListItem
+          button
+          component={Link}
+          to={"/contactus"}
+          onClick={handleDrawerToggle}
+        >
+          <ListItemIcon></ListItemIcon>
           <ListItemText primary="Contact Us" />
         </ListItem>
-
-
       </List>
     </div>
   );
@@ -162,14 +167,14 @@ function ResponsiveDrawer(props) {
           <Drawer
             container={container}
             variant="temporary"
-            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+            anchor={theme.direction === "rtl" ? "right" : "left"}
             open={mobileOpen}
             onClose={handleDrawerToggle}
             classes={{
-              paper: classes.drawerPaper,
+              paper: classes.drawerPaper
             }}
             ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
+              keepMounted: true // Better open performance on mobile.
             }}
           >
             {drawer}
@@ -181,6 +186,3 @@ function ResponsiveDrawer(props) {
 }
 
 export default ResponsiveDrawer;
-
-
-
