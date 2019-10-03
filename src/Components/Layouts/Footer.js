@@ -4,20 +4,11 @@ import React from "react";
 import { AppBar, Toolbar, Hidden } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import "../style.css";
+import { Color } from "../color";
 
 export default props => (
-  <div
-    style={{
-      marginBottom: "auto",
-      marginTop: "auto",
-      marginLeft: "auto",
-      marginRight: "auto",
-      padding: "auto",
-      position: "fixed",
-      bottom: "0",
-      width: "inherit"
-    }}
-  >
+  <div className="footer_container">
     <AppBar position="static" color="default">
       <Toolbar>
         <Grid
@@ -25,11 +16,9 @@ export default props => (
           direction="row"
           justify="flex-start"
           alignItems="flex-end"
+          className="footer_grid"
         >
-          <Typography
-            variant="body2"
-            style={{ fontSize: "0.92rem", fontFamily: "Roboto" }}
-          >
+          <Typography variant="body2" style={{ fontSize: "0.92rem" }}>
             Copyright © 2019 Team TechnoJam
           </Typography>
         </Grid>
@@ -44,7 +33,7 @@ export default props => (
               >
                 <i
                   className="fab fa-twitter fa-lg"
-                  style={{ color: "#28aae1" }}
+                  style={{ color: Color.color_twitter }}
                 ></i>
               </a>
               &#8194;
@@ -56,7 +45,7 @@ export default props => (
               >
                 <i
                   className="fab fa-facebook fa-lg"
-                  style={{ color: "#3b5998" }}
+                  style={{ color: Color.color_fb }}
                 ></i>
               </a>
               &#8194;
@@ -68,7 +57,7 @@ export default props => (
               >
                 <i
                   className="fab fa-instagram fa-lg"
-                  style={{ color: "#e41a2b" }}
+                  style={{ color: Color.color_insta }}
                 ></i>
               </a>
               &#8194;
@@ -80,7 +69,7 @@ export default props => (
               >
                 <i
                   className="fab fa-linkedin fa-lg"
-                  style={{ color: "#0077b5" }}
+                  style={{ color: Color.color_linkedIn }}
                 ></i>
               </a>
               &#8194;
@@ -102,7 +91,7 @@ export default props => (
               >
                 <i
                   className="fab fa-twitter fa-lg"
-                  style={{ color: "#28aae1" }}
+                  style={{ color: Color.color_twitter }}
                 ></i>
               </a>
               &#8194;
@@ -114,7 +103,7 @@ export default props => (
               >
                 <i
                   className="fab fa-facebook fa-lg"
-                  style={{ color: "#3b5998" }}
+                  style={{ color: Color.color_fb }}
                 ></i>
               </a>
               &#8194;
@@ -126,7 +115,7 @@ export default props => (
               >
                 <i
                   className="fab fa-instagram fa-lg"
-                  style={{ color: "#e41a2b" }}
+                  style={{ color: Color.color_insta }}
                 ></i>
               </a>
               &#8194;
@@ -138,7 +127,7 @@ export default props => (
               >
                 <i
                   className="fab fa-linkedin fa-lg"
-                  style={{ color: "#0077b5" }}
+                  style={{ color: Color.color_linkedIn }}
                 ></i>
               </a>
               &#8194;
@@ -148,7 +137,7 @@ export default props => (
         <Hidden smDown>
           <Grid container direction="row">
             <div style={{ paddingLeft: "100px", paddingRight: "auto" }}>
-              <Typography style={{ fontFamily: "Roboto" }}>
+              <Typography>
                 Email us : Technojam@galgotiasuniversity.edu.in
               </Typography>
             </div>

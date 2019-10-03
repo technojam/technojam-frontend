@@ -5,6 +5,8 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { Grid, Hidden } from "@material-ui/core";
+import '../style.css';
+import { Color } from "../color";
 
 class Alumni extends Component {
     constructor(props) {
@@ -104,26 +106,14 @@ class Alumni extends Component {
                         <br />{" "}
                         <Typography
                             variant="h3"
-                            style={{
-                                fontFamily: "Roboto",
-                                letterSpacing: "1px",
-                                lineHeight: "28px",
-                                wordSpacing: "5px",
-                                textAlign: "center",
-                                color: "#073fff"
-                            }}
+                            className='view_title'
+                           
                         >
                             Our Alumni{" "}
                         </Typography>{" "}
                         <hr
-                            style={{
-                                maxWidth: "120px",
-                                borderWidth: "0.6px",
-                                opacity: "1",
-                                marginTop: "25px",
-                                marginBottom: "25px",
-                                borderColor: "#007FFF"
-                            }}
+                            
+                            className='view_line'
                         ></hr>{" "}
                         <br />
                         <Grid
@@ -136,12 +126,8 @@ class Alumni extends Component {
                             {achie.map(achie => (
                                 <Grid item xs={6} sm={4} md={3}>
                                     <Card
-                                        className="card--shadow"
-                                        style={{
-                                            minWidth: "30px",
-                                            borderRadius: "20px",
-                                            maxHeight: "500px"
-                                        }}
+                                        className="card--shadow view_card"
+                                      
                                     >
                                         <CardMedia>
                                             <img
@@ -155,9 +141,7 @@ class Alumni extends Component {
                                             <Typography
                                                 variant="h7"
                                                 component="p"
-                                                style={{
-                                                    fontFamily: "Roboto"
-                                                }}
+                                               
                                             >
                                                 {" "}
                                                 {achie.title}{" "}
@@ -187,7 +171,7 @@ class Alumni extends Component {
                                                     <i
                                                         className="fab fa-linkedin fa-lg"
                                                         style={{
-                                                            color: "#0077b5"
+                                                            color: Color.color_linkedIn
                                                         }}
                                                     >
                                                         {" "}

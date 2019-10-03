@@ -1,17 +1,17 @@
-
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 //material ui component
-import { Grid, Container, Divider } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import { Grid, Container, Divider } from "@material-ui/core";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
 
 const style = {
-	height: '85vh'
+  height: "85vh"
 };
 
 class Groups extends Component {
+
 	constructor(props) {
 		super(props);
 		//Until backend add data here cards will be created automatically.
@@ -54,77 +54,64 @@ class Groups extends Component {
 	render() {
 		const Groups = this.state.Groups;
 
-		console.log(Groups);
-		return (
-			<section>
-				<Container maxWidth="lg">
-					<div style={{ marginBottom: '20px', marginTop: '90px' }}>
-						<div>
-							<Typography
-								variant="h3"
-								style={{
-									fontFamily: 'Roboto',
-									letterSpacing: '1px',
-									lineHeight: '28px',
-									wordSpacing: '5px',
-									textAlign: 'center',
-									color: '#073fff'
-								}}
-							>
-								Speciality Groups
-							</Typography>
-							<hr
-								style={{
-									maxWidth: '120px',
-									borderWidth: '0.6px',
-									opacity: '1',
-									marginTop: '25px',
-									marginBottom: '25px',
-									borderColor: '#007FFF'
-								}}
-							/>
-							<br />
-							<Grid container spacing={3} direction="row" justify="flex-start" alignItems="flex-start">
-								{Groups.map((Groups) => (
-									<Grid item xs={6} sm={3} md={3}>
-										<Card
-											className="card--shadow"
-											style={{
-												position: 'relative',
-												border: '1px solid rgba(0, 0, 0, 0.04)',
-												padding: '15px 20px',
-												fontSize: '18px',
-												fontWeight: '600',
-												marginBottom: '30px',
-												borderRadius: '15px'
-											}}
-										>
-											<CardContent>
-												<Typography variant="h5" style={{ fontFamily: 'Roboto' }}>
-													{Groups.title}
-												</Typography>
-											</CardContent>
-											<CardContent style={{ marginTop: '-20px' }}>
-												<Typography
-													variant="body2"
-													color="textSecondary"
-													component="p"
-													style={{ fontFamily: 'Roboto' }}
-												>
-													{Groups.Description}
-												</Typography>
-											</CardContent>
-										</Card>
-									</Grid>
-								))}
-							</Grid>
-						</div>
-					</div>
-				</Container>
-			</section>
-		);
-	}
 
+  render() {
+    const Groups = this.state.Groups;
+
+    console.log(Groups);
+    return (
+      <section>
+        <Container maxWidth="lg">
+          <div style={{ marginBottom: "20px", marginTop: "90px" }}>
+            <div>
+              <Typography variant="h3" className="view_title">
+                Speciality Groups
+              </Typography>
+              <hr className="view_line" />
+              <br />
+              <Grid
+                container
+                spacing={3}
+                direction="row"
+                justify="flex-start"
+                alignItems="flex-start"
+              >
+                {Groups.map(Groups => (
+                  <Grid item xs={6} sm={3} md={3}>
+                    <Card
+                      className="card--shadow"
+                      style={{
+                        position: "relative",
+                        border: "1px solid rgba(0, 0, 0, 0.04)",
+                        padding: "15px 20px",
+                        fontSize: "18px",
+                        fontWeight: "600",
+                        marginBottom: "30px",
+                        borderRadius: "15px"
+                      }}
+                    >
+                      <CardContent>
+                        <Typography variant="h5">{Groups.title}</Typography>
+                      </CardContent>
+                      <CardContent className="card_content_top">
+                        <Typography
+                          variant="body2"
+                          color="textSecondary"
+                          component="p"
+                        >
+                          {Groups.Description}
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                ))}
+              </Grid>
+            </div>
+          </div>
+        </Container>
+      </section>
+    );
+  }
 }
 
 export default Groups;
