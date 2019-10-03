@@ -1,0 +1,20 @@
+.banner-text {
+  background-color: white;
+  opacity: 1;
+  margin: auto;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  height: auto;
+  box-shadow: 9px 9px;
+}
+.banner-text h2 {
+  font-size: 66px;
+  font-weight: bold;
+  color: #f08080;
+  text-align: center;
+  text-shadow: 4px 4px black;
+}
