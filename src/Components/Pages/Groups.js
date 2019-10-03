@@ -11,50 +11,49 @@ const style = {
 };
 
 class Groups extends Component {
-  constructor(props) {
-    super(props);
-    //Until backend add data here cards will be created automatically.
-    this.state = {
-      Groups: [
-        {
-          id: 1,
-          title: "Gaming and VR",
-          Description:
-            "Technojam Gaming and VR speciality Group is Dedicated to development of games"
-        },
-        {
-          id: 2,
-          title: "Cloud",
-          Description:
-            "Technojam Cloud speciality Group is Dedicated to development on Cloud"
-        },
-        {
-          id: 3,
-          title: "Web",
-          Description:
-            "Technojam Web speciality Group is Dedicated to development of Websites"
-        },
-        {
-          id: 4,
-          title: "Android",
-          Description:
-            "Technojam Android speciality Group is Dedicated to development of Apps"
-        },
-        {
-          id: 5,
-          title: "CyberSecruity",
-          Description:
-            "Technojam CyberSecurity speciality Group is Dedicated to development of games"
-        },
-        {
-          id: 6,
-          title: "Competitive Coding",
-          Description:
-            "Technojam Competitive Coding speciality Group is Dedicated to Data Structures"
-        }
-      ]
-    };
-  }
+
+	constructor(props) {
+		super(props);
+		//Until backend add data here cards will be created automatically.
+		this.state = {
+			Groups: [
+				{
+					id: 1,
+					title: 'Gaming and VR',
+					Description: 'Technojam Gaming and VR speciality Group is Dedicated to development of games'
+				},
+				{
+					id: 2,
+					title: 'Cloud Computing',
+					Description: 'Technojam Cloud speciality Group is Dedicated to development on Cloud'
+				},
+				{
+					id: 3,
+					title: 'Web Technologies',
+					Description: 'Technojam Web speciality Group is Dedicated to development of Websites'
+				},
+				{
+					id: 4,
+					title: 'Android',
+					Description: 'Technojam Android speciality Group is Dedicated to development of Apps'
+				},
+				{
+					id: 5,
+					title: 'CyberSecruity',
+					Description: 'Technojam CyberSecurity speciality Group is Dedicated to development of games'
+				},
+				{
+					id: 6,
+					title: 'Competitive Coding',
+					Description: 'Technojam Competitive Coding speciality Group is Dedicated to Data Structures'
+				}
+			]
+		};
+	}
+
+	render() {
+		const Groups = this.state.Groups;
+
 
   render() {
     const Groups = this.state.Groups;

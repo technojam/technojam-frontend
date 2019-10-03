@@ -11,57 +11,55 @@ import Divider from "@material-ui/core/Divider";
 import "../style.css";
 
 class Achievements extends Component {
-  constructor(props) {
-    super(props);
-    //Until backend add data here cards will be created automatically.
-    this.state = {
-      achie: [
-        {
-          id: 1,
-          title: "Nasa space Challenge",
-          by: "Darshan Baid",
-          date: "Spetember 15, 2019",
-          Description:
-            "Technojam conducting 24 hours hackthon in delhi region at galgotias university. it is recognized by NASA",
-          Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/space.jpg"
-        },
 
-        {
-          id: 2,
-          title: "First Ideathon",
-          by: "Shwetank",
-          date: "26 August, 2019",
-          Description:
-            "Conducted Ideathon in Galgotias's Induction Program.alomst 300 students took part.crowd was really enthusiastic",
-          Image:
-            " https://tj-static.s3.ap-south-1.amazonaws.com/etc/ideathon.JPG"
-        },
+	constructor(props) {
+		super(props);
+		//Until backend add data here cards will be created automatically.
+		this.state = {
+			achie: [
+				{
+					id: 1,
+					title: 'Nasa Space Apps Challenge',
+					by: 'Darshan Baid',
+					date: 'Spetember 15, 2019',
+					Description:
+						'Technojam conducted 24 hours hackthon in delhi region at galgotia College almost 400 students took part. it is recognized by NASA',
+					Image: 'https://tj-static.s3.ap-south-1.amazonaws.com/etc/space.jpg'
+				},
 
-        {
-          id: 3,
-          title: "First Gsocer",
-          by: "Rahul Chuhan",
-          date: "May 12, 2018",
-          Description:
-            "rahul chuhan Member of Team Teachnojam is the first Gsoc cleared person of Galgotias University",
-          Description:
-            "Technojam conducting 24 hours hackthon in delhi region at galgotias university. it is recognized by NASA",
-          Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/rahul.jpg"
-        },
+				{
+					id: 2,
+					title: 'First Ideathon',
+					by: 'Shwetank',
+					date: '26 August, 2019',
+					Description:
+						"Conducted Ideathon in Galgotias University Induction Program. Alomst 300 students took part. Crowd was really enthusiastic",
+					Image: ' https://tj-static.s3.ap-south-1.amazonaws.com/etc/ideathon.JPG'
+				},
 
-        {
-          id: 4,
-          title: "Dextrix 1.0",
-          by: "Team Technojam",
-          date: "26 August, 2018",
-          Description:
-            "Conducted Dextrix1.0 Galgotias's University first ever hackthon. Almost 200 students took part. ",
-          Image:
-            "https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1"
-        }
-      ]
-    };
-  }
+				{
+					id: 3,
+					title: 'First Gsocer',
+					by: 'Rahul Chuhan',
+					date: 'May 12, 2018',
+					Description:
+						'rahul chuhan Member of Team Teachnojam cleared Gsoc in 2019 in Galgotias University. He worked on R project',
+					Image: 'https://tj-static.s3.ap-south-1.amazonaws.com/etc/rahul.jpg'
+				},
+
+				{
+					id: 4,
+					title: 'Dextrix 1.0',
+					by: 'Team Technojam',
+					date: '26 August, 2018',
+					Description:
+						"Conducted Dextrix1.0 Galgotias's University first ever hackthon in our university. Almost 200 students took part. ",
+					Image: 'https://tj-static.s3.ap-south-1.amazonaws.com/etc/dextrix.jpg'
+				}
+			]
+		};
+	}
+
 
   render() {
     const achie = this.state.achie;

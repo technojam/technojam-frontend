@@ -11,31 +11,32 @@ const Style = {
   maxHeight: "720px",
   height: "90vh",
 
-  square: {
-    border: "4px solid yellow",
-    padding: "20px",
 
-    position: "absolute",
-    marginTop: "180px",
-    left: "46px",
-    marginRight: "40px"
-  },
-  square1: {
-    border: "4px solid yellow",
-    padding: "20px",
-    position: "absolute",
-    marginTop: "18px",
-    left: "46px",
-    marginRight: "40px"
-  },
-  back: {
-    width: "100%",
-    height: "100%",
-    //Put new background Image here of Size 1550 * 720 px
-    backgroundImage:
-      "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png)",
-    //Good Boy don't touch anything else
-    backgroundRepeat: "no-repeat",
+	square: {
+		border: '4px solid yellow',
+		padding: '20px',
+		position: 'absolute',
+		marginTop: '180px',
+		left: '46px',
+		marginRight: '40px',
+
+	},
+	square1: {
+		border: '4px solid yellow',
+		padding: '20px',
+		position: 'absolute',
+		marginTop: '18px',
+		left: '46px',
+		marginRight: '40px'
+	},
+	back: {
+		width: '100%',
+		height: '100%',
+		//Put new background Image here of Size 1550 * 720 px
+		backgroundImage: 'url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png)',
+		//Good Boy don't touch anything else
+		backgroundRepeat: 'no-repeat',
+
 
     backgroundPositionX: "center",
     minHeight: "750px"
@@ -47,21 +48,21 @@ const Style = {
 };
 
 class Homepage extends Component {
-  constructor(props) {
-    super(props);
-    //Until backend add data here cards will be created automatically.
-    this.state = {
-      Home: [
-        {
-          content:
-            "Technojam Mentorship initiative is a global program focused on introducing students to open source software development. Since its inception program aims on giving the very best experince of GSOC to enthusiast.",
-          title: "DEXTRIX 2.0",
-          cta: "#",
-          buttonname: "Register here"
-        }
-      ]
-    };
-  }
+
+	constructor(props) {
+		super(props);
+		//Until backend add data here cards will be created automatically.
+		this.state = {
+			Home: [
+				{
+					content:'Technojam is hosting 24 Hours hackathon. In Galgotias University Those who want to know more can register here.',
+					title: 'DEXTRIX 2.0',
+					cta: '#',
+					buttonname: 'Register here'
+				}
+			]
+		};
+	}
 
   render() {
     const Home = this.state.Home;
