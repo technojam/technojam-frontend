@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 export default class Profile extends Component {
   render() {

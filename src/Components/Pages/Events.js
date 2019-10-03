@@ -11,10 +11,6 @@ import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
 
-const style = {
-	height: '85vh'
-};
-
 class Events extends Component {
 	constructor(props) {
 		super(props);
