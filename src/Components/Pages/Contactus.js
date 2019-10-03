@@ -91,6 +91,7 @@ class Mentorship extends Component {
                       </Typography>
                     </Hidden>
 
+
                     <Hidden mdDown>
                       <div className='banner-text'>
                         <Typography
