@@ -51,10 +51,6 @@ class Groups extends Component {
 		};
 	}
 
-	render() {
-		const Groups = this.state.Groups;
-
-
   render() {
     const Groups = this.state.Groups;
 
