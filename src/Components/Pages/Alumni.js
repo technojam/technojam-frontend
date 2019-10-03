@@ -48,7 +48,7 @@ class Alumni extends Component {
                     title: "Aditya Kumar ",
                     Google: "Aditya12.official@gmail.com ",
                     Linkedin: "#",
-                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg\",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg",
                 },
                 {
                     id: 6,
