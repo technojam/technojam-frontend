@@ -122,7 +122,7 @@ class Alumni extends Component {
                                                     
                                                     <CardMedia>
 
-                                                        <img src={achie.Image} width="100%" height="auto" />
+                                                        <img  alt='' src={achie.Image} width="100%" height="auto" />
 
                                                     </CardMedia>
 
@@ -134,8 +134,8 @@ class Alumni extends Component {
                                                             <Hidden smDown>
                                                             &#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;
                                                             </Hidden>
-                                                        <a className="btn btn-social-icon btn-google" href={achie.Google} target="_blank"><i className="fab fa-google fa-lg"style={{color:'#28aae1'}}></i></a>&#8194;
-                                                        <a className="btn btn-social-icon btn-linkedin" href={achie.Linkedin} target="_blank"><i className="fab fa-linkedin fa-lg" style={{color:'#0077b5'}}></i></a>&#8194;       
+                                                        <a className="btn btn-social-icon btn-google" rel="noopener noreferrer" href={achie.Google} target="_blank"><i className="fab fa-google fa-lg"style={{color:'#28aae1'}}></i></a>&#8194;
+                                                        <a className="btn btn-social-icon btn-linkedin" rel="noopener noreferrer" href={achie.Linkedin} target="_blank"><i className="fab fa-linkedin fa-lg" style={{color:'#0077b5'}}></i></a>&#8194;       
                                                     </Typography>
                                                     </CardContent>
                                                 

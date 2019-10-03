@@ -25,18 +25,18 @@ export default props =>
                 <Grid container direction="row" spacing={80} >
                     <Hidden mdUp>
                         <div style={{ marginLeft: 'auto' }} >
-                            <a className="btn btn-social-icon btn-twitter" href=" https://twitter.com/technojam_gu" target="_blank"><i className="fab fa-twitter fa-lg" style={{ color: '#28aae1' }}></i></a>&#8194;
-                        <a className="btn btn-social-icon btn-facebook" href="facebook.com/technojam.scse " target="_blank"><i className="fab fa-facebook fa-lg" style={{ color: '#3b5998' }}></i></a>&#8194;
-                        <a className="btn btn-social-icon btn-instagram" href="https://instagram.com/technojam_galgotias" target="_blank"><i className="fab fa-instagram fa-lg" style={{ color: '#e41a2b' }}></i></a>&#8194;
-                        <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/company/technojam/" target="_blank"><i className="fab fa-linkedin fa-lg" style={{ color: '#0077b5' }}></i></a>&#8194;
+                            <a className="btn btn-social-icon btn-twitter" href=" https://twitter.com/technojam_gu"  rel="noopener noreferrer" target="_blank"><i className="fab fa-twitter fa-lg" style={{ color: '#28aae1' }}></i></a>&#8194;
+                        <a className="btn btn-social-icon btn-facebook" href="facebook.com/technojam.scse "  rel="noopener noreferrer" target="_blank"><i className="fab fa-facebook fa-lg" style={{ color: '#3b5998' }}></i></a>&#8194;
+                        <a className="btn btn-social-icon btn-instagram" href="https://instagram.com/technojam_galgotias"  rel="noopener noreferrer" target="_blank"><i className="fab fa-instagram fa-lg" style={{ color: '#e41a2b' }}></i></a>&#8194;
+                        <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/company/technojam/"  rel="noopener noreferrer" target="_blank"><i className="fab fa-linkedin fa-lg" style={{ color: '#0077b5' }}></i></a>&#8194;
                     </div>
                     </Hidden>
                     <Hidden smDown>
                         <div style={{ paddingLeft: 'auto', paddingRight: 'auto', marginLeft: '90px' }} >
-                            <a className="btn btn-social-icon btn-twitter" href=" https://twitter.com/technojam_gu" target="_blank"><i className="fab fa-twitter fa-lg" style={{ color: '#28aae1' }}></i></a>&#8194;
-                        <a className="btn btn-social-icon btn-facebook" href="facebook.com/technojam.scse " target="_blank"><i className="fab fa-facebook fa-lg" style={{ color: '#3b5998' }}></i></a>&#8194;
-                        <a className="btn btn-social-icon btn-instagram" href="https://instagram.com/technojam_galgotias" target="_blank"><i className="fab fa-instagram fa-lg" style={{ color: '#e41a2b' }}></i></a>&#8194;
-                        <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/company/technojam/" target="_blank"><i className="fab fa-linkedin fa-lg" style={{ color: '#0077b5' }}></i></a>&#8194;
+                            <a className="btn btn-social-icon btn-twitter" href=" https://twitter.com/technojam_gu"  rel="noopener noreferrer" target="_blank"><i className="fab fa-twitter fa-lg" style={{ color: '#28aae1' }}></i></a>&#8194;
+                        <a className="btn btn-social-icon btn-facebook" href="facebook.com/technojam.scse "  rel="noopener noreferrer" target="_blank"><i className="fab fa-facebook fa-lg" style={{ color: '#3b5998' }}></i></a>&#8194;
+                        <a className="btn btn-social-icon btn-instagram" href="https://instagram.com/technojam_galgotias" rel="noopener noreferrer" target="_blank"><i className="fab fa-instagram fa-lg" style={{ color: '#e41a2b' }}></i></a>&#8194;
+                        <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/company/technojam/" rel="noopener noreferrer" target="_blank"><i className="fab fa-linkedin fa-lg" style={{ color: '#0077b5' }}></i></a>&#8194;
                     </div>
                     </Hidden>
                 </Grid>

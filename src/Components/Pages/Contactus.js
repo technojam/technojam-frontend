@@ -3,13 +3,11 @@ import React, { Component } from 'react'
 
 //material ui component
 import Container from '@material-ui/core/Container';
-import { Typography, Hidden, Grid, Button, CardHeader, CardContent } from '@material-ui/core';
+import { Typography, Hidden, Grid, Button, CardContent } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
-import TextField from '@material-ui/core/TextField';
-import clsx from 'clsx';
 import { FormGroup } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
-import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+import { TwitterTimelineEmbed, } from 'react-twitter-embed';
 
 
 
@@ -110,7 +108,7 @@ class Mentorship extends Component {
                                    <br></br>
                                    <Typography style={{textAlign:"center",fontFamily:"Roboto"}}>
                                    <Button variant="contained" style={{backgroundColor:" #e03030",color:"white"}}>
-                                      Submit <a  href="#" target="_blank"></a>
+                                      Submit <a  href="#"  rel="noopener noreferrer" target="_blank"></a>
                                 </Button>
                                 </Typography>
 

@@ -112,7 +112,8 @@ class Homepage extends Component {
                                 </Typography>
                                 <br></br>
                                 <Button variant="contained" style={Style.button}>
-                                      {Home.buttonname}  <a  href={Home.cta} target="_blank"></a>
+                
+                                      {Home.buttonname}  <a  href={Home.cta} rel="noopener noreferrer" target="_blank"></a>
                                 </Button>
                                 </div>
                              </div>

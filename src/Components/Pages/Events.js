@@ -112,10 +112,10 @@ class Events extends Component {
 
 
 
-                            <div style={{display:"inline",display:"inlineblock",float:"left"}}>
+                            <div style={{display:"inline-block",float:"left"}}>
 
                                 {upevent.map(upevent => (
-                                    <Timeline  style={{ border: "black", }}>
+                                    <Timeline key={upevent.id}  style={{ border: "black", }}>
                                         <TimelineEvent>
                                             <CardContent>
                                                 <Typography variant="h5" component="p" style={{ fontFamily: "Roboto", letterSpacing: "2px" }}>
@@ -164,7 +164,7 @@ class Events extends Component {
                                 {paevent.map(paevent => (
 
 
-                                    <Grid item >
+                                    <Grid item key={paevent.id}>
                                         <br></br>
                                         <Card style={{
                                             maxHeight: "auto", minHeight: "auto",
@@ -194,7 +194,7 @@ class Events extends Component {
                                             <Divider variant="inset" />
 
                                             <CardContent style={{ marginLeft: "50px" }}>
-                                                <a className="btn btn-social-icon btn-github" href={paevent.Todo} target="_blank">
+                                                <a className="btn btn-social-icon btn-github" rel="noopener noreferrer" href={paevent.Todo} target="_blank">
                                                     <i className="fab fa-github fa-lg" style={{color:"black"}} ></i></a>
                                                 <Button variant="outlined" color="primary" style={{ marginLeft: "10px",fontFamily: "Roboto" }} href={paevent.Feedback} >
                                                     Feedback

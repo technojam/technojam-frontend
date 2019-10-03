@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 //material ui component
 import Container from '@material-ui/core/Container';
-import { Typography, Hidden, Grid } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -86,12 +86,12 @@ class Mentorship extends Component {
                                 </Typography><br></br>
 
                                 <Typography variant="h5" style={{ fontFamily: "Roboto", letterSpacing: "2px" }}>
-                                    <a  href=" https://twitter.com/technojam_gu" target="_blank"><i className="fab fa-twitter fa-lg" style={{ color: '#28aae1' }}></i></a>&#8194;
-                                    <a  href=" https://tjosc.slack.com/" target="_blank"><i className="fab fa-slack fa-lg" style={{ color: '#e44134' }}></i></a>&#8194;
-                                    <a  href="#" target="_blank"><i className="fab fa-telegram-plane fa-lg" style={{ color: '#f4b602' }}></i></a>&#8194;
-                                    <a  href="https://www.linkedin.com/company/technojam/" target="_blank"><i className="fab fa-linkedin fa-lg" style={{ color: '#28aae1' }}></i></a>&#8194;
-                                    <a  href="https://www.facebook.com/technojam.scse/?ref=br_rs" target="_blank"><i className="fab fa-facebook fa-lg" style={{ color: '#33a351' }}></i></a>&#8194;
-                                    <a  href="https://instagram.com/technojam_galgotias" target="_blank"><i className="fab fa-instagram fa-lg" style={{ color: '#e44134' }}></i></a>&#8194;
+                                    <a  href=" https://twitter.com/technojam_gu"  rel="noopener noreferrer"  target="_blank"><i className="fab fa-twitter fa-lg" style={{ color: '#28aae1' }}></i></a>&#8194;
+                                    <a  href=" https://tjosc.slack.com/"  rel="noopener noreferrer" target="_blank"><i className="fab fa-slack fa-lg" style={{ color: '#e44134' }}></i></a>&#8194;
+                                    <a  href="#"  rel="noopener noreferrer"  target="_blank"><i className="fab fa-telegram-plane fa-lg" style={{ color: '#f4b602' }}></i></a>&#8194;
+                                    <a  href="https://www.linkedin.com/company/technojam/"  rel="noopener noreferrer"  target="_blank"><i className="fab fa-linkedin fa-lg" style={{ color: '#28aae1' }}></i></a>&#8194;
+                                    <a  href="https://www.facebook.com/technojam.scse/?ref=br_rs"  rel="noopener noreferrer"  target="_blank"><i className="fab fa-facebook fa-lg" style={{ color: '#33a351' }}></i></a>&#8194;
+                                    <a  href="https://instagram.com/technojam_galgotias"  rel="noopener noreferrer" target="_blank"><i className="fab fa-instagram fa-lg" style={{ color: '#e44134' }}></i></a>&#8194;
                                 </Typography>
 
 
@@ -170,8 +170,8 @@ class Mentorship extends Component {
                                                         </Grid>
                                                         <Grid item md={6} xl={6}>
                                                             <Typography style={{ fontFamily: "Roboto", letterSpacing: "0.9px", paddingLeft: "25px", wordSpacing: "3px",paddingTop:"4px" }}>
-                                                                 <a  href={project.slack} target="_blank"><i className="fab fa-slack fa-2x" style={{ color: '#e44134' }}></i></a>&#8194;
-                                                                 <a  href={project.telegram} target="_blank"><i className="fab fa-telegram fa-2x" style={{ color: '#f4b602' }}></i></a>
+                                                                 <a  href={project.slack} rel="noopener noreferrer" target="_blank"><i className="fab fa-slack fa-2x" style={{ color: '#e44134' }}></i></a>&#8194;
+                                                                 <a  href={project.telegram} rel="noopener noreferrer" target="_blank"><i className="fab fa-telegram fa-2x" style={{ color: '#f4b602' }}></i></a>
                                                                  
                                                             </Typography>
                                                         </Grid>
@@ -185,7 +185,7 @@ class Mentorship extends Component {
                                                         </Grid>
                                                         <Grid item md={6} xl={6}>
                                                             <Typography style={{ fontFamily: "Roboto", letterSpacing: "0.9px", paddingLeft: "25px", wordSpacing: "3px",paddingTop:"4px" }}>
-                                                                 <a  href={project.repolink  } target="_blank"><i className="fa fa-link fa-2x" style={{ color: '#be38ae' }}></i></a>&#8194;     
+                                                                 <a  href={project.repolink  } rel="noopener noreferrer" target="_blank"><i className="fa fa-link fa-2x" style={{ color: '#be38ae' }}></i></a>&#8194;     
                                                             </Typography>
                                                         </Grid>
                                                         

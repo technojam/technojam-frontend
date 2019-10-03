@@ -11,16 +11,10 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Badge from '@material-ui/core/Badge';
 
 /* Icons */
-import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+
 import MenuIcon from '@material-ui/icons/Menu';
-import EqualizerRoundedIcon from '@material-ui/icons/EqualizerRounded';
-import PeopleRoundedIcon from '@material-ui/icons/PeopleRounded';
-import PersonRoundedIcon from '@material-ui/icons/PersonRounded';
-import ContactsRoundedIcon from '@material-ui/icons/ContactsRounded';
-import DashboardRoundedIcon from '@material-ui/icons/DashboardRounded';
 
 const drawerWidth = 240;
 

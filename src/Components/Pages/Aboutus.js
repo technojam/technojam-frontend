@@ -39,7 +39,7 @@ function Aboutus() {
                     <Grid item lg={3} md={3} sm={3} >
                         <CardContent>
                             <CardMedia style={{ textAlign: "center" }}>
-                                <img src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/team.svg" width="50%" height="auto" />
+                                <img alt='' src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/team.svg" width="50%" height="auto" />
                             </CardMedia><br></br>
                             <Typography style={{ alignItems: "Center",fontFamily: "Roboto" }}>
                                 Team TechnoJam consist of 50 people and we all work together like a strong team.
@@ -49,7 +49,7 @@ function Aboutus() {
                     <Grid item lg={3} md={3} sm={3} >
                         <CardContent>
                             <CardMedia style={{ textAlign: "center" }}>
-                                <img src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/attendees.svg" width="50%" height="auto" />
+                                <img alt='' src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/attendees.svg" width="50%" height="auto" />
                             </CardMedia><br></br>
                             <Typography style={{ alignItems: "Center",fontFamily: "Roboto" }}>
                                 Technojam conducts more than 40+ events at Galgotias institution per year.
@@ -59,7 +59,7 @@ function Aboutus() {
                     <Grid item lg={3} md={3} sm={3} >
                         <CardContent >
                             <CardMedia style={{ textAlign: "center" }}>
-                                <img src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/event-management.svg" width="50%" height="auto" />
+                                <img alt='' src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/event-management.svg" width="50%" height="auto" />
                             </CardMedia><br></br>
                             <Typography style={{ alignItems: "Center",fontFamily: "Roboto" }}>
                                 TechnoJam has Reached upto 3000+ attendee through its workshops, Hackathons.

@@ -29,7 +29,7 @@ const style = {
 
 export default function TopMenu() {
     const [open, setOpen] = React.useState(false);
-    const [on, setOn] = React.useState(false);
+
 
 
 
@@ -94,7 +94,7 @@ export default function TopMenu() {
                         </Tooltip>
 
                         <Tooltip title="Our Projects">
-                            <a className="btn btn-social-icon btn-github" href="https://github.com/technojam" target="_blank">
+                            <a className="btn btn-social-icon btn-github"  rel="noopener noreferrer" href="https://github.com/technojam" target="_blank">
                                 <i className="fab fa-github fa-lg" style={{ color: '#fcfcfc' }}></i></a>
                         </Tooltip>
 
