@@ -52,107 +52,99 @@ const style = {
 class Mentorship extends Component {
 	render() {
 		return (
-			<Container maxWidth="xl ">
+			<Container maxWidth="xl">
 				<div style={sectionStyle}>
-					<Grid container direction="row" justify="flex-start" alignItems="flex-start" spacing={6}>
-						<Grid direction="row" xs={12} sm={12} md={6}>
-							<Card className="card--shadow" style={{ borderRadius: '10px', marginTop: '23px' }}>
+					<Grid container direction="row" justify="flex-start" alignItems="flex-start" spacing={5}>
+						<Grid item xs={12} sm={12} md={6}>
+							<Card className="card--shadow" style={{ borderRadius: '10px' }}>
 								<div style={{ backgroundColor: '#24292E' }}>
 									<br />
 									<CardContent>
-										<Hidden smUp>
-											<Typography
-												variant="h4"
-												style={{
-													fontFamily: 'Roboto',
-													letterSpacing: '1px',
-													lineHeight: '28px',
-													wordSpacing: '5px',
-													textAlign: 'center',
-													color: 'white'
-												}}
-											>
-												Get in touch
+										<Typography
+											variant="h2"
+											style={{
+												fontFamily: 'Roboto',
+												letterSpacing: '1px',
+												lineHeight: '28px',
+												textAlign: 'center',
+												color: 'white',
+												fontSize: '24px',
+												fontWeight: 'bold'
+											}}
+										>
+											Get in touch
 											</Typography>
-										</Hidden>
-
-										<Hidden mdDown>
-											<Typography
-												variant="h2"
-												style={{
-													fontFamily: 'Roboto',
-													letterSpacing: '1px',
-													lineHeight: '28px',
-													wordSpacing: '5px',
-													textAlign: 'center',
-													color: 'white'
-												}}
-											>
-												Get in touch
-											</Typography>
-										</Hidden>
 									</CardContent>
 								</div>
-								<Divider />
-								<br />
 								<div style={style.form}>
 									<form autoComplete="on">
 										<Grid container spacing={3}>
 											<Grid item xs={6}>
 												<FormGroup>
-													<label>First-Name</label>
-													<input
-														style={style.form.text}
-														type="text"
+													<TextField
 														name="Firstname"
+														id="standard-dense"
+														label="First-Name"
+														margin="dense"
 														onChange={this.handleChange}
 													/>
 												</FormGroup>
 											</Grid>
 											<Grid item xs={6}>
 												<FormGroup>
-													<label>Last-Name</label>
-													<input
-														style={style.form.text}
-														type="text"
+													<TextField
 														name="Lastname"
+														id="standard-dense"
+														label="Last-Name"
+														margin="dense"
+														onChange={this.handleChange}
+													/>
+												</FormGroup>
+											</Grid>
+										</Grid>
+
+										<Grid container spacing={3}>
+											<Grid item xs={6}>
+												<FormGroup>
+													<TextField
+														name="Email"
+														id="standard-dense"
+														label="Email"
+														margin="dense"
+														onChange={this.handleChange}
+													/>
+												</FormGroup>
+											</Grid>
+											<Grid item xs={6}>
+												<FormGroup>
+													<TextField
+														type="tel"
+														name="Mobile"
+														id="standard-dense"
+														label="Contact Number"
+														margin="dense"
 														onChange={this.handleChange}
 													/>
 												</FormGroup>
 											</Grid>
 										</Grid>
 										<FormGroup>
-											<label>Email</label>
-											<input
-												style={style.form.text}
-												type="email"
-												name="Email"
-												onChange={this.handleChange}
-											/>
-										</FormGroup>
-										<FormGroup>
-											<label>Contact Number</label>
-											<input
-												style={style.form.text}
-												type="tel"
-												name="Mobile"
-												onChange={this.handleChange}
-											/>
-										</FormGroup>
-										<FormGroup>
-											<label>Query</label>
-											<input
-												style={style.form.text}
+											<TextField
 												type="textarea"
 												name="Reason"
+												id="standard-multiline-static"
+												multiline
+												rows="2"
+												label="Query"
+												margin="dense"
 												onChange={this.handleChange}
 											/>
 										</FormGroup>
 										<br />
-										<Typography style={{ textAlign: 'center', fontFamily: 'Roboto' }}>
+										<Typography style={{ fontFamily: 'Roboto' }}>
 											<Button
 												variant="contained"
-												style={{ backgroundColor: ' #e03030', color: 'white' }}
+												style={{ backgroundColor: ' #24292e', color: 'white' }}
 											>
 												Submit <a href="#" target="_blank" />
 											</Button>
@@ -161,7 +153,7 @@ class Mentorship extends Component {
 								</div>
 							</Card>
 						</Grid>
-						<Grid item xs={12} sm={6} md={6}>
+						<Grid item xs={12} sm={12} md={6}>
 							<Card style={{ borderRadius: '10px', fontSize: '14px' }}>
 								<TwitterTimelineEmbed
 									sourceType="profile"
