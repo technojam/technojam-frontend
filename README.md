@@ -2,6 +2,11 @@ This project use React, material ui completed with MERN Stack with [Create React
 
 ## Available Scripts
 
+## Before Running Script
+
+Make sure you have installed the dependencies for the project.<br>
+To install dependencies run npm install or npm i 
+
 In the project directory, you can run:
 
 ### `npm start`
