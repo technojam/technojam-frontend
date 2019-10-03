@@ -32,11 +32,8 @@ class Alumni extends Component {
                     id: 3,
                     title: "Rohith Kandi",
                     Google: "kandirohith09@gmail.com",
-
-                    Linkedin:
-                        "https://www.linkedin.com/in/rohith-kandi-77a671108/",
-                    Image:
-                        "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg"
+                    Linkedin: "https://www.linkedin.com/in/rohith-kandi-77a671108/",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/IMG_3169+-+Kandi+Rohith+(1).jpg"
 
                 },
                 {
@@ -159,7 +156,7 @@ class Alumni extends Component {
                                                 variant="h7"
                                                 component="p"
                                                 style={{
-                                                    fontFamily: "Linotte"
+                                                    fontFamily: "Roboto"
                                                 }}
                                             >
                                                 {" "}

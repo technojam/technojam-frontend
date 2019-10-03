@@ -5,6 +5,11 @@ import React from "react";
 //materila ui Component
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+
 
 
 function Aboutus() {
