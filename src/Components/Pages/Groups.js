@@ -24,12 +24,12 @@ class Groups extends Component {
 				},
 				{
 					id: 2,
-					title: 'Cloud',
+					title: 'Cloud Computing',
 					Description: 'Technojam Cloud speciality Group is Dedicated to development on Cloud'
 				},
 				{
 					id: 3,
-					title: 'Web',
+					title: 'Web Technologies',
 					Description: 'Technojam Web speciality Group is Dedicated to development of Websites'
 				},
 				{
