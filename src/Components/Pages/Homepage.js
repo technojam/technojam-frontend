@@ -44,6 +44,11 @@ const Style = {
 	}
 };
 
+/* FIXME: When the target will be decided, remove the rel attribute.
+ * It has been added here for security reasons.
+ * Reference: https://mathiasbynens.github.io/rel-noopener/
+ */
+
 class Homepage extends Component {
 	constructor(props) {
 		super(props);
@@ -64,101 +69,118 @@ class Homepage extends Component {
 	render() {
 		const Home = this.state.Home;
 
-		console.log(Home);
-		return (
-			<div style={Style}>
-				{Home.map((Home) => (
-					<div style={{...Style.back, backgroundImage: `url(${Home.backgroundImageUrl})`}}>
-						<Grid container xs={6} sm={3} md={3}>
-							<Hidden smDown>
-								<div style={Style.square}>
-									<div
-										style={{
-											marginLeft: 'auto',
-											marginRight: 'auto',
-											maxWidth: '550px',
-											paddingLeft: '20px',
-											paddingRight: '20px'
-										}}
-									>
-										<Typography
-											variant="h3"
-											style={{ fontFamily: 'Roboto', letterSpacing: '2px', color: 'white' }}
-										>
-											{Home.title}
-										</Typography>
-										<br />
-										<Typography
-											variant="body2"
-											style={{
-												fontFamily: 'Roboto',
-												letterSpacing: '1px',
-												fontSize: '21px',
-												lineHeight: '35px',
-												wordSpacing: '5px',
-												color: 'white'
-											}}
-										>
-											{Home.content}
-										</Typography>
-										<br />
-										<Button variant="contained" style={Style.button}>
-											{Home.buttonname} <a src={Home.cta} target="_blank" />
-										</Button>
-									</div>
-								</div>
-							</Hidden>
+    return (
+      <div style={Style}>
+        {Home.map(Home => (
+          <div
+            style={{
+              ...Style.back,
+              backgroundImage: `url(${Home.backgroundImageUrl})`
+            }}
+          >
+            <Grid container xs={6} sm={3} md={3}>
+              <Hidden smDown>
+                <div style={Style.square}>
+                  <div
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      maxWidth: "550px",
+                      paddingLeft: "20px",
+                      paddingRight: "20px"
+                    }}
+                  >
+                    <Typography
+                      variant="h3"
+                      style={{
+                        fontFamily: "Roboto",
+                        letterSpacing: "2px",
+                        color: "white"
+                      }}
+                    >
+                      {Home.title}
+                    </Typography>
+                    <br />
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontFamily: "Roboto",
+                        letterSpacing: "1px",
+                        fontSize: "21px",
+                        lineHeight: "35px",
+                        wordSpacing: "5px",
+                        color: "white"
+                      }}
+                    >
+                      {Home.content}
+                    </Typography>
+                    <br />
+                    <Button variant="contained" style={Style.button}>
+                      {Home.buttonname}{" "}
+                      <a
+                        src={Home.cta}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      />
+                    </Button>
+                  </div>
+                </div>
+              </Hidden>
 
-							<Hidden mdUp>
-								<div style={Style.square1}>
-									<div
-										style={{
-											marginLeft: 'auto',
-											marginRight: 'auto',
-											maxWidth: '550px',
-											paddingLeft: '20px',
-											paddingRight: '20px'
-										}}
-									>
-										<Typography
-											variant="h3"
-											style={{
-												fontFamily: 'Roboto',
-												letterSpacing: '2px',
-												color: 'white',
-												fontSize: '28px'
-											}}
-										>
-											{Home.title}
-										</Typography>
-										<br />
-										<Typography
-											variant="body2"
-											style={{
-												fontFamily: 'Roboto',
-												letterSpacing: '1px',
-												fontSize: '14px',
-												lineHeight: '28px',
-												wordSpacing: '5px',
-												color: 'white'
-											}}
-										>
-											{Home.content}
-										</Typography>
-										<br />
-										<Button variant="contained" style={Style.button}>
-											{Home.buttonname} <a href={Home.cta} target="_blank" />
-										</Button>
-									</div>
-								</div>
-							</Hidden>
-						</Grid>
-					</div>
-				))}
-			</div>
-		);
-	}
-
+              <Hidden mdUp>
+                <div style={Style.square1}>
+                  <div
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      maxWidth: "550px",
+                      paddingLeft: "20px",
+                      paddingRight: "20px"
+                    }}
+                  >
+                    <Typography
+                      variant="h3"
+                      style={{
+                        fontFamily: "Roboto",
+                        letterSpacing: "2px",
+                        color: "white",
+                        fontSize: "28px"
+                      }}
+                    >
+                      {Home.title}
+                    </Typography>
+                    <br />
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontFamily: "Roboto",
+                        letterSpacing: "1px",
+                        fontSize: "14px",
+                        lineHeight: "28px",
+                        wordSpacing: "5px",
+                        color: "white"
+                      }}
+                    >
+                      {Home.content}
+                    </Typography>
+                    <br />
+                    <Button variant="contained" style={Style.button}>
+                      {Home.buttonname}{" "}
+                      <a
+                        href={Home.cta}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      />
+                    </Button>
+                  </div>
+                </div>
+              </Hidden>
+            </Grid>
+          </div>
+        ))}
+      </div>
+    );
+  }
 }
 
 export default Homepage;
