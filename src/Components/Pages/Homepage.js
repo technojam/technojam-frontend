@@ -31,7 +31,7 @@ const Style = {
 		width: '100%',
 		height: '100%',
 		//Put new background Image here of Size 1550 * 720 px
-		backgroundImage: 'url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png)',
+	
 		//Good Boy don't touch anything else
 		backgroundRepeat: 'no-repeat',
 
@@ -54,7 +54,8 @@ class Homepage extends Component {
 					content:'Technojam is hosting 24 Hours hackathon. In Galgotias University Those who want to know more can register here.',
 					title: 'DEXTRIX 2.0',
 					cta: '#',
-					buttonname: 'Register here'
+          buttonname: 'Register here',
+          backgroundImageUrl: 'https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png'
 				}
 			]
 		};
@@ -67,7 +68,7 @@ class Homepage extends Component {
 		return (
 			<div style={Style}>
 				{Home.map((Home) => (
-					<div style={Style.back}>
+					<div style={{...Style.back, backgroundImage: `url(${Home.backgroundImageUrl})`}}>
 						<Grid container xs={6} sm={3} md={3}>
 							<Hidden smDown>
 								<div style={Style.square}>
