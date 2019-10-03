@@ -53,7 +53,7 @@ class Achievements extends Component {
 					date: '26 August, 2018',
 					Description:
 						"Conducted Dextrix1.0 Galgotias's University first ever hackthon in our university. Almost 200 students took part. ",
-					Image: 'https://storage.cloud.google.com/tjtempimg/dextrix.JPG?authuser=1'
+					Image: 'https://tj-static.s3.ap-south-1.amazonaws.com/etc/dextrix.jpg'
 				}
 			]
 		};
