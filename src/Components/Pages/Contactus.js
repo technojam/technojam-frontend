@@ -24,7 +24,7 @@ import {
 
 var sectionStyle = {
 	width: '100%',
-	height: '85vh',
+	minHeight: '85vh',
 	backgroundRepeat: 'no-repeat',
 	marginTop: '100px',
 	backgroundPositionX: 'center',
@@ -55,8 +55,8 @@ class Mentorship extends Component {
 			<Container maxWidth="xl ">
 				<div style={sectionStyle}>
 					<Grid container direction="row" justify="flex-start" alignItems="flex-start" spacing={6}>
-						<Grid direction="row" xs={12} sm={12} md={6}>
-							<Card className="card--shadow" style={{ borderRadius: '10px', marginTop: '23px' }}>
+						<Grid item xs={12} sm={12} md={8} style={{ alignSelf: "center"}}>
+							<Card className="card--shadow" style={{ borderRadius: '10px' }}>
 								<div style={{ backgroundColor: '#24292E' }}>
 									<br />
 									<CardContent>
@@ -161,7 +161,7 @@ class Mentorship extends Component {
 								</div>
 							</Card>
 						</Grid>
-						<Grid item xs={12} sm={6} md={6}>
+						<Grid item xs={12} sm={6} md={4}>
 							<Card style={{ borderRadius: '10px', fontSize: '14px' }}>
 								<TwitterTimelineEmbed
 									sourceType="profile"
