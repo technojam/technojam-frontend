@@ -104,7 +104,7 @@ class Alumni extends Component {
                     }}
                 >
                     <div>
-                        <br> </br>{" "}
+                        <br />{" "}
                         <Typography
                             variant="h3"
                             style={{
@@ -128,7 +128,7 @@ class Alumni extends Component {
                                 borderColor: "#007FFF"
                             }}
                         ></hr>{" "}
-                        <br> </br>
+                        <br />
                         <Grid
                             container
                             spacing={3}
@@ -165,9 +165,7 @@ class Alumni extends Component {
                                                 {" "}
                                                 {achie.title}{" "}
                                                 <Hidden smDown>
-                                                    & #8194;&# 8194; & #8194;&#
-                                                    8194; & #8194;&# 8194; &
-                                                    #8194;&# 8194; & #8194;
+                                                &#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;
                                                 </Hidden>
                                                 <a
                                                     href={achie.Google}
@@ -183,7 +181,7 @@ class Alumni extends Component {
                                                         {" "}
                                                     </i>
                                                 </a>{" "}
-                                                & #8194;
+                                                &#8194;
                                                 <a
                                                     href={achie.Linkedin}
                                                     target="_blank"
@@ -198,7 +196,7 @@ class Alumni extends Component {
                                                         {" "}
                                                     </i>
                                                 </a>{" "}
-                                                & #8194;
+                                                &#8194;
                                             </Typography>
                                         </CardContent>
                                     </Card>

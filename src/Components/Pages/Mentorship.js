@@ -130,11 +130,10 @@ class Mentorship extends Component {
 							{project.map((project) => (
 								<Grid item xs={12} sm={6} md={6}>
 									<ExpansionPanel
+										className="card--shadow"
 										style={{
 											marginTop: '20px',
 											marginBottom: '20px',
-											boxShadow:
-												' 0 30px 35px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19)',
 											minHeight: '123px'
 										}}
 									>
