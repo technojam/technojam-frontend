@@ -41,14 +41,14 @@ class Alumni extends Component {
                     title: "Kaustubh",
                     Google: "kausr2595@gmail.com",
                     Linkedin: "https://www.linkedin.com/in/kausr2595/",
-                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kaustubh+Rai.JPG",
                 },
                 {
                     id: 5,
                     title: "Aditya Kumar ",
                     Google: "Aditya12.official@gmail.com ",
                     Linkedin: "#",
-                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg\",
+                    Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kandi+Rohith.jpg",
                 },
                 {
                     id: 6,
