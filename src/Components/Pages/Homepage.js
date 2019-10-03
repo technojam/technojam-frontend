@@ -13,11 +13,11 @@ const Style = {
 	square: {
 		border: '4px solid yellow',
 		padding: '20px',
-
 		position: 'absolute',
 		marginTop: '180px',
 		left: '46px',
-		marginRight: '40px'
+		marginRight: '40px',
+
 	},
 	square1: {
 		border: '4px solid yellow',
@@ -51,8 +51,7 @@ class Homepage extends Component {
 		this.state = {
 			Home: [
 				{
-					content:
-						'Technojam Mentorship initiative is a global program focused on introducing students to open source software development. Since its inception program aims on giving the very best experince of GSOC to enthusiast.',
+					content:'Technojam is hosting 24 Hours hackathon. In Galgotias University Those who want to know more can register here.',
 					title: 'DEXTRIX 2.0',
 					cta: '#',
 					buttonname: 'Register here'
