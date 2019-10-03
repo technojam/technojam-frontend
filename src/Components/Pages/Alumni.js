@@ -42,7 +42,6 @@ class Alumni extends Component {
                     Google: "kausr2595@gmail.com",
                     Linkedin: "https://www.linkedin.com/in/kausr2595/",
                     Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Kaustubh+Rai.JPG",
-
                 },
                 {
                     id: 5,
@@ -50,7 +49,6 @@ class Alumni extends Component {
                     Google: "Aditya12.official@gmail.com ",
                     Linkedin: "#",
                     Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Aditya+kumar.jpg",
-
                 },
                 {
                     id: 6,
