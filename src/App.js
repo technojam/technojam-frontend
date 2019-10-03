@@ -20,9 +20,6 @@ function App() {
         <TopMenu />
 
         <Maincontent />
-        <br></br>
-        <br></br>
-        <br></br>
         <Footer />
       </Fragment>
     </div>

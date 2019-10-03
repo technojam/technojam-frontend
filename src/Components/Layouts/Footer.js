@@ -6,19 +6,16 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
 export default props => (
+
   <div
     style={{
-      marginBottom: "auto",
-      marginTop: "auto",
-      marginLeft: "auto",
-      marginRight: "auto",
+      margin: "auto",
       padding: "auto",
-      position: "fixed",
       bottom: "0",
-      width: "inherit"
+      width: "inherit",
     }}
   >
-    <AppBar position="static" color="default">
+    <AppBar position="relative">
       <Toolbar>
         <Grid
           container
@@ -28,11 +25,12 @@ export default props => (
         >
           <Typography
             variant="body2"
-            style={{ fontSize: "0.92rem", fontFamily: "Roboto" }}
+            style={{ fontSize: "12px", fontFamily: "Roboto" }}
           >
             Copyright © 2019 Team TechnoJam
           </Typography>
         </Grid>
+
         <Grid container direction="row" spacing={80}>
           <Hidden mdUp>
             <div style={{ marginLeft: "auto" }}>
@@ -44,13 +42,13 @@ export default props => (
               >
                 <i
                   className="fab fa-twitter fa-lg"
-                  style={{ color: "#28aae1" }}
+                  style={{ color: "#fff" }}
                 ></i>
               </a>
               &#8194;
               <a
                 className="btn btn-social-icon btn-facebook"
-                href="facebook.com/technojam.scse "
+                href="https://facebook.com/technojam.scse "
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -86,12 +84,14 @@ export default props => (
               &#8194;
             </div>
           </Hidden>
+
           <Hidden smDown>
             <div
               style={{
                 paddingLeft: "auto",
                 paddingRight: "auto",
-                marginLeft: "90px"
+                marginLeft: "auto",
+                marginRight: "auto"
               }}
             >
               <a
@@ -99,22 +99,24 @@ export default props => (
                 href=" https://twitter.com/technojam_gu"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ margin: "5px" }}
               >
                 <i
                   className="fab fa-twitter fa-lg"
-                  style={{ color: "#28aae1" }}
+                  style={{ color: "#fff" }}
                 ></i>
               </a>
               &#8194;
               <a
                 className="btn btn-social-icon btn-facebook"
-                href="facebook.com/technojam.scse "
+                href="https://facebook.com/technojam.scse "
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ margin: "5px" }}
               >
                 <i
                   className="fab fa-facebook fa-lg"
-                  style={{ color: "#3b5998" }}
+                  style={{ color: "#fff" }}
                 ></i>
               </a>
               &#8194;
@@ -123,10 +125,11 @@ export default props => (
                 href="https://instagram.com/technojam_galgotias"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ margin: "5px" }}
               >
                 <i
                   className="fab fa-instagram fa-lg"
-                  style={{ color: "#e41a2b" }}
+                  style={{ color: "#fff" }}
                 ></i>
               </a>
               &#8194;
@@ -135,10 +138,25 @@ export default props => (
                 href="https://www.linkedin.com/company/technojam/"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ margin: "5px" }}
               >
                 <i
                   className="fab fa-linkedin fa-lg"
-                  style={{ color: "#0077b5" }}
+                  style={{ color: "#fff" }}
+                ></i>
+              </a>
+              &#8194;
+
+              <a
+                className="btn btn-social-icon btn-linkedin"
+                href="mailto:technojam@galgotiasuniversity.edu.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ margin: "5px" }}
+              >
+                <i
+                  className="fas fa-envelope fa-lg"
+                  style={{ color: "#fff" }}
                 ></i>
               </a>
               &#8194;
@@ -146,12 +164,10 @@ export default props => (
           </Hidden>
         </Grid>
         <Hidden smDown>
-          <Grid container direction="row">
-            <div style={{ paddingLeft: "100px", paddingRight: "auto" }}>
-              <Typography style={{ fontFamily: "Roboto" }}>
-                Email us : Technojam@galgotiasuniversity.edu.in
-              </Typography>
-            </div>
+          <Grid container direction="row-reverse">
+            <Typography style={{ fontFamily: "Roboto", color:"#fff", fontSize: "12px" }}>
+              <div>Email us: <a style={{ color: "#fff", textDecoration: "none" }} href="">technojam@galgotiasuniversity.edu.in</a></div>
+            </Typography>
           </Grid>
         </Hidden>
       </Toolbar>
