@@ -45,26 +45,27 @@ class Events extends Component {
 			],
 
 			upevent: [
+				
 				{
 					id: 1,
-					title: 'WebDev Day 1',
+					title: 'Dextrix 2.0',
 					Register: '#',
-					date: '26 August, 2019',
-					venue: ' GU C Block room no 211',
+					date: 'November, 2019',
+					venue: ' GU Campus',
 					Todo: '#',
-					Description: 'Learn to Develop website from scratch on MERN stack.'
+					Description:
+						'Technojam  is going to conduct 24 hours hackthon in delhi region at galgotias university.'
 				},
 
 				{
 					id: 2,
-					title: 'Dextrix 2.0',
+					title: 'WebDev Day 1',
 					Register: '#',
-					date: 'May 12, 2018',
-					venue: ' GU campus',
+					date: 'October, 2019',
+					venue: ' GU Campus',
 					Todo: '#',
-					Description:
-						'Technojam conducted 12 hours hackthon in delhi region at galgotias university. it is recognized Speaker NASA'
-				}
+					Description: 'Learn to Develop website from scratch on MERN stack.'
+				},
 			]
 		};
 	}
@@ -121,17 +122,18 @@ class Events extends Component {
 														component="p"
 														style={{ fontFamily: 'Roboto' }}
 													>
-														<b>Venue:</b> {upevent.venue}
-													</Typography>
+														<b>Venue:</b> {upevent.venue}&#8194;&#8194;
+													
 													<Button
 														variant="contained"
 														color="secondary"
 														size="small"
-														style={{ marginTop: '5px', fontFamily: 'Roboto' }}
-														src={upevent.Register}
+														style={{ marginTop: '3px', fontFamily: 'Roboto' }}
+														href={upevent.Register}
 													>
 														Register Now
 													</Button>
+													</Typography>
 												</CardContent>
 											</TimelineEvent>
 										</Timeline>
