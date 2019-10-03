@@ -162,7 +162,7 @@ class Alumni extends Component {
                                                 {" "}
                                                 {achie.title}{" "}
                                                 <Hidden smDown>
-                                                &#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;
+                                                &#8194;&#8194;&#8194;&#8194;&#8194;
                                                 </Hidden>
                                                 <a
                                                     href={achie.Google}
