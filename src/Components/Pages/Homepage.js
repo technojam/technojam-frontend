@@ -28,7 +28,8 @@ const Style = {
     position: "absolute",
     marginTop: "18px",
     left: "46px",
-    marginRight: "40px"
+    marginRight: "40px",
+    marginTop:"100px",
   },
   back: {
     width: "100%",

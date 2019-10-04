@@ -22,7 +22,7 @@ class Groups extends Component {
           id: 1,
           title: "Gaming and VR",
           Description:
-            "Technojam Gaming and VR speciality Group is Dedicated to development of games"
+            "Technojam Gaming speciality Group is eDdicated to development of games."
         },
         {
           id: 2,
@@ -50,7 +50,7 @@ class Groups extends Component {
           id: 5,
           title: "CyberSecruity",
           Description:
-            "Technojam CyberSecurity speciality Group is Dedicated to development of games"
+            "Technojam CyberSecurity speciality Group is Dedicated to Ethical hacking"
         },
         {
           id: 6,
@@ -86,7 +86,7 @@ class Groups extends Component {
                 alignItems="flex-start"
               >
                 {Groups.map(Groups => (
-                  <Grid item xs={6} sm={3} md={3}>
+                  <Grid item xs={12} sm={3} md={4}>
                     <Card
                       className="card--shadow"
                       style={{
@@ -96,7 +96,9 @@ class Groups extends Component {
                         fontSize: "18px",
                         fontWeight: "600",
                         marginBottom: "30px",
-                        borderRadius: "15px"
+                        borderRadius: "15px",
+                        maxHeight: "400px",
+                       
                       }}
                     >
                       <CardContent>

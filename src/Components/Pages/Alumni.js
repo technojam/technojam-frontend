@@ -140,37 +140,6 @@ class Alumni extends Component {
               justify="flex-start"
               alignItems="flex-start"
             >
-              {achie.map(achie => (
-                <Grid item xs={6} sm={4} md={3}>
-                  <Card
-                    className="card--shadow"
-                    style={{
-                      minWidth: "30px",
-                      borderRadius: "20px",
-                      maxHeight: "500px"
-                    }}
-                >
-                    <div>
-                        <br />{" "}
-                        <Typography
-                            variant="h3"
-                            className='view_title'
-                           
-                        >
-                            Our Alumni{" "}
-                        </Typography>{" "}
-                        <hr
-                            
-                            className='view_line'
-                        ></hr>{" "}
-                        <br />
-                        <Grid
-                            container
-                            spacing={3}
-                            direction="row"
-                            justify="flex-start"
-                            alignItems="flex-start"
-                        >
                             {achie.map(achie => (
                                 <Grid item xs={6} sm={4} md={3}>
                                     <Card
@@ -193,9 +162,8 @@ class Alumni extends Component {
                                             >
                                                 {" "}
                                                 {achie.title}{" "}
-                                                <Hidden smDown>
-                                                &#8194;&#8194;&#8194;&#8194;&#8194;
-                                                </Hidden>
+                                              </Typography>
+                                              <Typography style={{paddingTop:"5px"}}>
                                                 <a
                                                     href={achie.Google}
                                                     target="_blank"
@@ -234,6 +202,7 @@ class Alumni extends Component {
                         </Grid>
                     </div>
                 </div>
+
             </Container>
         );
     }

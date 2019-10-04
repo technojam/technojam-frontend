@@ -12,19 +12,6 @@ import { FormGroup } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import '../style.css';
 
-import {
-  Button,
-  CardContent,
-  FormGroup,
-  Grid,
-  Hidden,
-  Typography
-} from "@material-ui/core";
-import Card from "@material-ui/core/Card";
-//material ui component
-import Container from "@material-ui/core/Container";
-import Divider from "@material-ui/core/Divider";
-import React, { Component } from "react";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 var sectionStyle = {
