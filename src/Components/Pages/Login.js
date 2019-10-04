@@ -6,14 +6,14 @@ import { makeStyles } from "@material-ui/core/styles"
 
 const useStyles = makeStyles({
   mentorship: {
-    marginTop: '11%'
+    marginTop: '100px'
   },
   paper: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     padding: '20px 30px 30px',
-    opacity: '0.9',
+    opacity: '1',
     marginBottom: '2%'
   },
   textField: {

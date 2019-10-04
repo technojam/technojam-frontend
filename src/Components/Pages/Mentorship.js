@@ -113,14 +113,7 @@ class Mentorship extends Component {
 									<a href="https://tjosc.slack.com/" target="_blank" rel='noopener noreferrer'>
 										<i className="fab fa-slack fa-lg" style={{ color: '#e44134' }} />
 									</a>&#8194;
-									<a href="/" target="_blank" rel='noopener noreferrer'>
-
-									<a href="https://twitter.com/technojam_gu" target="_blank">
-										<i className="fab fa-twitter fa-lg" style={{ color: '#28aae1' }} />
-									</a>&#8194;
-									<a href="https://tjosc.slack.com/" target="_blank">
-										<i className="fab fa-slack fa-lg" style={{ color: '#e44134' }} />
-									</a>&#8194;
+									<a href="/" target="_blank" rel='noopener noreferrer'></a>
 									<a href="/" target="_blank">
 
 										<i className="fab fa-telegram-plane fa-lg" style={{ color: '#f4b602' }} />
