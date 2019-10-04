@@ -89,59 +89,66 @@ export default props => (
           <Hidden smDown>
             <div
               style={{
-                paddingLeft: "auto",
-                paddingRight: "auto",
-                marginLeft: "90px"
+                flex: 1,
+                flexDirection: 'row'
               }}
             >
-              <a
-                className="btn btn-social-icon btn-twitter"
-                href=" https://twitter.com/technojam_gu"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i
-                  className="fab fa-twitter fa-lg"
-                  style={{ color: "#28aae1" }}
-                ></i>
-              </a>
-              &#8194;
-              <a
-                className="btn btn-social-icon btn-facebook"
-                href="facebook.com/technojam.scse "
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i
-                  className="fab fa-facebook fa-lg"
-                  style={{ color: "#3b5998" }}
-                ></i>
-              </a>
-              &#8194;
-              <a
-                className="btn btn-social-icon btn-instagram"
-                href="https://instagram.com/technojam_galgotias"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i
-                  className="fab fa-instagram fa-lg"
-                  style={{ color: "#e41a2b" }}
-                ></i>
-              </a>
-              &#8194;
-              <a
-                className="btn btn-social-icon btn-linkedin"
-                href="https://www.linkedin.com/company/technojam/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i
-                  className="fab fa-linkedin fa-lg"
-                  style={{ color: "#0077b5" }}
-                ></i>
-              </a>
-              &#8194;
+              <div style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <a
+                  className="btn btn-social-icon btn-twitter"
+                  href=" https://twitter.com/technojam_gu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i
+                    className="fab fa-twitter fa-lg"
+                    style={{ color: "#28aae1" }}
+                  ></i>
+                </a>
+                &#8194;
+              </div>
+              <div style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <a
+                  className="btn btn-social-icon btn-facebook"
+                  href="facebook.com/technojam.scse "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i
+                    className="fab fa-facebook fa-lg"
+                    style={{ color: "#3b5998" }}
+                  ></i>
+                </a>
+                &#8194;
+              </div>
+              <div style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <a
+                  className="btn btn-social-icon btn-instagram"
+                  href="https://instagram.com/technojam_galgotias"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i
+                    className="fab fa-instagram fa-lg"
+                    style={{ color: "#e41a2b" }}
+                  ></i>
+                </a>
+                &#8194;
+              </div>
+              <div style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <a
+                  className="btn btn-social-icon btn-linkedin"
+                  href="https://www.linkedin.com/company/technojam/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i
+                    className="fab fa-linkedin fa-lg"
+                    style={{ color: "#0077b5" }}
+                  ></i>
+                </a>
+                &#8194;
+              </div>
             </div>
           </Hidden>
         </Grid>
