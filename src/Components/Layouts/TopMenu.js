@@ -207,9 +207,11 @@ export default function TopMenu() {
             <Tooltip title="Log-in">
               <IconButton
                 color="inherit"
-                onClick={handleOpen}
+                // onClick={handleOpen}
                 aria-label="Login"
                 style={{ style }}
+                component={Link}
+                to={"/login"}
               >
                 <PersonIcon />
               </IconButton>

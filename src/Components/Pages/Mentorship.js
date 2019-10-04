@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 //material ui component
 import Container from '@material-ui/core/Container';
-import { Typography, Hidden, Grid } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -106,6 +106,7 @@ class Mentorship extends Component {
 								<br />
 
 								<Typography variant="h5" style={{ fontFamily: 'Roboto', letterSpacing: '2px' }}>
+
 									<a href="https://twitter.com/technojam_gu" target="_blank" rel='noopener noreferrer'>
 										<i className="fab fa-twitter fa-lg" style={{ color: '#28aae1' }} />
 									</a>&#8194;
@@ -113,6 +114,15 @@ class Mentorship extends Component {
 										<i className="fab fa-slack fa-lg" style={{ color: '#e44134' }} />
 									</a>&#8194;
 									<a href="/" target="_blank" rel='noopener noreferrer'>
+
+									<a href="https://twitter.com/technojam_gu" target="_blank">
+										<i className="fab fa-twitter fa-lg" style={{ color: '#28aae1' }} />
+									</a>&#8194;
+									<a href="https://tjosc.slack.com/" target="_blank">
+										<i className="fab fa-slack fa-lg" style={{ color: '#e44134' }} />
+									</a>&#8194;
+									<a href="/" target="_blank">
+
 										<i className="fab fa-telegram-plane fa-lg" style={{ color: '#f4b602' }} />
 									</a>&#8194;
 									<a href="https://www.linkedin.com/company/technojam/" target="_blank" rel='noopener noreferrer'>

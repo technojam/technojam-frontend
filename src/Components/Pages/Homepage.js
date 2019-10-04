@@ -1,47 +1,46 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 //material ui component
 
-import { Grid, Typography, Hidden } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
+import { Grid, Typography, Hidden } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 
 const Style = {
-	marginTop: '60px',
-	maxHeight: '720px',
-	height: '90vh',
+  marginTop: "60px",
+  maxHeight: "720px",
+  height: "90vh",
 
-	square: {
-		border: '4px solid yellow',
-		padding: '20px',
-		position: 'absolute',
-		marginTop: '180px',
-		left: '46px',
-		marginRight: '40px',
+  square: {
+    border: "4px solid yellow",
+    padding: "20px",
+    position: "absolute",
+    marginTop: "180px",
+    left: "46px",
+    marginRight: "40px"
+  },
+  square1: {
+    border: "4px solid yellow",
+    padding: "20px",
+    position: "absolute",
+    marginTop: "18px",
+    left: "46px",
+    marginRight: "40px"
+  },
+  back: {
+    width: "100%",
+    height: "100%",
+    //Put new background Image here of Size 1550 * 720 px
 
-	},
-	square1: {
-		border: '4px solid yellow',
-		padding: '20px',
-		position: 'absolute',
-		marginTop: '18px',
-		left: '46px',
-		marginRight: '40px'
-	},
-	back: {
-		width: '100%',
-		height: '100%',
-		//Put new background Image here of Size 1550 * 720 px
-	
-		//Good Boy don't touch anything else
-		backgroundRepeat: 'no-repeat',
+    //Good Boy don't touch anything else
+    backgroundRepeat: "no-repeat",
 
-		backgroundPositionX: 'center',
-		minHeight: '750px'
-	},
-	button: {
-		color: 'black',
-		backgroundColor: 'yellow'
-	}
+    backgroundPositionX: "center",
+    minHeight: "750px"
+  },
+  button: {
+    color: "black",
+    backgroundColor: "yellow"
+  }
 };
 
 /* FIXME: When the target will be decided, remove the rel attribute.
@@ -50,24 +49,26 @@ const Style = {
  */
 
 class Homepage extends Component {
-	constructor(props) {
-		super(props);
-		//Until backend add data here cards will be created automatically.
-		this.state = {
-			Home: [
-				{
-					content:'Technojam is hosting 24 Hours hackathon. In Galgotias University Those who want to know more can register here.',
-					title: 'DEXTRIX 2.0',
-					cta: '#',
-          buttonname: 'Register here',
-          backgroundImageUrl: 'https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png'
-				}
-			]
-		};
-	}
+  constructor(props) {
+    super(props);
+    //Until backend add data here cards will be created automatically.
+    this.state = {
+      Home: [
+        {
+          content:
+            "Technojam is hosting 24 Hours hackathon. In Galgotias University Those who want to know more can register here.",
+          title: "DEXTRIX 2.0",
+          cta: "#",
+          buttonname: "Register here",
+          backgroundImageUrl:
+            "https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png"
+        }
+      ]
+    };
+  }
 
-	render() {
-		const Home = this.state.Home;
+  render() {
+    const Home = this.state.Home;
 
     return (
       <div style={Style}>
@@ -116,12 +117,16 @@ class Homepage extends Component {
                     </Typography>
                     <br />
                     <Button variant="contained" style={Style.button}>
+
                       {Home.buttonname}{" "}
                       <a
                         src={Home.cta}
                         target="_blank"
                         rel="noopener noreferrer"
                       />
+
+                      {Home.buttonname} <a src={Home.cta} target="_blank" />
+
                     </Button>
                   </div>
                 </div>
@@ -165,12 +170,16 @@ class Homepage extends Component {
                     </Typography>
                     <br />
                     <Button variant="contained" style={Style.button}>
+
                       {Home.buttonname}{" "}
                       <a
                         href={Home.cta}
                         target="_blank"
                         rel="noopener noreferrer"
                       />
+
+                      {Home.buttonname} <a href={Home.cta} target="_blank" />
+
                     </Button>
                   </div>
                 </div>
