@@ -55,6 +55,7 @@ const Style = {
  */
 
 class Homepage extends Component {
+
   constructor(props) {
     super(props);
     //Until backend add data here cards will be created automatically.
@@ -156,6 +157,7 @@ class Homepage extends Component {
                     <br />
                     <Button variant="contained" style={Style.button}>
                       {Home.buttonname} <a href={Home.cta} target="_blank" />
+
 
                     </Button>
                   </div>

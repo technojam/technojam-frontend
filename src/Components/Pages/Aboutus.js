@@ -1,3 +1,4 @@
+
 import React from "react";
 
 //materila ui Component
@@ -9,9 +10,11 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import "../style.css";
 
+
 function Aboutus() {
   return (
     <Container maxWidth="lg">
+
       <div className="aboutus view_container">
         <Grid
           container
@@ -33,11 +36,13 @@ function Aboutus() {
               <Typography style={{ alignItems: "Center" }}>
                 Team TechnoJam consist of 50 people and we all work together
                 like a strong team.
+
               </Typography>
             </CardContent>
           </Grid>
           <Grid item lg={3} md={3} sm={3}>
             <CardContent>
+
               <CardMedia className="align_center">
                 <img
                   src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/attendees.svg"
@@ -49,12 +54,15 @@ function Aboutus() {
               <Typography style={{ alignItems: "Center" }}>
                 Technojam conducts more than 40+ events at Galgotias institution
                 per year.
+
               </Typography>
             </CardContent>
           </Grid>
           <Grid item lg={3} md={3} sm={3}>
             <CardContent>
+
               <CardMedia className="align_center">
+
                 <img
                   src="https://tj-static.s3.ap-south-1.amazonaws.com/etc/event-management.svg"
                   width="50%"
@@ -62,9 +70,11 @@ function Aboutus() {
                 />
               </CardMedia>
               <br />
+
               <Typography style={{ alignItems: "Center" }}>
                 TechnoJam has Reached upto 3000+ attendee through its workshops,
                 Hackathons.
+
               </Typography>
             </CardContent>
           </Grid>
@@ -75,6 +85,7 @@ function Aboutus() {
         <br />
         <br />
         <div>
+
           <Grid
             container
             direction="row"
@@ -89,10 +100,12 @@ function Aboutus() {
               >
                 <CardContent>
                   <Typography variant="h3" className="card_content_h3">
+
                     Our Vision
                   </Typography>
                 </CardContent>
                 <CardContent>
+
                   <Typography variant="body1" className="card_content_body1">
                     <p>
                       To work on various innovative projects which will bestow
@@ -119,6 +132,7 @@ function Aboutus() {
                       never say die spirit having 100% dedication and devotion
                       to our work, motivating and inspiring the young and
                       creative minds in the direction of technology.
+
                     </p>
                   </Typography>
                 </CardContent>
@@ -126,15 +140,18 @@ function Aboutus() {
             </Grid>
             <Grid item lg={6} md={6} sm={12}>
               <Card
+
                 className="card--shadow card_style"
                 style={{ backgroundColor: "#33a351" }}
               >
                 <CardContent>
                   <Typography variant="h3" className="card_content_h3">
+
                     Our Mission
                   </Typography>
                 </CardContent>
                 <CardContent>
+
                   <Typography variant="body1" className="card_content_body1">
                     <p>
                       1. To develop a platform where the technical
@@ -162,6 +179,7 @@ function Aboutus() {
                       5. Represent our institute by participating at National
                       level Tech-Fest and other technical events all around the
                       nation.
+
                     </p>
                     <p /> <br />
                   </Typography>

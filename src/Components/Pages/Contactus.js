@@ -1,5 +1,4 @@
 
-
 import React, { Component } from 'react';
 
 //material ui component
@@ -10,6 +9,7 @@ import TextField from '@material-ui/core/TextField';
 import clsx from 'clsx';
 import { FormGroup } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
+
 import '../style.css';
 
 import { TwitterTimelineEmbed } from "react-twitter-embed";
@@ -37,6 +37,7 @@ const style = {
       background: "#e8ebed",
       color: "#576366",
       fontSize: "14px"
+
     }
   }
 };
@@ -83,81 +84,84 @@ class Mentorship extends Component {
 												<FormGroup>
 													<label>First-Name</label>
 													<input
+
 														style={style.form.text}
 														type="text"
 														name="Firstname"
 														onChange={this.handleChange}
 													/>
-												</FormGroup>
-											</Grid>
-											<Grid item xs={6}>
-												<FormGroup>
-													<label>Last-Name</label>
-													<input
+                        </FormGroup>
+                      </Grid>
+                      <Grid item xs={6}>
+                        <FormGroup>
+                          <label>Last-Name</label>
+                          <input
 														style={style.form.text}
 														type="text"
 														name="Lastname"
 														onChange={this.handleChange}
 													/>
-												</FormGroup>
-											</Grid>
-										</Grid>
-										<FormGroup>
-											<label>Email</label>
-											<input
+                        </FormGroup>
+                      </Grid>
+                    </Grid>
+                    <FormGroup>
+                      <label>Email</label>
+											<input 
 												style={style.form.text}
 												type="email"
 												name="Email"
 												onChange={this.handleChange}
 											/>
-										</FormGroup>
-										<FormGroup>
-											<label>Contact Number</label>
-											<input
+                    </FormGroup>
+                    <FormGroup>
+                      <label>Contact Number</label>
+                      <input
 												style={style.form.text}
 												type="tel"
 												name="Mobile"
 												onChange={this.handleChange}
 											/>
-										</FormGroup>
-										<FormGroup>
-											<label>Query</label>
-											<input
+                    </FormGroup>
+                    <FormGroup>
+                      <label>Query</label>
+                      <input
 												style={style.form.text}
 												type="textarea"
 												name="Reason"
 												onChange={this.handleChange}
 											/>
+
 										</FormGroup>
 										<br />
 										<Typography className='align_center'>
+
 											<Button
 												variant="contained"
 												style={{ backgroundColor: '#e03030', color: 'white' }}
 											>
-												Submit <a href="#" target="_blank" />
-											</Button>
-										</Typography>
-									</form>
-								</div>
-							</Card>
-						</Grid>
-						<Grid item xs={12} sm={6} md={6}>
-							<Card style={{ borderRadius: '10px', fontSize: '14px' }}>
-								<TwitterTimelineEmbed
-									sourceType="profile"
-									screenName="technojam_gu"
-									options={{ height: 440 }}
-									size="20px"
-								/>
-							</Card>
-						</Grid>
-					</Grid>
-					<br />
-				</div>
-			</Container>
-		);
-	}
+                        Submit <a href="#" target="_blank" />
+                      </Button>
+                    </Typography>
+                  </form>
+                </div>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={6}>
+              <Card style={{ borderRadius: '10px', fontSize: '14px' }}>
+                <TwitterTimelineEmbed
+                  sourceType="profile"
+                  screenName="technojam_gu"
+                  options={{ height: 440 }}
+                  size="20px"
+                />
+              </Card>
+            </Grid>
+          </Grid>
+          <br />
+        </div>
+      </Container>
+    );
+  }
 }
 
 export default Mentorship;

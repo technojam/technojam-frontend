@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
 
 //material ui component
+
 import { AppBar, Toolbar, Hidden } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -24,17 +25,19 @@ export default props => (
         </Grid>
         <Grid container direction="row" spacing={80}>
           <Hidden mdUp>
-            <div style={{ marginLeft: "auto" }}>
+            <div style={{ marginLeft: 'auto' }}>
               <a
                 className="btn btn-social-icon btn-twitter"
                 href=" https://twitter.com/technojam_gu"
                 target="_blank"
                 rel="noopener noreferrer"
               >
+
                 <i
                   className="fab fa-twitter fa-lg"
                   style={{ color: Color.color_twitter }}
                 ></i>
+
               </a>
               &#8194;
               <a
@@ -43,10 +46,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
+
                 <i
                   className="fab fa-facebook fa-lg"
                   style={{ color: Color.color_fb }}
                 ></i>
+
               </a>
               &#8194;
               <a
@@ -55,10 +60,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
+
                 <i
                   className="fab fa-instagram fa-lg"
                   style={{ color: Color.color_insta }}
                 ></i>
+
               </a>
               &#8194;
               <a
@@ -67,10 +74,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
+
                 <i
                   className="fab fa-linkedin fa-lg"
                   style={{ color: Color.color_linkedIn }}
                 ></i>
+
               </a>
               &#8194;
             </div>
@@ -78,9 +87,9 @@ export default props => (
           <Hidden smDown>
             <div
               style={{
-                paddingLeft: "auto",
-                paddingRight: "auto",
-                marginLeft: "90px"
+                paddingLeft: 'auto',
+                paddingRight: 'auto',
+                marginLeft: '90px'
               }}
             >
               <a
@@ -89,10 +98,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
+
                 <i
                   className="fab fa-twitter fa-lg"
                   style={{ color: Color.color_twitter }}
                 ></i>
+
               </a>
               &#8194;
               <a
@@ -101,10 +112,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
+
                 <i
                   className="fab fa-facebook fa-lg"
                   style={{ color: Color.color_fb }}
                 ></i>
+
               </a>
               &#8194;
               <a
@@ -113,10 +126,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
+
                 <i
                   className="fab fa-instagram fa-lg"
                   style={{ color: Color.color_insta }}
                 ></i>
+
               </a>
               &#8194;
               <a
@@ -125,10 +140,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
+
                 <i
                   className="fab fa-linkedin fa-lg"
                   style={{ color: Color.color_linkedIn }}
                 ></i>
+
               </a>
               &#8194;
             </div>
@@ -136,8 +153,10 @@ export default props => (
         </Grid>
         <Hidden smDown>
           <Grid container direction="row">
-            <div style={{ paddingLeft: "100px", paddingRight: "auto" }}>
-              <Typography>
+
+            <div style={{ paddingLeft: '100px', paddingRight: 'auto' }}>
+              <Typography style={{ fontFamily: 'Roboto' }}>
+
                 Email us : Technojam@galgotiasuniversity.edu.in
               </Typography>
             </div>

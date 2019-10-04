@@ -1,4 +1,6 @@
+
 import React, { Component } from "react";
+
 
 //material ui component
 import Card from "@material-ui/core/Card";
@@ -21,16 +23,19 @@ class Achievements extends Component {
         {
           id: 1,
 
+
           title: "Nasa Space Apps Challenge",
           by: "Darshan Baid",
           date: "Spetember 15, 2019",
           Description:
             "Technojam conducted 24 hours hackthon in delhi region at galgotia College almost 400 students took part. it is recognized by NASA",
           Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/space.jpg"
+
         },
 
         {
           id: 2,
+
           title: "First Ideathon",
           by: "Shwetank",
           date: "26 August, 2019",
@@ -38,10 +43,12 @@ class Achievements extends Component {
               "Conducted Ideathon in Galgotias University Induction Program. Alomst 300 students took part. Crowd was really enthusiastic",
           Image:
             " https://tj-static.s3.ap-south-1.amazonaws.com/etc/ideathon.JPG"
+
         },
 
         {
           id: 3,
+
           title: "First Gsocer",
           by: "Rahul Chuhan",
           date: "May 12, 2018",
@@ -50,10 +57,12 @@ class Achievements extends Component {
             "rahul chuhan Member of Team Teachnojam cleared Gsoc in 2019 in Galgotias University. He worked on R project",
 
           Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/rahul.jpg"
+
         },
 
         {
           id: 4,
+
           title: "Dextrix 1.0",
           by: "Team Technojam",
           date: "26 August, 2018",
@@ -61,6 +70,7 @@ class Achievements extends Component {
 
             "Conducted Dextrix1.0 Galgotias's University first ever hackthon in our university. Almost 200 students took part. ",
           Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/dextrix.jpg"
+
 
         }
       ]
@@ -73,6 +83,7 @@ class Achievements extends Component {
     console.log(achie);
     return (
       <Container maxWidth="lg">
+
 
         <div className="view_container">
           <div>
@@ -94,11 +105,13 @@ class Achievements extends Component {
 
                   <Card className="card--shadow card_content_achieve">
 
+
                     <CardMedia>
                       <img src={achie.Image} width="100%" height="auto" />
                     </CardMedia>
 
                     <CardContent>
+
                       <Typography
                         variant="h5"
                         component="p"
@@ -112,12 +125,13 @@ class Achievements extends Component {
 
                     <CardContent style={{ marginTop: "-20px" }}>
 
+
                       <Typography
                         variant="body2"
                         color="textSecondary"
                         component="p"
-
                         style={{ letterSpacing: "0.9px" }}
+
 
                       >
                         {achie.Description}

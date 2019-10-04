@@ -1,9 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../../images/logo_small.png";
-import ResponsiveDrawer from "./ResponsiveDrawer";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Logo from '../../images/logo_small.png';
+import ResponsiveDrawer from './ResponsiveDrawer';
 
 //material ui component
+
 import {
   AppBar,
   Toolbar,
@@ -25,7 +26,7 @@ import "../style.css";
 const style = {
   marginleft: 200,
   toolbarButtons: {
-    marginLeft: "auto",
+    marginLeft: 'auto',
     marginRight: -12
   }
 };
@@ -42,38 +43,38 @@ export default function TopMenu() {
   };
 
   return (
-    <div style={{ color: "#fff" }}>
+    <div style={{ color: '#fff' }}>
       <AppBar position="fixed">
-        <Toolbar style={{ backgroundColor: "#24292e" }}>
+        <Toolbar style={{ backgroundColor: '#24292e' }}>
           <Hidden mdUp>
             <ResponsiveDrawer />
           </Hidden>
           <Grid alignItems="flex-start" justify="flex-start">
-            <Button color="inherit" component={Link} to={"/"}>
-              <img
-                src={Logo}
-                alt="TechnoJam.tech"
-                height="50px"
-                align="center"
-              />
+            <Button color="inherit" component={Link} to={'/'}>
+              <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />
             </Button>
           </Grid>
           <Hidden smDown>
+
             <div className="topMenu_wrapper">
               <Grid
+
                 alignItems="flex-end"
                 justify="flex-end"
                 spacing={800}
-                style={{ marginLeft: "75px" }}
+                style={{ marginLeft: '75px' }}
               >
+
                 <Button style={{ style }} component={Link} to={"/events"}>
                   <Typography className="topMenu_typo_name">Events</Typography>
+
                 </Button>
                 <Badge
-                  style={{ marginBottom: "30px", marginRight: "5px" }}
-                  badgeContent={"New"}
+                  style={{ marginBottom: '30px', marginRight: '5px' }}
+                  badgeContent={'New'}
                   color="secondary"
                 ></Badge>
+
                 <Button style={{ style }} component={Link} to={"/achievements"}>
                   <Typography className="topMenu_typo_name">
                     Achievements
@@ -102,20 +103,21 @@ export default function TopMenu() {
                 </Button>
                 <Button style={{ style }} component={Link} to={"/contactus"}>
                   <Typography className="topMenu_typo_name">
+
                     Contact Us
                   </Typography>
                 </Button>
               </Grid>
             </div>
           </Hidden>
-          <div style={{ marginLeft: "auto" }}>
+          <div style={{ marginLeft: 'auto' }}>
             <Tooltip title="Night Mode">
-              <IconButton
+              <IconButton 
                 color="inherit"
                 aria-label="Night Mode"
                 style={{ style }}
                 component={Link}
-                to={"/"}
+                to={'/'}
               >
                 <WbIncandescentIcon />
               </IconButton>
@@ -128,14 +130,12 @@ export default function TopMenu() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fab fa-github fa-lg"
-                  style={{ color: "#fcfcfc" }}
-                ></i>
+                <i className="fab fa-github fa-lg" style={{ color: '#fcfcfc' }}></i>
               </a>
             </Tooltip>
 
             <Tooltip title="Log-in">
+
               <IconButton
                 color="inherit"
                 // onClick={handleOpen}
@@ -144,10 +144,12 @@ export default function TopMenu() {
                 component={Link}
                 to={"/login"}
               >
+
                 <PersonIcon />
               </IconButton>
             </Tooltip>
             <Modal open={open} onClose={handleClose}>
+
               <div id="login_modal_container">
                 <div id="login_modal_content">
                   <img
@@ -156,6 +158,7 @@ export default function TopMenu() {
                     height="50px"
                     align="center"
                   />
+
                   <br></br>
 
                   <FormControl component="fieldset">
@@ -184,18 +187,13 @@ export default function TopMenu() {
                     </Grid>
                     <br></br>
 
-                    <Grid
-                      container
-                      direction="row"
-                      justify="center"
-                      alignItems="center"
-                    >
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={handleClose}
-                        component={Link}
-                        to={"/login"}
+                    <Grid container direction="row" justify="center" alignItems="center">
+                      <Button 
+                        variant="contained" 
+                        color="primary" 
+                        onClick={handleClose} 
+                        component={Link} 
+                        to={'/login'}
                       >
                         Login
                       </Button>

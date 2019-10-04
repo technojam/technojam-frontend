@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 
-//material ui component
+// material ui component
 import Container from '@material-ui/core/Container';
 import { Typography, Grid } from '@material-ui/core';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';

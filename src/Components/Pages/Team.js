@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
 
-//material ui component
+// material ui component
+
 
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -11,21 +12,26 @@ import Typography from "@material-ui/core/Typography";
 import "../style.css";
 const style = {
   height: "83vh"
+
 };
 
 
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
+
     marginTop: "100px",
     marginBottom: 20,
     minHeight: "580px"
+
   }
 }));
+
 const circle = {
   width: 80,
   borderRadius: 40
 };
+
 const tileData = [
   {
     img:
@@ -241,11 +247,13 @@ const tileData = [
       "http://tj-static.s3-website.ap-south-1.amazonaws.com/Img/Vishal Kumar.jpg",
     tilte: "Image",
     Name: "Vishal Kumar"
+
   }
 ];
 
 export default function Team() {
   const classes = useStyles();
+
 
   return (
     <div className={classes.root}>
@@ -254,6 +262,7 @@ export default function Team() {
         Our Team
       </Typography>
       <hr className="view_line" />
+
 
       <br />
 
