@@ -10,6 +10,7 @@ import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
+import '../style.css';
 
 const style = {
 	height: '85vh'
@@ -45,27 +46,26 @@ class Events extends Component {
 			],
 
 			upevent: [
-				
 				{
 					id: 1,
-					title: 'Dextrix 2.0',
+					title: 'WebDev Day 1',
 					Register: '#',
-					date: 'November, 2019',
-					venue: ' GU Campus',
+					date: '26 August, 2019',
+					venue: ' GU C Block room no 211',
 					Todo: '#',
-					Description:
-						'Technojam  is going to conduct 24 hours hackthon in delhi region at galgotias university.'
+					Description: 'Learn to Develop website from scratch on MERN stack.'
 				},
 
 				{
 					id: 2,
-					title: 'WebDev Day 1',
+					title: 'Dextrix 2.0',
 					Register: '#',
-					date: 'October, 2019',
-					venue: ' GU Campus',
+					date: 'May 12, 2018',
+					venue: ' GU campus',
 					Todo: '#',
-					Description: 'Learn to Develop website from scratch on MERN stack.'
-				},
+					Description:
+						'Technojam conducted 12 hours hackthon in delhi region at galgotias university. it is recognized Speaker NASA'
+				}
 			]
 		};
 	}
@@ -88,7 +88,7 @@ class Events extends Component {
 													<Typography
 														variant="h5"
 														component="p"
-														style={{ fontFamily: 'Roboto', letterSpacing: '2px' }}
+														className='letter_spacing'
 													>
 														{upevent.title}
 													</Typography>
@@ -99,17 +99,16 @@ class Events extends Component {
 														variant="body2"
 														color="Secondary"
 														component="p"
-														style={{ fontFamily: 'Roboto' }}
 													>
 														<b>{upevent.date}</b>
 													</Typography>
 												</CardContent>
-												<CardContent style={{ marginTop: '-20px' }}>
+												<CardContent className='card_content_top'>
 													<Typography
 														variant="body2"
 														color="textSecondary"
 														component="p"
-														style={{ letterSpacing: '0.9px', fontFamily: 'Roboto' }}
+														style={{ letterSpacing: '0.9px' }}
 													>
 														{upevent.Description}
 													</Typography>
@@ -120,20 +119,18 @@ class Events extends Component {
 														variant="body2"
 														color="textSecondary"
 														component="p"
-														style={{ fontFamily: 'Roboto' }}
 													>
-														<b>Venue:</b> {upevent.venue}&#8194;&#8194;
-													
+														<b>Venue:</b> {upevent.venue}
+													</Typography>
 													<Button
 														variant="contained"
 														color="secondary"
 														size="small"
-														style={{ marginTop: '3px', fontFamily: 'Roboto' }}
-														href={upevent.Register}
+														style={{ marginTop: '5px' }}
+														src={upevent.Register}
 													>
 														Register Now
 													</Button>
-													</Typography>
 												</CardContent>
 											</TimelineEvent>
 										</Timeline>
@@ -160,29 +157,28 @@ class Events extends Component {
 													<Typography
 														variant="h5"
 														component="p"
-														style={{ fontFamily: 'Roboto', letterSpacing: '2px' }}
+														className='letter_spacing'
 													>
 														{paevent.title}
 													</Typography>
 												</CardContent>
 												<Divider />
 												<br />
-												<CardContent style={{ marginTop: '-20px' }}>
+												<CardContent className='card_content_top'>
 													<Typography
 														variant="body2"
 														color="Secondary"
 														component="p"
-														style={{ fontFamily: 'Roboto' }}
 													>
 														<b>{paevent.date}</b>
 													</Typography>
 												</CardContent>
-												<CardContent style={{ marginTop: '-20px' }}>
+												<CardContent className='card_content_top'>
 													<Typography
 														variant="body2"
 														color="textSecondary"
 														component="p"
-														style={{ letterSpacing: '0.9px', fontFamily: 'Roboto' }}
+														style={{ letterSpacing: '0.9px' }}
 													>
 														{paevent.Description}
 													</Typography>
@@ -200,7 +196,7 @@ class Events extends Component {
 													<Button
 														variant="outlined"
 														color="primary"
-														style={{ marginLeft: '10px', fontFamily: 'Roboto' }}
+														style={{ marginLeft: '10px'}}
 														href={paevent.Feedback}
 													>
 														Feedback

@@ -7,6 +7,8 @@ import { Typography, Hidden, Grid } from '@material-ui/core';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import '../style.css';
+import {Color} from '../color';
 
 var sectionStyle = {
 	width: '100%',
@@ -54,16 +56,13 @@ class Mentorship extends Component {
 				<div id="1">
 					<div style={sectionStyle}>
 						<div
+						className='mentor_section_div'
 							style={{
 								paddingTop: '330px',
-								right: '',
-								marginLeft: 'auto',
-								marginRight: 'auto',
-								maxWidth: '550px',
-								paddingLeft: '20px'
+								
 							}}
 						>
-							<Typography variant="h3" style={{ fontFamily: 'Roboto', letterSpacing: '2px' }}>
+							<Typography variant="h3" className='letter_spacing'>
 								2019 Projects
 							</Typography>
 							<br />
@@ -72,7 +71,6 @@ class Mentorship extends Component {
 							<Typography
 								variant="body2"
 								style={{
-									fontFamily: 'Roboto',
 									letterSpacing: '1px',
 									fontSize: '21px',
 									lineHeight: '35px',
@@ -85,24 +83,21 @@ class Mentorship extends Component {
 							</Typography>
 
 							<div
+							className='mentor_section_div'
 								style={{
 									paddingTop: '20px',
-									right: '',
-									marginLeft: 'auto',
-									marginRight: 'auto',
-									maxWidth: '550px',
-									paddingLeft: '20px'
+								
 								}}
 							>
-								<Typography variant="h6" style={{ fontFamily: 'Roboto', letterSpacing: '2px' }}>
+								<Typography variant="h6" className='letter_spacing'>
 									Know
 									More&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;
 								</Typography>
 								<br />
 
-								<Typography variant="h5" style={{ fontFamily: 'Roboto', letterSpacing: '2px' }}>
+								<Typography variant="h5" className='letter_spacing'>
 									<a href=" https://twitter.com/technojam_gu" target="_blank">
-										<i className="fab fa-twitter fa-lg" style={{ color: '#28aae1' }} />
+										<i className="fab fa-twitter fa-lg" style={{ color: Color.color_twitter }} />
 									</a>&#8194;
 									<a href=" https://tjosc.slack.com/" target="_blank">
 										<i className="fab fa-slack fa-lg" style={{ color: '#e44134' }} />
@@ -111,7 +106,7 @@ class Mentorship extends Component {
 										<i className="fab fa-telegram-plane fa-lg" style={{ color: '#f4b602' }} />
 									</a>&#8194;
 									<a href="https://www.linkedin.com/company/technojam/" target="_blank">
-										<i className="fab fa-linkedin fa-lg" style={{ color: '#28aae1' }} />
+										<i className="fab fa-linkedin fa-lg" style={{ color: Color.color_twitter }} />
 									</a>&#8194;
 									<a href="https://www.facebook.com/technojam.scse/?ref=br_rs" target="_blank">
 										<i className="fab fa-facebook fa-lg" style={{ color: '#33a351' }} />
@@ -143,25 +138,18 @@ class Mentorship extends Component {
 												<Typography
 													variant="h5"
 													component="p"
+													className='letter_spacing'
 													style={{
-														fontFamily: 'Roboto',
-														letterSpacing: '2px',
 														textAlign: 'end',
 														fontSize: '32px'
 													}}
 												>
-													{project.title}<Typography style={{textAlign:"center"}}><i class="fas fa-arrow-circle-down fa-2x" style={{color:"#33a351"}}></i></Typography>
+													{project.title}
 												</Typography>
 											</Grid>
 											<Grid item md={6} xl={6}>
 												<Typography
-													style={{
-														fontFamily: 'Roboto',
-														letterSpacing: '0.9px',
-														paddingLeft: '25px',
-														paddingTop: '4px',
-														wordSpacing: '3px'
-													}}
+													className='grid_item_typo'
 												>
 													{project.info}
 												</Typography>
@@ -172,9 +160,8 @@ class Mentorship extends Component {
 											<Grid item md={6} xl={6}>
 												<Typography
 													variant="h6"
+													className='letter_spacing'
 													style={{
-														fontFamily: 'Roboto',
-														letterSpacing: '2px',
 														textAlign: 'end'
 													}}
 												>
@@ -183,13 +170,8 @@ class Mentorship extends Component {
 											</Grid>
 											<Grid item md={6} xl={6}>
 												<Typography
-													style={{
-														fontFamily: 'Roboto',
-														letterSpacing: '0.9px',
-														paddingLeft: '25px',
-														wordSpacing: '3px',
-														paddingTop: '4px'
-													}}
+												className='grid_item_typo'
+												
 												>
 													{project.Skills}
 												</Typography>
@@ -199,9 +181,8 @@ class Mentorship extends Component {
 											<Grid item md={6} xl={6}>
 												<Typography
 													variant="h6"
+													className='letter_spacing'
 													style={{
-														fontFamily: 'Roboto',
-														letterSpacing: '2px',
 														textAlign: 'end'
 													}}
 												>
@@ -210,13 +191,8 @@ class Mentorship extends Component {
 											</Grid>
 											<Grid item md={6} xl={6}>
 												<Typography
-													style={{
-														fontFamily: 'Roboto',
-														letterSpacing: '0.9px',
-														paddingLeft: '25px',
-														wordSpacing: '3px',
-														paddingTop: '4px'
-													}}
+												className='grid_item_typo'
+													
 												>
 													{project.mentor}
 												</Typography>
@@ -227,9 +203,8 @@ class Mentorship extends Component {
 											<Grid item md={6} xl={6}>
 												<Typography
 													variant="h6"
+													className='letter_spacing'
 													style={{
-														fontFamily: 'Roboto',
-														letterSpacing: '2px',
 														textAlign: 'end'
 													}}
 												>
@@ -238,13 +213,8 @@ class Mentorship extends Component {
 											</Grid>
 											<Grid item md={6} xl={6}>
 												<Typography
-													style={{
-														fontFamily: 'Roboto',
-														letterSpacing: '0.9px',
-														paddingLeft: '25px',
-														wordSpacing: '3px',
-														paddingTop: '4px'
-													}}
+												className='grid_item_typo'
+													
 												>
 													<a href={project.slack} target="_blank">
 														<i
@@ -265,9 +235,8 @@ class Mentorship extends Component {
 											<Grid item md={6} xl={6}>
 												<Typography
 													variant="h6"
+													className='letter_spacing'
 													style={{
-														fontFamily: 'Roboto',
-														letterSpacing: '2px',
 														textAlign: 'end'
 													}}
 												>
@@ -276,13 +245,8 @@ class Mentorship extends Component {
 											</Grid>
 											<Grid item md={6} xl={6}>
 												<Typography
-													style={{
-														fontFamily: 'Roboto',
-														letterSpacing: '0.9px',
-														paddingLeft: '25px',
-														wordSpacing: '3px',
-														paddingTop: '4px'
-													}}
+												className='grid_item_typo'
+													
 												>
 													<a href={project.repolink} target="_blank">
 														<i className="fa fa-link fa-2x" style={{ color: '#be38ae' }} />

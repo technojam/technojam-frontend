@@ -9,6 +9,7 @@ import TextField from '@material-ui/core/TextField';
 import clsx from 'clsx';
 import { FormGroup } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
+import '../style.css';
 import {
 	TwitterTimelineEmbed,
 	TwitterShareButton,
@@ -63,14 +64,8 @@ class Mentorship extends Component {
 										<Hidden smUp>
 											<Typography
 												variant="h4"
-												style={{
-													fontFamily: 'Roboto',
-													letterSpacing: '1px',
-													lineHeight: '28px',
-													wordSpacing: '5px',
-													textAlign: 'center',
-													color: 'white'
-												}}
+												className='contact_section_heading'
+												
 											>
 												Get in touch
 											</Typography>
@@ -79,14 +74,8 @@ class Mentorship extends Component {
 										<Hidden mdDown>
 											<Typography
 												variant="h2"
-												style={{
-													fontFamily: 'Roboto',
-													letterSpacing: '1px',
-													lineHeight: '28px',
-													wordSpacing: '5px',
-													textAlign: 'center',
-													color: 'white'
-												}}
+												className='contact_section_heading'
+												
 											>
 												Get in touch
 											</Typography>
@@ -149,10 +138,10 @@ class Mentorship extends Component {
 											/>
 										</FormGroup>
 										<br />
-										<Typography style={{ textAlign: 'center', fontFamily: 'Roboto' }}>
+										<Typography className='align_center'>
 											<Button
 												variant="contained"
-												style={{ backgroundColor: '#24292E', color: 'white' }}
+												style={{ backgroundColor: '#e03030', color: 'white' }}
 											>
 												Submit <a href="#" target="_blank" />
 											</Button>
