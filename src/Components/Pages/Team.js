@@ -7,10 +7,12 @@ import Grid from "@material-ui/core/Grid";
 import Tooltip from "@material-ui/core/Tooltip";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
+
 import "../style.css";
 const style = {
   height: "83vh"
 };
+
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -247,10 +249,12 @@ export default function Team() {
 
   return (
     <div className={classes.root}>
+
       <Typography variant="h3" className="view_title">
         Our Team
       </Typography>
       <hr className="view_line" />
+
       <br />
 
       <Container fixed>

@@ -1,4 +1,5 @@
 
+
 import React, { Component } from 'react';
 
 //material ui component
@@ -10,47 +11,51 @@ import clsx from 'clsx';
 import { FormGroup } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import '../style.css';
+
 import {
-	TwitterTimelineEmbed,
-	TwitterShareButton,
-	TwitterFollowButton,
-	TwitterHashtagButton,
-	TwitterMentionButton,
-	TwitterTweetEmbed,
-	TwitterMomentShare,
-	TwitterDMButton,
-	TwitterVideoEmbed,
-	TwitterOnAirButton
-} from 'react-twitter-embed';
+  Button,
+  CardContent,
+  FormGroup,
+  Grid,
+  Hidden,
+  Typography
+} from "@material-ui/core";
+import Card from "@material-ui/core/Card";
+//material ui component
+import Container from "@material-ui/core/Container";
+import Divider from "@material-ui/core/Divider";
+import React, { Component } from "react";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 var sectionStyle = {
-	width: '100%',
-	height: '85vh',
-	backgroundRepeat: 'no-repeat',
-	marginTop: '100px',
-	backgroundPositionX: 'center',
-	Height: '100%'
+  width: "100%",
+  height: "85vh",
+  backgroundRepeat: "no-repeat",
+  marginTop: "100px",
+  backgroundPositionX: "center",
+  Height: "100%"
 };
 const style = {
-	form: {
-		padding: '20px',
-		text: {
-			appearance: 'none',
-			width: '100%',
+  form: {
+    padding: "20px",
+    text: {
+      appearance: "none",
+      width: "100%",
 
-			height: '35px',
+      height: "35px",
 
-			borderRadius: '5px',
-			outline: 'none',
-			border: 'none',
-			background: '#e8ebed',
-			color: '#576366',
-			fontSize: '14px'
-		}
-	}
+      borderRadius: "5px",
+      outline: "none",
+      border: "none",
+      background: "#e8ebed",
+      color: "#576366",
+      fontSize: "14px"
+    }
+  }
 };
 
 class Mentorship extends Component {
+
 	render() {
 		return (
 			<Container maxWidth="xl ">

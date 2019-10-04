@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 //material ui component
+
 import { Grid, Container, Divider } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -9,6 +10,7 @@ import Typography from "@material-ui/core/Typography";
 const style = {
   height: "85vh"
 };
+
 
 class Groups extends Component {
   constructor(props) {
@@ -24,13 +26,17 @@ class Groups extends Component {
         },
         {
           id: 2,
-          title: "Cloud",
+
+          title: "Cloud Computing",
+
           Description:
             "Technojam Cloud speciality Group is Dedicated to development on Cloud"
         },
         {
           id: 3,
-          title: "Web",
+
+          title: "Web Technologies",
+
           Description:
             "Technojam Web speciality Group is Dedicated to development of Websites"
         },
@@ -65,10 +71,12 @@ class Groups extends Component {
         <Container maxWidth="lg">
           <div style={{ marginBottom: "20px", marginTop: "90px" }}>
             <div>
+
               <Typography variant="h3" className="view_title">
                 Speciality Groups
               </Typography>
               <hr className="view_line" />
+
               <br />
               <Grid
                 container
@@ -92,13 +100,18 @@ class Groups extends Component {
                       }}
                     >
                       <CardContent>
+
                         <Typography variant="h5">{Groups.title}</Typography>
                       </CardContent>
                       <CardContent className="card_content_top">
+
                         <Typography
                           variant="body2"
                           color="textSecondary"
                           component="p"
+
+                          style={{ fontFamily: "Roboto" }}
+
                         >
                           {Groups.Description}
                         </Typography>

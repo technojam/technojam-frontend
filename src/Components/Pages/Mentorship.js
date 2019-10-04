@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 //material ui component
 import Container from '@material-ui/core/Container';
-import { Typography, Hidden, Grid } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -18,6 +18,11 @@ var sectionStyle = {
 	marginTop: '40px',
 	backgroundPositionX: 'center'
 };
+
+/* FIXME: When the target will be decided, remove the rel attribute.
+ * It has been added here for security reasons.
+ * Reference: https://mathiasbynens.github.io/rel-noopener/
+ */
 
 class Mentorship extends Component {
 	constructor(props) {
@@ -95,23 +100,29 @@ class Mentorship extends Component {
 								</Typography>
 								<br />
 
+
 								<Typography variant="h5" className='letter_spacing'>
-									<a href=" https://twitter.com/technojam_gu" target="_blank">
+									<a href=" https://twitter.com/technojam_gu" target="_blank" rel='noopener noreferrer'>
 										<i className="fab fa-twitter fa-lg" style={{ color: Color.color_twitter }} />
+
 									</a>&#8194;
-									<a href=" https://tjosc.slack.com/" target="_blank">
+									<a href="https://tjosc.slack.com/" target="_blank" rel='noopener noreferrer'>
 										<i className="fab fa-slack fa-lg" style={{ color: '#e44134' }} />
 									</a>&#8194;
-									<a href="#" target="_blank">
+									<a href="/" target="_blank" rel='noopener noreferrer'></a>
+									<a href="/" target="_blank">
+
 										<i className="fab fa-telegram-plane fa-lg" style={{ color: '#f4b602' }} />
 									</a>&#8194;
-									<a href="https://www.linkedin.com/company/technojam/" target="_blank">
+
+									<a href="https://www.linkedin.com/company/technojam/" target="_blank" rel='noopener noreferrer'>
 										<i className="fab fa-linkedin fa-lg" style={{ color: Color.color_twitter }} />
+
 									</a>&#8194;
-									<a href="https://www.facebook.com/technojam.scse/?ref=br_rs" target="_blank">
+									<a href="https://www.facebook.com/technojam.scse/?ref=br_rs" target="_blank" rel='noopener noreferrer'>
 										<i className="fab fa-facebook fa-lg" style={{ color: '#33a351' }} />
 									</a>&#8194;
-									<a href="https://instagram.com/technojam_galgotias" target="_blank">
+									<a href="https://instagram.com/technojam_galgotias" target="_blank" rel='noopener noreferrer'>
 										<i className="fab fa-instagram fa-lg" style={{ color: '#e44134' }} />
 									</a>&#8194;
 								</Typography>
@@ -216,13 +227,13 @@ class Mentorship extends Component {
 												className='grid_item_typo'
 													
 												>
-													<a href={project.slack} target="_blank">
+													<a href={project.slack} target="_blank" rel='noopener noreferrer'>
 														<i
 															className="fab fa-slack fa-2x"
 															style={{ color: '#e44134' }}
 														/>
 													</a>&#8194;
-													<a href={project.telegram} target="_blank">
+													<a href={project.telegram} target="_blank" rel='noopener noreferrer'>
 														<i
 															className="fab fa-telegram fa-2x"
 															style={{ color: '#f4b602' }}
@@ -248,7 +259,7 @@ class Mentorship extends Component {
 												className='grid_item_typo'
 													
 												>
-													<a href={project.repolink} target="_blank">
+													<a href={project.repolink} target="_blank" rel='noopener noreferrer'>
 														<i className="fa fa-link fa-2x" style={{ color: '#be38ae' }} />
 													</a>&#8194;
 												</Typography>

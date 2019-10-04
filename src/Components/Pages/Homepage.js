@@ -4,7 +4,9 @@ import React, { Component } from "react";
 
 import { Grid, Typography, Hidden } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+
 import "../style.css";
+
 
 const Style = {
   marginTop: "60px",
@@ -32,8 +34,8 @@ const Style = {
     width: "100%",
     height: "100%",
     //Put new background Image here of Size 1550 * 720 px
-    backgroundImage:
-      "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png)",
+
+
     //Good Boy don't touch anything else
     backgroundRepeat: "no-repeat",
 
@@ -46,6 +48,11 @@ const Style = {
   }
 };
 
+/* FIXME: When the target will be decided, remove the rel attribute.
+ * It has been added here for security reasons.
+ * Reference: https://mathiasbynens.github.io/rel-noopener/
+ */
+
 class Homepage extends Component {
   constructor(props) {
     super(props);
@@ -54,10 +61,13 @@ class Homepage extends Component {
       Home: [
         {
           content:
-            "Technojam Mentorship initiative is a global program focused on introducing students to open source software development. Since its inception program aims on giving the very best experince of GSOC to enthusiast.",
+
+            "Technojam is hosting 24 Hours hackathon. In Galgotias University Those who want to know more can register here.",
           title: "DEXTRIX 2.0",
           cta: "#",
-          buttonname: "Register here"
+          buttonname: "Register here",
+          backgroundImageUrl:
+            "https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png"
         }
       ]
     };
@@ -66,11 +76,15 @@ class Homepage extends Component {
   render() {
     const Home = this.state.Home;
 
+
     console.log(Home);
     return (
       <div style={Style}>
         {Home.map(Home => (
-          <div style={Style.back}>
+          <div  style={{
+              ...Style.back,
+              backgroundImage: `url(${Home.backgroundImageUrl})`
+            }}>
             <Grid container xs={6} sm={3} md={3}>
               <Hidden smDown>
                 <div style={Style.square}>
@@ -79,27 +93,42 @@ class Homepage extends Component {
                       variant="h3"
                       className="letter_spacing"
                       style={{ color: "white" }}
+
                     >
                       {Home.title}
                     </Typography>
                     <br />
+
 
                     <Typography
                       variant="body2"
                       className="home_grid_typo"
                       style={{
                         fontSize: "21px"
+
                       }}
                     >
                       {Home.content}
                     </Typography>
                     <br />
                     <Button variant="contained" style={Style.button}>
+
+
+                      {Home.buttonname}{" "}
+                      <a
+                        src={Home.cta}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      />
+
                       {Home.buttonname} <a src={Home.cta} target="_blank" />
+
+
                     </Button>
                   </div>
                 </div>
               </Hidden>
+
 
               <Hidden mdUp>
                 <div style={Style.square1}>
@@ -126,6 +155,7 @@ class Homepage extends Component {
                     <br />
                     <Button variant="contained" style={Style.button}>
                       {Home.buttonname} <a href={Home.cta} target="_blank" />
+
                     </Button>
                   </div>
                 </div>
