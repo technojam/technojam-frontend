@@ -157,7 +157,7 @@ export default props => (
             <div style={{ paddingLeft: '100px', paddingRight: 'auto' }}>
               <Typography style={{ fontFamily: 'Roboto' }}>
 
-                Email us : Technojam@galgotiasuniversity.edu.in
+                Email us : technojam@galgotiasuniversity.edu.in
               </Typography>
             </div>
           </Grid>
