@@ -43,6 +43,11 @@ const Style = {
   }
 };
 
+/* FIXME: When the target will be decided, remove the rel attribute.
+ * It has been added here for security reasons.
+ * Reference: https://mathiasbynens.github.io/rel-noopener/
+ */
+
 class Homepage extends Component {
   constructor(props) {
     super(props);
@@ -112,7 +117,16 @@ class Homepage extends Component {
                     </Typography>
                     <br />
                     <Button variant="contained" style={Style.button}>
+
+                      {Home.buttonname}{" "}
+                      <a
+                        src={Home.cta}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      />
+
                       {Home.buttonname} <a src={Home.cta} target="_blank" />
+
                     </Button>
                   </div>
                 </div>
@@ -156,7 +170,16 @@ class Homepage extends Component {
                     </Typography>
                     <br />
                     <Button variant="contained" style={Style.button}>
+
+                      {Home.buttonname}{" "}
+                      <a
+                        href={Home.cta}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      />
+
                       {Home.buttonname} <a href={Home.cta} target="_blank" />
+
                     </Button>
                   </div>
                 </div>

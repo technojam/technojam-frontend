@@ -11,6 +11,13 @@ import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
 
+
+/* FIXME: When the target will be decided, remove the rel attribute.
+ * It has been added here for security reasons.
+ * Reference: https://mathiasbynens.github.io/rel-noopener/
+ */
+
+
 class Events extends Component {
 	constructor(props) {
 		super(props);
@@ -190,6 +197,7 @@ class Events extends Component {
 														className="btn btn-social-icon btn-github"
 														href={paevent.Todo}
 														target="_blank"
+														rel='noopener noreferrer'
 													>
 														<i className="fab fa-github fa-lg" style={{ color: 'black' }} />
 													</a>
