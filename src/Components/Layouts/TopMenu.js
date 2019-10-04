@@ -1,9 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../../images/logo_small.png";
-import ResponsiveDrawer from "./ResponsiveDrawer";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Logo from '../../images/logo_small.png';
+import ResponsiveDrawer from './ResponsiveDrawer';
 
 //material ui component
+
 import {
   AppBar,
   Toolbar,
@@ -20,11 +21,12 @@ import Modal from "@material-ui/core/Modal";
 import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
+import "../style.css";
 
 const style = {
   marginleft: 200,
   toolbarButtons: {
-    marginLeft: "auto",
+    marginLeft: 'auto',
     marginRight: -12
   }
 };
@@ -41,150 +43,81 @@ export default function TopMenu() {
   };
 
   return (
-    <div style={{ color: "#fff" }}>
+    <div style={{ color: '#fff' }}>
       <AppBar position="fixed">
-        <Toolbar style={{ backgroundColor: "#24292e" }}>
+        <Toolbar style={{ backgroundColor: '#24292e' }}>
           <Hidden mdUp>
             <ResponsiveDrawer />
           </Hidden>
           <Grid alignItems="flex-start" justify="flex-start">
-            <Button color="inherit" component={Link} to={"/"}>
-              <img
-                src={Logo}
-                alt="TechnoJam.tech"
-                height="50px"
-                align="center"
-              />
+            <Button color="inherit" component={Link} to={'/'}>
+              <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />
             </Button>
           </Grid>
           <Hidden smDown>
-            <div
-              style={{
-                marginLeft: "auto",
-                marginRight: "auto",
-                padding: "5px"
-              }}
-            >
+
+            <div className="topMenu_wrapper">
               <Grid
+
                 alignItems="flex-end"
                 justify="flex-end"
                 spacing={800}
-                style={{ marginLeft: "75px" }}
+                style={{ marginLeft: '75px' }}
               >
+
                 <Button style={{ style }} component={Link} to={"/events"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
-                    Events
-                  </Typography>
+                  <Typography className="topMenu_typo_name">Events</Typography>
+
                 </Button>
                 <Badge
-                  style={{ marginBottom: "30px", marginRight: "5px" }}
-                  badgeContent={"New"}
+                  style={{ marginBottom: '30px', marginRight: '5px' }}
+                  badgeContent={'New'}
                   color="secondary"
                 ></Badge>
+
                 <Button style={{ style }} component={Link} to={"/achievements"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
+                  <Typography className="topMenu_typo_name">
                     Achievements
                   </Typography>
                 </Button>
                 <Button style={{ style }} component={Link} to={"/team"}>
                   {" "}
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
-                    Team
-                  </Typography>
+                  <Typography className="topMenu_typo_name">Team</Typography>
                 </Button>
                 <Button style={{ style }} component={Link} to={"/alumni"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
-                    Alumni
-                  </Typography>
+                  <Typography className="topMenu_typo_name">Alumni</Typography>
                 </Button>
 
                 <Button style={{ style }} component={Link} to={"/mentorship"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
+                  <Typography className="topMenu_typo_name">
                     Mentorship
                   </Typography>
                 </Button>
                 <Button style={{ style }} component={Link} to={"/groups"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
-                    Groups
-                  </Typography>
+                  <Typography className="topMenu_typo_name">Groups</Typography>
                 </Button>
                 <Button style={{ style }} component={Link} to={"/aboutus"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
+                  <Typography className="topMenu_typo_name">
                     About Us
                   </Typography>
                 </Button>
                 <Button style={{ style }} component={Link} to={"/contactus"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
+                  <Typography className="topMenu_typo_name">
+
                     Contact Us
                   </Typography>
                 </Button>
               </Grid>
             </div>
           </Hidden>
-          <div style={{ marginLeft: "auto" }}>
+          <div style={{ marginLeft: 'auto' }}>
             <Tooltip title="Night Mode">
-              <IconButton
+              <IconButton 
                 color="inherit"
                 aria-label="Night Mode"
                 style={{ style }}
                 component={Link}
-                to={"/"}
+                to={'/'}
               >
                 <WbIncandescentIcon />
               </IconButton>
@@ -197,52 +130,35 @@ export default function TopMenu() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fab fa-github fa-lg"
-                  style={{ color: "#fcfcfc" }}
-                ></i>
+                <i className="fab fa-github fa-lg" style={{ color: '#fcfcfc' }}></i>
               </a>
             </Tooltip>
 
             <Tooltip title="Log-in">
+
               <IconButton
                 color="inherit"
-                onClick={handleOpen}
+                // onClick={handleOpen}
                 aria-label="Login"
                 style={{ style }}
+                component={Link}
+                to={"/login"}
               >
+
                 <PersonIcon />
               </IconButton>
             </Tooltip>
             <Modal open={open} onClose={handleClose}>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundColor: "black",
-                  opacity: "0.98",
-                  position: "absolute",
-                  top: "0",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center"
-                }}
-              >
-                <div
-                  style={{
-                    width: "500px",
-                    height: "290px",
-                    backgroundColor: "#fafafa",
-                    borderRadius: "7px",
-                    textAlign: "center"
-                  }}
-                >
+
+              <div id="login_modal_container">
+                <div id="login_modal_content">
                   <img
                     src={Logo}
                     alt="TechnoJam.tech"
                     height="50px"
                     align="center"
                   />
+
                   <br></br>
 
                   <FormControl component="fieldset">
@@ -271,18 +187,13 @@ export default function TopMenu() {
                     </Grid>
                     <br></br>
 
-                    <Grid
-                      container
-                      direction="row"
-                      justify="center"
-                      alignItems="center"
-                    >
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={handleClose}
-                        component={Link}
-                        to={"/login"}
+                    <Grid container direction="row" justify="center" alignItems="center">
+                      <Button 
+                        variant="contained" 
+                        color="primary" 
+                        onClick={handleClose} 
+                        component={Link} 
+                        to={'/login'}
                       >
                         Login
                       </Button>
