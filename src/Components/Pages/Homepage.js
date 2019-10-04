@@ -51,7 +51,8 @@ class Homepage extends Component {
 		this.state = {
 			Home: [
 				{
-					content:'Technojam is hosting 24 Hours hackathon. In Galgotias University Those who want to know more can register here.',
+					content:
+						'Technojam is hosting 24 Hours hackathon. In Galgotias University Those who want to know more can register here.',
 					title: 'DEXTRIX 2.0',
 					cta: '#',
           buttonname: 'Register here',

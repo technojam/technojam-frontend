@@ -1,30 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../../images/logo_small.png";
-import ResponsiveDrawer from "./ResponsiveDrawer";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Logo from '../../images/logo_small.png';
+import ResponsiveDrawer from './ResponsiveDrawer';
 
 //material ui component
-import {
-  AppBar,
-  Toolbar,
-  Button,
-  Badge,
-  IconButton,
-  Hidden
-} from "@material-ui/core";
-import Grid from "@material-ui/core/Grid";
-import WbIncandescentIcon from "@material-ui/icons/WbIncandescent";
-import PersonIcon from "@material-ui/icons/Person";
-import Tooltip from "@material-ui/core/Tooltip";
-import Modal from "@material-ui/core/Modal";
-import FormControl from "@material-ui/core/FormControl";
-import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
+import { AppBar, Toolbar, Button, Badge, IconButton, Hidden } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
+import PersonIcon from '@material-ui/icons/Person';
+import Tooltip from '@material-ui/core/Tooltip';
+import Modal from '@material-ui/core/Modal';
+import FormControl from '@material-ui/core/FormControl';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 
 const style = {
   marginleft: 200,
   toolbarButtons: {
-    marginLeft: "auto",
+    marginLeft: 'auto',
     marginRight: -12
   }
 };
@@ -41,134 +34,129 @@ export default function TopMenu() {
   };
 
   return (
-    <div style={{ color: "#fff" }}>
+    <div style={{ color: '#fff' }}>
       <AppBar position="fixed">
-        <Toolbar style={{ backgroundColor: "#24292e" }}>
+        <Toolbar style={{ backgroundColor: '#24292e' }}>
           <Hidden mdUp>
             <ResponsiveDrawer />
           </Hidden>
           <Grid alignItems="flex-start" justify="flex-start">
-            <Button color="inherit" component={Link} to={"/"}>
-              <img
-                src={Logo}
-                alt="TechnoJam.tech"
-                height="50px"
-                align="center"
-              />
+            <Button color="inherit" component={Link} to={'/'}>
+              <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />
             </Button>
           </Grid>
           <Hidden smDown>
             <div
               style={{
-                marginLeft: "auto",
-                marginRight: "auto",
-                padding: "5px"
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                padding: '5px'
               }}
             >
-              <Grid
+              <Grid 
                 alignItems="flex-end"
                 justify="flex-end"
                 spacing={800}
-                style={{ marginLeft: "75px" }}
+                style={{ marginLeft: '75px' }}
               >
-                <Button style={{ style }} component={Link} to={"/events"}>
+                <Button style={{ style }} component={Link} to={'/events'}>
                   <Typography
                     style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
+                      fontFamily: 'Roboto',
+                      letterSpacing: '0.9px',
+                      textTransform: 'none',
+                      color: '#fafafa'
                     }}
                   >
                     Events
                   </Typography>
                 </Button>
                 <Badge
-                  style={{ marginBottom: "30px", marginRight: "5px" }}
-                  badgeContent={"New"}
+                  style={{ marginBottom: '30px', marginRight: '5px' }}
+                  badgeContent={'New'}
                   color="secondary"
                 ></Badge>
-                <Button style={{ style }} component={Link} to={"/achievements"}>
+                <Button style={{ style }} component={Link} to={'/achievements'}>
                   <Typography
                     style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
+                      fontFamily: 'Roboto',
+                      letterSpacing: '0.9px',
+                      textTransform: 'none',
+                      color: '#fafafa'
                     }}
                   >
                     Achievements
                   </Typography>
                 </Button>
-                <Button style={{ style }} component={Link} to={"/team"}>
-                  {" "}
+                <Button style={{ style }} component={Link} to={'/team'}>
+                  {' '}
                   <Typography
                     style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
+                      fontFamily: 'Roboto',
+                      letterSpacing: '0.9px',
+                      textTransform: 'none',
+                      color: '#fafafa'
                     }}
                   >
                     Team
                   </Typography>
                 </Button>
-                <Button style={{ style }} component={Link} to={"/alumni"}>
+                <Button style={{ style }} component={Link} to={'/alumni'}>
                   <Typography
                     style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
+                      fontFamily: 'Roboto',
+                      letterSpacing: '0.9px',
+                      textTransform: 'none',
+                      color: '#fafafa'
                     }}
                   >
                     Alumni
                   </Typography>
                 </Button>
 
-                <Button style={{ style }} component={Link} to={"/mentorship"}>
+                <Button style={{ style }} component={Link} to={'/mentorship'}>
                   <Typography
                     style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
+                      fontFamily: 'Roboto',
+                      letterSpacing: '0.9px',
+                      textTransform: 'none',
+                      color: '#fafafa'
                     }}
                   >
                     Mentorship
                   </Typography>
                 </Button>
-                <Button style={{ style }} component={Link} to={"/groups"}>
+                <Button style={{ style }} component={Link} to={'/groups'}>
                   <Typography
                     style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
+                      fontFamily: 'Roboto',
+                      letterSpacing: '0.9px',
+                      textTransform: 'none',
+                      color: '#fafafa'
                     }}
                   >
                     Groups
                   </Typography>
                 </Button>
-                <Button style={{ style }} component={Link} to={"/aboutus"}>
+                <Button style={{ style }} component={Link} to={'/aboutus'}>
                   <Typography
                     style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
+                      fontFamily: 'Roboto',
+                      letterSpacing: '0.9px',
+                      textTransform: 'none',
+                      color: '#fafafa'
                     }}
                   >
                     About Us
                   </Typography>
                 </Button>
-                <Button style={{ style }} component={Link} to={"/contactus"}>
+                <Button style={{ style }} component={Link} to={'/contactus'}>
                   <Typography
                     style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
+                      fontFamily: 'Roboto',
+                      letterSpacing: '0.9px',
+                      textTransform: 'none',
+                      color: '#fafafa'
                     }}
                   >
                     Contact Us
@@ -177,14 +165,14 @@ export default function TopMenu() {
               </Grid>
             </div>
           </Hidden>
-          <div style={{ marginLeft: "auto" }}>
+          <div style={{ marginLeft: 'auto' }}>
             <Tooltip title="Night Mode">
-              <IconButton
+              <IconButton 
                 color="inherit"
                 aria-label="Night Mode"
                 style={{ style }}
                 component={Link}
-                to={"/"}
+                to={'/'}
               >
                 <WbIncandescentIcon />
               </IconButton>
@@ -197,52 +185,39 @@ export default function TopMenu() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fab fa-github fa-lg"
-                  style={{ color: "#fcfcfc" }}
-                ></i>
+                <i className="fab fa-github fa-lg" style={{ color: '#fcfcfc' }}></i>
               </a>
             </Tooltip>
 
             <Tooltip title="Log-in">
-              <IconButton
-                color="inherit"
-                onClick={handleOpen}
-                aria-label="Login"
-                style={{ style }}
-              >
+              <IconButton color="inherit" onClick={handleOpen} aria-label="Login" style={{ style }}>
                 <PersonIcon />
               </IconButton>
             </Tooltip>
             <Modal open={open} onClose={handleClose}>
               <div
                 style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundColor: "black",
-                  opacity: "0.98",
-                  position: "absolute",
-                  top: "0",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center"
+                  width: '100%',
+                  height: '100%',
+                  backgroundColor: 'black',
+                  opacity: '0.98',
+                  position: 'absolute',
+                  top: '0',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
                 }}
               >
                 <div
                   style={{
-                    width: "500px",
-                    height: "290px",
-                    backgroundColor: "#fafafa",
-                    borderRadius: "7px",
-                    textAlign: "center"
+                    width: '500px',
+                    height: '290px',
+                    backgroundColor: '#fafafa',
+                    borderRadius: '7px',
+                    textAlign: 'center'
                   }}
                 >
-                  <img
-                    src={Logo}
-                    alt="TechnoJam.tech"
-                    height="50px"
-                    align="center"
-                  />
+                  <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />
                   <br></br>
 
                   <FormControl component="fieldset">
@@ -271,18 +246,13 @@ export default function TopMenu() {
                     </Grid>
                     <br></br>
 
-                    <Grid
-                      container
-                      direction="row"
-                      justify="center"
-                      alignItems="center"
-                    >
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={handleClose}
-                        component={Link}
-                        to={"/login"}
+                    <Grid container direction="row" justify="center" alignItems="center">
+                      <Button 
+                        variant="contained" 
+                        color="primary" 
+                        onClick={handleClose} 
+                        component={Link} 
+                        to={'/login'}
                       >
                         Login
                       </Button>
