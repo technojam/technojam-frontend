@@ -18,10 +18,16 @@ import WbIncandescentIcon from "@material-ui/icons/WbIncandescent";
 import PersonIcon from "@material-ui/icons/Person";
 import Tooltip from "@material-ui/core/Tooltip";
 import Modal from "@material-ui/core/Modal";
-import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
+import Fade from "@material-ui/core/Fade";
+import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
+
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 import "../style.css";
+
 
 const style = {
   marginleft: 200,
@@ -31,8 +37,34 @@ const style = {
   }
 };
 
+const modalCardBaseStyle = {
+  position: "relative",
+  display: "flex",
+  flexDirection: "column",
+  padding: "4rem 1rem 3rem",
+  backgroundColor: "#fff",
+  backgroundImage:
+    'url("https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.png")',
+  backgroundSize: "125%",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "160% -12px",
+  borderRadius: ".25rem",
+  boxShadow: "0 0 3rem rgb(36, 41, 46)",
+  outline: "none"
+};
+
 export default function TopMenu() {
   const [open, setOpen] = React.useState(false);
+  const theme = useTheme();
+  const modalCardStyle = { ...modalCardBaseStyle };
+
+  if (useMediaQuery(theme.breakpoints.up("sm"))) {
+    modalCardStyle.width = 400;
+    modalCardStyle.padding = "4rem 2rem 3rem";
+  } else {
+    modalCardStyle.width = "80%";
+    modalCardStyle.maxWidth = "calc(100% - 2rem)";
+  }
 
   const handleOpen = () => {
     setOpen(true);
@@ -123,7 +155,6 @@ export default function TopMenu() {
                 <WbIncandescentIcon />
               </IconButton>
             </Tooltip>
-
             <Tooltip title="Our Projects">
               <a
                 className="btn btn-social-icon btn-github"
@@ -134,74 +165,86 @@ export default function TopMenu() {
                 <i className="fab fa-github fa-lg" style={{ color: '#fcfcfc' }}></i>
               </a>
             </Tooltip>
-
             <Tooltip title="Log-in">
 
               <IconButton
                 color="inherit"
-                // onClick={handleOpen}
+                onClick={handleOpen}
                 aria-label="Login"
                 style={{ style }}
                 component={Link}
-                to={"/login"}
+                
               >
 
                 <PersonIcon />
               </IconButton>
             </Tooltip>
-            <Modal open={open} onClose={handleClose}>
 
-              <div id="login_modal_container">
-                <div id="login_modal_content">
+            <Modal
+              open={open}
+              onClose={handleClose}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              <Fade in={open}>
+                <div style={modalCardStyle}>
+
                   <img
                     src={Logo}
                     alt="TechnoJam.tech"
-                    height="50px"
-                    align="center"
+                    style={{
+                      position: "absolute",
+                      top: "0",
+                      left: "50%",
+                      width: "100px",
+                      transform: "translate(-50%, -50%)"
+                    }}
                   />
 
-                  <br></br>
+                  <IconButton
+                    aria-label="close"
+                    onClick={handleClose}
+                    style={{
+                      position: "absolute",
+                      top: ".5rem",
+                      right: ".5rem"
+                    }}
+                  >
+                    <CloseIcon />
+                  </IconButton>
+                  <TextField
+                    id="outlined-email-input"
+                    label="Email"
+                    type="email"
+                    name="email"
+                    autoComplete="email"
+                    margin="normal"
+                    variant="outlined"
+                  />
+                  <TextField
+                    id="outlined-password-input"
+                    label="password"
+                    type="password"
+                    autoComplete="current-password"
+                    margin="normal"
+                    variant="outlined"
+                  />
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    onClick={handleClose}
+                    to={"/login"}
+                    style={{ marginTop: "16px" }}
+                  >
+                    Login
+                  </Button>
 
-                  <FormControl component="fieldset">
-                    <Grid container alignItems="flex-start">
-                      <Grid item xs={12} sm={12} md={12}>
-                        <TextField
-                          id="outlined-email-input"
-                          label="Email"
-                          type="email"
-                          name="email"
-                          autoComplete="email"
-                          margin="normal"
-                          variant="outlined"
-                        />
-                      </Grid>
-                      <Grid item xs={12} sm={12} md={12}>
-                        <TextField
-                          id="outlined-password-input"
-                          label="password"
-                          type="password"
-                          autoComplete="current-password"
-                          margin="normal"
-                          variant="outlined"
-                        />
-                      </Grid>
-                    </Grid>
-                    <br></br>
-
-                    <Grid container direction="row" justify="center" alignItems="center">
-                      <Button 
-                        variant="contained" 
-                        color="primary" 
-                        onClick={handleClose} 
-                        component={Link} 
-                        to={'/login'}
-                      >
-                        Login
-                      </Button>
-                    </Grid>
-                  </FormControl>
                 </div>
-              </div>
+              </Fade>
             </Modal>
           </div>
         </Toolbar>
