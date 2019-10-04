@@ -169,11 +169,11 @@ export default function TopMenu() {
 
               <IconButton
                 color="inherit"
-                // onClick={handleOpen}
+                onClick={handleOpen}
                 aria-label="Login"
                 style={{ style }}
                 component={Link}
-                to={"/login"}
+                
               >
 
                 <PersonIcon />
