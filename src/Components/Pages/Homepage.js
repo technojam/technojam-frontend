@@ -67,7 +67,7 @@ class Homepage extends Component {
             "Technojam is hosting 24 Hours hackathon. In Galgotias University Those who want to know more can register here.",
           title: "DEXTRIX 2.0",
           cta: "#",
-          buttonname: "#",
+          buttonname: "Register here",
           backgroundImageUrl:
             "https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png"
         }
@@ -123,7 +123,7 @@ class Homepage extends Component {
                         rel="noopener noreferrer"
                       />
 
-                      {Home.buttonname} <a src={Home.cta} target="_blank" />
+                     
 
 
                     </Button>
