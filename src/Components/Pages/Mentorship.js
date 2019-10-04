@@ -156,6 +156,9 @@ class Mentorship extends Component {
 													}}
 												>
 													{project.title}
+													<Typography style={{textAlign:"center"}}>
+													<i class="fas fa-arrow-circle-down fa-2x" style={{color:"#33a351"}}></i>
+													</Typography>
 												</Typography>
 											</Grid>
 											<Grid item md={6} xl={6}>
