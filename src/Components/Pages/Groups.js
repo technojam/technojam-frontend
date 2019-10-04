@@ -73,6 +73,7 @@ class Groups extends Component {
             <div>
 
               <Typography variant="h3" className="view_title">
+                <br></br>
                 Speciality Groups
               </Typography>
               <hr className="view_line" />
@@ -86,7 +87,7 @@ class Groups extends Component {
                 alignItems="flex-start"
               >
                 {Groups.map(Groups => (
-                  <Grid item xs={12} sm={3} md={4}>
+                  <Grid item xs={12} sm={4} md={3}>
                     <Card
                       className="card--shadow"
                       style={{

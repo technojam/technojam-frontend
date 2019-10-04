@@ -45,24 +45,29 @@
 }
 .card--shadow {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25) !important;
+  line-height:20px
 }
 .card_style {
   opacity: "0.9";
   min-height: 530px;
   border-radius: 20px !important;
+  
 }
 .card_content_h3 {
   text-align: center;
   font-family: Roboto;
   color: #fafafa;
   letter-spacing: 2px;
+  
 }
 .card_content_body1 {
   color: #fafafa;
   letter-spacing: 0.8px;
+  
 }
 .card_content_top {
   margin-top: -20px;
+  
 }
 .card_content_achieve {
   max-height: 410px;

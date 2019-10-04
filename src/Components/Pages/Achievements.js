@@ -54,7 +54,7 @@ class Achievements extends Component {
           date: "May 12, 2018",
           Description:
 
-            "rahul chuhan Member of Team Teachnojam cleared Gsoc in 2019 in Galgotias University. He worked on R project",
+            "Rahul chuhan Member of Team Teachnojam cleared Gsoc in 2019 in Galgotias University. He worked on R project",
 
           Image: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/rahul.jpg"
 
@@ -88,6 +88,7 @@ class Achievements extends Component {
         <div className="view_container">
           <div>
             <Typography variant="h3" className="view_title">
+              <br></br>
               Our Achievements
             </Typography>
             <hr className="view_line" />
@@ -130,7 +131,7 @@ class Achievements extends Component {
                         variant="body2"
                         color="textSecondary"
                         component="p"
-                        style={{ letterSpacing: "0.9px" }}
+                        style={{ letterSpacing: "0.9px",lineHeight:"21px" }}
 
 
                       >

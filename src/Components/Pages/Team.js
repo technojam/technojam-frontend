@@ -259,6 +259,7 @@ export default function Team() {
     <div className={classes.root}>
 
       <Typography variant="h3" className="view_title">
+        <br></br>
         Our Team
       </Typography>
       <hr className="view_line" />

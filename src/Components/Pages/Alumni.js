@@ -120,6 +120,7 @@ class Alumni extends Component {
                 color: "#073fff"
               }}
             >
+              <br></br>
               Our Alumni{" "}
             </Typography>{" "}
             <hr

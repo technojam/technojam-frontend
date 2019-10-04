@@ -111,7 +111,7 @@ class Events extends Component {
 														variant="body2"
 														color="textSecondary"
 														component="p"
-														style={{ letterSpacing: '0.9px' }}
+														style={{ letterSpacing: '0.9px',lineHeight:"24px" }}
 													>
 														{upevent.Description}
 													</Typography>
@@ -181,7 +181,7 @@ class Events extends Component {
 														variant="body2"
 														color="textSecondary"
 														component="p"
-														style={{ letterSpacing: '0.9px' }}
+														style={{ letterSpacing: '0.9px',lineHeight:"24px"}}
 													>
 														{paevent.Description}
 													</Typography>

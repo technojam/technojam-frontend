@@ -106,7 +106,7 @@ function Aboutus() {
                 </CardContent>
                 <CardContent>
 
-                  <Typography variant="body1" className="card_content_body1">
+                  <Typography variant="body1" className="card_content_body1" style={{lineHeight:"29px"}}>
                     <p>
                       To work on various innovative projects which will bestow
                       creative minds thinking patterns to the upcoming future
@@ -134,6 +134,9 @@ function Aboutus() {
                       creative minds in the direction of technology.
 
                     </p>
+                    <p>
+                      We as a OS community would try our best to give back to our community.
+                    </p>
                   </Typography>
                 </CardContent>
               </Card>
@@ -152,7 +155,7 @@ function Aboutus() {
                 </CardContent>
                 <CardContent>
 
-                  <Typography variant="body1" className="card_content_body1">
+                  <Typography variant="body1" className="card_content_body1"  style={{lineHeight:"29px"}}>
                     <p>
                       1. To develop a platform where the technical
                       innovativeness of students could be nurtured and given a

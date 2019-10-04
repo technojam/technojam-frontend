@@ -52,6 +52,7 @@ export default function TopMenu() {
           <Grid alignItems="flex-start" justify="flex-start">
             <Button color="inherit" component={Link} to={'/'}>
               <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />
+              <Typography className="topMenu_typo_name">TECHNOJAM</Typography>
             </Button>
           </Grid>
           <Hidden smDown>
