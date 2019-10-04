@@ -20,6 +20,7 @@ import Modal from "@material-ui/core/Modal";
 import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
+import "../style.css";
 
 const style = {
   marginleft: 200,
@@ -58,13 +59,7 @@ export default function TopMenu() {
             </Button>
           </Grid>
           <Hidden smDown>
-            <div
-              style={{
-                marginLeft: "auto",
-                marginRight: "auto",
-                padding: "5px"
-              }}
-            >
+            <div className="topMenu_wrapper">
               <Grid
                 alignItems="flex-end"
                 justify="flex-end"
@@ -72,16 +67,7 @@ export default function TopMenu() {
                 style={{ marginLeft: "75px" }}
               >
                 <Button style={{ style }} component={Link} to={"/events"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
-                    Events
-                  </Typography>
+                  <Typography className="topMenu_typo_name">Events</Typography>
                 </Button>
                 <Badge
                   style={{ marginBottom: "30px", marginRight: "5px" }}
@@ -89,88 +75,33 @@ export default function TopMenu() {
                   color="secondary"
                 ></Badge>
                 <Button style={{ style }} component={Link} to={"/achievements"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
+                  <Typography className="topMenu_typo_name">
                     Achievements
                   </Typography>
                 </Button>
                 <Button style={{ style }} component={Link} to={"/team"}>
                   {" "}
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
-                    Team
-                  </Typography>
+                  <Typography className="topMenu_typo_name">Team</Typography>
                 </Button>
                 <Button style={{ style }} component={Link} to={"/alumni"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
-                    Alumni
-                  </Typography>
+                  <Typography className="topMenu_typo_name">Alumni</Typography>
                 </Button>
 
                 <Button style={{ style }} component={Link} to={"/mentorship"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
+                  <Typography className="topMenu_typo_name">
                     Mentorship
                   </Typography>
                 </Button>
                 <Button style={{ style }} component={Link} to={"/groups"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
-                    Groups
-                  </Typography>
+                  <Typography className="topMenu_typo_name">Groups</Typography>
                 </Button>
                 <Button style={{ style }} component={Link} to={"/aboutus"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
+                  <Typography className="topMenu_typo_name">
                     About Us
                   </Typography>
                 </Button>
                 <Button style={{ style }} component={Link} to={"/contactus"}>
-                  <Typography
-                    style={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "0.9px",
-                      textTransform: "none",
-                      color: "#fafafa"
-                    }}
-                  >
+                  <Typography className="topMenu_typo_name">
                     Contact Us
                   </Typography>
                 </Button>
@@ -217,28 +148,8 @@ export default function TopMenu() {
               </IconButton>
             </Tooltip>
             <Modal open={open} onClose={handleClose}>
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundColor: "black",
-                  opacity: "0.98",
-                  position: "absolute",
-                  top: "0",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center"
-                }}
-              >
-                <div
-                  style={{
-                    width: "500px",
-                    height: "290px",
-                    backgroundColor: "#fafafa",
-                    borderRadius: "7px",
-                    textAlign: "center"
-                  }}
-                >
+              <div id="login_modal_container">
+                <div id="login_modal_content">
                   <img
                     src={Logo}
                     alt="TechnoJam.tech"

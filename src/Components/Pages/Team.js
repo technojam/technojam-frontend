@@ -8,6 +8,12 @@ import Tooltip from "@material-ui/core/Tooltip";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
+import "../style.css";
+const style = {
+  height: "83vh"
+};
+
+
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
@@ -243,29 +249,12 @@ export default function Team() {
 
   return (
     <div className={classes.root}>
-      <Typography
-        variant="h3"
-        style={{
-          fontFamily: "Roboto",
-          letterSpacing: "1px",
-          lineHeight: "28px",
-          wordSpacing: "5px",
-          textAlign: "center",
-          color: "#073fff"
-        }}
-      >
+
+      <Typography variant="h3" className="view_title">
         Our Team
       </Typography>
-      <hr
-        style={{
-          maxWidth: "120px",
-          borderWidth: "0.6px",
-          opacity: "1",
-          marginTop: "25px",
-          marginBottom: "25px",
-          borderColor: "#007FFF"
-        }}
-      />
+      <hr className="view_line" />
+
       <br />
 
       <Container fixed>

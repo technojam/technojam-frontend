@@ -5,6 +5,9 @@ import React, { Component } from "react";
 import { Grid, Typography, Hidden } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 
+import "../style.css";
+
+
 const Style = {
   marginTop: "60px",
   maxHeight: "720px",
@@ -13,6 +16,7 @@ const Style = {
   square: {
     border: "4px solid yellow",
     padding: "20px",
+
     position: "absolute",
     marginTop: "180px",
     left: "46px",
@@ -30,6 +34,7 @@ const Style = {
     width: "100%",
     height: "100%",
     //Put new background Image here of Size 1550 * 720 px
+
 
     //Good Boy don't touch anything else
     backgroundRepeat: "no-repeat",
@@ -56,6 +61,7 @@ class Homepage extends Component {
       Home: [
         {
           content:
+
             "Technojam is hosting 24 Hours hackathon. In Galgotias University Those who want to know more can register here.",
           title: "DEXTRIX 2.0",
           cta: "#",
@@ -70,53 +76,43 @@ class Homepage extends Component {
   render() {
     const Home = this.state.Home;
 
+
+    console.log(Home);
     return (
       <div style={Style}>
         {Home.map(Home => (
-          <div
-            style={{
+          <div  style={{
               ...Style.back,
               backgroundImage: `url(${Home.backgroundImageUrl})`
-            }}
-          >
+            }}>
             <Grid container xs={6} sm={3} md={3}>
               <Hidden smDown>
                 <div style={Style.square}>
-                  <div
-                    style={{
-                      marginLeft: "auto",
-                      marginRight: "auto",
-                      maxWidth: "550px",
-                      paddingLeft: "20px",
-                      paddingRight: "20px"
-                    }}
-                  >
+                  <div className="home_grid">
                     <Typography
                       variant="h3"
-                      style={{
-                        fontFamily: "Roboto",
-                        letterSpacing: "2px",
-                        color: "white"
-                      }}
+                      className="letter_spacing"
+                      style={{ color: "white" }}
+
                     >
                       {Home.title}
                     </Typography>
                     <br />
+
+
                     <Typography
                       variant="body2"
+                      className="home_grid_typo"
                       style={{
-                        fontFamily: "Roboto",
-                        letterSpacing: "1px",
-                        fontSize: "21px",
-                        lineHeight: "35px",
-                        wordSpacing: "5px",
-                        color: "white"
+                        fontSize: "21px"
+
                       }}
                     >
                       {Home.content}
                     </Typography>
                     <br />
                     <Button variant="contained" style={Style.button}>
+
 
                       {Home.buttonname}{" "}
                       <a
@@ -127,27 +123,19 @@ class Homepage extends Component {
 
                       {Home.buttonname} <a src={Home.cta} target="_blank" />
 
+
                     </Button>
                   </div>
                 </div>
               </Hidden>
 
+
               <Hidden mdUp>
                 <div style={Style.square1}>
-                  <div
-                    style={{
-                      marginLeft: "auto",
-                      marginRight: "auto",
-                      maxWidth: "550px",
-                      paddingLeft: "20px",
-                      paddingRight: "20px"
-                    }}
-                  >
+                  <div className="home_grid letter_spacing">
                     <Typography
                       variant="h3"
                       style={{
-                        fontFamily: "Roboto",
-                        letterSpacing: "2px",
                         color: "white",
                         fontSize: "28px"
                       }}
@@ -157,27 +145,15 @@ class Homepage extends Component {
                     <br />
                     <Typography
                       variant="body2"
+                      className="home_grid_typo"
                       style={{
-                        fontFamily: "Roboto",
-                        letterSpacing: "1px",
-                        fontSize: "14px",
-                        lineHeight: "28px",
-                        wordSpacing: "5px",
-                        color: "white"
+                        fontSize: "14px"
                       }}
                     >
                       {Home.content}
                     </Typography>
                     <br />
                     <Button variant="contained" style={Style.button}>
-
-                      {Home.buttonname}{" "}
-                      <a
-                        href={Home.cta}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      />
-
                       {Home.buttonname} <a href={Home.cta} target="_blank" />
 
                     </Button>
