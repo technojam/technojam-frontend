@@ -1,27 +1,25 @@
 import React from 'react';
 
 //material ui component
-import { AppBar, Toolbar, Hidden } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+
+import { AppBar, Toolbar, Hidden } from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import "../style.css";
+import { Color } from "../color";
 
 export default props => (
-  <div
-    style={{
-      marginBottom: 'auto',
-      marginTop: 'auto',
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      padding: 'auto',
-      position: 'fixed',
-      bottom: '0',
-      width: 'inherit'
-    }}
-  >
+  <div className="footer_container">
     <AppBar position="static" color="default">
       <Toolbar>
-        <Grid container direction="row" justify="flex-start" alignItems="flex-end">
-          <Typography variant="body2" style={{ fontSize: '0.92rem', fontFamily: 'Roboto' }}>
+        <Grid
+          container
+          direction="row"
+          justify="flex-start"
+          alignItems="flex-end"
+          className="footer_grid"
+        >
+          <Typography variant="body2" style={{ fontSize: "0.92rem" }}>
             Copyright © 2019 Team TechnoJam
           </Typography>
         </Grid>
@@ -34,7 +32,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-twitter fa-lg" style={{ color: '#28aae1' }}></i>
+
+                <i
+                  className="fab fa-twitter fa-lg"
+                  style={{ color: Color.color_twitter }}
+                ></i>
+
               </a>
               &#8194;
               <a
@@ -43,7 +46,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-facebook fa-lg" style={{ color: '#3b5998' }}></i>
+
+                <i
+                  className="fab fa-facebook fa-lg"
+                  style={{ color: Color.color_fb }}
+                ></i>
+
               </a>
               &#8194;
               <a
@@ -52,7 +60,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-instagram fa-lg" style={{ color: '#e41a2b' }}></i>
+
+                <i
+                  className="fab fa-instagram fa-lg"
+                  style={{ color: Color.color_insta }}
+                ></i>
+
               </a>
               &#8194;
               <a
@@ -61,7 +74,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-linkedin fa-lg" style={{ color: '#0077b5' }}></i>
+
+                <i
+                  className="fab fa-linkedin fa-lg"
+                  style={{ color: Color.color_linkedIn }}
+                ></i>
+
               </a>
               &#8194;
             </div>
@@ -80,7 +98,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-twitter fa-lg" style={{ color: '#28aae1' }}></i>
+
+                <i
+                  className="fab fa-twitter fa-lg"
+                  style={{ color: Color.color_twitter }}
+                ></i>
+
               </a>
               &#8194;
               <a
@@ -89,7 +112,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-facebook fa-lg" style={{ color: '#3b5998' }}></i>
+
+                <i
+                  className="fab fa-facebook fa-lg"
+                  style={{ color: Color.color_fb }}
+                ></i>
+
               </a>
               &#8194;
               <a
@@ -98,7 +126,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-instagram fa-lg" style={{ color: '#e41a2b' }}></i>
+
+                <i
+                  className="fab fa-instagram fa-lg"
+                  style={{ color: Color.color_insta }}
+                ></i>
+
               </a>
               &#8194;
               <a
@@ -107,7 +140,12 @@ export default props => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-linkedin fa-lg" style={{ color: '#0077b5' }}></i>
+
+                <i
+                  className="fab fa-linkedin fa-lg"
+                  style={{ color: Color.color_linkedIn }}
+                ></i>
+
               </a>
               &#8194;
             </div>
@@ -115,8 +153,10 @@ export default props => (
         </Grid>
         <Hidden smDown>
           <Grid container direction="row">
+
             <div style={{ paddingLeft: '100px', paddingRight: 'auto' }}>
               <Typography style={{ fontFamily: 'Roboto' }}>
+
                 Email us : Technojam@galgotiasuniversity.edu.in
               </Typography>
             </div>
