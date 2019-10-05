@@ -1,3 +1,4 @@
+
 import React from "react";
 import {Switch, Route} from "react-router-dom";
 import {
@@ -10,12 +11,15 @@ import {
   team,
   events,
   login,
-  alumni
+  alumni,
+  pannel
 } from "./Pages/";
+
 
 function Maincontent() {
   return (
     <div className="main-content" id="ToggleButton">
+
       <Switch>
         <Route exact path="/login" component={login} />
         <Route exact path="/" component={homepage} />
@@ -27,9 +31,10 @@ function Maincontent() {
         <Route exact path="/Alumni" component={alumni} />
         <Route exact path="/team" component={team} />
         <Route exact path="/groups" component={groups} />
+        <Route exact path="/pannel" component={pannel} />
+
       </Switch>
-    </div>
-  );
-}
+   </div>
+);
 
 export default Maincontent;
