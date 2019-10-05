@@ -1,47 +1,52 @@
 import React, { Component, useState } from 'react';
 //material ui component
-import { Grid, Typography, Hidden } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
-import '../style.css';
 
-const style = {
-   marginTop: '60px',
-   maxHeight: '720px',
-   height: '90vh',
+import { Grid, Typography, Hidden } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 
-   square: {
-      border: '4px solid yellow',
-      padding: '20px',
+import "../style.css";
 
-      position: 'absolute',
-      marginTop: '180px',
-      left: '46px',
-      marginRight: '40px'
-   },
-   square1: {
-      border: '4px solid yellow',
-      padding: '20px',
-      position: 'absolute',
-      marginTop: '18px',
-      left: '46px',
-      marginRight: '40px',
-      marginTop: '100px'
-   },
-   back: {
-      width: '100%',
-      height: '100%',
-      //Put new background Image here of Size 1550 * 720 px
 
-      //Good Boy don't touch anything else
-      backgroundRepeat: 'no-repeat',
+const Style = {
+  marginTop: "60px",
+  maxHeight: "720px",
+  height: "90vh",
 
-      backgroundPositionX: 'center',
-      minHeight: '750px'
-   },
-   button: {
-      color: 'black',
-      backgroundColor: 'yellow'
-   }
+  square: {
+    border: "4px solid red",
+    padding: "20px",
+
+    position: "absolute",
+    marginTop: "180px",
+    left: "46px",
+    marginRight: "40px"
+  },
+  square1: {
+    border: "4px solid red",
+    padding: "20px",
+    position: "absolute",
+    marginTop: "18px",
+    left: "46px",
+    marginRight: "40px",
+    marginTop:"100px",
+  },
+  back: {
+    width: "100%",
+    height: "100%",
+    //Put new background Image here of Size 1550 * 720 px
+
+
+    //Good Boy don't touch anything else
+    backgroundRepeat: "no-repeat",
+
+    backgroundPositionX: "center",
+    minHeight: "750px"
+  },
+  button: {
+    color: "white",
+    backgroundColor: "red"
+  }
+
 };
 
 /* FIXME: When the target will be decided, remove the rel attribute.
@@ -52,11 +57,11 @@ const style = {
 const Homepage = () => {
    const [content] = useState([
       {
-         content: 'Technojam is hosting 24 Hours hackathon. In Galgotias University Those who want to know more can register here.',
-         title: 'DEXTRIX 2.0',
-         cta: '#',
-         buttonName: 'Register here',
-         backgroundImageUrl: 'https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png'
+         content:"Technojam is a community based on promoting Open source community. We to work on open Source projects and give mentorship in them, to give a first experince on GSOC. we also conduct Handson workshops at various places.",
+          title: "Our Community",
+          cta: "#",
+          buttonname: "Know More",
+          backgroundImageUrl: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/b1.jpg"
       }
    ]);
 
@@ -73,7 +78,7 @@ const Homepage = () => {
                   <Hidden smDown>
                      <div style={style.square}>
                         <div className='home_grid'>
-                           <Typography variant='h3' className='letter_spacing' style={{ color: 'white' }}>
+                           <Typography variant='h3' className='letter_spacing' style={{ color: 'black' }}>
                               {item.title}
                            </Typography>
                            <br />
@@ -82,7 +87,8 @@ const Homepage = () => {
                               variant='body2'
                               className='home_grid_typo'
                               style={{
-                                 fontSize: '21px'
+                                 fontSize: '21px',
+                                 color: 'black'
                               }}>
                               {item.content}
                            </Typography>
@@ -100,7 +106,7 @@ const Homepage = () => {
                            <Typography
                               variant='h3'
                               style={{
-                                 color: 'white',
+                                 color: 'black',
                                  fontSize: '28px'
                               }}>
                               {item.title}
@@ -110,7 +116,8 @@ const Homepage = () => {
                               variant='body2'
                               className='home_grid_typo'
                               style={{
-                                 fontSize: '14px'
+                                 fontSize: '14px',
+                                  color: 'black'
                               }}>
                               {item.content}
                            </Typography>
