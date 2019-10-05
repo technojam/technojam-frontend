@@ -53,6 +53,7 @@ const modalCardBaseStyle = {
 };
 
 export default function TopMenu() {
+
 	const [open, setOpen] = React.useState(false);
 	const [user, setUser] = React.useState({ role: 'user', name: 'Guest' });
 
@@ -278,4 +279,5 @@ export default function TopMenu() {
 			</AppBar>
 		</div>
 	);
+
 }

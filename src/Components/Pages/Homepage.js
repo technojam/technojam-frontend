@@ -64,10 +64,14 @@ class Homepage extends Component {
         {
           content:
 
-          "Technojam is a community based on promoting Open source community. We to work on open Source projects and give mentorship in them, to give a first experince on GSOC. we also conduct Handson workshops at various places.",
-          title: "DEXTRIX 2.0",
+
+            "Technojam is a community based on promoting Open source community. We to work on open Source projects and give mentorship in them, to give a first experince on GSOC. we also conduct Handson workshops at various places.",
+          title: "Our Community",
+
           cta: "#",
-          buttonname: "Register here",
+
+          buttonname: "Know More",
+
           backgroundImageUrl:
             "https://tj-static.s3.ap-south-1.amazonaws.com/etc/b1.jpg"
         }
@@ -107,7 +111,9 @@ class Homepage extends Component {
                       className="home_grid_typo"
                       style={{
                         fontSize: "21px",
+
                         color: "black"
+
 
                       }}
                     >
@@ -117,7 +123,7 @@ class Homepage extends Component {
                     <Button variant="contained" style={Style.button}>
 
 
-                      {Home.buttonname}{" "}
+                
                       <a
                         src={Home.cta}
                         target="_blank"
@@ -151,7 +157,9 @@ class Homepage extends Component {
                       className="home_grid_typo"
                       style={{
                         fontSize: "14px",
-                        color: "black"
+
+                        color:"black"
+
                       }}
                     >
                       {Home.content}
