@@ -464,7 +464,7 @@ const ALUMNI = [
         email: "kandirohith09@gmail.com",
         Linkedin: "https://www.linkedin.com/in/rohith-kandi-77a671108/",
         Image:
-            "https://tj-static.s3.ap-south-1.amazonaws.com/etc/Image_3169+-+Kandi+Rohith+(1).jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/etc/IMG_3169+-+Kandi+Rohith+(1).jpg",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
             value: "Value"
