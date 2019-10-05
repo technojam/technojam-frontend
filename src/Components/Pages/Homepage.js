@@ -14,7 +14,7 @@ const Style = {
   height: "90vh",
 
   square: {
-    border: "4px solid yellow",
+    border: "4px solid red",
     padding: "20px",
 
     position: "absolute",
@@ -23,7 +23,7 @@ const Style = {
     marginRight: "40px"
   },
   square1: {
-    border: "4px solid yellow",
+    border: "4px solid red",
     padding: "20px",
     position: "absolute",
     marginTop: "18px",
@@ -44,8 +44,8 @@ const Style = {
     minHeight: "750px"
   },
   button: {
-    color: "black",
-    backgroundColor: "yellow"
+    color: "white",
+    backgroundColor: "red"
   }
 };
 
@@ -64,12 +64,12 @@ class Homepage extends Component {
         {
           content:
 
-            "Technojam is hosting 24 Hours hackathon. In Galgotias University Those who want to know more can register here.",
+          "Technojam is a community based on promoting Open source community. We to work on open Source projects and give mentorship in them, to give a first experince on GSOC. we also conduct Handson workshops at various places.",
           title: "DEXTRIX 2.0",
           cta: "#",
           buttonname: "Register here",
           backgroundImageUrl:
-            "https://tj-static.s3.ap-south-1.amazonaws.com/etc/9511.png"
+            "https://tj-static.s3.ap-south-1.amazonaws.com/etc/b1.jpg"
         }
       ]
     };
@@ -94,7 +94,7 @@ class Homepage extends Component {
                     <Typography
                       variant="h3"
                       className="letter_spacing"
-                      style={{ color: "white" }}
+                      style={{ color: "black" }}
 
                     >
                       {Home.title}
@@ -106,7 +106,8 @@ class Homepage extends Component {
                       variant="body2"
                       className="home_grid_typo"
                       style={{
-                        fontSize: "21px"
+                        fontSize: "21px",
+                        color: "black"
 
                       }}
                     >
@@ -138,7 +139,7 @@ class Homepage extends Component {
                     <Typography
                       variant="h3"
                       style={{
-                        color: "white",
+                        color: "black",
                         fontSize: "28px"
                       }}
                     >
@@ -149,7 +150,8 @@ class Homepage extends Component {
                       variant="body2"
                       className="home_grid_typo"
                       style={{
-                        fontSize: "14px"
+                        fontSize: "14px",
+                        color: "black"
                       }}
                     >
                       {Home.content}

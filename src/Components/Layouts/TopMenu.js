@@ -104,7 +104,9 @@ export default function TopMenu() {
 								height='50px'
 								align='center'
 							/>
-							<Typography className='topMenu_typo_name'>TECHNOJAM</Typography>
+              <Hidden smDown>
+							<Typography className='topMenu_typo_name' style={{fontSize:"14px"}}>TECHNOJAM</Typography>
+              </Hidden>
 						</Button>
 					</Grid>
 					<Hidden smDown>
