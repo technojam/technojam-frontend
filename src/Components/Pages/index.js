@@ -5,5 +5,19 @@ import groups from "./Groups";
 import homepage from "./Homepage";
 import mentorship from "./Mentorship";
 import team from "./Team";
+import events from "./Events";
+import login from "./Login";
+import alumni from "./Alumni";
 
-export { aboutus, achievements, contactus, groups, homepage, mentorship, team };
+export {
+  aboutus,
+  achievements,
+  contactus,
+  groups,
+  homepage,
+  mentorship,
+  team,
+  events,
+  login,
+  alumni
+};
