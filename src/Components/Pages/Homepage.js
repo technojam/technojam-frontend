@@ -67,7 +67,9 @@ class Homepage extends Component {
             "Technojam is a community based on promoting Open source community. We to work on open Source projects and give mentorship in them, to give a first experince on GSOC. we also conduct Handson workshops at various places.",
           title: "Our Community",
           cta: "#",
+
           buttonname: "Know More",
+
           backgroundImageUrl:
             "https://tj-static.s3.ap-south-1.amazonaws.com/etc/b1.jpg"
         }
@@ -124,7 +126,7 @@ class Homepage extends Component {
                         rel="noopener noreferrer"
                       />
 
-                      {Home.buttonname} <a src={Home.cta} target="_blank" />
+                     
 
 
                     </Button>
