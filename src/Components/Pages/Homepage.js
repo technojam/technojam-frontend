@@ -129,7 +129,7 @@ class Homepage extends Component {
                         target="_blank"
                         rel="noopener noreferrer"
                       />
-
+                       {Home.buttonname}<a href={Home.cta} target="_blank" />
                      
 
 
