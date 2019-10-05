@@ -1,22 +1,27 @@
+
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import {
-    aboutus,
-    achievements,
-    contactus,
-    groups,
-    homepage,
-    mentorship,
-    team,
-    events,
-    login,
-    alumni,
-    ProfilePage
+  aboutus,
+  achievements,
+  contactus,
+  groups,
+  homepage,
+  mentorship,
+  team,
+  events,
+  login,
+  alumni,
+  pannel,
+  ProfilePage
+
 } from "./Pages/";
 
-function Maincontent() {
-  return (
-    <div className="main-content">
+
+const Maincontent = () => (
+ 
+    <div className="main-content" id="ToggleButton">
+
       <Switch>
         <Route exact path="/login" component={login} />
         <Route exact path="/" component={homepage} />
@@ -29,9 +34,11 @@ function Maincontent() {
         <Route exact path="/team" component={team} />
         <Route exact path="/groups" component={groups} />
         <Route exact path="/profile/:id" component={ProfilePage} />
+        <Route exact path="/pannel" component={pannel} />
+
       </Switch>
-    </div>
-  );
-}
+   </div>
+);
+
 
 export default Maincontent;

@@ -1,38 +1,31 @@
 import React from 'react';
+
 import { Link } from "react-router-dom";
 import {TEAM_MEMBERS} from '../../util/constants';
 
 // material ui component
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Tooltip from '@material-ui/core/Tooltip';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import '../style.css';
 
+const useStyles = makeStyles({
+   root: {
+      flexGrow: 1,
 
-import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import Tooltip from "@material-ui/core/Tooltip";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
-
-import "../style.css";
-const style = {
-  height: "83vh"
-
-};
-
-
-const useStyles = makeStyles(() => ({
-  root: {
-    flexGrow: 1,
-
-    marginTop: "100px",
-    marginBottom: 20,
-    minHeight: "580px"
-
-  }
-}));
+      marginTop: '100px',
+      marginBottom: 20,
+      minHeight: '580px'
+   }
+});
 
 const circle = {
-  width: 80,
-  borderRadius: 40
+   width: 80,
+   borderRadius: 40
 };
+
 
 export default function Team() {
   const classes = useStyles();
@@ -60,11 +53,11 @@ export default function Team() {
                 </Tooltip>
               </Link>
             </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </div>
-  );
-}
+         </Container>
+      </div>
+   );
+};
+
+export default Team;
 
 /*{tile.name} To be deleted which is not in the tooltip after uploading pictures of every team members */
