@@ -1,16 +1,17 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import {
-  aboutus,
-  achievements,
-  contactus,
-  groups,
-  homepage,
-  mentorship,
-  team,
-  events,
-  login,
-  alumni
+    aboutus,
+    achievements,
+    contactus,
+    groups,
+    homepage,
+    mentorship,
+    team,
+    events,
+    login,
+    alumni,
+    ProfilePage
 } from "./Pages/";
 
 function Maincontent() {
@@ -27,6 +28,7 @@ function Maincontent() {
         <Route exact path="/Alumni" component={alumni} />
         <Route exact path="/team" component={team} />
         <Route exact path="/groups" component={groups} />
+        <Route exact path="/profile/:id" component={ProfilePage} />
       </Switch>
     </div>
   );

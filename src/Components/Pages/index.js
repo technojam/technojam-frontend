@@ -8,6 +8,7 @@ import team from "./Team";
 import events from "./Events";
 import login from "./Login";
 import alumni from "./Alumni";
+import ProfilePage from "./ProfilePage";
 
 export {
   aboutus,
@@ -19,5 +20,6 @@ export {
   team,
   events,
   login,
-  alumni
+  alumni,
+  ProfilePage
 };
