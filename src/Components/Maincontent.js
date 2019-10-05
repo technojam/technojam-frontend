@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import {
   aboutus,
   achievements,
@@ -15,7 +15,7 @@ import {
 
 function Maincontent() {
   return (
-    <div className="main-content">
+    <div className="main-content" id="ToggleButton">
       <Switch>
         <Route exact path="/login" component={login} />
         <Route exact path="/" component={homepage} />

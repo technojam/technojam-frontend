@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Logo from '../../images/logo_small.png';
-import ResponsiveDrawer from './ResponsiveDrawer';
+import React, {useState} from "react";
+import {Link} from "react-router-dom";
+import Logo from "../../images/logo_small.png";
+import ResponsiveDrawer from "./ResponsiveDrawer";
 
 //material ui component
 
@@ -23,16 +23,15 @@ import Fade from "@material-ui/core/Fade";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
 
-import { useTheme } from "@material-ui/core/styles";
+import {useTheme} from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import "../style.css";
 
-
 const style = {
   marginleft: 200,
   toolbarButtons: {
-    marginLeft: 'auto',
+    marginLeft: "auto",
     marginRight: -12
   }
 };
@@ -53,10 +52,10 @@ const modalCardBaseStyle = {
   outline: "none"
 };
 
-export default function TopMenu() {
+export default function TopMenu({toggleButton}) {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
-  const modalCardStyle = { ...modalCardBaseStyle };
+  const modalCardStyle = {...modalCardBaseStyle};
 
   if (useMediaQuery(theme.breakpoints.up("sm"))) {
     modalCardStyle.width = 400;
@@ -75,82 +74,83 @@ export default function TopMenu() {
   };
 
   return (
-    <div style={{ color: '#fff' }}>
+    <div style={{color: "#fff"}}>
       <AppBar position="fixed">
-        <Toolbar style={{ backgroundColor: '#24292e' }}>
+        <Toolbar style={{backgroundColor: "#24292e"}}>
           <Hidden mdUp>
             <ResponsiveDrawer />
           </Hidden>
           <Grid alignItems="flex-start" justify="flex-start">
-            <Button color="inherit" component={Link} to={'/'}>
-              <img src={Logo} alt="TechnoJam.tech" height="50px" align="center" />
+            <Button color="inherit" component={Link} to={"/"}>
+              <img
+                src={Logo}
+                alt="TechnoJam.tech"
+                height="50px"
+                align="center"
+              />
               <Typography className="topMenu_typo_name">TECHNOJAM</Typography>
             </Button>
           </Grid>
           <Hidden smDown>
-
             <div className="topMenu_wrapper">
               <Grid
-
                 alignItems="flex-end"
                 justify="flex-end"
                 spacing={800}
-                style={{ marginLeft: '75px' }}
+                style={{marginLeft: "75px"}}
               >
-
-                <Button style={{ style }} component={Link} to={"/events"}>
+                <Button style={{style}} component={Link} to={"/events"}>
                   <Typography className="topMenu_typo_name">Events</Typography>
-
                 </Button>
                 <Badge
-                  style={{ marginBottom: '30px', marginRight: '5px' }}
-                  badgeContent={'New'}
+                  style={{marginBottom: "30px", marginRight: "5px"}}
+                  badgeContent={"New"}
                   color="secondary"
                 ></Badge>
 
-                <Button style={{ style }} component={Link} to={"/achievements"}>
+                <Button style={{style}} component={Link} to={"/achievements"}>
                   <Typography className="topMenu_typo_name">
                     Achievements
                   </Typography>
                 </Button>
-                <Button style={{ style }} component={Link} to={"/team"}>
+                <Button style={{style}} component={Link} to={"/team"}>
                   {" "}
                   <Typography className="topMenu_typo_name">Team</Typography>
                 </Button>
-                <Button style={{ style }} component={Link} to={"/alumni"}>
+                <Button style={{style}} component={Link} to={"/alumni"}>
                   <Typography className="topMenu_typo_name">Alumni</Typography>
                 </Button>
 
-                <Button style={{ style }} component={Link} to={"/mentorship"}>
+                <Button style={{style}} component={Link} to={"/mentorship"}>
                   <Typography className="topMenu_typo_name">
                     Mentorship
                   </Typography>
                 </Button>
-                <Button style={{ style }} component={Link} to={"/groups"}>
+                <Button style={{style}} component={Link} to={"/groups"}>
                   <Typography className="topMenu_typo_name">Groups</Typography>
                 </Button>
-                <Button style={{ style }} component={Link} to={"/aboutus"}>
+                <Button style={{style}} component={Link} to={"/aboutus"}>
                   <Typography className="topMenu_typo_name">
                     About Us
                   </Typography>
                 </Button>
-                <Button style={{ style }} component={Link} to={"/contactus"}>
+                <Button style={{style}} component={Link} to={"/contactus"}>
                   <Typography className="topMenu_typo_name">
-
                     Contact Us
                   </Typography>
                 </Button>
               </Grid>
             </div>
           </Hidden>
-          <div style={{ marginLeft: 'auto' }}>
+          <div style={{marginLeft: "auto"}}>
             <Tooltip title="Night Mode">
-              <IconButton 
+              <IconButton
                 color="inherit"
                 aria-label="Night Mode"
-                style={{ style }}
+                style={{style}}
                 component={Link}
-                to={'/'}
+                to={"/"}
+                onClick={toggleButton}
               >
                 <WbIncandescentIcon />
               </IconButton>
@@ -162,20 +162,20 @@ export default function TopMenu() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-github fa-lg" style={{ color: '#fcfcfc' }}></i>
+                <i
+                  className="fab fa-github fa-lg"
+                  style={{color: "#fcfcfc"}}
+                ></i>
               </a>
             </Tooltip>
             <Tooltip title="Log-in">
-
               <IconButton
                 color="inherit"
                 onClick={handleOpen}
                 aria-label="Login"
-                style={{ style }}
+                style={{style}}
                 component={Link}
-                
               >
-
                 <PersonIcon />
               </IconButton>
             </Tooltip>
@@ -191,7 +191,6 @@ export default function TopMenu() {
             >
               <Fade in={open}>
                 <div style={modalCardStyle}>
-
                   <img
                     src={Logo}
                     alt="TechnoJam.tech"
@@ -238,11 +237,10 @@ export default function TopMenu() {
                     size="large"
                     onClick={handleClose}
                     to={"/login"}
-                    style={{ marginTop: "16px" }}
+                    style={{marginTop: "16px"}}
                   >
                     Login
                   </Button>
-
                 </div>
               </Fade>
             </Modal>

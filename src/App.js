@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { TopMenu, Footer } from "./Components/Layouts";
+import React, {Fragment, useState} from "react";
+import {TopMenu, Footer} from "./Components/Layouts";
 import Maincontent from "./Components/Maincontent";
 
 var sectionStyle = {
@@ -13,10 +13,21 @@ var sectionStyle = {
 };
 
 function App() {
+  const [panel, setPanel] = useState(false);
+
+  function toggleButton() {
+    if (!panel) setPanel(true);
+    else setPanel(false);
+
+    if (panel === false) {
+      document.getElementById("ToggleButton").style.background = "#161625";
+    }
+  }
+
   return (
     <div className="App" style={sectionStyle}>
       <Fragment>
-        <TopMenu />
+        <TopMenu toggleButton={toggleButton} />
 
         <Maincontent />
         <br></br>
