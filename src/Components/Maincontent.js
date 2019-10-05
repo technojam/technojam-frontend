@@ -16,8 +16,8 @@ import {
 } from "./Pages/";
 
 
-function Maincontent() {
-  return (
+const Maincontent = () => (
+ 
     <div className="main-content" id="ToggleButton">
 
       <Switch>
@@ -36,5 +36,6 @@ function Maincontent() {
       </Switch>
    </div>
 );
+
 
 export default Maincontent;

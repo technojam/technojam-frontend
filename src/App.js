@@ -37,5 +37,6 @@ function App() {
       </Fragment>
    </div>
 );
+  }
 
 export default App;
