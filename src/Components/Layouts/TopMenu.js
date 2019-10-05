@@ -165,7 +165,7 @@ export default function TopMenu() {
 										</Typography>
 									</Button>
 								) : null}
-								<Button style={{ style }} component={Link} to={'/'}>
+								<Button style={{ style }} component={Link} to={'/pannel'}>
 									<Typography className='topMenu_typo_name'>
 										Welcome, {name}
 									</Typography>

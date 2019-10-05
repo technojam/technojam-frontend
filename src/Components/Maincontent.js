@@ -10,7 +10,8 @@ import {
   team,
   events,
   login,
-  alumni
+  alumni,
+  pannel
 } from "./Pages/";
 
 function Maincontent() {
@@ -27,6 +28,7 @@ function Maincontent() {
         <Route exact path="/Alumni" component={alumni} />
         <Route exact path="/team" component={team} />
         <Route exact path="/groups" component={groups} />
+        <Route exact path="/pannel" component={pannel} />
       </Switch>
     </div>
   );

@@ -42,7 +42,7 @@ const style = {
   }
 };
 
-class Mentorship extends Component {
+class Contactus extends Component {
 
 	render() {
 		return (
@@ -165,4 +165,4 @@ class Mentorship extends Component {
   }
 }
 
-export default Mentorship;
+export default Contactus;
