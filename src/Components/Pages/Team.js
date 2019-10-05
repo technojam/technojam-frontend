@@ -53,11 +53,13 @@ export default function Team() {
                 </Tooltip>
               </Link>
             </Grid>
+          ))}
+          </Grid>
          </Container>
       </div>
    );
 };
 
-export default Team;
+
 
 /*{tile.name} To be deleted which is not in the tooltip after uploading pictures of every team members */

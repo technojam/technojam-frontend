@@ -1,7 +1,7 @@
 const TEAM_MEMBERS = [
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Anubhav Raj Singh.jpeg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Anubhav+Raj+Singh.jpeg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -12,7 +12,7 @@ const TEAM_MEMBERS = [
         id: 0
     },
     {
-        Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Swetank.jpg",
+        Image: "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Swetank.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -24,7 +24,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Ravi Saxena.jpeg ",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Ravi+Saxena.jpeg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -36,7 +36,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Abhimanyu Dwivedi.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Abhimanyu+Dwivedi.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -47,7 +47,7 @@ const TEAM_MEMBERS = [
         id: 3
     },
     {
-        Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Aman.jpg",
+        Image: "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Aman.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -59,7 +59,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Anil Kumar.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Anil+Kumar.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -71,7 +71,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Ankit Srivastava.jpg ",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Ankit+Srivastava.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -83,7 +83,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Anshika Soni.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Anshika+Soni.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -95,14 +95,14 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Anurag Verma.png",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Anurag+Verma.png",
         tilte: "Image.jpg",
         Name: "Anurag Verma",
         id: 8
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/ASHWANI TRIPATHI.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/ASHWANI+TRIPATHI.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -113,7 +113,7 @@ const TEAM_MEMBERS = [
         id: 9
     },
     {
-        Image: "https://tj-static.s3.ap-south-1.amazonaws.com/Image/Astha+Singh.jpg",
+        Image: "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Astha+Singh.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -125,7 +125,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Ayush Gupta.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Ayush+Gupta.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -137,7 +137,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Ayush Tiwari.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Ayush+Tiwari.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -149,7 +149,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Danish Jamal.jpeg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Danish+Jamal.jpeg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -161,7 +161,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Darshan Baid.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Darshan+Baid.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -173,7 +173,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Deepanshu Goyal.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Deepanshu+Goyal.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -185,7 +185,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Himanshu Singh.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Himanshu+Singh.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -197,7 +197,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Kritika Saxena.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Kritika+Saxena.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -209,7 +209,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Kushagra Singhal.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Kushagra+Singhal.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -220,7 +220,7 @@ const TEAM_MEMBERS = [
         id: 18
     },
     {
-        Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Lokesh.jpg",
+        Image: "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Lokesh.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -232,7 +232,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Manas Khurana.JPG",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Manas+Khurana.JPG",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -244,7 +244,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Mayank Jain.jpeg ",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Mayank+Jain.jpeg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -256,7 +256,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Naman Jain.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Naman+Jain.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -268,7 +268,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Prakhar Srivastava.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Prakhar+Srivastava.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -280,7 +280,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Praveen Singh.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Praveen+Singh.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -292,7 +292,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Priyanshu Trivedi.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Priyanshu+Trivedi.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -303,7 +303,7 @@ const TEAM_MEMBERS = [
         id: 25
     },
     {
-        Image: "https://tj-static.s3.ap-south-1.amazonaws.com/Image/Rahul+Chauhan.jpeg",
+        Image: "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Rahul+Chauhan.jpeg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -314,7 +314,7 @@ const TEAM_MEMBERS = [
         id: 26
     },
     {
-        Image: "https://tj-static.s3.ap-south-1.amazonaws.com/Image/Rahul+Godella.jpg",
+        Image: "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Rahul+Godella.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -326,7 +326,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Rahul Singh.jpg ",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Rahul+Singh.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -338,7 +338,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/sakshi gupta.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/sakshi+gupta.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -350,7 +350,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Saloni Mehra.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Saloni+Mehra.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -362,7 +362,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Satyam Bharti.jpeg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Satyam+Bharti.jpeg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -374,7 +374,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/SHASHWAT SINGH.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/SHASHWAT+SINGH.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -386,7 +386,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Shivam Sharma.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Shivam+Sharma.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -398,7 +398,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Shreyansh Deep.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Shreyansh+Deep.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -409,7 +409,7 @@ const TEAM_MEMBERS = [
         id: 34
     },
     {
-        Image: "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Vidit.jpg",
+        Image: "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Vidit.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
@@ -421,7 +421,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "http://tj-static.s3-website.ap-south-1.amazonaws.com/Image/Vishal Kumar.jpg",
+            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Vishal+Kumar.jpg",
         tilte: "Image",
         details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
             title: "Detail",
