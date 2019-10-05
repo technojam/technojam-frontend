@@ -105,7 +105,7 @@ const Mentorship = () => {
          <div id='2' style={{ marginTop: '50px' }}>
             <Container maxWidth='xl'>
                <Grid container spacing={3} direction='row' justify='flex-start' alignItems='flex-start'>
-                  {project.map(project => (
+                  {projects.map(project => (
                      <Grid item xs={12} sm={6} md={6} key={project.id}>
                         <ExpansionPanel
                            className='card--shadow'

@@ -3,11 +3,13 @@ import React, { Component, useState } from 'react';
 
 import { Grid, Typography, Hidden } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+import '../style.css';
+import { Color } from '../color';
 
 import "../style.css";
 
 
-const Style = {
+const style = {
   marginTop: "60px",
   maxHeight: "720px",
   height: "90vh",
