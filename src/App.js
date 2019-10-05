@@ -1,31 +1,28 @@
-import React, { Fragment } from "react";
-import { TopMenu, Footer } from "./Components/Layouts";
-import Maincontent from "./Components/Maincontent";
+import React, { Fragment } from 'react';
+import { TopMenu, Footer } from './Components/Layouts';
+import Maincontent from './Components/Maincontent';
 
-var sectionStyle = {
-  backgroundImage:
-    "url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.png)",
-  backgroundRepeat: "repeat",
-  backgroundPositionX: "center",
-  position: "absolute",
-  width: "100%",
-  top: "0"
+const sectionStyle = {
+   backgroundImage: 'url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.png)',
+   backgroundRepeat: 'repeat',
+   backgroundPositionX: 'center',
+   position: 'absolute',
+   width: '100%',
+   top: '0'
 };
 
-function App() {
-  return (
-    <div className="App" style={sectionStyle}>
+const App = () => (
+   <div className='App' style={sectionStyle}>
       <Fragment>
-        <TopMenu />
+         <TopMenu />
 
-        <Maincontent />
-        <br></br>
-        <br></br>
-        <br></br>
-        <Footer />
+         <Maincontent />
+         <br />
+         <br />
+         <br />
+         <Footer />
       </Fragment>
-    </div>
-  );
-}
+   </div>
+);
 
 export default App;
