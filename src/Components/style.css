@@ -142,3 +142,12 @@
   word-spacing: 3px;
   padding-top: 4px;
 }
+
+@media (max-width: 600px) {
+  .MuiTypography-h2 {
+    font-size: 36px !important;
+  }
+  .MuiTypography-body1 {
+    font-size: 12px !important;
+  }
+}
