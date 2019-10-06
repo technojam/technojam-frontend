@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import {
   aboutus,
   achievements,
@@ -12,12 +12,16 @@ import {
   events,
   login,
   alumni,
-  pannel
+  pannel,
+  ProfilePage
+
 } from "./Pages/";
 
 
 const Maincontent = () => (
-   <div className='main-content'>
+ 
+    <div className="main-content" id="ToggleButton">
+
       <Switch>
         <Route exact path="/login" component={login} />
         <Route exact path="/" component={homepage} />
@@ -29,10 +33,12 @@ const Maincontent = () => (
         <Route exact path="/Alumni" component={alumni} />
         <Route exact path="/team" component={team} />
         <Route exact path="/groups" component={groups} />
+        <Route exact path="/profile/:id" component={ProfilePage} />
         <Route exact path="/pannel" component={pannel} />
 
       </Switch>
    </div>
 );
+
 
 export default Maincontent;

@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react';
-import { TopMenu, Footer } from './Components/Layouts';
-import Maincontent from './Components/Maincontent';
+
+import React, {Fragment, useState} from "react";
+import {TopMenu, Footer} from "./Components/Layouts";
+import Maincontent from "./Components/Maincontent";
+
 
 const sectionStyle = {
    backgroundImage: 'url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.png)',
@@ -11,11 +13,22 @@ const sectionStyle = {
    top: '0'
 };
 
-const App = () => (
-   <div className='App' style={sectionStyle}>
-      <Fragment>
-         <TopMenu />
+function App() {
+  const [panel, setPanel] = useState(false);
 
+  function toggleButton() {
+    if (!panel) setPanel(true);
+    else setPanel(false);
+
+    if (panel === false) {
+      document.getElementById("ToggleButton").style.background = "#161625";
+    }
+  }
+
+  return (
+    <div className="App" style={sectionStyle}>
+      <Fragment>
+        <TopMenu toggleButton={toggleButton} />
          <Maincontent />
          <br />
          <br />
@@ -24,5 +37,6 @@ const App = () => (
       </Fragment>
    </div>
 );
+  }
 
 export default App;

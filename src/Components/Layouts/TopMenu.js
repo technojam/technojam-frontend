@@ -1,39 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Logo from '../../images/logo_small.png';
-import ResponsiveDrawer from './ResponsiveDrawer';
+import React, {useState} from "react";
+import {Link} from "react-router-dom";
+import Logo from "../../images/logo_small.png";
+import ResponsiveDrawer from "./ResponsiveDrawer";
 
 //material ui component
 
 import {
-	AppBar,
-	Toolbar,
-	Button,
-	Badge,
-	IconButton,
-	Hidden
-} from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
-import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
-import PersonIcon from '@material-ui/icons/Person';
-import Tooltip from '@material-ui/core/Tooltip';
-import Modal from '@material-ui/core/Modal';
-import TextField from '@material-ui/core/TextField';
-import Fade from '@material-ui/core/Fade';
-import CloseIcon from '@material-ui/icons/Close';
-import Typography from '@material-ui/core/Typography';
 
-import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+  AppBar,
+  Toolbar,
+  Button,
+  Badge,
+  IconButton,
+  Hidden
+} from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
+import WbIncandescentIcon from "@material-ui/icons/WbIncandescent";
+import PersonIcon from "@material-ui/icons/Person";
+import Tooltip from "@material-ui/core/Tooltip";
+import Modal from "@material-ui/core/Modal";
+import TextField from "@material-ui/core/TextField";
+import Fade from "@material-ui/core/Fade";
+import CloseIcon from "@material-ui/icons/Close";
+import Typography from "@material-ui/core/Typography";
 
-import '../style.css';
+import {useTheme} from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
+import "../style.css";
 
 const style = {
-	marginleft: 200,
-	toolbarButtons: {
-		marginLeft: 'auto',
-		marginRight: -12
-	}
+  marginleft: 200,
+  toolbarButtons: {
+    marginLeft: "auto",
+    marginRight: -12
+  }
+
 };
 
 const modalCardBaseStyle = {
@@ -52,31 +54,31 @@ const modalCardBaseStyle = {
 	outline: 'none'
 };
 
-export default function TopMenu() {
 
-	const [open, setOpen] = React.useState(false);
+export default function TopMenu({toggleButton}) {
+  const theme = useTheme();
+  const modalCardStyle = {...modalCardBaseStyle};
+
+  if (useMediaQuery(theme.breakpoints.up("sm"))) {
+    modalCardStyle.width = 400;
+    modalCardStyle.padding = "4rem 2rem 3rem";
+  } else {
+    modalCardStyle.width = "80%";
+    modalCardStyle.maxWidth = "calc(100% - 2rem)";
+  }
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const [open, setOpen] = React.useState(false);
 	const [user, setUser] = React.useState({ role: 'user', name: 'Guest' });
 
 	const { role, name } = user;
-
-	const theme = useTheme();
-	const modalCardStyle = { ...modalCardBaseStyle };
-
-	if (useMediaQuery(theme.breakpoints.up('sm'))) {
-		modalCardStyle.width = 400;
-		modalCardStyle.padding = '4rem 2rem 3rem';
-	} else {
-		modalCardStyle.width = '80%';
-		modalCardStyle.maxWidth = 'calc(100% - 2rem)';
-	}
-
-	const handleOpen = () => {
-		setOpen(true);
-	};
-
-	const handleClose = () => {
-		setOpen(false);
-	};
 
 	//here we will call the backend which will give us the name of the user and his role
 	//if role is admin dasboard link will be visible otherwise not
