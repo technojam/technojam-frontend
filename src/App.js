@@ -2,7 +2,7 @@
 import React, {Fragment, useState} from "react";
 import {TopMenu, Footer} from "./Components/Layouts";
 import Maincontent from "./Components/Maincontent";
-
+import { Container, Button, Link } from 'react-floating-action-button';
 
 const sectionStyle = {
    backgroundImage: 'url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.png)',
@@ -35,6 +35,13 @@ function App() {
          <br />
          <Footer />
       </Fragment>
+              <Container>
+            <Button
+                tooltip="The big plus button!"
+                icon="fas fa-chevron-up"
+                rotate={false}
+                onClick={() => window.scrollTo(0,0)} />
+        </Container>
    </div>
 );
   }
