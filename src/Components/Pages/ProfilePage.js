@@ -8,18 +8,14 @@ import {ALUMNI, TEAM_MEMBERS} from '../../util/constants';
 
 const style = {
     container: {
-        flexGrow: 1,
-        marginBottom: 20,
-        minHeight: "580px",
-        marginTop: "10%"
+        marginTop: "62px"
     },
     img: {
-        width: "180px",
-        borderRadius: "50%"
-    },
-    details: {
-        width: '100%',
-        overflowX: 'auto',
+        maxWidth: "180px",
+        minWidth: "100px",
+        width: "100%",
+        borderRadius: "50%",
+        marginTop: "10px",
     }
 };
 
@@ -47,11 +43,11 @@ export default class ProfilePage extends React.Component {
             return (
                 <div style={style.container}>
                     <Container fixed>
-                        <Grid container spacing={10}>
-                            <Grid item xs={2}>
+                        <Grid container justify="space-between">
+                            <Grid item lg={2} md={4} xs={4}>
                                 <img src={this.state.currentProfile.Image} style={style.img}/>
                             </Grid>
-                            <Grid item xs={10} style={{marginTop: "4%"}}>
+                            <Grid item lg={10} md={8} xs={6} style={{marginTop: "4%"}}>
                                 <Typography variant="h2" style={style.name}>
                                     {this.state.currentProfile.Name}
                                 </Typography>
@@ -60,14 +56,14 @@ export default class ProfilePage extends React.Component {
                                 </Typography>
                             </Grid>
                         </Grid>
-                        <Grid container>
-                            <Grid item xs={2}/>
-                            <Grid item xs={10}>
-                                <Paper style={style.details}>
-                                    <Table style={{minWidth: 650}}>
+                        <Grid container style={{marginTop: "16px"}}>
+                            <Grid item lg={2} md={false}/>
+                            <Grid item lg={10} md={12}>
+                                <Paper>
+                                    <Table style={{tableLayout: 'fixed'}}>
                                         <TableBody>
-                                            {this.state.currentProfile.details.map(detail => (
-                                                <TableRow>
+                                            {this.state.currentProfile.details.map((detail, index) => (
+                                                <TableRow key={`detail-${index}`}>
                                                     <TableCell component="th" scope="row">{detail.title}</TableCell>
                                                     <TableCell align="right">{detail.value}</TableCell>
                                                 </TableRow>
