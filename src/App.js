@@ -1,7 +1,6 @@
 import React, {Fragment, useState} from "react";
 import {Footer, TopMenu} from "./Components/Layouts";
 import Maincontent from "./Components/Maincontent";
-import {Container} from 'react-floating-action-button';
 import {Fab, Icon} from "@material-ui/core"
 
 const sectionStyle = {
@@ -11,6 +10,13 @@ const sectionStyle = {
     position: 'absolute',
     width: '100%',
     top: '0'
+};
+
+const fabPosition = {
+    bottom: '10vh',
+    position: 'fixed',
+    margin: '1em',
+    right: '8vw',
 };
 
 function App() {
@@ -35,11 +41,11 @@ function App() {
                 <br/>
                 <Footer/>
             </Fragment>
-            <Container>
+            <div style={fabPosition}>
                 <Fab color="secondary" onClick={() => window.scrollTo(0, 0)}>
                     <Icon style={{height: "auto"}} className="fas fa-chevron-up"/>
                 </Fab>
-            </Container>
+            </div>
         </div>
     );
 }
