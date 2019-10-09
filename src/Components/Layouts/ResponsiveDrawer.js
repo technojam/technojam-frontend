@@ -62,6 +62,12 @@ function ResponsiveDrawer(props) {
       <Divider />
 
       <List>
+      <List>
+        <ListItem button component={Link} to={'/Pannel'} onClick={handleDrawerToggle}>
+          <ListItemIcon></ListItemIcon>
+          <ListItemText primary="Dashboard" />
+        </ListItem>
+      </List>
         <ListItem button component={Link} to={'/aboutus'} onClick={handleDrawerToggle}>
           <ListItemIcon></ListItemIcon>
           <ListItemText primary="About Us" />

@@ -12,7 +12,7 @@ import {
   events,
   login,
   alumni,
-  pannel,
+  Pannel,
   ProfilePage
   
 } from "./Pages/";
@@ -33,7 +33,7 @@ const Maincontent = () => (
         <Route exact path="/team" component={team} />
         <Route exact path="/groups" component={groups} />
         <Route exact path="/profile/:id" component={ProfilePage} />
-        <Route exact path="/pannel" component={pannel} />
+        <Route exact path="/Pannel" component={Pannel} />
 
       </Switch>
    </div>

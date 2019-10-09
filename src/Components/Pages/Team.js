@@ -69,7 +69,7 @@ export default function Team() {
                 <Card className={classes.card}>
                   {/* <p>Opa</p> */}
                   <img src={member.Image} alt={member.title} className={classes.circle} key={member.id} />
-                  <Typography>
+                  <Typography style={{fontFamily:"Roboto"}}>
                     <Box className={classes.name} fontWeight="bold" m={1}>{member.Name}</Box>
                   </Typography>
                   <div>

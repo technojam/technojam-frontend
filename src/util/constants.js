@@ -544,4 +544,18 @@ const ALUMNI = [
     }
 ];
 
-export {TEAM_MEMBERS, ALUMNI}
+const MEMBER = [
+    {
+        id: 1,
+        name: "Honey Sharma",
+        role:"admin",
+        email: "honey.singhroi@gmail.com",
+        password:"",
+        achievement:"",
+        event:"",
+        volunteerbadage:"https://tj-static.s3.ap-south-1.amazonaws.com/etc/badage1.jpg",
+        speakerbadage:"https://tj-static.s3.ap-south-1.amazonaws.com/etc/badage2.jpg",
+        ossbadage:"https://tj-static.s3.ap-south-1.amazonaws.com/etc/badage3.jpg",
+    }
+];
+export {TEAM_MEMBERS, ALUMNI, MEMBER}
