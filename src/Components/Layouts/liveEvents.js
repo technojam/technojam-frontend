@@ -147,7 +147,8 @@ const countStyle= {
     height:'20px',
     textAlign:'center',
     writingMode:'horizontal-tb',
-    borderRadius:'3px'
+    borderRadius:'3px',
+    boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)'
 }
 
 const EventLabel = (props) => {
