@@ -43,7 +43,7 @@ function App() {
             </Fragment>
             <div style={fabPosition}>
                 <Fab color="secondary" onClick={() => window.scrollTo(0, 0)}>
-                    <Icon style={{height: "auto"}} className="fas fa-chevron-up"/>
+                    <Icon fontSize="inherit" style={{height: "auto"}} className="fas fa-chevron-up"/>
                 </Fab>
             </div>
         </div>
