@@ -124,6 +124,7 @@ export default class liveEvents extends React.Component{
 
 
 const nameStyle = {
+    marginTop:"62px",
     display:'inline-block',
     writingMode:'vertical-rl',
     background: '#23292e',
@@ -136,6 +137,7 @@ const nameStyle = {
 }
 
 const countStyle= {
+    marginTop:"62px",
     position:'absolute',
     top:'-10px',
     left:'-15px',
@@ -167,6 +169,7 @@ const EventLabel = (props) => {
 
 
 const eventContentStyle = {
+    marginTop:"62px",
     display:'inline-block',
     float:'right',
     transition:'width 1s',
@@ -179,6 +182,7 @@ const eventContentStyle = {
 }
 
 const eventListsStyle = {
+   
     listStyleType:'none',
     background:'#fff',
     fontSize:'14px',

@@ -102,7 +102,7 @@ const Pannel = () => {
                         }
                         title={member.name}
                       >
-                      </CardHeader>~
+                      </CardHeader>
                     </Typography>
                   </Grid>
                          
