@@ -1,12 +1,8 @@
 import React from 'react';
-import { css } from '@emotion/core';
+
 import { MoonLoader } from 'react-spinners';
 
 
-const override = css`
-display: flex;
-margin: 8px auto;
-border-color: red;`;
 
 const defaultEventsList = [
     {
@@ -130,12 +126,13 @@ export default class liveEvents extends React.Component{
 const nameStyle = {
     display:'inline-block',
     writingMode:'vertical-rl',
-    background: '#673ab7',
+    background: '#23292e',
     color: '#fff',
-    padding:'0.15em',
+    padding:'10px',
     borderRadius:'3px',
     cursor:'pointer',
-    maxHeight:'82px'
+    maxHeight:'82px',
+    width:"20px"
 }
 
 const countStyle= {
@@ -204,10 +201,7 @@ const EventContent = (props) => {
                props.open && props.list && props.showlist && props.list.map(d => 
                    (
                        <li style={eventListsStyle}>
-                           <div style={{display:'inline-block',width:'30%'}}>
-                               {/* images  to be added */}
-                                <img style={{height:'50px',width:'50px'}} alt='image'></img>
-                           </div>
+                         
                            <div style={{display:'inline-block',width:'70%'}}>
                                 <a href="#" style={{margin:'10px 0',color:'#2196F3',textDecoration:'none'}}>{d.title}</a>
                                 <p style={font10Margin0}>{d.date}</p>
@@ -221,7 +215,7 @@ const EventContent = (props) => {
                !props.dataFetched
                ?
                <MoonLoader
-                    css={override}
+                   
                     sizeUnit={"px"}
                     size={50}
                     color={'#123abc'}
