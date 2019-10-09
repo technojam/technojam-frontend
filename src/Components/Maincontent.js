@@ -14,14 +14,13 @@ import {
   alumni,
   pannel,
   ProfilePage
-
+  
 } from "./Pages/";
 
 
 const Maincontent = () => (
  
     <div className="main-content" id="ToggleButton">
-
       <Switch>
         <Route exact path="/login" component={login} />
         <Route exact path="/" component={homepage} />
