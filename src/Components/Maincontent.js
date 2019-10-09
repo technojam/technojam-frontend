@@ -17,6 +17,7 @@ import {
   
 } from "./Pages/";
 
+import LiveEvents from './Layouts/liveEvents'
 
 const Maincontent = () => (
  
@@ -36,6 +37,7 @@ const Maincontent = () => (
         <Route exact path="/Pannel" component={Pannel} />
 
       </Switch>
+      <LiveEvents></LiveEvents>
    </div>
 );
 
