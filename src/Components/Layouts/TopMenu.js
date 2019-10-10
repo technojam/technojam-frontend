@@ -175,7 +175,7 @@ export default function TopMenu({toggleButton}) {
 							</Grid>
 						</div>
 					</Hidden>
-					<div style={{ marginLeft: 'auto' }}>
+					<div style={{ marginLeft: 'auto' }} >
 						<Tooltip title='Night Mode'>
 							<IconButton
 								color='inherit'
@@ -200,11 +200,11 @@ export default function TopMenu({toggleButton}) {
 								></i>
 							</a>
 						</Tooltip>
-						<Tooltip title='Log-in'>
+						<Tooltip title='Login'>
 							<IconButton
 								color='inherit'
 								onClick={handleOpen}
-								aria-label='Login'
+								aria-label='Login '
 								style={{ style }}
 								component={Link}
 							>
@@ -257,7 +257,7 @@ export default function TopMenu({toggleButton}) {
 									/>
 									<TextField
 										id='outlined-password-input'
-										label='password'
+										label='Password'
 										type='password'
 										autoComplete='current-password'
 										margin='normal'
@@ -273,6 +273,12 @@ export default function TopMenu({toggleButton}) {
 									>
 										Login
 									</Button>
+									<div style={{marginTop: '10px'}}>
+									<p>You not have a Accounts?</p>
+									<Link style={{color: "#007791"}} to={"/signup"} > 
+                                       Sign up 
+                                    </Link>
+									</div>
 								</div>
 							</Fade>
 						</Modal>

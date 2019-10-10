@@ -2,6 +2,7 @@
 import React, {Fragment, useState} from "react";
 import {TopMenu, Footer} from "./Components/Layouts";
 import Maincontent from "./Components/Maincontent";
+import './App.css';
 
 
 const sectionStyle = {
@@ -13,8 +14,10 @@ const sectionStyle = {
    top: '0'
 };
 
+
 function App() {
   const [panel, setPanel] = useState(false);
+	//const [] = useState({ mode: 'light' });
 
   function toggleButton() {
     if (!panel) setPanel(true);
@@ -26,7 +29,8 @@ function App() {
   }
 
   return (
-    <div className="App" style={sectionStyle}>
+     <div className="dark-mode">
+    <div className="App "> style={sectionStyle}>
       <Fragment>
         <TopMenu toggleButton={toggleButton} />
          <Maincontent />
@@ -36,6 +40,8 @@ function App() {
          <Footer />
       </Fragment>
    </div>
+   </div>
+   
 );
   }
 
