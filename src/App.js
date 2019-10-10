@@ -35,7 +35,7 @@ function App() {
 
   return (
      <div className="dark-mode">
-    <div className="App "> style={sectionStyle}>
+    <div className="App "style={sectionStyle}>
     <AuthContext>
 				<AlertContext>
 					<TopMenu toggleButton={toggleButton} />

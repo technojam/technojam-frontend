@@ -69,7 +69,8 @@ const liveEventStyle = {
     right:'0',
     top:'100px',
     display:'flex',
-    zIndex:'999'  
+    zIndex:'999',
+   
 }
 
 export default class liveEvents extends React.Component{
@@ -132,8 +133,9 @@ const nameStyle = {
     padding:'10px',
     borderRadius:'3px',
     cursor:'pointer',
-    maxHeight:'82px',
-    width:"20px"
+    Height:'82px',
+    width:"40px",
+    
 }
 
 const countStyle= {
