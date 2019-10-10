@@ -55,9 +55,10 @@ const modalCardBaseStyle = {
 };
 
 
-export default function TopMenu({toggleButton}) {
+export default function TopMenu({toggleButton, onRouteChange}, props) {
   const theme = useTheme();
   const modalCardStyle = {...modalCardBaseStyle};
+
 
   if (useMediaQuery(theme.breakpoints.up("sm"))) {
     modalCardStyle.width = 400;
@@ -257,7 +258,7 @@ export default function TopMenu({toggleButton}) {
 									/>
 									<TextField
 										id='outlined-password-input'
-										label='password'
+										label='Password'
 										type='password'
 										autoComplete='current-password'
 										margin='normal'
@@ -270,6 +271,8 @@ export default function TopMenu({toggleButton}) {
 										onClick={handleLogin}
 										to={'/login'}
 										style={{ marginTop: '16px' }}
+										//onClick={props.onRouteChange}
+										onClick={onRouteChange}
 									>
 										Login
 									</Button>

@@ -1,5 +1,5 @@
 
-import React, {Fragment, useState} from "react";
+import React, {Fragment, useState, setCount} from "react";
 import {TopMenu, Footer} from "./Components/Layouts";
 import Maincontent from "./Components/Maincontent";
 
@@ -13,8 +13,12 @@ const sectionStyle = {
    top: '0'
 };
 
-function App() {
+function App(props) {
+
   const [panel, setPanel] = useState(false);
+  const [route ] = useState('signin'); 
+  const [ homes, setCount] = useState('home'); 
+
 
   function toggleButton() {
     if (!panel) setPanel(true);
@@ -24,17 +28,25 @@ function App() {
       document.getElementById("ToggleButton").style.background = "#161625";
     }
   }
+ 
+  function onRouteChange() {
+      setCount(homes);
+    }
+
 
   return (
     <div className="App" style={sectionStyle}>
-      <Fragment>
-        <TopMenu toggleButton={toggleButton} />
-         <Maincontent />
+     
+        {  route === 'signin'
+          ? <TopMenu onRouteChange={onRouteChange} toggleButton={toggleButton} />
+          : <div>
+          <Maincontent />
          <br />
          <br />
          <br />
          <Footer />
-      </Fragment>
+          </div>
+         }
    </div>
 );
   }

@@ -67,7 +67,7 @@ const Achievements = () => {
                      <Grid item xs={12} sm={3} md={4} key={achievement.id}>
                         <Card className='card--shadow card_content_achieve'>
                            <CardMedia>
-                              <img src={achievement.image} width='100%' height='auto' />
+                              <img alt={achievement} src={achievement.image} width='100%' height='auto' />
                            </CardMedia>
 
                            <CardContent>

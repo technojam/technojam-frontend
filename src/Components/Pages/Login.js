@@ -26,7 +26,7 @@ const useStyles = makeStyles({
    }
 });
 
-const Login = () => {
+const Login = ({onRouteChange}) => {
    const classes = useStyles();
    return (
       <Container className={classes.mentorship} maxWidth='sm'>
@@ -54,7 +54,7 @@ const Login = () => {
                variant='outlined'
                fullWidth
             />
-            <Button variant='contained' color='primary' fullWidth className={classes.logInButton} size='large' type='submit'>
+            <Button onclick={onRouteChange} variant='contained' color='primary' fullWidth className={classes.logInButton} size='large' type='submit'>
                Log In
             </Button>
          </Paper>

@@ -65,7 +65,7 @@ const Events = () => {
             <section style={{ marginBottom: '15px', marginTop: '65px', width: '100%' }}>
                <Grid container direction='row' justify='center' alignItems='center'>
                   <Grid item direction='column' justify='center' alignItems='center' spacing={2} md={4}>
-                     <div style={{ display: 'inline', display: 'inlineblock', float: 'left' }}>
+                     <div style={{  display: 'inlineblock', float: 'left' }}>
                         {upevent.map(event => (
                            <Timeline style={{ border: 'black' }} key={event.id}>
                               <TimelineEvent>
