@@ -257,8 +257,13 @@ function TopMenu(props) {
 										Contact Us
 									</Typography>
 								</Button>
+								<Button style={{ style }} component={Link} to={'/Pannel'}>
+										<Typography className='topMenu_typo_name'>
+											Dashboard
+										</Typography>
+									</Button>
 								{role == 'admin' ? (
-									<Button style={{ style }} component={Link} to={'/dashboard'}>
+									<Button style={{ style }} component={Link} to={'/pannel'}>
 										<Typography className='topMenu_typo_name'>
 											Dashboard
 										</Typography>
@@ -314,7 +319,7 @@ function TopMenu(props) {
 								<PersonIcon />
 								<Typography className='topMenu_typo_name'>
 									{console.log('user:', user)}
-									Welcome,{user ? user.name : name}
+									{user ? user.name : name}
 								</Typography>
 							</IconButton>
 							<Menu
@@ -334,13 +339,18 @@ function TopMenu(props) {
 							>
 								{!isAuthenticated ? (
 									<span>
+						
 										<MenuItem onClick={() => handleOpen()}>Login</MenuItem>
 										<MenuItem onClick={() => handleRegisterOpen()}>
 											Register
 										</MenuItem>
 									</span>
 								) : (
+									<div>
+									
 									<MenuItem onClick={() => handleLogout()}>Logout</MenuItem>
+									
+									</div>
 								)}
 							</Menu>
 						</React.Fragment>
