@@ -5,6 +5,7 @@ import ResponsiveDrawer from './ResponsiveDrawer';
 import Alert from './Alerts';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import { makeStyles } from '@material-ui/core/styles';
 //material ui component
 
 import {
@@ -68,12 +69,13 @@ function TopMenu(props) {
 		error,
 		clearErrors,
 		isAuthenticated,
-		user
+		user,
+		loading,
+		showLoading
 	} = authContext;
 
 	useEffect(() => {
-		// loadUser();
-
+		loadUser();
 		if (isAuthenticated) {
 			// props.history.push('/');
 			setOpen(false);
@@ -81,6 +83,14 @@ function TopMenu(props) {
 		}
 
 		if (error === 'Invalid Credentials') {
+			setAlert(error, 'danger');
+			clearErrors();
+		}
+		if (error === 'User already exists') {
+			setAlert(error, 'danger');
+			clearErrors();
+		}
+		if (error === 'Email doesnt exist') {
 			setAlert(error, 'danger');
 			clearErrors();
 		}
@@ -146,6 +156,7 @@ function TopMenu(props) {
 			setAlert('Please fill in all fields', 'danger');
 		} else {
 			console.log('login called');
+			showLoading();
 			login({
 				email,
 				password
@@ -159,6 +170,7 @@ function TopMenu(props) {
 			setAlert('Please fill in all fields', 'danger');
 		} else {
 			console.log('register called');
+			showLoading();
 			register({
 				name,
 				email,
@@ -309,12 +321,12 @@ function TopMenu(props) {
 								id='menu-appbar'
 								anchorEl={anchorEl}
 								anchorOrigin={{
-									vertical: 'top',
+									vertical: 'bottom',
 									horizontal: 'right'
 								}}
 								keepMounted
 								transformOrigin={{
-									vertical: 'top',
+									vertical: 'bottom',
 									horizontal: 'right'
 								}}
 								open={isOpen}
@@ -395,6 +407,7 @@ function TopMenu(props) {
 										size='large'
 										onClick={handleLogin}
 										to={'/login'}
+										disabled={loading}
 										style={{ marginTop: '16px' }}
 									>
 										Login
@@ -475,6 +488,7 @@ function TopMenu(props) {
 										color='primary'
 										size='large'
 										onClick={handleRegister}
+										disabled={loading}
 										to={'/login'}
 										style={{ marginTop: '16px' }}
 									>

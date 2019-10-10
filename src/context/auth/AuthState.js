@@ -11,7 +11,8 @@ import {
 	LOGIN_SUCCESS,
 	LOGIN_FAIL,
 	LOGOUT,
-	CLEAR_ERRORS
+	CLEAR_ERRORS,
+	SHOW_LOADING
 } from '../types';
 
 const backEndUrl = 'https://pacific-dusk-01065.herokuapp.com';
@@ -105,6 +106,9 @@ const AuthState = props => {
 	// Clear Errors
 	const clearErrors = () => dispatch({ type: CLEAR_ERRORS });
 
+	//Loading
+	const showLoading = () => dispatch({ type: SHOW_LOADING });
+
 	return (
 		<AuthContext.Provider
 			value={{
@@ -117,7 +121,8 @@ const AuthState = props => {
 				loadUser,
 				login,
 				logout,
-				clearErrors
+				clearErrors,
+				showLoading
 			}}
 		>
 			{props.children}

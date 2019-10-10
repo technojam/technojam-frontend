@@ -3,6 +3,7 @@ import { TopMenu, Footer } from './Components/Layouts';
 import Maincontent from './Components/Maincontent';
 import AuthContext from './context/auth/AuthState';
 import AlertContext from './context/alert/AlertState';
+
 const sectionStyle = {
 	backgroundImage:
 		'url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.png)',
