@@ -272,7 +272,7 @@ function TopMenu(props) {
 							</Grid>
 						</div>
 					</Hidden>
-					<div style={{ marginLeft: 'auto' }}>
+					<div style={{ marginLeft: 'auto' }} >
 						<Tooltip title='Night Mode'>
 							<IconButton
 								color='inherit'
@@ -297,6 +297,7 @@ function TopMenu(props) {
 								></i>
 							</a>
 						</Tooltip>
+
 						{/* <Tooltip title='Log-in'>
 							<IconButton
 								color='inherit'
@@ -402,7 +403,7 @@ function TopMenu(props) {
 									/>
 									<TextField
 										id='outlined-password-input'
-										label='password'
+										label='Password'
 										type='password'
 										name='password'
 										value={password}
@@ -422,6 +423,12 @@ function TopMenu(props) {
 									>
 										Login
 									</Button>
+									<div style={{marginTop: '10px'}}>
+									<p>You not have a Accounts?</p>
+									<Link style={{color: "#007791"}} to={"/signup"} > 
+                                       Sign up 
+                                    </Link>
+									</div>
 								</div>
 							</Fade>
 						</Modal>

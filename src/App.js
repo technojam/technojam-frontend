@@ -1,3 +1,4 @@
+import './App.css';
 import { Container, Button, Link } from 'react-floating-action-button';
 import React, { Fragment, useState, useContext } from 'react';
 import { TopMenu, Footer } from './Components/Layouts';
@@ -5,6 +6,7 @@ import Maincontent from './Components/Maincontent';
 import AuthContext from './context/auth/AuthState';
 import AlertContext from './context/alert/AlertState';
 import { Hidden } from '@material-ui/core';
+
 
 const sectionStyle = {
 	backgroundImage:
@@ -16,21 +18,25 @@ const sectionStyle = {
 	top: '0'
 };
 
+
 function App() {
-	const [panel, setPanel] = useState(false);
 
-	function toggleButton() {
-		if (!panel) setPanel(true);
-		else setPanel(false);
+  const [panel, setPanel] = useState(false);
+	//const [] = useState({ mode: 'light' });
 
-		if (panel === false) {
-			document.getElementById('ToggleButton').style.background = '#161625';
-		}
-	}
+  function toggleButton() {
+    if (!panel) setPanel(true);
+    else setPanel(false);
 
-	return (
-		<div className='App' style={sectionStyle}>
-			<AuthContext>
+    if (panel === false) {
+      document.getElementById("ToggleButton").style.background = "#161625";
+    }
+  }
+
+  return (
+     <div className="dark-mode">
+    <div className="App "> style={sectionStyle}>
+    <AuthContext>
 				<AlertContext>
 					<TopMenu toggleButton={toggleButton} />
 					<Maincontent />
@@ -51,8 +57,10 @@ function App() {
 					/>
 				</Container>
 			</Hidden>
-		</div>
-	);
-}
 
+   </div>
+   </div>
+   
+);
+  }
 export default App;
