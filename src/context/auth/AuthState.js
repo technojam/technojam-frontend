@@ -7,23 +7,25 @@ import {
 	REGISTER_SUCCESS,
 	REGISTER_FAIL,
 	USER_LOADED,
+	CONTACT_LOADED,
 	AUTH_ERROR,
 	LOGIN_SUCCESS,
 	LOGIN_FAIL,
 	LOGOUT,
 	CLEAR_ERRORS,
-	SHOW_LOADING
+	SHOW_LOADING,
+	backendUrl,
+	DELETE_CONTACT
 } from '../types';
-
-const backEndUrl = 'https://pacific-dusk-01065.herokuapp.com';
 
 const AuthState = props => {
 	const initialState = {
 		token: localStorage.getItem('token'),
 		isAuthenticated: null,
-		loading: true,
+		loading: false,
 		user: null,
-		error: null
+		error: null,
+		contact: []
 	};
 
 	const [state, dispatch] = useReducer(authReducer, initialState);
@@ -32,20 +34,60 @@ const AuthState = props => {
 	const loadUser = async () => {
 		if (localStorage.token) {
 			setAuthToken(localStorage.token);
-		}
+			try {
+				const res = await axios.get(backendUrl + '/api/login');
 
-		try {
-			const res = await axios.get(backEndUrl + '/api/login');
-
-			dispatch({
-				type: USER_LOADED,
-				payload: res.data
-			});
-		} catch (err) {
-			dispatch({ type: AUTH_ERROR });
+				dispatch({
+					type: USER_LOADED,
+					payload: res.data
+				});
+				if (res.data.role == 'admin') loadContact();
+			} catch (err) {
+				dispatch({ type: AUTH_ERROR });
+			}
 		}
 	};
 
+	const loadContact = async () => {
+		console.log('Loading Contacts');
+		if (localStorage.token) {
+			setAuthToken(localStorage.token);
+			try {
+				const res = await axios.get(backendUrl + '/api/contact');
+				console.log('contacts from server:', res.data);
+				dispatch({
+					type: CONTACT_LOADED,
+					payload: res.data
+				});
+			} catch (err) {
+				dispatch({ type: CLEAR_ERRORS });
+			}
+		}
+	};
+
+	const deleteContact = async cids => {
+		console.log('Deleting Contacts:', { cids: cids });
+		if (localStorage.token) {
+			setAuthToken(localStorage.token);
+			const config = {
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			};
+
+			try {
+				const res = await axios.delete(
+					backendUrl + '/api/contact',
+					{ cids: cids },
+					config
+				);
+				console.log('contacts from server:', res.data);
+				loadContact();
+			} catch (err) {
+				dispatch({ type: CLEAR_ERRORS });
+			}
+		}
+	};
 	// Register User
 	const register = async formData => {
 		const config = {
@@ -56,7 +98,7 @@ const AuthState = props => {
 
 		try {
 			const res = await axios.post(
-				backEndUrl + '/api/register',
+				backendUrl + '/api/register',
 				formData,
 				config
 			);
@@ -84,7 +126,7 @@ const AuthState = props => {
 		};
 
 		try {
-			const res = await axios.post(backEndUrl + '/api/login', formData, config);
+			const res = await axios.post(backendUrl + '/api/login', formData, config);
 
 			dispatch({
 				type: LOGIN_SUCCESS,
@@ -107,7 +149,7 @@ const AuthState = props => {
 	const clearErrors = () => dispatch({ type: CLEAR_ERRORS });
 
 	//Loading
-	const showLoading = () => dispatch({ type: SHOW_LOADING });
+	const showLoading = data => dispatch({ type: SHOW_LOADING, payload: data });
 
 	return (
 		<AuthContext.Provider
@@ -117,8 +159,11 @@ const AuthState = props => {
 				loading: state.loading,
 				user: state.user,
 				error: state.error,
+				contact: state.contact,
 				register,
 				loadUser,
+				loadContact,
+				deleteContact,
 				login,
 				logout,
 				clearErrors,
