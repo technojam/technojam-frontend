@@ -17,10 +17,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### View map of the frontend is given here
+### `View map of the frontend is given here`
 This section has moved here: https://docs.google.com/spreadsheets/d/1lcwsAChRc2UOdvfuPohoHo5MZwpFQ3CZ3PhNc7pUKwo/edit?usp=sharing
 
-### Requirments of the frontend is given here
+### `Requirments of the frontend is given here`
 This section has moved here: https://docs.google.com/document/d/1zsNa42tBbcOsZJql_ueDOcIj1K3p6qlIwLLzdAjahlI/edit?usp=sharing
 ### `npm test`
 

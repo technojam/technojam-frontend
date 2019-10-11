@@ -46,7 +46,7 @@ export default function Team() {
       <Container fixed>
         <Grid container spacing={3}>
           {TEAM_MEMBERS.map(member => (
-            <Grid item xs={3} sm={2} lg={1}>
+            <Grid item xs={4} sm={3} lg={1}>
               <Link to={"/profile/" + member.id}>
                 <Tooltip title={member.Name}>
                   <img src={member.Image} alt={member.title} style={circle} key={member.id}/>
@@ -59,7 +59,3 @@ export default function Team() {
       </div>
    );
 };
-
-
-
-/*{tile.name} To be deleted which is not in the tooltip after uploading pictures of every team members */

@@ -142,3 +142,18 @@
   word-spacing: 3px;
   padding-top: 4px;
 }
+
+@media (max-width: 600px) {
+  .MuiTypography-h2 {
+    font-size: 36px !important;
+  }
+  .MuiTypography-body1 {
+    font-size: 12px !important;
+  }
+}
+
+.one{
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ece9e6, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+}
