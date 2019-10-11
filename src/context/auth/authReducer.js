@@ -6,11 +6,17 @@ import {
 	LOGIN_SUCCESS,
 	LOGIN_FAIL,
 	LOGOUT,
-	CLEAR_ERRORS
+	CLEAR_ERRORS,
+	SHOW_LOADING
 } from '../types';
 
 export default (state, action) => {
 	switch (action.type) {
+		case SHOW_LOADING:
+			return {
+				...state,
+				loading: true
+			};
 		case USER_LOADED:
 			return {
 				...state,
