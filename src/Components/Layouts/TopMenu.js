@@ -5,9 +5,7 @@ import ResponsiveDrawer from './ResponsiveDrawer';
 import Alert from './Alerts';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import { makeStyles } from '@material-ui/core/styles';
 //material ui component
-
 import {
 	AppBar,
 	Toolbar,
@@ -66,16 +64,20 @@ function TopMenu(props) {
 		register,
 		logout,
 		loadUser,
+		loadContact,
 		error,
 		clearErrors,
 		isAuthenticated,
 		user,
+		contact,
 		loading,
 		showLoading
 	} = authContext;
 
 	useEffect(() => {
 		loadUser();
+
+		console.log('contacts:', contact);
 		if (isAuthenticated) {
 			// props.history.push('/');
 			setOpen(false);
@@ -156,7 +158,7 @@ function TopMenu(props) {
 			setAlert('Please fill in all fields', 'danger');
 		} else {
 			console.log('login called');
-			showLoading();
+			showLoading({ data: true });
 			login({
 				email,
 				password
@@ -170,7 +172,7 @@ function TopMenu(props) {
 			setAlert('Please fill in all fields', 'danger');
 		} else {
 			console.log('register called');
-			showLoading();
+			showLoading({ data: true });
 			register({
 				name,
 				email,
@@ -257,18 +259,6 @@ function TopMenu(props) {
 										Contact Us
 									</Typography>
 								</Button>
-								<Button style={{ style }} component={Link} to={'/Pannel'}>
-										<Typography className='topMenu_typo_name'>
-											Dashboard
-										</Typography>
-									</Button>
-								{role == 'admin' ? (
-									<Button style={{ style }} component={Link} to={'/pannel'}>
-										<Typography className='topMenu_typo_name'>
-											Dashboard
-										</Typography>
-									</Button>
-								) : null}
 							</Grid>
 						</div>
 					</Hidden>
@@ -319,7 +309,7 @@ function TopMenu(props) {
 							>
 								<PersonIcon />
 								<Typography className='topMenu_typo_name'>
-									{console.log('user:', user)}
+									{/* {console.log('user:', user)} */}
 									{user ? user.name : name}
 								</Typography>
 							</IconButton>
@@ -340,7 +330,6 @@ function TopMenu(props) {
 							>
 								{!isAuthenticated ? (
 									<span>
-						
 										<MenuItem onClick={() => handleOpen()}>Login</MenuItem>
 										<MenuItem onClick={() => handleRegisterOpen()}>
 											Register
@@ -348,9 +337,12 @@ function TopMenu(props) {
 									</span>
 								) : (
 									<div>
-									
-									<MenuItem onClick={() => handleLogout()}>Logout</MenuItem>
-									
+										{user && user.role == 'admin' ? (
+											<MenuItem component={Link} to='/pannel'>
+												Dashboard
+											</MenuItem>
+										) : null}
+										<MenuItem onClick={() => handleLogout()}>Logout</MenuItem>
 									</div>
 								)}
 							</Menu>
