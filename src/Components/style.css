@@ -106,6 +106,10 @@
   letter-spacing: 2px;
 }
 
+/*Event style*/
+.timeline::before{
+  background: #007fff !important;
+}
 /* Contact style */
 .contact_section_heading {
   letter-spacing: 1px !important;
