@@ -69,7 +69,7 @@ const Events = () => {
     };
 
     const pastEventStyle = {
-       background: "#ECECEC",
+        background: "#ECECEC",
         borderRadius: "20px",
         boxShadow: "0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12)"
     };
@@ -81,15 +81,14 @@ const Events = () => {
                     <VerticalTimeline className="timeline">
                         {upevent.map(event => (
                                 <VerticalTimelineElement
-                                    className="vertical-timeline-element--work"
+                                    className="vertical-timeline-technojam"
                                     contentStyle={upcomingEventStyle}
                                     contentArrowStyle={{borderRight: '7px solid  rgb(33, 150, 243)'}}
                                     date={event.date}
                                     iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
                                 >
-                                    <Typography variant='h5' component='p' className='letter_spacing'>
-                                        {event.title}
-                                    </Typography>
+                                    <h5>{event.title}</h5>
+                                    <Divider />
                                     <Typography
                                         variant='body2'
                                         color='textSecondary'
@@ -97,6 +96,8 @@ const Events = () => {
                                         style={{letterSpacing: '0.9px', lineHeight: '24px'}}>
                                         {event.description}
                                     </Typography>
+                                    <br />
+                                    <Divider />
                                     <Typography variant='body2' color='textSecondary' component='p'>
                                         <b>Venue:</b> {event.venue}
                                     </Typography>
@@ -104,7 +105,7 @@ const Events = () => {
                                         variant='contained'
                                         color='secondary'
                                         size='small'
-                                        style={{marginTop: '5px'}}
+                                        style={{marginLeft:'5px',marginTop: '5px'}}
                                         src={event.register}>
                                         Register Now
                                     </Button>
@@ -113,15 +114,14 @@ const Events = () => {
                         )}
                         {paevent.map(event => (
                                 <VerticalTimelineElement
-                                    className="vertical-timeline-element--work"
+                                    className="vertical-timeline-technojam"
                                     contentStyle={pastEventStyle}
                                     contentArrowStyle={{borderRight: '7px solid  #ECECEC'}}
                                     date={event.date}
                                     iconStyle={{background: '#ECECEC', color: '#fff'}}
                                 >
-                                    <Typography variant='h5' component='p' className='letter_spacing'>
-                                        {event.title}
-                                    </Typography>
+                                    <h5>{event.title}</h5>
+                                    <Divider />
                                     <Typography
                                         variant='body2'
                                         color='textSecondary'
@@ -129,6 +129,9 @@ const Events = () => {
                                         style={{letterSpacing: '0.9px', lineHeight: '24px'}}>
                                         {event.description}
                                     </Typography>
+                                    <br/>
+                                    <Divider variant='inset' />
+                                    <br/>
                                     <a
                                         className='btn btn-social-icon btn-github'
                                         href={event.todo}
