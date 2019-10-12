@@ -106,6 +106,21 @@
   letter-spacing: 2px;
 }
 
+/*Event style*/
+.timeline::before{
+  background: #007fff !important;
+}
+
+.vertical-timeline-technojam h5{
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.33;
+}
+.vertical-timeline-technojam p{
+  font-weight: 400 !important;
+}
+
 /* Contact style */
 .contact_section_heading {
   letter-spacing: 1px !important;

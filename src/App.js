@@ -1,11 +1,10 @@
 import './App.css';
-import { Container, Button, Link } from 'react-floating-action-button';
 import React, { Fragment, useState, useContext } from 'react';
 import { TopMenu, Footer } from './Components/Layouts';
 import Maincontent from './Components/Maincontent';
 import AuthContext from './context/auth/AuthState';
 import AlertContext from './context/alert/AlertState';
-import { Hidden } from '@material-ui/core';
+import { Hidden, Fab, Icon } from '@material-ui/core';
 
 
 const sectionStyle = {
@@ -17,6 +16,14 @@ const sectionStyle = {
 	width: '100%',
 	top: '0'
 };
+
+
+	const fabPosition = {
+		bottom: '10vh',
+		position: 'fixed',
+		margin: '1em',
+		right: '8vw',
+	};
 
 
 function App() {
@@ -48,14 +55,13 @@ function App() {
 			</AuthContext>
 
 			<Hidden smUp>
-				<Container>
-					<Button
-						tooltip='The big plus button!'
-						icon='fas fa-chevron-up'
-						rotate={false}
-						onClick={() => window.scrollTo(0, 0)}
-					/>
-				</Container>
+
+				<div style={fabPosition}>
+					<Fab color="secondary" onClick={() => window.scrollTo(0, 0)}>
+						<Icon fontSize="inherit" style={{height: "auto"}} className="fas fa-chevron-up"/>
+					</Fab>
+				</div>
+
 			</Hidden>
 
    </div>
@@ -64,3 +70,4 @@ function App() {
 );
   }
 export default App;
+
