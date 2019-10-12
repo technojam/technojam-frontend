@@ -94,7 +94,7 @@
   opacity: 1;
   margin-top: 25px;
   margin-bottom: 25px;
-  border-color: #007fff;
+  border-color: #292;
 }
 
 .view_card {
@@ -108,7 +108,7 @@
 
 /*Event style*/
 .timeline::before{
-  background: #007fff !important;
+  background: #29232e !important;
 }
 
 .vertical-timeline-technojam h5{
