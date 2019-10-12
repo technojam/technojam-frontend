@@ -262,7 +262,7 @@ function TopMenu(props) {
 							</Grid>
 						</div>
 					</Hidden>
-					<div style={{ marginLeft: 'auto' }} >
+					<div style={{ marginLeft: 'auto' }}>
 						<Tooltip title='Night Mode'>
 							<IconButton
 								color='inherit'
@@ -338,7 +338,11 @@ function TopMenu(props) {
 								) : (
 									<div>
 										{user && user.role == 'admin' ? (
-											<MenuItem component={Link} to='/pannel'>
+											<MenuItem
+												component={Link}
+												to='/pannel'
+												onClick={() => handleClose1()}
+											>
 												Dashboard
 											</MenuItem>
 										) : null}
@@ -415,11 +419,11 @@ function TopMenu(props) {
 									>
 										Login
 									</Button>
-									<div style={{marginTop: '10px'}}>
-									<p>You not have a Accounts?</p>
-									<Link style={{color: "#007791"}} to={"/signup"} > 
-                                       Sign up 
-                                    </Link>
+									<div style={{ marginTop: '10px' }}>
+										<p>You not have a Accounts?</p>
+										<Link style={{ color: '#007791' }} to={'/signup'}>
+											Sign up
+										</Link>
 									</div>
 								</div>
 							</Fade>
