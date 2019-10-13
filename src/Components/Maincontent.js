@@ -16,6 +16,8 @@ import {
 } from './Pages/';
 
 import LiveEvents from './Layouts/liveEvents';
+import AdminRoute from '../util/AdminRoutes';
+import Dashboard from './Pages/dashboard/Dashboard';
 
 const Maincontent = () => (
 	<div className='main-content' id='ToggleButton'>
@@ -31,7 +33,7 @@ const Maincontent = () => (
 			<Route exact path='/team' component={team} />
 			<Route exact path='/groups' component={groups} />
 			<Route exact path='/profile/:id' component={ProfilePage} />
-			<Route exact path='/Pannel' component={Pannel} />
+			<AdminRoute exact path='/pannel' component={Dashboard} />
 		</Switch>
 		<LiveEvents></LiveEvents>
 	</div>

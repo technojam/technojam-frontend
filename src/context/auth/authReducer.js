@@ -2,6 +2,7 @@ import {
 	REGISTER_SUCCESS,
 	REGISTER_FAIL,
 	USER_LOADED,
+	CONTACT_LOADED,
 	AUTH_ERROR,
 	LOGIN_SUCCESS,
 	LOGIN_FAIL,
@@ -15,7 +16,7 @@ export default (state, action) => {
 		case SHOW_LOADING:
 			return {
 				...state,
-				loading: true
+				loading: action.payload.data
 			};
 		case USER_LOADED:
 			return {
@@ -37,7 +38,6 @@ export default (state, action) => {
 		case AUTH_ERROR:
 		case LOGIN_FAIL:
 		case LOGOUT:
-			console.log('logout called');
 			localStorage.removeItem('token');
 			return {
 				...state,
@@ -51,6 +51,11 @@ export default (state, action) => {
 			return {
 				...state,
 				error: null
+			};
+		case CONTACT_LOADED:
+			return {
+				...state,
+				contact: action.payload
 			};
 		default:
 			return state;

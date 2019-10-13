@@ -1,4 +1,4 @@
-import React, { Component, Link, useState } from "react";
+import React, { Component, Link, useState, useContext } from "react";
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
@@ -21,7 +21,8 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Divider from '@material-ui/core/Divider';
-
+import ContactTable from './../Pages/dashboard/ContactTable'
+import AuthContext from './../../context/auth/authContext'
 /* FIXME: When the target will be decided, remove the rel attribute.
  * It has been added here for security reasons.
  * Reference: https://mathiasbynens.github.io/rel-noopener/
@@ -53,6 +54,9 @@ const style = {
 
 const Pannel = () => {
   
+  const authContext=useContext(AuthContext)
+  const {user}=authContext;
+
   const [details, setDetails] = useState({
     Eventname: '',
     Date: '',
@@ -97,10 +101,10 @@ const Pannel = () => {
                       <CardHeader
                         avatar={
                           <Avatar >
-                            R
+                            {user?user.name[0]:'A'}
                                   </Avatar>
                         }
-                        title={member.name}
+                        title={user?user.name:'Default'}
                       >
                       </CardHeader>
                     </Typography>
@@ -116,7 +120,13 @@ const Pannel = () => {
                   <Divider></Divider>
                   <br></br>
                 </Grid>
-               
+               <Grid item xs={12} sm={12} md={12} >
+                  <Card className='card--shadow'>
+                    <CardContent>
+                           <ContactTable/>
+                    </CardContent>
+                  </Card>
+                </Grid>
                 <Grid item xs={12} sm={6} md={6} >
                   <ExpansionPanel className='card--shadow'>
                     <ExpansionPanelSummary>
@@ -276,9 +286,8 @@ const Pannel = () => {
                             </Button>
                           </Typography>
                         </form>
+                        <ContactTable/>
                       </div>
-
-
                       <Grid item md={6} xl={6}>
                         <Typography className='grid_item_typo'></Typography>
                       </Grid>
