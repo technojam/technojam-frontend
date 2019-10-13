@@ -79,7 +79,7 @@ const useStyles = makeStyles(theme => ({
 		flexGrow: 1
 	},
 	drawerPaper: {
-		position: 'relative',
+		position: 'fixed',
 		whiteSpace: 'nowrap',
 		marginTop: '64px',
 		width: drawerWidth,
@@ -90,6 +90,7 @@ const useStyles = makeStyles(theme => ({
 		})
 	},
 	drawerPaperClose: {
+		position:'fixed',
 		overflowX: 'hidden',
 		transition: theme.transitions.create('width', {
 			easing: theme.transitions.easing.sharp,
