@@ -17,6 +17,7 @@
     "react-dom": "^16.9.0",
     "react-draft-wysiwyg": "^1.13.2",
     "react-event-calendar": "^0.3.0",
+    "react-event-timeline": "^1.6.3",
     "react-facebook-login": "^4.1.1",
     "react-gesture-gallery": "^1.1.0",
     "react-gesture-responder": "^2.1.0",
