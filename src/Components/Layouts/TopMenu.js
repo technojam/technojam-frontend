@@ -346,6 +346,16 @@ function TopMenu(props) {
 												Dashboard
 											</MenuItem>
 										) : null}
+										{user && user.role == 'admin' ? (
+											<MenuItem
+												component={Link}
+												to='/pannel'
+												onClick={() => handleClose1()}
+											>
+												View Profile
+											</MenuItem>
+										) : null}
+										
 										<MenuItem onClick={() => handleLogout()}>Logout</MenuItem>
 									</div>
 								)}
