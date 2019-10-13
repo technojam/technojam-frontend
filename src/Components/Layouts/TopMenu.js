@@ -1,41 +1,41 @@
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
-import Logo from "../../images/logo_small.png";
-import ResponsiveDrawer from "./ResponsiveDrawer";
-
+import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Logo from '../../images/logo_small.png';
+import ResponsiveDrawer from './ResponsiveDrawer';
+import Alert from './Alerts';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
 //material ui component
-
 import {
+	AppBar,
+	Toolbar,
+	Button,
+	Badge,
+	IconButton,
+	Hidden
+} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
+import PersonIcon from '@material-ui/icons/Person';
+import Tooltip from '@material-ui/core/Tooltip';
+import Modal from '@material-ui/core/Modal';
+import TextField from '@material-ui/core/TextField';
+import Fade from '@material-ui/core/Fade';
+import CloseIcon from '@material-ui/icons/Close';
+import Typography from '@material-ui/core/Typography';
+import AlertContext from '../../context/alert/alertContext';
+import AuthContext from '../../context/auth/authContext';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-  AppBar,
-  Toolbar,
-  Button,
-  Badge,
-  IconButton,
-  Hidden
-} from "@material-ui/core";
-import Grid from "@material-ui/core/Grid";
-import WbIncandescentIcon from "@material-ui/icons/WbIncandescent";
-import PersonIcon from "@material-ui/icons/Person";
-import Tooltip from "@material-ui/core/Tooltip";
-import Modal from "@material-ui/core/Modal";
-import TextField from "@material-ui/core/TextField";
-import Fade from "@material-ui/core/Fade";
-import CloseIcon from "@material-ui/icons/Close";
-import Typography from "@material-ui/core/Typography";
-
-import {useTheme} from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-
-import "../style.css";
+import '../style.css';
 
 const style = {
-  marginleft: 200,
-  toolbarButtons: {
-    marginLeft: "auto",
-    marginRight: -12
-  }
-
+	marginleft: 200,
+	toolbarButtons: {
+		marginLeft: 'auto',
+		marginRight: -12
+	}
 };
 
 const modalCardBaseStyle = {
@@ -54,42 +54,136 @@ const modalCardBaseStyle = {
 	outline: 'none'
 };
 
+function TopMenu(props) {
+	const alertContext = useContext(AlertContext);
+	const authContext = useContext(AuthContext);
 
-export default function TopMenu({toggleButton}) {
-  const theme = useTheme();
-  const modalCardStyle = {...modalCardBaseStyle};
+	const { setAlert } = alertContext;
+	const {
+		login,
+		register,
+		logout,
+		loadUser,
+		loadContact,
+		error,
+		clearErrors,
+		isAuthenticated,
+		user,
+		contact,
+		loading,
+		showLoading
+	} = authContext;
 
-  if (useMediaQuery(theme.breakpoints.up("sm"))) {
-    modalCardStyle.width = 400;
-    modalCardStyle.padding = "4rem 2rem 3rem";
-  } else {
-    modalCardStyle.width = "80%";
-    modalCardStyle.maxWidth = "calc(100% - 2rem)";
-  }
+	useEffect(() => {
+		loadUser();
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
+		console.log('contacts:', contact);
+		if (isAuthenticated) {
+			// props.history.push('/');
+			setOpen(false);
+			setRegisterOpen(false);
+		}
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+		if (error === 'Invalid Credentials') {
+			setAlert(error, 'danger');
+			clearErrors();
+		}
+		if (error === 'User already exists') {
+			setAlert(error, 'danger');
+			clearErrors();
+		}
+		if (error === 'Email doesnt exist') {
+			setAlert(error, 'danger');
+			clearErrors();
+		}
+		// eslint-disable-next-line
+	}, [error, isAuthenticated, props.history]);
 
-  const [open, setOpen] = React.useState(false);
-	const [user, setUser] = React.useState({ role: 'user', name: 'Guest' });
+	const theme = useTheme();
+	const modalCardStyle = { ...modalCardBaseStyle };
 
-	const { role, name } = user;
+	if (useMediaQuery(theme.breakpoints.up('sm'))) {
+		modalCardStyle.width = 400;
+		modalCardStyle.padding = '4rem 2rem 3rem';
+	} else {
+		modalCardStyle.width = '80%';
+		modalCardStyle.maxWidth = 'calc(100% - 2rem)';
+	}
 
-	//here we will call the backend which will give us the name of the user and his role
-	//if role is admin dasboard link will be visible otherwise not
-	//obvisouly the dasboard link will be protected so that only admins can access that
-	//for now i am setting it default to admin
-	const handleLogin = () => {
-		// mock data from backend
-		// actual data will have more properties
-		const dataFromBackEnd = { role: 'admin', name: 'Admin' };
-		setUser({ role: dataFromBackEnd.role, name: dataFromBackEnd.name });
+	const [anchorEl, setAnchorEl] = React.useState(null);
+	const isOpen = Boolean(anchorEl);
+	const [open, setOpen] = React.useState(false);
+	const [registerOpen, setRegisterOpen] = React.useState(false);
+
+	const [user1, setUser] = React.useState({
+		role: 'user',
+		name: 'Guest',
+		email: '',
+		password: ''
+	});
+
+	const { email, password, role, name } = user1;
+
+	const handleOpen = () => {
+		setOpen(true);
+		setAnchorEl(null);
+	};
+
+	const handleRegisterOpen = () => {
+		setRegisterOpen(true);
+		setAnchorEl(null);
+	};
+
+	const handleClose = () => {
 		setOpen(false);
+		setRegisterOpen(false);
+	};
+
+	const handleMenu = event => {
+		console.log('handle menu called');
+		setAnchorEl(event.currentTarget);
+	};
+
+	const handleClose1 = () => {
+		setAnchorEl(null);
+	};
+	const onChange = e => {
+		// console.log(`onChange called:${e.target.name},${e.target.value}`);
+		setUser({ ...user1, [e.target.name]: e.target.value });
+	};
+
+	const handleLogin = e => {
+		e.preventDefault();
+		if (email === '' || password === '') {
+			setAlert('Please fill in all fields', 'danger');
+		} else {
+			console.log('login called');
+			showLoading({ data: true });
+			login({
+				email,
+				password
+			});
+		}
+	};
+
+	const handleRegister = e => {
+		e.preventDefault();
+		if (name === '' || email === '' || password === '') {
+			setAlert('Please fill in all fields', 'danger');
+		} else {
+			console.log('register called');
+			showLoading({ data: true });
+			register({
+				name,
+				email,
+				password
+			});
+		}
+	};
+
+	const handleLogout = () => {
+		logout();
+		handleClose1();
 	};
 
 	return (
@@ -107,9 +201,14 @@ export default function TopMenu({toggleButton}) {
 								height='50px'
 								align='center'
 							/>
-              <Hidden smDown>
-							<Typography className='topMenu_typo_name' style={{fontSize:"14px"}}>TECHNOJAM</Typography>
-              </Hidden>
+							<Hidden smDown>
+								<Typography
+									className='topMenu_typo_name'
+									style={{ fontSize: '14px' }}
+								>
+									TECHNOJAM
+								</Typography>
+							</Hidden>
 						</Button>
 					</Grid>
 					<Hidden smDown>
@@ -160,18 +259,6 @@ export default function TopMenu({toggleButton}) {
 										Contact Us
 									</Typography>
 								</Button>
-								{role == 'admin' ? (
-									<Button style={{ style }} component={Link} to={'/dashboard'}>
-										<Typography className='topMenu_typo_name'>
-											Dashboard
-										</Typography>
-									</Button>
-								) : null}
-								<Button style={{ style }} component={Link} to={'/pannel'}>
-									<Typography className='topMenu_typo_name'>
-										Welcome, {name}
-									</Typography>
-								</Button>
 							</Grid>
 						</div>
 					</Hidden>
@@ -200,18 +287,70 @@ export default function TopMenu({toggleButton}) {
 								></i>
 							</a>
 						</Tooltip>
-						<Tooltip title='Log-in'>
+
+						{/* <Tooltip title='Log-in'>
 							<IconButton
 								color='inherit'
-								onClick={handleOpen}
+								onClick={()=>handleOpen(login)}
 								aria-label='Login'
 								style={{ style }}
 								component={Link}
 							>
 								<PersonIcon />
 							</IconButton>
-						</Tooltip>
-
+						</Tooltip> */}
+						<React.Fragment>
+							<IconButton
+								aria-label='account of current user'
+								aria-controls='menu-appbar'
+								aria-haspopup='true'
+								onClick={handleMenu}
+								color='inherit'
+							>
+								<PersonIcon />
+								<Typography className='topMenu_typo_name'>
+									{/* {console.log('user:', user)} */}
+									{user ? user.name : name}
+								</Typography>
+							</IconButton>
+							<Menu
+								id='menu-appbar'
+								anchorEl={anchorEl}
+								anchorOrigin={{
+									vertical: 'bottom',
+									horizontal: 'right'
+								}}
+								keepMounted
+								transformOrigin={{
+									vertical: 'bottom',
+									horizontal: 'right'
+								}}
+								open={isOpen}
+								onClose={handleClose1}
+							>
+								{!isAuthenticated ? (
+									<span>
+										<MenuItem onClick={() => handleOpen()}>Login</MenuItem>
+										<MenuItem onClick={() => handleRegisterOpen()}>
+											Register
+										</MenuItem>
+									</span>
+								) : (
+									<div>
+										{user && user.role == 'admin' ? (
+											<MenuItem
+												component={Link}
+												to='/pannel'
+												onClick={() => handleClose1()}
+											>
+												Dashboard
+											</MenuItem>
+										) : null}
+										<MenuItem onClick={() => handleLogout()}>Logout</MenuItem>
+									</div>
+								)}
+							</Menu>
+						</React.Fragment>
 						<Modal
 							open={open}
 							onClose={handleClose}
@@ -223,6 +362,7 @@ export default function TopMenu({toggleButton}) {
 						>
 							<Fade in={open}>
 								<div style={modalCardStyle}>
+									<Alert />
 									<img
 										src={Logo}
 										alt='TechnoJam.tech'
@@ -251,14 +391,19 @@ export default function TopMenu({toggleButton}) {
 										label='Email'
 										type='email'
 										name='email'
+										value={email}
+										onChange={onChange}
 										autoComplete='email'
 										margin='normal'
 										variant='outlined'
 									/>
 									<TextField
 										id='outlined-password-input'
-										label='password'
+										label='Password'
 										type='password'
+										name='password'
+										value={password}
+										onChange={onChange}
 										autoComplete='current-password'
 										margin='normal'
 										variant='outlined'
@@ -269,9 +414,98 @@ export default function TopMenu({toggleButton}) {
 										size='large'
 										onClick={handleLogin}
 										to={'/login'}
+										disabled={loading}
 										style={{ marginTop: '16px' }}
 									>
 										Login
+									</Button>
+									<div style={{ marginTop: '10px' }}>
+										<p>You not have a Accounts?</p>
+										<Link style={{ color: '#007791' }} to={'/signup'}>
+											Sign up
+										</Link>
+									</div>
+								</div>
+							</Fade>
+						</Modal>
+						<Modal
+							open={registerOpen}
+							onClose={handleClose}
+							style={{
+								display: 'flex',
+								alignItems: 'center',
+								justifyContent: 'center'
+							}}
+						>
+							<Fade in={registerOpen}>
+								<div style={modalCardStyle}>
+									<Alert />
+									<img
+										src={Logo}
+										alt='TechnoJam.tech'
+										style={{
+											position: 'absolute',
+											top: '0',
+											left: '50%',
+											width: '100px',
+											transform: 'translate(-50%, -50%)'
+										}}
+									/>
+
+									<IconButton
+										aria-label='close'
+										onClick={handleClose}
+										style={{
+											position: 'absolute',
+											top: '.5rem',
+											right: '.5rem'
+										}}
+									>
+										<CloseIcon />
+									</IconButton>
+									<TextField
+										id='outlined-email-input'
+										label='Name'
+										type='text'
+										name='name'
+										value={name}
+										onChange={onChange}
+										autoComplete='name'
+										margin='normal'
+										variant='outlined'
+									/>
+									<TextField
+										id='outlined-email-input'
+										label='Email'
+										type='email'
+										name='email'
+										value={email}
+										onChange={onChange}
+										autoComplete='email'
+										margin='normal'
+										variant='outlined'
+									/>
+									<TextField
+										id='outlined-password-input'
+										label='password'
+										type='password'
+										name='password'
+										value={password}
+										onChange={onChange}
+										autoComplete='current-password'
+										margin='normal'
+										variant='outlined'
+									/>
+									<Button
+										variant='contained'
+										color='primary'
+										size='large'
+										onClick={handleRegister}
+										disabled={loading}
+										to={'/login'}
+										style={{ marginTop: '16px' }}
+									>
+										Register
 									</Button>
 								</div>
 							</Fade>
@@ -281,5 +515,6 @@ export default function TopMenu({toggleButton}) {
 			</AppBar>
 		</div>
 	);
-
 }
+
+export default TopMenu;

@@ -9,7 +9,7 @@ import events from "./Events";
 import login from "./Login";
 import alumni from "./Alumni";
 import ProfilePage from "./ProfilePage";
-import pannel from "./Pannel";
+import Pannel from "./Pannel";
 
 
 export {
@@ -24,6 +24,6 @@ export {
   login,
   alumni,
   ProfilePage,
-  pannel
+  Pannel
 
 };
