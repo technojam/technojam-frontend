@@ -531,7 +531,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 44,
+        id: 45,
         Name: "Shaurya Chauhan",
         email: "scshaurya@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shauryachauhan/",
