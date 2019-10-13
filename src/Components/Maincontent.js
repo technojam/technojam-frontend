@@ -17,7 +17,7 @@ import {
 
 import LiveEvents from './Layouts/liveEvents';
 import AdminRoute from '../util/AdminRoutes';
-import Dashboard from './Pages/Dashboard';
+import Dashboard from './Pages/dashboard/Dashboard';
 
 const Maincontent = () => (
 	<div className='main-content' id='ToggleButton'>

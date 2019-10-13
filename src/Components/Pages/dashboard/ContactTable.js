@@ -20,7 +20,7 @@ import Switch from '@material-ui/core/Switch';
 import DeleteIcon from '@material-ui/icons/Delete';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import RefreshIcon from '@material-ui/icons/Refresh';
-import AuthContext from './../../context/auth/authContext';
+import AuthContext from '../../../context/auth/authContext';
 
 function createData(cid, name, calories, fat, carbs, protein) {
 	return { cid, name, calories, fat, carbs, protein };

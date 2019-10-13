@@ -21,7 +21,7 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Divider from '@material-ui/core/Divider';
-import ContactTable from './../Layouts/ContactTable'
+import ContactTable from './../Pages/dashboard/ContactTable'
 import AuthContext from './../../context/auth/authContext'
 /* FIXME: When the target will be decided, remove the rel attribute.
  * It has been added here for security reasons.
