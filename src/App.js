@@ -8,7 +8,7 @@ import { Hidden, Fab, Icon } from '@material-ui/core';
 
 const sectionStyle = {
 	backgroundImage:
-		'url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.png)',
+		'url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/Untitled-1.png)',
 	backgroundRepeat: 'repeat',
 	backgroundPositionX: 'center',
 	position: 'absolute',
