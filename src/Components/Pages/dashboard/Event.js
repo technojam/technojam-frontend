@@ -64,7 +64,7 @@ const Event = () => {
 	};
 
 	return (
-		<section style={{padding:"30px"}}>
+		<section >
 			<div id="event-showcase">
 				<Grid
 					container

@@ -114,11 +114,13 @@ const useStyles = makeStyles(theme => ({
 	content: {
 		flexGrow: 1,
 		height: '100vh',
-		overflow: 'auto'
+		overflow: 'auto',
+		
 	},
 	container: {
 		paddingTop: theme.spacing(1),
-		paddingBottom: theme.spacing(2)
+		paddingBottom: theme.spacing(2),
+		
 	},
 	paper: {
 		padding: theme.spacing(2),
@@ -269,7 +271,7 @@ export default function Dashboard() {
 						{/* <Grid item xs={12} md={4} lg={3}>
 							<Paper className={fixedHeightPaper}><Deposits /></Paper>
 						</Grid> */}
-						<Grid item xs={12}>
+						<Grid item xs={12} style={{paddingLeft:"60px"}}>
 							<Paper className={classes.paper}>{loadComponent()}</Paper>
 						</Grid>
 					</Grid>
