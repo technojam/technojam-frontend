@@ -531,7 +531,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 44,
+        id: 45,
         Name: "Shaurya Chauhan",
         email: "scshaurya@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shauryachauhan/",
@@ -551,11 +551,8 @@ const MEMBER = [
         role:"admin",
         email: "honey.singhroi@gmail.com",
         password:"",
-        achievement:"",
-        event:"",
-        volunteerbadage:"https://tj-static.s3.ap-south-1.amazonaws.com/etc/badage1.jpg",
-        speakerbadage:"https://tj-static.s3.ap-south-1.amazonaws.com/etc/badage2.jpg",
-        ossbadage:"https://tj-static.s3.ap-south-1.amazonaws.com/etc/badage3.jpg",
+        admission:"",
+        image:"https://tj-static.s3.ap-south-1.amazonaws.com/etc/muphoto+-+Honey+Sharma+(1).jpg",
     }
 ];
 export {TEAM_MEMBERS, ALUMNI, MEMBER}
