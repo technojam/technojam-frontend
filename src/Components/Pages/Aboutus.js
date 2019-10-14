@@ -11,6 +11,7 @@ import '../style.css';
 const Aboutus = () => (
    <Container maxWidth='lg'>
       <div className='aboutus view_container'>
+
         <Card className='card--shadow' style={{ backgroundColor: ' #e03030',opacity: '0.8', color: '#fff', 'border-radius':'10px', 'margin-top':'160px'}}>
           <Grid container direction='row' justify='center' alignItems='center' spacing={4}>
             <Grid item lg={3} md={3} sm={3}>
@@ -42,12 +43,15 @@ const Aboutus = () => (
                   </CardMedia>
                   <br />
 
-                  <Typography style={{ alignItems: 'Center' }}>
-                     TechnoJam has Reached upto 3000+ attendee through its workshops, Hackathons.
-                  </Typography>
-               </CardContent>
-            </Grid>
-         </Grid>
+
+                        <Typography style={{ alignItems: 'Center' }}>
+                           TechnoJam has Reached upto 3000+ attendee through its workshops, Hackathons.
+                        </Typography>
+                     </CardContent>
+                  </Grid>
+               </Grid>
+            </CardContent>
+         </Card>
 
         </Card>
   

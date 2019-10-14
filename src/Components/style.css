@@ -48,7 +48,7 @@
   line-height:20px
 }
 .card_style {
-  opacity: "0.9";
+  opacity: 0.9;
   min-height: 530px;
   border-radius: 20px !important;
   
@@ -85,7 +85,8 @@
   line-height: 28px;
   word-spacing: 5px;
   text-align: center;
-  color: #073fff;
+  color: #1a2a6c; 
+  
 }
 
 .view_line {
@@ -188,4 +189,23 @@ background: linear-gradient(to right, #eea849, #f46b45); /* W3C, IE 10+/ Edge, F
 background: -webkit-linear-gradient(to right, #B5AC49, #3CA55C);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #B5AC49, #3CA55C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+
+@media (min-width: 768px){
+  .profile-info{
+    padding: 75px !important;
+  } 
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+ .profile-info{
+   padding: 35px 0 0 0 !important;
+ } 
+
+ .profile-info table{
+   table-layout: fixed;
+ }
+ .profile-info table td{
+   word-wrap: break-word;
+ }
 }

@@ -22,11 +22,11 @@ import axios from 'axios';
 
 const sectionStyle = {
 	width: '100%',
-	height: '85vh',
+	
 	backgroundRepeat: 'no-repeat',
 	marginTop: '100px',
 	backgroundPositionX: 'center',
-	Height: '100%'
+	
 };
 const style = {
 	form: {
@@ -224,11 +224,11 @@ const Mentorship = () => {
 						</Card>
 					</Grid>
 					<Grid item xs={12} sm={6} md={6}>
-						<Card style={{ borderRadius: '10px', fontSize: '14px' }}>
+						<Card style={{ borderRadius: '10px', fontSize: '14px' }} className="card--shadow">
 							<TwitterTimelineEmbed
 								sourceType='profile'
 								screenName='technojam_gu'
-								options={{ height: 440 }}
+								options={{ height: 475 }}
 								size='20px'
 							/>
 						</Card>

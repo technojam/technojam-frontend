@@ -57,7 +57,7 @@ export default class ProfilePage extends React.Component {
                             </Grid>
                         </Grid>
                         <Grid container style={{marginTop: "16px"}}>
-                            <Grid item lg={2} md={false}/>
+                            
                             <Grid item lg={10} md={12}>
                                 <Paper>
                                     <Table style={{tableLayout: 'fixed'}}>

@@ -32,6 +32,7 @@ import Event from './Event';
 import Main from './Main';
 import Team from './Team';
 import Users from './Users';
+import Profile from './Profile'
 
 function Copyright() {
 	return (
@@ -154,6 +155,8 @@ export default function Dashboard() {
 				return <Team />;
 			case 4:
 				return <ContactTable />;
+			case 5:
+				return <Profile />;
 			default:
 				return <Main />;
 		}
@@ -255,6 +258,14 @@ export default function Dashboard() {
 						</ListItemIcon>
 						<ListItemText primary='Contacts' />
 					</ListItem>
+
+					<ListItem button onClick={() => changeComponent(5)}>
+						<ListItemIcon>
+							<PeopleIcon />
+						</ListItemIcon>
+						<ListItemText primary='Profile' />
+					</ListItem>
+
 				</div>
 				<Divider />
 				{/* <List>{secondaryListItems}</List> */}

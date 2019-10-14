@@ -1,8 +1,8 @@
-  
 import React from 'react';
 
 import { Link } from "react-router-dom";
 import { ALUMNI } from '../../util/constants';
+
 
 // material ui component
 import { makeStyles } from '@material-ui/core/styles';
@@ -30,6 +30,7 @@ const useStyles = makeStyles({
     padding: '25px 0px',
     boxShadow:" 0px 4px 8px rgba(0, 0, 0, 0.25) !important",
     lineHeight: "20px"
+
   },
   link: {
     textDecoration: 'none',
@@ -63,10 +64,12 @@ export default function Team() {
 
       <br />
 
-      <Container fixed>
-        <Grid container spacing={5} >
+
+      <Container maxWidth="xl">
+        <Grid container spacing={5}>
           {ALUMNI.map(member => (
-            <Grid item xs={12} sm={4} md={2}>
+            <Grid item xs={12} sm={6} md={2}>
+
               <Link className={classes.link} to={"/profile/" + member.id}>
                 <Card className={classes.card}>
                   {/* <p>Opa</p> */}
