@@ -119,12 +119,12 @@ const Profile = () => {
                        </Hidden>
  
                         
-                        <CardContent style={{padding:"75px"}}>
+                        <CardContent className='profile-info'>
                       
                         <Grid container>
                            
                             <Grid item lg={10} md={12}>
-                                <Typography style={{textAlign:"end"}}> <CreateIcon /></Typography>
+                                <Typography style={{textAlign:"end",padding:'0.5em'}}> <CreateIcon/></Typography>
                            
                                 <Paper>
                                     <Table >

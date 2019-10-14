@@ -190,3 +190,22 @@ background: -webkit-linear-gradient(to right, #B5AC49, #3CA55C);  /* Chrome 10-2
 background: linear-gradient(to right, #B5AC49, #3CA55C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
+@media (min-width: 768px){
+  .profile-info{
+    padding: 75px !important;
+  } 
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+ .profile-info{
+   padding: 35px 0 0 0 !important;
+ } 
+
+ .profile-info table{
+   table-layout: fixed;
+ }
+ .profile-info table td{
+   word-wrap: break-word;
+ }
+}
