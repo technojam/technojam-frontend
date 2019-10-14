@@ -238,7 +238,7 @@ const TEAM_MEMBERS = [
             title: "Detail",
             value: "Value"
         }],
-        email: "team-memeber@technojam.com",
+        email: "manas.khurana20@gmail.com",
         Name: "Manas Khurana",
         id: 20
     },
