@@ -159,8 +159,16 @@
   padding: 5px;
 }
 
-label {
+#create-new-event label {
   font-weight: 700;
+}
+
+#create-new-event input:focus,
+#create-new-event select:focus {
+  border: 1px solid #f50057;
+  box-shadow: 0 0 0 1px #f50057;
+  -moz-box-shadow: 0 0 0 1px #f50057;
+  -webkit-box-shadow: 0 0 0 1px #f50057;
 }
 
 @media (max-width: 600px) {

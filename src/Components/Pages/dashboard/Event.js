@@ -14,12 +14,11 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 
 
 const style = {
-	marginTop: "112px",
+	marginTop: '112px',
 	form: {
 		padding: '20px',
 		width:"100%",
@@ -30,13 +29,12 @@ const style = {
 			width: '100%',
 			padding: '5px',
 			height: '35px',
-
 			borderRadius: '5px',
 			outline: 'none',
 			border: 'none',
 			background: '#e8ebed',
 			color: '#576366',
-			fontSize: '14px'
+			fontSize: '14px',
 		}
 	}
 };
@@ -258,27 +256,17 @@ const Event = () => {
 								<FormGroup>
 									<label>Short Description</label>
 
-									<div style={{ backgroundColor: "#e8ebed", borderRadius: "5px"}} >
+									<div style={{ backgroundColor: "#e8ebed", borderRadius: "5px", overflowX: "hidden",maxWidth: "100%"}} >
 										<Editor
 											toolbarClassName="toolbarClassName"
 											wrapperClassName="wrapperClassName"
 											editorClassName="editorClassName"
 										>
-											{/* <input style={style.form.text}
+											<input style={style.form.text}
 												type='textarea'
 												name='Shortdescription'
 												onChange={handleChange}>
-											</input> */}
-											<TextField
-											id="filled-multiline-static"
-											label="Multiline"
-											multiline
-											rows="4"
-											margin="normal"
-											variant="filled"
-											name='Shortdescription'
-											onChange={handleChange}
-											/>
+											</input>
 										</Editor>
 									</div>
 								</FormGroup>
