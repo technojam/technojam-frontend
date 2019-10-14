@@ -147,15 +147,11 @@ const Events = () => {
                                  <Divider variant='inset' />
 
                                  <CardContent style={{ marginLeft: '50px' }}>
-                                    <a
-                                       className='btn btn-social-icon btn-github'
-                                       href={event.todo}
-                                       target='_blank'
-                                       rel='noopener noreferrer'>
-                                       <i className='fab fa-github fa-lg' style={{ color: 'black' }} />
-                                    </a>
-                                    <Button variant='outlined' color='primary' style={{ marginLeft: '10px' }} href={event.feedback}>
+                                 <Button variant='outlined' color='primary' style={{ marginLeft: '10px' }} href={event.feedback}>
                                        Feedback
+                                    </Button>
+                                    <Button variant='outlined'  style={{ marginLeft: '10px' }} href={event.todo}>
+                                       Resources
                                     </Button>
                                  </CardContent>
                               </Card>

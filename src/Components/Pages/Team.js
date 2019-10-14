@@ -23,7 +23,8 @@ const useStyles = makeStyles({
 
 const circle = {
    width: 80,
-   borderRadius: 40
+   borderRadius: 40,
+   boxShadow: '1px 4px 6px  rgba(0, 0, 0, 0.5)',
 };
 
 
