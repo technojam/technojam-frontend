@@ -11,37 +11,38 @@ import '../style.css';
 const Aboutus = () => (
    <Container maxWidth='lg'>
       <div className='aboutus view_container'>
-         <Card className='card_style' style = {{minHeight: 'auto'}}> 
-            <CardContent>
-               <Grid container direction='row' justify='center' alignItems='center' spacing={4}>
-                  <Grid item lg={3} md={3} sm={3}>
-                     <CardContent>
-                        <CardMedia className='align_center'>
-                           <img src='https://tj-static.s3.ap-south-1.amazonaws.com/etc/team.svg' width='50%' height='auto' />
-                        </CardMedia>
-                        <br />
-                        <Typography style={{ alignItems: 'Center' }}>
-                           Team TechnoJam consist of 50 people and we all work together like a strong team.
-                        </Typography>
-                     </CardContent>
-                  </Grid>
-                  <Grid item lg={3} md={3} sm={3}>
-                     <CardContent>
-                        <CardMedia className='align_center'>
-                           <img src='https://tj-static.s3.ap-south-1.amazonaws.com/etc/attendees.svg' width='50%' height='auto' />
-                        </CardMedia>
-                        <br />
-                        <Typography style={{ alignItems: 'Center' }}>
-                           Technojam conducts more than 40+ events at Galgotias institution per year.
-                        </Typography>
-                     </CardContent>
-                  </Grid>
-                  <Grid item lg={3} md={3} sm={3}>
-                     <CardContent>
-                        <CardMedia className='align_center'>
-                           <img src='https://tj-static.s3.ap-south-1.amazonaws.com/etc/event-management.svg' width='50%' height='auto' />
-                        </CardMedia>
-                        <br />
+
+        <Card className='card--shadow' style={{ backgroundColor: ' #e03030',opacity: '0.8', color: '#fff', 'border-radius':'10px', 'margin-top':'160px'}}>
+          <Grid container direction='row' justify='center' alignItems='center' spacing={4}>
+            <Grid item lg={3} md={3} sm={3}>
+               <CardContent>
+                  <CardMedia className='align_center'>
+                     <img src='https://tj-static.s3.ap-south-1.amazonaws.com/etc/team.svg' width='50%' height='auto' />
+                  </CardMedia>
+                  <br />
+                  <Typography style={{ alignItems: 'Center' }}>
+                     Team TechnoJam consist of 50 people and we all work together like a strong team.
+                  </Typography>
+               </CardContent>
+            </Grid>
+            <Grid item lg={3} md={3} sm={3}>
+               <CardContent>
+                  <CardMedia className='align_center'>
+                     <img src='https://tj-static.s3.ap-south-1.amazonaws.com/etc/attendees.svg' width='50%' height='auto' />
+                  </CardMedia>
+                  <br />
+                  <Typography style={{ alignItems: 'Center' }}>
+                     Technojam conducts more than 40+ events at Galgotias institution per year.
+                  </Typography>
+               </CardContent>
+            </Grid>
+            <Grid item lg={3} md={3} sm={3}>
+               <CardContent>
+                  <CardMedia className='align_center'>
+                     <img src='https://tj-static.s3.ap-south-1.amazonaws.com/etc/event-management.svg' width='50%' height='auto' />
+                  </CardMedia>
+                  <br />
+
 
                         <Typography style={{ alignItems: 'Center' }}>
                            TechnoJam has Reached upto 3000+ attendee through its workshops, Hackathons.
@@ -52,6 +53,8 @@ const Aboutus = () => (
             </CardContent>
          </Card>
 
+        </Card>
+  
          <br />
          <br />
          <br />

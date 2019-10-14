@@ -20,7 +20,8 @@ const fabPosition = {
 	bottom: '10vh',
 	position: 'fixed',
 	margin: '1em',
-	right: '8vw'
+	right: '8vw',
+	opacity:"0.9"
 };
 
 function App() {
