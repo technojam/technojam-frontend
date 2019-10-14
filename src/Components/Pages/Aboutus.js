@@ -11,7 +11,8 @@ import '../style.css';
 const Aboutus = () => (
    <Container maxWidth='lg'>
       <div className='aboutus view_container'>
-         <Grid container direction='row' justify='center' alignItems='center' spacing={4}>
+        <Card className='card--shadow' style={{ backgroundColor: ' #e03030',opacity: '0.8', color: '#fff', 'border-radius':'10px', 'margin-top':'160px'}}>
+          <Grid container direction='row' justify='center' alignItems='center' spacing={4}>
             <Grid item lg={3} md={3} sm={3}>
                <CardContent>
                   <CardMedia className='align_center'>
@@ -48,6 +49,8 @@ const Aboutus = () => (
             </Grid>
          </Grid>
 
+        </Card>
+  
          <br />
          <br />
          <br />
