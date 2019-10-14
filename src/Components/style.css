@@ -48,7 +48,7 @@
   line-height: 20px;
 }
 .card_style {
-  opacity: '0.9';
+  opacity: 0.9;
   min-height: 530px;
   border-radius: 20px !important;
 }
