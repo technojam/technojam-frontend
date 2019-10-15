@@ -50,10 +50,7 @@ const Aboutus = () => (
                      </CardContent>
                   </Grid>
                </Grid>
-            </CardContent>
          </Card>
-
-        </Card>
   
          <br />
          <br />
