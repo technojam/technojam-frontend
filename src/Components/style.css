@@ -190,3 +190,16 @@ background: -webkit-linear-gradient(to right, #B5AC49, #3CA55C);  /* Chrome 10-2
 background: linear-gradient(to right, #B5AC49, #3CA55C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
+.btn-social-icon:hover {
+  animation: shake 0.12s 2;
+}
+
+@keyframes shake {
+  0% { transform: translate(0px, -1px) rotate(-1deg); }
+  20% { transform: translate(1px, -2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); } 
+  60% { transform: translate(0px, 0px) rotate(0deg); }
+  80% { transform: translate(0px, 1px) rotate(-1deg); }
+  100% { transform: translate(-1px, 2px) rotate(0deg); }
+}
