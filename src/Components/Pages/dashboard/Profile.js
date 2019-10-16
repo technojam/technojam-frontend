@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import { FormGroup, Button, Container } from '@material-ui/core';
 import AuthContext from './../../../context/auth/authContext';
 import CreateIcon from '@material-ui/icons/Create';
+
 import {
 	Paper,
 	Table,
@@ -71,22 +72,25 @@ const Profile = () => {
 	const authContext = useContext(AuthContext);
 	const { user } = authContext;
 
-	const [details, setDetails] = useState({
-		Eventname: '',
-		Date: '',
-		Venue: '',
-		Time: '',
-		Shortdescription: '',
-		EventType: '',
-		TeamSize: ''
+	const [updateUser, setUpdateUser] = useState({
+		profileImg:''
 	});
+	
+	const getFiles=(e)=>{
+		// console.log("file obtained:",file)
+		 let reader = new FileReader();
 
-	const handleChange = e => {
-		setDetails({
-			...details,
-			[e.target.name]: e.target.value
-		});
-	};
+      // Convert the file to base64 text
+      reader.readAsDataURL(e.target.files[0]);
+
+      // on reader load somthing...
+      reader.onload = () => {
+		let base64= reader.result
+		  console.log("ahsuhd",base64)
+		setUpdateUser({profileImg: base64})
+		// callBackend to update user
+	}
+	}
 
 	return (
 		<Container>
@@ -101,7 +105,7 @@ const Profile = () => {
 							<CardContent style={style.card.back}>
 								<Typography>
 									<img
-										src='https://i.pravatar.cc/150?img=56'
+										src={updateUser.profileImg?updateUser.profileImg:'https://i.pravatar.cc/150?img=56'}
 										alt={user && user.name}
 										style={style.circle}
 									/>
@@ -138,6 +142,21 @@ const Profile = () => {
 									<Typography style={{ textAlign: 'end', padding: '0.5em' }}>
 										{' '}
 										<CreateIcon />
+									</Typography>
+									<Typography style={{ padding: '0.5em' }}>
+										<input
+  accept="image/*"
+  style={{ display: 'none' }}
+  id="raised-button-file"
+  multiple
+  type="file"
+											onChange={getFiles}
+/>
+<label htmlFor="raised-button-file">
+  <Button variant="raised" component="span">
+    Upload
+  </Button>
+</label>
 									</Typography>
 
 									<Paper>
