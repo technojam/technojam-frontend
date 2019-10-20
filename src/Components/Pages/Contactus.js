@@ -19,6 +19,7 @@ import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
 import { backendUrl } from '../../context/types';
 import axios from 'axios';
+import SendIcon from '@material-ui/icons/Send';
 
 const sectionStyle = {
 	width: '100%',
@@ -109,7 +110,7 @@ const Contactus = () => {
 	};
 
 	return (
-		<Container maxWidth='xl '>
+		<Container maxWidth='lg'>
 			<br />
 			<div style={sectionStyle}>
 				<Grid
@@ -138,7 +139,7 @@ const Contactus = () => {
 
 									<Hidden mdDown>
 										<Typography
-											variant='h2'
+											variant='h3'
 											className='contact_section_heading'
 										>
 											Get in touch
@@ -213,8 +214,10 @@ const Contactus = () => {
 									<Typography className='align_center'>
 										<Button
 											variant='contained'
+											color="primary"
 											onClick={submitContact}
 											disabled={loading}
+											endIcon={<SendIcon />}
 										>
 											Submit
 										</Button>
