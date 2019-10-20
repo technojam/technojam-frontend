@@ -47,7 +47,7 @@ const style = {
 	}
 };
 
-const Mentorship = () => {
+const Contactus = () => {
 	const alertContext = useContext(AlertContext);
 	const authContext = useContext(AuthContext);
 	const { setAlert } = alertContext;
@@ -239,4 +239,4 @@ const Mentorship = () => {
 		</Container>
 	);
 };
-export default Mentorship;
+export default Contactus;
