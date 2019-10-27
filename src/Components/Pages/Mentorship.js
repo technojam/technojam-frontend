@@ -10,11 +10,12 @@ import { Color } from '../color';
 
 const sectionStyle = {
    width: '100%',
-   height: 'auto',
+   height: '100vh',
    backgroundImage: 'url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/pro.jpg)',
    backgroundRepeat: 'no-repeat',
    marginTop: '40px',
-   backgroundPositionX: 'center'
+   backgroundPositionX: 'center',
+   backgroundSize: 'cover'
 };
 
 /* FIXME: When the target will be decided, remove the rel attribute.
@@ -103,7 +104,7 @@ const Mentorship = () => {
          </div>
 
          <div id='2' style={{ marginTop: '50px' }}>
-            <Container maxWidth='xl'>
+            <Container maxWidth='lg'>
                <Grid container spacing={3} direction='row' justify='flex-start' alignItems='flex-start'>
                   {projects.map(project => (
                      <Grid item xs={12} sm={6} md={6} key={project.id}>
@@ -138,7 +139,7 @@ const Mentorship = () => {
                            <ExpansionPanelDetails>
                               <Grid item md={6} xl={6}>
                                  <Typography variant='h6' className='letter_spacing' style={{ textAlign: 'end' }}>
-                                    Skills
+                                    Tech Stack
                                  </Typography>
                               </Grid>
                               <Grid item md={6} xl={6}>
@@ -148,7 +149,7 @@ const Mentorship = () => {
                            <ExpansionPanelDetails>
                               <Grid item md={6} xl={6}>
                                  <Typography variant='h6' className='letter_spacing' style={{ textAlign: 'end' }}>
-                                    Mentors
+                                    Maintainers
                                  </Typography>
                               </Grid>
                               <Grid item md={6} xl={6}>
@@ -159,7 +160,7 @@ const Mentorship = () => {
                            <ExpansionPanelDetails>
                               <Grid item md={6} xl={6}>
                                  <Typography variant='h6' className='letter_spacing' style={{ textAlign: 'end' }}>
-                                    Project Discussion
+                                    Discussion
                                  </Typography>
                               </Grid>
                               <Grid item md={6} xl={6}>
@@ -176,7 +177,7 @@ const Mentorship = () => {
                            <ExpansionPanelDetails>
                               <Grid item md={6} xl={6}>
                                  <Typography variant='h6' className='letter_spacing' style={{ textAlign: 'end' }}>
-                                    Project Repository
+                                    Repository
                                  </Typography>
                               </Grid>
                               <Grid item md={6} xl={6}>
