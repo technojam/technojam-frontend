@@ -19,6 +19,7 @@ import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
 import { backendUrl } from '../../context/types';
 import axios from 'axios';
+import SendIcon from '@material-ui/icons/Send';
 
 const sectionStyle = {
 	width: '100%',
@@ -47,7 +48,7 @@ const style = {
 	}
 };
 
-const Mentorship = () => {
+const Contactus = () => {
 	const alertContext = useContext(AlertContext);
 	const authContext = useContext(AuthContext);
 	const { setAlert } = alertContext;
@@ -109,7 +110,7 @@ const Mentorship = () => {
 	};
 
 	return (
-		<Container maxWidth='xl '>
+		<Container maxWidth='lg'>
 			<br />
 			<div style={sectionStyle}>
 				<Grid
@@ -138,7 +139,7 @@ const Mentorship = () => {
 
 									<Hidden mdDown>
 										<Typography
-											variant='h2'
+											variant='h3'
 											className='contact_section_heading'
 										>
 											Get in touch
@@ -213,8 +214,10 @@ const Mentorship = () => {
 									<Typography className='align_center'>
 										<Button
 											variant='contained'
+											color="primary"
 											onClick={submitContact}
 											disabled={loading}
+											endIcon={<SendIcon />}
 										>
 											Submit
 										</Button>
@@ -239,4 +242,4 @@ const Mentorship = () => {
 		</Container>
 	);
 };
-export default Mentorship;
+export default Contactus;
