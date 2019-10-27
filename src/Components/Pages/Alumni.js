@@ -41,7 +41,8 @@ const useStyles = makeStyles({
     width: 125,
     margin: '20px',
     borderRadius: 100,
-    margin: '50px #fff'
+    margin: '50px #fff',
+    boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
   }, 
   name: {
     marginTop: '15px'
@@ -65,7 +66,7 @@ export default function Team() {
       <br />
 
 
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Grid container spacing={5}>
           {ALUMNI.map(member => (
             <Grid item xs={12} sm={6} md={2}>
