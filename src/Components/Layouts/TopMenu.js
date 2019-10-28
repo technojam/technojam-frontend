@@ -25,6 +25,8 @@ import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
+import EventContext from '../../context/event/eventContext';
+
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
@@ -57,6 +59,7 @@ const modalCardBaseStyle = {
 function TopMenu(props) {
 	const alertContext = useContext(AlertContext);
 	const authContext = useContext(AuthContext);
+	const eventContext = useContext(EventContext);
 
 	const { setAlert } = alertContext;
 	const {
@@ -74,9 +77,11 @@ function TopMenu(props) {
 		showLoading
 	} = authContext;
 
+	const { loadEvents } = eventContext;
+
 	useEffect(() => {
 		loadUser();
-
+		loadEvents();
 		console.log('contacts:', contact);
 		if (isAuthenticated) {
 			// props.history.push('/');

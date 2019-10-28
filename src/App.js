@@ -4,6 +4,8 @@ import { TopMenu, Footer } from './Components/Layouts';
 import Maincontent from './Components/Maincontent';
 import AuthContext from './context/auth/AuthState';
 import AlertContext from './context/alert/AlertState';
+import EventContext from './context/event/eventState';
+
 import { Hidden, Fab, Icon } from '@material-ui/core';
 
 const sectionStyle = {
@@ -21,7 +23,7 @@ const fabPosition = {
 	position: 'fixed',
 	margin: '1em',
 	right: '8vw',
-	opacity:"0.9"
+	opacity: '0.9'
 };
 
 function App() {
@@ -41,14 +43,16 @@ function App() {
 		<div className='dark-mode'>
 			<div className='App ' style={sectionStyle}>
 				<AuthContext>
-					<AlertContext>
-						<TopMenu toggleButton={toggleButton} />
-						<Maincontent />
-						<br />
-						<br />
-						<br />
-						<Footer />
-					</AlertContext>
+					<EventContext>
+						<AlertContext>
+							<TopMenu toggleButton={toggleButton} />
+							<Maincontent />
+							<br />
+							<br />
+							<br />
+							<Footer />
+						</AlertContext>
+					</EventContext>
 				</AuthContext>
 				<Hidden smUp>
 					<div style={fabPosition}>

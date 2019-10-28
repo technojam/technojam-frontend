@@ -17,3 +17,7 @@ export const CONTACT_LOADED = 'CONTACT_LOADED';
 export const SUBMIT_CONTACT = 'SUBMIT_CONTACT';
 export const SHOW_CONTACT = 'SHOW_CONTACT';
 export const DELETE_CONTACT = 'DELETE_CONTACT';
+
+//events
+export const EVENT_LOADED = 'EVENT_LOADED';
+export const EVENT_LOAD_ERROR = 'EVENT_LOAD_ERROR';
