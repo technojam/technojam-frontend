@@ -154,6 +154,23 @@
 	padding-top: 4px;
 }
 
+/*Event Form*/
+.editorClassName {
+	padding: 5px;
+}
+
+#create-new-event label {
+	font-weight: 700;
+}
+
+#create-new-event input:focus,
+#create-new-event select:focus {
+	border: 1px solid #f50057;
+	box-shadow: 0 0 0 1px #f50057;
+	-moz-box-shadow: 0 0 0 1px #f50057;
+	-webkit-box-shadow: 0 0 0 1px #f50057;
+}
+
 @media (max-width: 600px) {
 	.MuiTypography-h2 {
 		font-size: 36px !important;
@@ -211,47 +228,4 @@
 		#b5ac49,
 		#3ca55c
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-@media (min-width: 768px) {
-	.profile-info {
-		padding: 75px !important;
-	}
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-	.profile-info {
-		padding: 35px 0 0 0 !important;
-	}
-
-	.profile-info table {
-		table-layout: fixed;
-	}
-	.profile-info table td {
-		word-wrap: break-word;
-	}
-}
-.btn-social-icon:hover {
-	animation: shake 0.12s 2;
-}
-
-@keyframes shake {
-	0% {
-		transform: translate(0px, -1px) rotate(-1deg);
-	}
-	20% {
-		transform: translate(1px, -2px) rotate(0deg);
-	}
-	40% {
-		transform: translate(1px, -1px) rotate(1deg);
-	}
-	60% {
-		transform: translate(0px, 0px) rotate(0deg);
-	}
-	80% {
-		transform: translate(0px, 1px) rotate(-1deg);
-	}
-	100% {
-		transform: translate(-1px, 2px) rotate(0deg);
-	}
 }

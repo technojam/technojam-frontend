@@ -18,7 +18,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 
 const style = {
-	marginTop: "112px",
+	marginTop: '112px',
 	form: {
 		padding: '20px',
 		width:"100%",
@@ -27,15 +27,14 @@ const style = {
 		text: {
 			appearance: 'none',
 			width: '100%',
-
+			padding: '5px',
 			height: '35px',
-
 			borderRadius: '5px',
 			outline: 'none',
 			border: 'none',
 			background: '#e8ebed',
 			color: '#576366',
-			fontSize: '14px'
+			fontSize: '14px',
 		}
 	}
 };
@@ -43,7 +42,7 @@ const style = {
 const Event = () => {
 	const authContext = useContext(AuthContext)
 	const { user } = authContext;
-	
+
 
 	const [details, setDetails] = useState({
 		Eventname: '',
@@ -53,7 +52,7 @@ const Event = () => {
 		Shortdescription: '',
 		EventType: '',
 		TeamSize:'',
-			
+
 	});
 
 	const handleChange = e => {
@@ -72,7 +71,7 @@ const Event = () => {
 					justify="center"
 					alignItems="center"
 					spacing={3}
-					
+
 				>
 					<Grid item sm={12} xs={10} md={3} lg={4}>
 						<Card className="card--shadow ab">
@@ -125,7 +124,7 @@ const Event = () => {
 				</Grid>
 			</div>
 			<br></br><br></br>
-			
+
 			<div id="eventlist">
 				<Grid
 					container
@@ -151,7 +150,7 @@ const Event = () => {
 				<br></br>
 			</div>
 			<br></br>
-			
+
 			<div id="create-new-event">
 				<ExpansionPanel className='card--shadow'>
 					<ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
@@ -167,8 +166,8 @@ const Event = () => {
 								<Grid container spacing={3}>
 									<Grid item xs={12} md={4}>
 										<FormGroup>
-											<label>Event-Name</label>
-											
+											<label>Event Name</label>
+
 											<input
 												style={style.form.text}
 												type='text'
@@ -181,7 +180,7 @@ const Event = () => {
 									<Grid item xs={12} md={4} >
 										<FormGroup>
 											<label>Date</label>
-											
+
 											<input
 												style={style.form.text}
 												type='date'
@@ -194,11 +193,12 @@ const Event = () => {
 									<Grid item xs={12} md={4} >
 										<FormGroup>
 											<label>Time</label>
-											
+
 											<input
 												style={style.form.text}
 												type='time'
 												name='Time'
+												defaultValue='07:30'
 												onChange={handleChange}
 											/>
 										</FormGroup>
@@ -209,7 +209,7 @@ const Event = () => {
 									<Grid item xs={12} md={4}>
 									<FormGroup>
 									<label>Venue</label>
-									
+
 									<input
 										style={style.form.text}
 										type='text'
@@ -219,11 +219,11 @@ const Event = () => {
 								</FormGroup>
 										<br></br>
 									</Grid>
-									
+
 									<Grid item xs={12} md={4} >
 										<FormGroup>
-										<label>Event-Type</label>
-										<select 
+										<label>Event Type</label>
+										<select
 											style={style.form.text}
 											name='EventType'
 											onChange={handleChange}>
@@ -237,12 +237,13 @@ const Event = () => {
 									</Grid>
 									<Grid item xs={12} md={4} >
 										<FormGroup>
-										<label>Team-size</label>
-											
+										<label>Team Size</label>
+
 											<input
 												style={style.form.text}
 												type='number'
 												name='TeamSize'
+												defaultValue='0'
 												onChange={handleChange}
 											/>
 										</FormGroup>
@@ -254,8 +255,8 @@ const Event = () => {
 
 								<FormGroup>
 									<label>Short Description</label>
-									
-									<div style={{ backgroundColor: "#e8ebed", border: "solid #e8ebed" }} >
+
+									<div style={{ backgroundColor: "#e8ebed", borderRadius: "5px", overflowX: "hidden",maxWidth: "100%"}} >
 										<Editor
 											toolbarClassName="toolbarClassName"
 											wrapperClassName="wrapperClassName"
@@ -275,7 +276,7 @@ const Event = () => {
 								<Typography className='align_center'>
 									<Button
 										variant='contained'
-										style={{ backgroundColor: '#e03030', color: 'white' }}>
+										style={{ backgroundColor: '#f50057', color: 'white' }}>
 										Submit <a href='#' target='_blank' />
 									</Button>
 								</Typography>
@@ -283,9 +284,9 @@ const Event = () => {
 						</div>
 
 
-						<Grid item md={6} xl={6}>
+						{/* <Grid item md={6} xl={6}>
 							<Typography className='grid_item_typo'></Typography>
-						</Grid>
+						</Grid> */}
 					</ExpansionPanelDetails>
 				</ExpansionPanel>
 			</div>
