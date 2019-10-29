@@ -15,7 +15,8 @@ import {
 	CLEAR_ERRORS,
 	SHOW_LOADING,
 	backendUrl,
-	DELETE_CONTACT
+	DELETE_CONTACT,
+	LOGIN_DIALOG
 } from '../types';
 
 const AuthState = props => {
@@ -25,10 +26,19 @@ const AuthState = props => {
 		loading: false,
 		user: null,
 		error: null,
+		showLogin: false,
 		contact: []
 	};
 
 	const [state, dispatch] = useReducer(authReducer, initialState);
+
+	const loginDialog = setTo => {
+		//console.log('Login dialog caled with value:', setTo);
+		dispatch({
+			type: LOGIN_DIALOG,
+			payload: setTo
+		});
+	};
 
 	// Load User
 	const loadUser = async () => {
@@ -160,6 +170,7 @@ const AuthState = props => {
 				user: state.user,
 				error: state.error,
 				contact: state.contact,
+				showLogin: state.showLogin,
 				register,
 				loadUser,
 				loadContact,
@@ -167,7 +178,8 @@ const AuthState = props => {
 				login,
 				logout,
 				clearErrors,
-				showLoading
+				showLoading,
+				loginDialog
 			}}
 		>
 			{props.children}

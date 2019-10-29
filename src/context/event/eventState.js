@@ -2,7 +2,13 @@ import React, { useReducer } from 'react';
 import axios from 'axios';
 import EventContext from './eventContext';
 import eventReducer from './eventReducer';
-import { EVENT_LOADED, EVENT_LOAD_ERROR, backendUrl } from '../types';
+import setAuthToken from '../../util/setAuthToken';
+import {
+	EVENT_LOADED,
+	REGISTER_FOR_EVENT,
+	EVENT_LOAD_ERROR,
+	backendUrl
+} from '../types';
 
 const EventState = props => {
 	const initialState = {
@@ -11,6 +17,24 @@ const EventState = props => {
 
 	const [state, dispatch] = useReducer(eventReducer, initialState);
 
+	const registerForEvent = async eventId => {
+		if (localStorage.token) {
+			setAuthToken(localStorage.token);
+			try {
+				const res = await axios.put(
+					backendUrl + '/api/events/register/' + eventId
+				);
+				console.log('res:', res.data);
+				loadEvents();
+				// dispatch({
+				// 	type: REGISTER_FOR_EVENT,
+				// 	payload: res.data
+				// });
+			} catch (err) {
+				dispatch({ type: EVENT_LOAD_ERROR });
+			}
+		}
+	};
 	// Load Events
 	const loadEvents = async () => {
 		console.log('loadevents called:');
@@ -30,7 +54,8 @@ const EventState = props => {
 		<EventContext.Provider
 			value={{
 				events: state.events,
-				loadEvents
+				loadEvents,
+				registerForEvent
 			}}
 		>
 			{props.children}

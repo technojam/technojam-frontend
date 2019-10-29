@@ -9,6 +9,8 @@ import Button from '@material-ui/core/Button';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
 import '../style.css';
 import EventContext from '../../context/event/eventContext';
+import AuthContext from '../../context/auth/authContext';
+
 /* FIXME: When the target will be decided, remove the rel attribute.
  * It has been added here for security reasons.
  * Reference: https://mathiasbynens.github.io/rel-noopener/
@@ -16,8 +18,11 @@ import EventContext from '../../context/event/eventContext';
 
 const Events = () => {
 	const eventContext = useContext(EventContext);
+	const authContext = useContext(AuthContext);
 
-	const { events } = eventContext;
+	const { loginDialog, user, showLogin, isAuthenticated } = authContext;
+
+	const { events, registerForEvent } = eventContext;
 
 	const [paevent, setPaevent] = useState([]);
 	const [upevent, setUpevent] = useState([]);
@@ -31,6 +36,14 @@ const Events = () => {
 		// eslint-disable-next-line
 	}, [events]);
 
+	const handleRegister = eventId => {
+		console.log('Eventid:', eventId);
+		if (isAuthenticated) {
+			registerForEvent(eventId);
+		} else {
+			loginDialog(true);
+		}
+	};
 	return (
 		<div>
 			<Container maxWidth='xl' style={{ width: '100%', top: '0' }}>
@@ -120,8 +133,16 @@ const Events = () => {
 														size='small'
 														style={{ marginTop: '5px' }}
 														src={event.register}
+														disabled={
+															user && event.users.indexOf(user.uid) != -1
+																? true
+																: false
+														}
+														onClick={() => handleRegister(event.eid)}
 													>
-														Register Now
+														{user && event.users.indexOf(user.uid) != -1
+															? 'Registered'
+															: 'Register Now'}
 													</Button>
 												</CardContent>
 											</TimelineEvent>

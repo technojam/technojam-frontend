@@ -8,11 +8,17 @@ import {
 	LOGIN_FAIL,
 	LOGOUT,
 	CLEAR_ERRORS,
-	SHOW_LOADING
+	SHOW_LOADING,
+	LOGIN_DIALOG
 } from '../types';
 
 export default (state, action) => {
 	switch (action.type) {
+		case LOGIN_DIALOG:
+			return {
+				...state,
+				showLogin: action.payload
+			};
 		case SHOW_LOADING:
 			return {
 				...state,

@@ -74,7 +74,9 @@ function TopMenu(props) {
 		user,
 		contact,
 		loading,
-		showLoading
+		showLoading,
+		showLogin,
+		loginDialog
 	} = authContext;
 
 	const { loadEvents } = eventContext;
@@ -82,7 +84,7 @@ function TopMenu(props) {
 	useEffect(() => {
 		loadUser();
 		loadEvents();
-		console.log('contacts:', contact);
+		console.log('showLogin:', showLogin);
 		if (isAuthenticated) {
 			// props.history.push('/');
 			setOpen(false);
@@ -141,6 +143,7 @@ function TopMenu(props) {
 
 	const handleClose = () => {
 		setOpen(false);
+		loginDialog(false);
 		setRegisterOpen(false);
 	};
 
@@ -193,6 +196,7 @@ function TopMenu(props) {
 
 	return (
 		<div style={{ color: '#fff' }}>
+			{console.log('show login value:', showLogin)}
 			<AppBar position='fixed'>
 				<Toolbar style={{ backgroundColor: '#24292e' }}>
 					<Hidden mdUp>
@@ -364,7 +368,7 @@ function TopMenu(props) {
 							</Menu>
 						</React.Fragment>
 						<Modal
-							open={open}
+							open={showLogin || open}
 							onClose={handleClose}
 							style={{
 								display: 'flex',
@@ -372,7 +376,7 @@ function TopMenu(props) {
 								justifyContent: 'center'
 							}}
 						>
-							<Fade in={open}>
+							<Fade in={showLogin || open}>
 								<div style={modalCardStyle}>
 									<Alert />
 									<img
