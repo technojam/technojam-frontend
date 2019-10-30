@@ -6,6 +6,7 @@ import setAuthToken from '../../util/setAuthToken';
 import {
 	EVENT_LOADED,
 	REGISTER_FOR_EVENT,
+	DELETE_EVENT,
 	EVENT_LOAD_ERROR,
 	backendUrl
 } from '../types';
@@ -35,6 +36,7 @@ const EventState = props => {
 			}
 		}
 	};
+
 	// Load Events
 	const loadEvents = async () => {
 		console.log('loadevents called:');
@@ -49,12 +51,30 @@ const EventState = props => {
 			dispatch({ type: EVENT_LOAD_ERROR });
 		}
 	};
+	// Delete Event
+	const deleteEvent = async eventId => {
+		console.log('deleteEvent called with id:', eventId);
+		try {
+			const res = await axios.delete(
+				backendUrl + '/api/events/delete/' + eventId
+			);
+			console.log('res:', res.data);
+			loadEvents();
+			// dispatch({
+			// 	type: EVENT_LOADED,
+			// 	payload: res.data
+			// });
+		} catch (err) {
+			dispatch({ type: EVENT_LOAD_ERROR });
+		}
+	};
 
 	return (
 		<EventContext.Provider
 			value={{
 				events: state.events,
 				loadEvents,
+				deleteEvent,
 				registerForEvent
 			}}
 		>

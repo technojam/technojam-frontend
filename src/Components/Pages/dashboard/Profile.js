@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import { FormGroup, Button, Container } from '@material-ui/core';
 import AuthContext from './../../../context/auth/authContext';
 import CreateIcon from '@material-ui/icons/Create';
+import ProfileTabs from '../../Layouts/ProfileTabs';
 
 import {
 	Paper,
@@ -73,24 +74,24 @@ const Profile = () => {
 	const { user } = authContext;
 
 	const [updateUser, setUpdateUser] = useState({
-		profileImg:''
+		profileImg: ''
 	});
-	
-	const getFiles=(e)=>{
+
+	const getFiles = e => {
 		// console.log("file obtained:",file)
-		 let reader = new FileReader();
+		let reader = new FileReader();
 
-      // Convert the file to base64 text
-      reader.readAsDataURL(e.target.files[0]);
+		// Convert the file to base64 text
+		reader.readAsDataURL(e.target.files[0]);
 
-      // on reader load somthing...
-      reader.onload = () => {
-		let base64= reader.result
-		  console.log("ahsuhd",base64)
-		setUpdateUser({profileImg: base64})
-		// callBackend to update user
-	}
-	}
+		// on reader load somthing...
+		reader.onload = () => {
+			let base64 = reader.result;
+			console.log('ahsuhd', base64);
+			setUpdateUser({ profileImg: base64 });
+			// callBackend to update user
+		};
+	};
 
 	return (
 		<Container>
@@ -105,7 +106,11 @@ const Profile = () => {
 							<CardContent style={style.card.back}>
 								<Typography>
 									<img
-										src={updateUser.profileImg?updateUser.profileImg:'https://i.pravatar.cc/150?img=56'}
+										src={
+											updateUser.profileImg
+												? updateUser.profileImg
+												: 'https://i.pravatar.cc/150?img=56'
+										}
 										alt={user && user.name}
 										style={style.circle}
 									/>
@@ -145,22 +150,23 @@ const Profile = () => {
 									</Typography>
 									<Typography style={{ padding: '0.5em' }}>
 										<input
-  accept="image/*"
-  style={{ display: 'none' }}
-  id="raised-button-file"
-  multiple
-  type="file"
+											accept='image/*'
+											style={{ display: 'none' }}
+											id='raised-button-file'
+											multiple
+											type='file'
 											onChange={getFiles}
-/>
-<label htmlFor="raised-button-file">
-  <Button variant="raised" component="span">
-    Upload
-  </Button>
-</label>
+										/>
+										<label htmlFor='raised-button-file'>
+											<Button variant='raised' component='span'>
+												Upload
+											</Button>
+										</label>
 									</Typography>
 
 									<Paper>
-										<Table>
+										<ProfileTabs />
+										{/* <Table>
 											<TableBody>
 												<TableRow>
 													<TableCell component='th' scope='row'>
@@ -187,7 +193,7 @@ const Profile = () => {
 													</TableCell>
 												</TableRow>
 											</TableBody>
-										</Table>
+										</Table> */}
 									</Paper>
 								</Grid>
 							</Grid>

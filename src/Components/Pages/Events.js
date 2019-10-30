@@ -26,12 +26,16 @@ const Events = () => {
 
 	const [paevent, setPaevent] = useState([]);
 	const [upevent, setUpevent] = useState([]);
+	const [eventMessage, setEventMessage] = useState('Loading.....');
 
 	useEffect(() => {
 		// console.log('past events are:', paevent);
 		// paevent = events.filter(e => new Date(e.timing) < new Date());
 		setPaevent(events.filter(e => new Date(e.timing) < new Date()));
 		setUpevent(events.filter(e => new Date(e.timing) >= new Date()));
+		setTimeout(() => {
+			setEventMessage('No events currently available');
+		}, 5000);
 		// console.log('past events are:', paevent);
 		// eslint-disable-next-line
 	}, [events]);
@@ -66,6 +70,7 @@ const Events = () => {
 									float: 'left'
 								}}
 							>
+								<h4>Live Events</h4>
 								{upevent.length < 1 ? (
 									<Timeline style={{ border: 'black' }}>
 										<TimelineEvent>
@@ -75,7 +80,7 @@ const Events = () => {
 													component='p'
 													className='letter_spacing'
 												>
-													<h6>No Live events currently</h6>
+													<h6>{eventMessage}</h6>
 												</Typography>
 											</CardContent>
 										</TimelineEvent>
@@ -162,8 +167,9 @@ const Events = () => {
 							md={4}
 						>
 							<div>
-								{paevent.map(event => (
-									<Grid item key={event.id}>
+								<h4>Past Events</h4>
+								{paevent.length < 1 ? (
+									<Grid item>
 										<br />
 										<Card
 											className='card--shadow'
@@ -175,61 +181,85 @@ const Events = () => {
 										>
 											<CardContent>
 												<Typography
-													variant='h5'
+													variant='h6'
 													component='p'
 													className='letter_spacing'
 												>
-													{event.name}
+													{eventMessage}
 												</Typography>
-											</CardContent>
-											<Divider />
-											<br />
-											<CardContent className='card_content_top'>
-												<Typography
-													variant='body2'
-													color='Secondary'
-													component='p'
-												>
-													<b>{new Date(event.timing).toDateString()}</b>
-												</Typography>
-											</CardContent>
-											<CardContent className='card_content_top'>
-												<Typography
-													variant='body2'
-													color='textSecondary'
-													component='p'
-													style={{
-														letterSpacing: '0.9px',
-														lineHeight: '24px'
-													}}
-												>
-													{event.desciption}
-													<br />
-													{event.longDescription}
-												</Typography>
-											</CardContent>
-											<Divider variant='inset' />
-
-											<CardContent style={{ marginLeft: '50px' }}>
-												<Button
-													variant='outlined'
-													color='primary'
-													style={{ marginLeft: '10px' }}
-													href={event.feedback}
-												>
-													Feedback
-												</Button>
-												<Button
-													variant='outlined'
-													style={{ marginLeft: '10px' }}
-													href={event.todo}
-												>
-													Resources
-												</Button>
 											</CardContent>
 										</Card>
 									</Grid>
-								))}
+								) : (
+									paevent.map(event => (
+										<Grid item key={event.id}>
+											<br />
+											<Card
+												className='card--shadow'
+												style={{
+													maxHeight: 'auto',
+													minHeight: 'auto',
+													borderRadius: '20px'
+												}}
+											>
+												<CardContent>
+													<Typography
+														variant='h5'
+														component='p'
+														className='letter_spacing'
+													>
+														{event.name}
+													</Typography>
+												</CardContent>
+												<Divider />
+												<br />
+												<CardContent className='card_content_top'>
+													<Typography
+														variant='body2'
+														color='Secondary'
+														component='p'
+													>
+														<b>{new Date(event.timing).toDateString()}</b>
+													</Typography>
+												</CardContent>
+												<CardContent className='card_content_top'>
+													<Typography
+														variant='body2'
+														color='textSecondary'
+														component='p'
+														style={{
+															letterSpacing: '0.9px',
+															lineHeight: '24px'
+														}}
+													>
+														{event.desciption}
+														<br />
+														{event.longDescription}
+													</Typography>
+												</CardContent>
+												<Divider variant='inset' />
+
+												<CardContent style={{ marginLeft: '50px' }}>
+													<Button
+														variant='outlined'
+														color='primary'
+														style={{ marginLeft: '10px' }}
+														href={event.feedback}
+													>
+														Feedback
+													</Button>
+													<Button
+														variant='outlined'
+														style={{ marginLeft: '10px' }}
+														href={event.todo}
+													>
+														Resources
+													</Button>
+												</CardContent>
+											</Card>
+										</Grid>
+									))
+								)}
 							</div>
 						</Grid>
 					</Grid>
