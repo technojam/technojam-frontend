@@ -137,6 +137,7 @@ function TopMenu(props) {
 	};
 
 	const handleRegisterOpen = () => {
+		setOpen(false);
 		setRegisterOpen(true);
 		setAnchorEl(null);
 	};
@@ -436,8 +437,11 @@ function TopMenu(props) {
 										Login
 									</Button>
 									<div style={{ marginTop: '10px' }}>
-										<p>You not have a Accounts?</p>
-										<Link style={{ color: '#007791' }} to={'/signup'}>
+										<p>Dont't have an account?</p>
+										<Link
+											style={{ color: '#007791' }}
+											onClick={handleRegisterOpen}
+										>
 											Sign up
 										</Link>
 									</div>
