@@ -17,21 +17,31 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Paper from '@material-ui/core/Paper';
+import Rating from '@material-ui/lab/Rating';
+import { makeStyles } from '@material-ui/core/styles';
+
 // import Draggable from 'react-draggable';
 /* FIXME: When the target will be decided, remove the rel attribute.
  * It has been added here for security reasons.
  * Reference: https://mathiasbynens.github.io/rel-noopener/
  */
 
-function PaperComponent(props) {
-	return (
-		<Paper {...props} />
-		// <Draggable cancel={'[class*="MuiDialogContent-root"]'}>
+const useStyles = makeStyles(theme => ({
+	container: {
+		display: 'flex',
+		flexWrap: 'wrap'
+	},
+	textField: {
+		marginLeft: theme.spacing(1),
+		marginRight: theme.spacing(1)
+	}
+}));
 
-		// </Draggable>
-	);
+function PaperComponent(props) {
+	return <Paper {...props} />;
 }
 const Events = () => {
+	const classes = useStyles();
 	const eventContext = useContext(EventContext);
 	const authContext = useContext(AuthContext);
 
@@ -44,6 +54,7 @@ const Events = () => {
 	const [selectedEvent, setSelectedEvent] = useState({});
 	const [eventMessage, setEventMessage] = useState('Loading.....');
 	const [open, setOpen] = React.useState(false);
+	const [ratingValue, setRatingValue] = React.useState(4);
 	const [openFeedback, setFeedbackOpen] = React.useState(false);
 
 	const handleFeedbackOpen = () => {
@@ -285,7 +296,8 @@ const Events = () => {
 													<Button
 														variant='outlined'
 														style={{ marginLeft: '10px' }}
-														href={event.todo}
+														target='_blank'
+														href='https://github.com/technojam'
 													>
 														Resources
 													</Button>
@@ -333,19 +345,37 @@ const Events = () => {
 			>
 				<DialogTitle id='form-dialog-title'>Submit Feedback</DialogTitle>
 				<DialogContent>
-					<DialogContentText>
-						To subscribe to this website, please enter your email address here.
-						We will send updates occasionally.
-					</DialogContentText>
+					<DialogContentText>Please submit your feedback.</DialogContentText>
 					<TextField
 						autoFocus
 						margin='dense'
 						id='name'
-						label='Email Address'
+						label='Email'
 						type='email'
 						value={user && user.email}
 						fullWidth
 					/>
+					<TextField
+						id='outlined-multiline-static'
+						label='Feedback'
+						multiline
+						rows='2'
+						placeholder='Your feedback'
+						fullWidth
+						// className={classes.textField}
+						margin='dense'
+					/>
+					<div>
+						<Rating
+							name='half-rating'
+							value={4}
+							size='large'
+							value={ratingValue}
+							onChange={(event, newValue) => {
+								setRatingValue(newValue);
+							}}
+						/>
+					</div>
 				</DialogContent>
 				<DialogActions>
 					<Button onClick={handleFeedbackClose} color='primary'>
