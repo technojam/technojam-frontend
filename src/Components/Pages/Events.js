@@ -10,12 +10,27 @@ import { Timeline, TimelineEvent } from 'react-event-timeline';
 import '../style.css';
 import EventContext from '../../context/event/eventContext';
 import AuthContext from '../../context/auth/authContext';
-
+import Dialog from '@material-ui/core/Dialog';
+import TextField from '@material-ui/core/TextField';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Paper from '@material-ui/core/Paper';
+// import Draggable from 'react-draggable';
 /* FIXME: When the target will be decided, remove the rel attribute.
  * It has been added here for security reasons.
  * Reference: https://mathiasbynens.github.io/rel-noopener/
  */
 
+function PaperComponent(props) {
+	return (
+		<Paper {...props} />
+		// <Draggable cancel={'[class*="MuiDialogContent-root"]'}>
+
+		// </Draggable>
+	);
+}
 const Events = () => {
 	const eventContext = useContext(EventContext);
 	const authContext = useContext(AuthContext);
@@ -26,7 +41,30 @@ const Events = () => {
 
 	const [paevent, setPaevent] = useState([]);
 	const [upevent, setUpevent] = useState([]);
+	const [selectedEvent, setSelectedEvent] = useState({});
 	const [eventMessage, setEventMessage] = useState('Loading.....');
+	const [open, setOpen] = React.useState(false);
+	const [openFeedback, setFeedbackOpen] = React.useState(false);
+
+	const handleFeedbackOpen = () => {
+		setFeedbackOpen(true);
+	};
+
+	const handleFeedbackClose = () => {
+		setFeedbackOpen(false);
+	};
+	const handleClickOpen = event => {
+		if (isAuthenticated) {
+			setSelectedEvent(event);
+			setOpen(true);
+		} else {
+			loginDialog(true);
+		}
+	};
+
+	const handleClose = () => {
+		setOpen(false);
+	};
 
 	useEffect(() => {
 		// console.log('past events are:', paevent);
@@ -40,13 +78,9 @@ const Events = () => {
 		// eslint-disable-next-line
 	}, [events]);
 
-	const handleRegister = eventId => {
-		console.log('Eventid:', eventId);
-		if (isAuthenticated) {
-			registerForEvent(eventId);
-		} else {
-			loginDialog(true);
-		}
+	const handleRegister = () => {
+		registerForEvent(selectedEvent.eid);
+		handleClose();
 	};
 	return (
 		<div>
@@ -143,7 +177,7 @@ const Events = () => {
 																? true
 																: false
 														}
-														onClick={() => handleRegister(event.eid)}
+														onClick={() => handleClickOpen(event)}
 													>
 														{user && event.users.indexOf(user.uid) != -1
 															? 'Registered'
@@ -244,7 +278,7 @@ const Events = () => {
 														variant='outlined'
 														color='primary'
 														style={{ marginLeft: '10px' }}
-														href={event.feedback}
+														onClick={handleFeedbackOpen}
 													>
 														Feedback
 													</Button>
@@ -267,6 +301,61 @@ const Events = () => {
 					<br />
 				</section>
 			</Container>
+			<Dialog
+				open={open}
+				onClose={handleClose}
+				PaperComponent={PaperComponent}
+				aria-labelledby='draggable-dialog-title'
+			>
+				<DialogTitle style={{ cursor: 'move' }} id='draggable-dialog-title'>
+					Confirm Registration-{selectedEvent.name}
+				</DialogTitle>
+				<DialogContent>
+					<DialogContentText>
+						This is a invite only event, registration confirmation will be send
+						to your registered event once we evaluate your request.
+					</DialogContentText>
+				</DialogContent>
+				<DialogActions>
+					<Button autoFocus onClick={handleClose} color='primary'>
+						Cancel
+					</Button>
+					<Button onClick={() => handleRegister()} color='primary'>
+						Register
+					</Button>
+				</DialogActions>
+			</Dialog>
+			{/* Feedback submission form */}
+			<Dialog
+				open={openFeedback}
+				onClose={handleClose}
+				aria-labelledby='form-dialog-title'
+			>
+				<DialogTitle id='form-dialog-title'>Submit Feedback</DialogTitle>
+				<DialogContent>
+					<DialogContentText>
+						To subscribe to this website, please enter your email address here.
+						We will send updates occasionally.
+					</DialogContentText>
+					<TextField
+						autoFocus
+						margin='dense'
+						id='name'
+						label='Email Address'
+						type='email'
+						value={user && user.email}
+						fullWidth
+					/>
+				</DialogContent>
+				<DialogActions>
+					<Button onClick={handleFeedbackClose} color='primary'>
+						Cancel
+					</Button>
+					<Button onClick={handleFeedbackClose} color='primary'>
+						Submit
+					</Button>
+				</DialogActions>
+			</Dialog>
 		</div>
 	);
 };
