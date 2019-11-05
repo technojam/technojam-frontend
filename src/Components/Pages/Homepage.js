@@ -10,9 +10,9 @@ import "../style.css";
 
 
 const style = {
-   overFlow:"hidden",
+   overFlow: "hidden",
    marginTop: "60px",
-   marginBottom:"-30px",
+   marginBottom: "-30px",
    square: {
       border: "4px solid #ff0000c9",
       padding: "20px",
@@ -23,13 +23,13 @@ const style = {
       marginRight: "40px"
    },
    square1: {
-      border: "4px solid red",
-      padding: "20px",
+      border: "2px solid red",
+      padding: "10px",
       position: "absolute",
-      marginTop: "18px",
+     
       left: "46px",
       marginRight: "40px",
-      marginTop: "100px",
+      marginTop: "70px",
    },
    back: {
       width: "100%",
@@ -66,13 +66,16 @@ const Homepage = () => {
          title: "",
          cta: "#",
          buttonname: "Register Now",
-         backgroundImageUrl: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/20191105_204943_0000.png"
+         backgroundImageUrl: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/20191105_204943_0000.png",
+         backgroundImageUrlM: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/mobile+web+size.png"
       }
    ]);
 
    return (
       <div style={style} >
          {content.map(item => (
+            <div>
+                <Hidden smDown>
             <div
                style={{
                   ...style.back,
@@ -80,64 +83,74 @@ const Homepage = () => {
                }}
                key={item.title}>
                <Grid container xs={6} sm={3} md={3}>
-                  <Hidden smDown>
+                 
                      <div style={style.square}>
                         <div className='home_grid'>
                            <Typography variant='h3' className='letter_spacing' style={{ color: "#000000cf", fontWeight: "900", fontSize: "36px" }}>
                               {item.title}
                            </Typography>
-                      
 
-                        <Typography
-                           variant='body2'
-                           className='home_grid_typo'
-                           style={{
-                              fontSize: '21px',
-                              color: '#000000bf',
-                              fontWeight: '500'
-                           }}>
-                           {item.content}
-                        </Typography>
-                      
-                        <Button variant='contained' style={style.button}>
-                           {item.buttonname} <a src={item.cta} target='_blank' rel='noopener noreferrer' />
-                        </Button>
-                     </div>
-                     </div>
-                  </Hidden>
 
-               <Hidden mdUp>
-                  <div style={style.square1}>
-                     <div className='home_grid letter_spacing'>
-                        <Typography
-                           variant='h3'
-                           style={{
-                              color: 'black',
-                              fontSize: '28px'
-                           }}>
-                           {item.title}
-                        </Typography>
-                        
-                        <Typography
-                           variant='body2'
-                           className='home_grid_typo'
-                           style={{
-                              fontSize: '14px',
-                              color: 'black'
-                           }}>
-                           {item.content}
-                        </Typography>
-                      
-                        <Button variant='contained' style={style.button}>
-                           {item.buttonname} <a href={item.cta} target='_blank' />
-                        </Button>
+                           <Typography
+                              variant='body2'
+                              className='home_grid_typo'
+                              style={{
+                                 fontSize: '21px',
+                                 color: '#000000bf',
+                                 fontWeight: '500'
+                              }}>
+                              {item.content}
+                           </Typography>
+
+                           <Button variant='contained' style={style.button}>
+                              {item.buttonname} <a src={item.cta} target='_blank' rel='noopener noreferrer' />
+                           </Button>
+                        </div>
                      </div>
-                  </div>
-               </Hidden>
+                 
                </Grid>
             </div>
+            </Hidden>
+            <Hidden mdUp>
+            <div  style={{
+                  ...style.back,
+                  backgroundImage: `url(${item.backgroundImageUrlM})`
+               }}>
+               <Grid container xs={6} sm={3} md={3}>
+                  
+                     <div style={style.square1}>
+                        <div className='home_grid letter_spacing'>
+                           <Typography
+                              variant='h3'
+                              style={{
+                                 color: 'black',
+                                 fontSize: '28px'
+                              }}>
+                              {item.title}
+                           </Typography>
+
+                           <Typography
+                              variant='body2'
+                              className='home_grid_typo'
+                              style={{
+                                 fontSize: '14px',
+                                 color: 'black'
+                              }}>
+                              {item.content}
+                           </Typography>
+
+                           <Button variant='contained' style={style.button}>
+                              {item.buttonname} <a href={item.cta} target='_blank' />
+                           </Button>
+                        </div>
+                     </div>
+                 
+               </Grid>
+            </div>
+            </Hidden>
+            </div>
    ))
-}
+         }
       </div >
    );
 };
