@@ -117,7 +117,7 @@ const Events = () => {
 							>
 								<h4>Live Events</h4>
 								{upevent.length < 1 ? (
-									<Timeline style={{ border: 'black' }}>
+									<Timeline style={{ border: 'black',width:'400px' }}>
 										<TimelineEvent>
 											<CardContent>
 												<Typography
@@ -132,7 +132,7 @@ const Events = () => {
 									</Timeline>
 								) : (
 									upevent.map(event => (
-										<Timeline style={{ border: 'black' }} key={event.id}>
+										<Timeline style={{ border: 'black',width:'500px' }} key={event.id}>
 											<TimelineEvent>
 												<CardContent>
 													<Typography

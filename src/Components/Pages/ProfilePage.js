@@ -43,7 +43,7 @@ export default class ProfilePage extends React.Component {
             return (
                 <div style={style.container}>
                     <Container fixed>
-                        <Grid container justify="space-between">
+                        <Grid  justify="space-between">
                             <Grid item lg={2} md={4} xs={4}>
                                 <img src={this.state.currentProfile.Image} style={style.img}/>
                             </Grid>
@@ -56,10 +56,10 @@ export default class ProfilePage extends React.Component {
                                 </Typography>
                             </Grid>
                         </Grid>
-                        <Grid container style={{marginTop: "16px"}}>
+                        <Grid style={{marginTop: "16px"}}>
                             
                             <Grid item lg={10} md={12}>
-                                <Paper>
+                               
                                     <Table style={{tableLayout: 'fixed'}}>
                                         <TableBody>
                                             {this.state.currentProfile.details.map((detail, index) => (
@@ -70,7 +70,7 @@ export default class ProfilePage extends React.Component {
                                             ))}
                                         </TableBody>
                                     </Table>
-                                </Paper>
+                                
                             </Grid>
                         </Grid>
                     </Container>

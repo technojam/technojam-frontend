@@ -15,7 +15,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 /* Icons */
 import MenuIcon from '@material-ui/icons/Menu';
 
-const drawerWidth = 240;
+const drawerWidth = 180;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -49,28 +49,18 @@ function ResponsiveDrawer(props) {
   }
 
   const drawer = (
-    <div>
+    <div >
       <div className={classes.toolbar} />
 
-      <List>
+      <List  >
         <ListItem button component={Link} to={'/'} onClick={handleDrawerToggle}>
           <ListItemIcon></ListItemIcon>
           <ListItemText primary="Home" />
         </ListItem>
-      </List>
-
-      <Divider />
-
-      <List>
-      <List>
+     
         <ListItem button component={Link} to={'/Pannel'} onClick={handleDrawerToggle}>
           <ListItemIcon></ListItemIcon>
           <ListItemText primary="Dashboard" />
-        </ListItem>
-      </List>
-        <ListItem button component={Link} to={'/aboutus'} onClick={handleDrawerToggle}>
-          <ListItemIcon></ListItemIcon>
-          <ListItemText primary="About Us" />
         </ListItem>
 
         <ListItem button component={Link} to={'/events'} onClick={handleDrawerToggle}>
@@ -102,11 +92,10 @@ function ResponsiveDrawer(props) {
           <ListItemIcon></ListItemIcon>
           <ListItemText primary="Groups" />
         </ListItem>
-      </List>
-
-      <Divider />
-
-      <List>
+        <ListItem button component={Link} to={'/aboutus'} onClick={handleDrawerToggle}>
+          <ListItemIcon></ListItemIcon>
+          <ListItemText primary="About Us" />
+        </ListItem>
         <ListItem button component={Link} to={'/contactus'} onClick={handleDrawerToggle}>
           <ListItemIcon></ListItemIcon>
           <ListItemText primary="Contact Us" />

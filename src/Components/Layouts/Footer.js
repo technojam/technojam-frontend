@@ -23,11 +23,11 @@ export default props => (
             Copyright © 2019 Team TechnoJam
           </Typography>
         </Grid>
-        <Grid container direction="row" spacing={80}>
+        <Grid container direction="row" spacing={50}>
           <Hidden mdUp>
             <div style={{ marginLeft: 'auto' }}>
               <a
-                className="btn btn-social-icon btn-twitter"
+              
                 href=" https://twitter.com/technojam_gu"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -35,13 +35,13 @@ export default props => (
 
                 <i
                   className="fab fa-twitter fa-lg"
-                  style={{ color: Color.color_twitter }}
+                  style={{ color: "#28aae1",padding:"2px" }}
                 ></i>
 
               </a>
-              &#8194;
+            
               <a
-                className="btn btn-social-icon btn-facebook"
+              
                 href="facebook.com/technojam.scse "
                 target="_blank"
                 rel="noopener noreferrer"
@@ -49,13 +49,13 @@ export default props => (
 
                 <i
                   className="fab fa-facebook fa-lg"
-                  style={{ color: Color.color_fb }}
+                  style={{ color: "#3b5998",padding:"2px" }}
                 ></i>
 
               </a>
-              &#8194;
+             
               <a
-                className="btn btn-social-icon btn-instagram"
+               
                 href="https://instagram.com/technojam_galgotias"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -63,13 +63,13 @@ export default props => (
 
                 <i
                   className="fab fa-instagram fa-lg"
-                  style={{ color: Color.color_insta }}
+                  style={{ color: "#e41a2b",padding:"2px" }}
                 ></i>
 
               </a>
-              &#8194;
+             
               <a
-                className="btn btn-social-icon btn-linkedin"
+                
                 href="https://www.linkedin.com/company/technojam/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -77,11 +77,11 @@ export default props => (
 
                 <i
                   className="fab fa-linkedin fa-lg"
-                  style={{ color: Color.color_linkedIn }}
+                  style={{ color: "#0077b5",padding:"2px" }}
                 ></i>
 
               </a>
-              &#8194;
+            
             </div>
           </Hidden>
           <Hidden smDown>
@@ -105,7 +105,7 @@ export default props => (
                 ></i>
 
               </a>
-              &#8194;
+            
               <a
                 className="btn btn-social-icon btn-facebook"
                 href="facebook.com/technojam.scse "
@@ -119,7 +119,7 @@ export default props => (
                 ></i>
 
               </a>
-              &#8194;
+             
               <a
                 className="btn btn-social-icon btn-instagram"
                 href="https://instagram.com/technojam_galgotias"
@@ -133,7 +133,7 @@ export default props => (
                 ></i>
 
               </a>
-              &#8194;
+            
               <a
                 className="btn btn-social-icon btn-linkedin"
                 href="https://www.linkedin.com/company/technojam/"
@@ -147,7 +147,7 @@ export default props => (
                 ></i>
 
               </a>
-              &#8194;
+            
             </div>
           </Hidden>
         </Grid>

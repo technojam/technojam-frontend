@@ -15,10 +15,6 @@ import ProfileTabs from '../../Layouts/ProfileTabs';
 
 import {
 	Paper,
-	Table,
-	TableRow,
-	TableBody,
-	TableCell
 } from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
 
@@ -164,37 +160,10 @@ const Profile = () => {
 										</label>
 									</Typography>
 
-									<Paper>
+								
 										<ProfileTabs />
-										{/* <Table>
-											<TableBody>
-												<TableRow>
-													<TableCell component='th' scope='row'>
-														Name
-													</TableCell>
-													<TableCell align='right'>
-														{user && user.name}
-													</TableCell>
-												</TableRow>
-												<TableRow>
-													<TableCell component='th' scope='row'>
-														Email
-													</TableCell>
-													<TableCell align='right'>
-														{user && user.email}
-													</TableCell>
-												</TableRow>
-												<TableRow>
-													<TableCell component='th' scope='row'>
-														Role
-													</TableCell>
-													<TableCell align='right'>
-														{user && user.role}
-													</TableCell>
-												</TableRow>
-											</TableBody>
-										</Table> */}
-									</Paper>
+
+									
 								</Grid>
 							</Grid>
 						</CardContent>

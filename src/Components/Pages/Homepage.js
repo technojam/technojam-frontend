@@ -10,17 +10,16 @@ import "../style.css";
 
 
 const style = {
+   overFlow:"hidden",
    marginTop: "60px",
-   maxHeight: "720px",
-   height: "90vh",
-
+   marginBottom:"-30px",
    square: {
       border: "4px solid #ff0000c9",
       padding: "20px",
-      "border-radius": "15px",
+      borderRadius: "15px",
       position: "absolute",
-      marginTop: "180px",
-      left: "46px",
+      marginTop: "160px",
+      left: "626px",
       marginRight: "40px"
    },
    square1: {
@@ -42,7 +41,7 @@ const style = {
       backgroundSize: "cover",
 
       backgroundPositionX: "0%",
-      minHeight: "90vh",
+      minHeight: "95vh",
    },
    button: {
       color: "white",
@@ -63,16 +62,16 @@ const style = {
 const Homepage = () => {
    const [content] = useState([
       {
-         content: "Technojam is a community based on promoting Open source community. We to work on open Source projects and give mentorship in them, to give a first experince on GSOC. we also conduct Handson workshops at various places.",
-         title: "Our Community",
+         content: "",
+         title: "",
          cta: "#",
-         buttonname: "Know More",
-         backgroundImageUrl: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/b1.jpg"
+         buttonname: "Register Now",
+         backgroundImageUrl: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/20191105_204943_0000.png"
       }
    ]);
 
    return (
-      <div style={style}>
+      <div style={style} >
          {content.map(item => (
             <div
                style={{
@@ -87,7 +86,7 @@ const Homepage = () => {
                            <Typography variant='h3' className='letter_spacing' style={{ color: "#000000cf", fontWeight: "900", fontSize: "36px" }}>
                               {item.title}
                            </Typography>
-                        <br />
+                      
 
                         <Typography
                            variant='body2'
@@ -99,7 +98,7 @@ const Homepage = () => {
                            }}>
                            {item.content}
                         </Typography>
-                        <br />
+                      
                         <Button variant='contained' style={style.button}>
                            {item.buttonname} <a src={item.cta} target='_blank' rel='noopener noreferrer' />
                         </Button>
@@ -118,7 +117,7 @@ const Homepage = () => {
                            }}>
                            {item.title}
                         </Typography>
-                        <br />
+                        
                         <Typography
                            variant='body2'
                            className='home_grid_typo'
@@ -128,7 +127,7 @@ const Homepage = () => {
                            }}>
                            {item.content}
                         </Typography>
-                        <br />
+                      
                         <Button variant='contained' style={style.button}>
                            {item.buttonname} <a href={item.cta} target='_blank' />
                         </Button>

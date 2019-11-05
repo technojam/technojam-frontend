@@ -12,7 +12,7 @@ const Aboutus = () => (
    <Container maxWidth='lg'>
       <div className='aboutus view_container'>
 
-        <Card className='card--shadow' style={{ backgroundColor: ' #e03030',opacity: '0.8', color: '#fff', 'border-radius':'10px', 'margin-top':'160px'}}>
+        <Card className='card--shadow' style={{ backgroundColor: ' #4285f4',opacity: '0.8', color: '#fff', 'border-radius':'10px', 'margin-top':'160px'}}>
           <Grid container direction='row' justify='center' alignItems='center' spacing={4}>
             <Grid item lg={3} md={3} sm={3}>
                <CardContent>
