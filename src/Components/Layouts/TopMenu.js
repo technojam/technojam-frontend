@@ -25,6 +25,8 @@ import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
+import EventContext from '../../context/event/eventContext';
+
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
@@ -57,6 +59,7 @@ const modalCardBaseStyle = {
 function TopMenu(props) {
 	const alertContext = useContext(AlertContext);
 	const authContext = useContext(AuthContext);
+	const eventContext = useContext(EventContext);
 
 	const { setAlert } = alertContext;
 	const {
@@ -71,13 +74,17 @@ function TopMenu(props) {
 		user,
 		contact,
 		loading,
-		showLoading
+		showLoading,
+		showLogin,
+		loginDialog
 	} = authContext;
+
+	const { loadEvents } = eventContext;
 
 	useEffect(() => {
 		loadUser();
-
-		console.log('contacts:', contact);
+		loadEvents();
+		console.log('showLogin:', showLogin);
 		if (isAuthenticated) {
 			// props.history.push('/');
 			setOpen(false);
@@ -130,12 +137,14 @@ function TopMenu(props) {
 	};
 
 	const handleRegisterOpen = () => {
+		setOpen(false);
 		setRegisterOpen(true);
 		setAnchorEl(null);
 	};
 
 	const handleClose = () => {
 		setOpen(false);
+		loginDialog(false);
 		setRegisterOpen(false);
 	};
 
@@ -188,6 +197,7 @@ function TopMenu(props) {
 
 	return (
 		<div style={{ color: '#fff' }}>
+			{console.log('show login value:', showLogin)}
 			<AppBar position='fixed'>
 				<Toolbar style={{ backgroundColor: '#24292e' }}>
 					<Hidden mdUp>
@@ -346,23 +356,20 @@ function TopMenu(props) {
 												Dashboard
 											</MenuItem>
 										) : null}
-										{user && user.role == 'admin' ? (
-											<MenuItem
-												component={Link}
-												to='/pannel'
-												onClick={() => handleClose1()}
-											>
-												View Profile
-											</MenuItem>
-										) : null}
-										
+										<MenuItem
+											component={Link}
+											to='/profile'
+											onClick={() => handleClose1()}
+										>
+											View Profile
+										</MenuItem>
 										<MenuItem onClick={() => handleLogout()}>Logout</MenuItem>
 									</div>
 								)}
 							</Menu>
 						</React.Fragment>
 						<Modal
-							open={open}
+							open={showLogin || open}
 							onClose={handleClose}
 							style={{
 								display: 'flex',
@@ -370,7 +377,7 @@ function TopMenu(props) {
 								justifyContent: 'center'
 							}}
 						>
-							<Fade in={open}>
+							<Fade in={showLogin || open}>
 								<div style={modalCardStyle}>
 									<Alert />
 									<img
@@ -430,8 +437,11 @@ function TopMenu(props) {
 										Login
 									</Button>
 									<div style={{ marginTop: '10px' }}>
-										<p>You not have a Accounts?</p>
-										<Link style={{ color: '#007791' }} to={'/signup'}>
+										<p>Dont't have an account?</p>
+										<Link
+											style={{ color: '#007791' }}
+											onClick={handleRegisterOpen}
+										>
 											Sign up
 										</Link>
 									</div>
