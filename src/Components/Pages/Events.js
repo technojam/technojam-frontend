@@ -19,7 +19,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Paper from '@material-ui/core/Paper';
 import Rating from '@material-ui/lab/Rating';
 import { makeStyles } from '@material-ui/core/styles';
-
+import Skeleton from '@material-ui/lab/Skeleton';
 // import Draggable from 'react-draggable';
 /* FIXME: When the target will be decided, remove the rel attribute.
  * It has been added here for security reasons.
@@ -117,17 +117,19 @@ const Events = () => {
 							>
 								<h4>Live Events</h4>
 								{upevent.length < 1 ? (
-									<Timeline style={{ border: 'black' }}>
-										<TimelineEvent>
-											<CardContent>
-												<Typography
-													variant='h5'
-													component='p'
-													className='letter_spacing'
-												>
-													<h6>{eventMessage}</h6>
-												</Typography>
-											</CardContent>
+									<Timeline style={{ border: 'black',margin:0,padding:0 }}>
+										<TimelineEvent style={{ margin:0,padding:0,width:'200px' }}>
+														<div className='skel-container'>
+															{
+																[...Array(3)].map( _ => (
+																	<div style={{padding:'0.5em'}}>
+																		<Skeleton />
+																		<Skeleton height="10px" width="60%"/>
+																		<Skeleton height="10px" width="60%" />
+																	</div>	
+																) )
+															}
+														</div>
 										</TimelineEvent>
 									</Timeline>
 								) : (
@@ -216,24 +218,30 @@ const Events = () => {
 								{paevent.length < 1 ? (
 									<Grid item>
 										<br />
-										<Card
-											className='card--shadow'
-											style={{
-												maxHeight: 'auto',
-												minHeight: 'auto',
-												borderRadius: '20px'
-											}}
-										>
-											<CardContent>
-												<Typography
-													variant='h6'
-													component='p'
-													className='letter_spacing'
+										{
+											[...Array(2)].map( _ => (
+												<Card
+													className='card--shadow'
+													style={{
+														maxHeight: 'auto',
+														minHeight: 'auto',
+														borderRadius: '20px',
+														margin:'1em'
+													}}
 												>
-													{eventMessage}
-												</Typography>
-											</CardContent>
-										</Card>
+													<CardContent>
+														<div className='skel-container' style={{margin:'0.5em'}}>		
+															<div style={{padding:'0.5em'}}>
+																<Skeleton />
+																<Skeleton height="10px" width="60%"/>
+																<Skeleton height="10px" width="60%" />
+															</div>	
+														</div>	
+													</CardContent>
+												</Card>
+
+											))
+										}
 									</Grid>
 								) : (
 									paevent.map(event => (
