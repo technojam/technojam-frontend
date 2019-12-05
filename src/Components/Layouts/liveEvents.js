@@ -5,65 +5,14 @@ import { MoonLoader } from 'react-spinners';
 const defaultEventsList = [
 	{
 		id: 1,
-		title: 'Ideathon',
+		title: 'Dextrix 2.0',
 		feedback: '#',
-		date: '26 August, 2019',
-		venue: ' GCET Auditorium',
+		date: '233 November, 2019',
+		venue: ' GU',
 		todo: '#',
 		description:
-			"Conducted Ideathon in Galgotias's Induction Program for freshers. almost 300 students took part."
+			"24 hours hackthon for all."
 	},
-
-	{
-		id: 2,
-		title: 'Dextrix 1.0',
-		feedback: '#',
-		date: 'May 12, 2018',
-		venue: ' GU campus',
-		todo: '#',
-		description:
-			'Technojam conducted 12 hours hackathon in delhi region at Galgotias university. it is recognized Speaker NASA'
-	},
-	{
-		id: 1,
-		title: 'WebDev Day 1',
-		register: '#',
-		date: '26 August, 2019',
-		venue: ' GU C Block room no 211',
-		Todo: '#',
-		description: 'Learn to Develop website from scratch on MERN stack.'
-	},
-
-	{
-		id: 2,
-		title: 'Dextrix 2.0',
-		register: '#',
-		date: 'May 12, 2018',
-		venue: ' GU campus',
-		Todo: '#',
-		description:
-			'Technojam conducted 12 hours hackthon in delhi region at galgotias university. it is recognized Speaker NASA'
-	},
-	{
-		id: 1,
-		title: 'WebDev Day 1',
-		register: '#',
-		date: '26 August, 2019',
-		venue: ' GU C Block room no 211',
-		Todo: '#',
-		description: 'Learn to Develop website from scratch on MERN stack.'
-	},
-
-	{
-		id: 2,
-		title: 'Dextrix 2.0',
-		register: '#',
-		date: 'May 12, 2018',
-		venue: ' GU campus',
-		Todo: '#',
-		description:
-			'Technojam conducted 12 hours hackthon in delhi region at galgotias university. it is recognized Speaker NASA'
-	}
 ];
 
 const liveEventStyle = {

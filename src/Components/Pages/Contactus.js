@@ -120,10 +120,10 @@ const Contactus = () => {
 					alignItems='flex-start'
 					spacing={6}
 				>
-					<Grid direction='row' xs={12} sm={12} md={6}>
+					<Grid direction='row' xs={12} sm={12} md={6} style={{padding:"20px"}}>
 						<Card
 							className='card--shadow'
-							style={{ borderRadius: '10px', marginTop: '23px' }}
+							style={{ borderRadius: '10px', }}
 						>
 							<div style={{ backgroundColor: '#24292E' }}>
 								<br />

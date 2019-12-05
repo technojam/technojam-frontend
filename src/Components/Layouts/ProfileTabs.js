@@ -82,7 +82,7 @@ export default function ProfileTabs() {
 	};
 
 	return (
-		<div className={classes.root}>
+		<div className={classes.root} style={{overflowX: 'auto',}} >
 			<Tabs
 				orientation='vertical'
 				variant='scrollable'
@@ -99,12 +99,12 @@ export default function ProfileTabs() {
 				<Tab label='Item Six' {...a11yProps(5)} />
 				<Tab label='Item Seven' {...a11yProps(6)} />
 			</Tabs>
-			<TabPanel value={value} index={0}>
+			<TabPanel value={value} index={0} style={{marginLeft:"100px"}}>
 				<Card style={style.card}>
 					<CardContent className='profile-info'>
 						<Grid container>
 							<Grid item lg={10} md={12}>
-								<Table>
+								<Table >
 									<TableBody>
 										<TableRow>
 											<TableCell component='th' scope='row'>
@@ -131,22 +131,22 @@ export default function ProfileTabs() {
 					</CardContent>
 				</Card>
 			</TabPanel>
-			<TabPanel value={value} index={1}>
+			<TabPanel value={value} index={1} style={{marginLeft:"100px"}}>
 				Item Two
 			</TabPanel>
-			<TabPanel value={value} index={2}>
+			<TabPanel value={value} index={2}style={{marginLeft:"100px"}}>
 				Item Three
 			</TabPanel>
-			<TabPanel value={value} index={3}>
+			<TabPanel value={value} index={3}style={{marginLeft:"100px"}}>
 				Item Four
 			</TabPanel>
-			<TabPanel value={value} index={4}>
+			<TabPanel value={value} index={4}style={{marginLeft:"100px"}}>
 				Item Five
 			</TabPanel>
-			<TabPanel value={value} index={5}>
+			<TabPanel value={value} index={5}style={{marginLeft:"100px"}}>
 				Item Six
 			</TabPanel>
-			<TabPanel value={value} index={6}>
+			<TabPanel value={value} index={6}style={{marginLeft:"100px"}}>
 				Item Seven
 			</TabPanel>
 		</div>

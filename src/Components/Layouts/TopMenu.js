@@ -33,11 +33,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import '../style.css';
 
 const style = {
-	marginleft: 200,
-	toolbarButtons: {
-		marginLeft: 'auto',
-		marginRight: -12
-	}
+
+
 };
 
 const modalCardBaseStyle = {
@@ -273,11 +270,11 @@ function TopMenu(props) {
 						</div>
 					</Hidden>
 					<div style={{ marginLeft: 'auto' }}>
-						<Tooltip title='Night Mode'>
+						<Tooltip title='Night Mode' >
 							<IconButton
 								color='inherit'
 								aria-label='Night Mode'
-								style={{ style }}
+								style={{padding:"4px" }}
 								component={Link}
 								to={'/'}
 							>
@@ -286,14 +283,14 @@ function TopMenu(props) {
 						</Tooltip>
 						<Tooltip title='Our Projects'>
 							<a
-								className='btn btn-social-icon btn-github'
+								className=' btn-social-icon btn-github'
 								href='https://github.com/technojam'
 								target='_blank'
 								rel='noopener noreferrer'
 							>
 								<i
 									className='fab fa-github fa-lg'
-									style={{ color: '#fcfcfc' }}
+									style={{ color: '#fcfcfc',padding:'4px' }}
 								></i>
 							</a>
 						</Tooltip>
@@ -316,6 +313,7 @@ function TopMenu(props) {
 								aria-haspopup='true'
 								onClick={handleMenu}
 								color='inherit'
+								style={{padding:"4px" }}
 							>
 								<PersonIcon />
 								<Typography className='topMenu_typo_name'>
