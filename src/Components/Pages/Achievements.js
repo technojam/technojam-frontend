@@ -37,7 +37,7 @@ const Achievements = () => {
          title: 'First Gsocer',
          by: 'Rahul Chuhan',
          date: 'May 12, 2018',
-         description: 'Rahul chuhan Member of Team Teachnojam cleared Gsoc in 2019 in Galgotias University. He worked on R project',
+         description: 'Rahul chauhan Member of Team Teachnojam cleared Gsoc in 2019 in Galgotias University. He worked on R project',
          image: 'https://tj-static.s3.ap-south-1.amazonaws.com/etc/rahul.jpg'
       },
 
