@@ -66,8 +66,8 @@ const Homepage = () => {
          title: "",
          cta: "#",
          buttonname: "Register Now",
-         backgroundImageUrl: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/20191105_204943_0000.png",
-         backgroundImageUrlM: "https://tj-static.s3.ap-south-1.amazonaws.com/etc/mobile+web+size.png"
+         backgroundImageUrl: "https://technojamm.s3.us-east-2.amazonaws.com/110-01.png",
+         backgroundImageUrlM: "https://technojamm.s3.us-east-2.amazonaws.com/110-01.png"
       }
    ]);
 
