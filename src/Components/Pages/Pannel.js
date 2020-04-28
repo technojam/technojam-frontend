@@ -113,7 +113,7 @@ const Pannel = () => {
                   <Grid item xs={6} sm={6} md={6}>
                     <Typography style={{ textAlign: "end", padding: "5px", marginTop: "5px" }}>
                       <IconButton aria-label="delete" >
-                        <i class="fas fa-cog"></i>
+                        <i className="fas fa-cog"></i>
                       </IconButton>
                     </Typography>
                   </Grid>

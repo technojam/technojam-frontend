@@ -99,7 +99,8 @@
 	max-height: 500px;
 }
 .letter_spacing {
-	letter-spacing: 2px;
+	letter-spacing: 3px;
+	line-height: 100px;
 }
 
 /*Event style*/

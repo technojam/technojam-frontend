@@ -38,7 +38,7 @@ const Mentorship = () => {
       {
          id: 2,
          title: 'Technojam-backend',
-         info: 'Technojam-Backend is build on Node and express Js. It uses MongoDB as its database.',
+         info: 'Technojam-Backend is build on NodeJS. It uses MongoDB as its database. currenty API are Work in progress',
          repolink: 'https://github.com/technojam/technojam-backend',
          slack: '#',
          mentor: 'Himanshu, Shivam and Abhimanyu',
@@ -113,7 +113,7 @@ const Mentorship = () => {
                            style={{
                               marginTop: '20px',
                               marginBottom: '20px',
-                              minHeight: '123px'
+                              minHeight: '140px',
                            }}>
                            <ExpansionPanelSummary>
                               <Grid item md={6} xl={6} alignContent='flex-end' justify='flex-end'>
@@ -122,12 +122,11 @@ const Mentorship = () => {
                                     component='p'
                                     className='letter_spacing'
                                     style={{
-                                       textAlign: 'end',
-                                       fontSize: '32px'
+                                       fontSize: '25px'
                                     }}>
                                     {project.title}
                                     <Typography style={{ textAlign: 'center' }}>
-                                       <i class='fas fa-arrow-circle-down fa-2x' style={{ color: '#33a351' }} />
+                                       <i className='fas fa-arrow-circle-down fa-2x' style={{ color: '#33a351' }} />
                                     </Typography>
                                  </Typography>
                               </Grid>

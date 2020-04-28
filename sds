@@ -56,8 +56,8 @@ const Homepage = () => {
          title: "About us",
          cta: "./events",
          buttonname: "Know more",
-         backgroundImageUrl: "#",
-         backgroundImageUrlM: "#"
+         backgroundImageUrl: "https://tj-static.s3.ap-south-1.amazonaws.com/110-01+(1)+(1).jpg",
+         backgroundImageUrlM: "https://tj-static.s3.ap-south-1.amazonaws.com/mobile-100-01+(1).jpg"
       }
    ]);
 
@@ -67,7 +67,7 @@ const Homepage = () => {
          {content.map(item => (
             <div>
                 <Hidden smDown>
-            <div id="1"
+            <div
                style={{
                   ...style.back,
                   backgroundImage: `url(${item.backgroundImageUrl})`
@@ -102,7 +102,7 @@ const Homepage = () => {
             </div>
             </Hidden>
             <Hidden mdUp>
-            <div id="2" style={{
+            <div  style={{
                   ...style.back,
                   backgroundImage: `url(${item.backgroundImageUrlM})`
                }}>
