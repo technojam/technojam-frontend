@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react';
 //material ui component
-
+import mobile from '../../images/mobile.jpg';
+import desktop from '../../images/desktop.png';
 import { Grid, Typography, Hidden } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import Container from '@material-ui/core/Container';
@@ -15,17 +16,17 @@ const style = {
    marginTop: "60px",
    marginBottom: "-30px",
    square: {
-      border: "4px solid #ff0000c9",
+      border: "4px solid #fafafa",
       padding: "20px",
       borderRadius: "15px",
-      marginTop: "87px",
+      marginTop: "75px",
       minWidth: "500px",
       marginLeft:"30px"
    },
    square1: {
-      border: "2px solid red",
+      border: "2px solid #fafafa",
       minWidth:"285px",
-      marginTop:"57px"
+      margin:"6px"
    },
    back: {
       width: "100%",
@@ -56,23 +57,24 @@ const Homepage = () => {
          title: "About us",
          cta: "./events",
          buttonname: "Know more",
-         backgroundImageUrl: "#",
+         backgroundImageUrl: "../../images/mobile.jpg ",
          backgroundImageUrlM: "#"
       }
    ]);
 
    return (
       <div style={style} >
-      <Container maxWidth='xl'>
          {content.map(item => (
             <div>
                 <Hidden smDown>
             <div id="1"
                style={{
                   ...style.back,
-                  backgroundImage: `url(${item.backgroundImageUrl})`
+                  backgroundImage: `url(${desktop})`
                }}
                key={item.title}>
+                  <div>
+                    
                <Grid container xs={6} sm={3} md={3}>
                  
                      <div style={style.square}>
@@ -99,12 +101,14 @@ const Homepage = () => {
                      </div>
                  
                </Grid>
+               <br /><br /><br />
+               </div>
             </div>
             </Hidden>
             <Hidden mdUp>
             <div id="2" style={{
                   ...style.back,
-                  backgroundImage: `url(${item.backgroundImageUrlM})`
+                  backgroundImage: `url(${mobile})`
                }}>
                <Grid container xs={6} sm={3} md={3}>
                   
@@ -142,7 +146,6 @@ const Homepage = () => {
             </div>
    ))
          }
-         </Container>
       </div >
    );
 };
