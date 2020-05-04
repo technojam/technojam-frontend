@@ -46,7 +46,7 @@ const style = {
 };
 
 /* FIXME: When the target will be decided, remove the rel attribute.
- * It has been added here for security reasons.
+ * It has been added here for security reasons
  * Reference: https://mathiasbynens.github.io/rel-noopener/
  */
 
