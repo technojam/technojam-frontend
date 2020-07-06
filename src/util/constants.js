@@ -889,3 +889,4 @@ const MEMBER = [
         image:"https://tj-static.s3.ap-south-1.amazonaws.com/etc/muphoto+-+Honey+Sharma+(1).jpg",
     }
 ];
+export {TEAM_MEMBERS, ALUMNI, MEMBER}
