@@ -374,7 +374,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083760/2018-22/LakshyaBansal_gcnnd5.jpg",
+            "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064689/tj-website/2018-2022/LakshyaBansal_g78s0r.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"},{title: "Linkedin", value: "https://www.linkedin.com/in/proghammer/"}, {title: "Github", value: "https://github.com/prog-hammer/"}],
         email: "bansallakshya94128@gmail.com",
@@ -382,7 +382,7 @@ const TEAM_MEMBERS = [
         id: 32
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083332/2018-22/PiyushKumar_h4mcab.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064689/tj-website/2018-2022/PiyushKumar_vzhnop.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/kpiyush04"}, {
             title: "Github",
@@ -394,7 +394,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083755/2018-22/DanishJamal_xl42ko.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064689/tj-website/2018-2022/DanishJamal_ps713q.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/danishjamal104"}, {
             title: "Github",
@@ -406,7 +406,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083757/2018-22/AryendraPrakashSingh_f0zvn7.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064688/tj-website/2018-2022/AryendraPrakashSingh_zgntyo.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/aryendra-singh-441734112"}, {
             title: "Github",
@@ -418,7 +418,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083757/2018-22/AkhilKumarJha_ussont.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064687/tj-website/2018-2022/AkhilKumarJha_sju7lt.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/theakhiljha"}, {
             title: "Github",
@@ -430,7 +430,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083757/2018-22/NamanJain_vjvxdy.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064689/tj-website/2018-2022/NamanJain_ql5b4b.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/naman-jain-b4827a188"}, {
             title: "Github",
@@ -442,7 +442,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083753/2018-22/3NCRY9T3R_j9ihmg.png",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064687/tj-website/2018-2022/3NCRY9T3R_txjebi.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/skyr4"}, {
             title: "Github",
@@ -466,7 +466,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083751/2018-22/AdarshDwivedi_kpxmvv.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064687/tj-website/2018-2022/AdarshDwivedi_baxwm6.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/itsadarsh8"}, {
             title: "Github",
@@ -478,7 +478,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083770/2018-22/AnjaliDabas_f1locz.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064687/tj-website/2018-2022/AnjaliDabas_ac4y5q.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/anjali-dabas-4185b6181/"}, {
             title: "Github",
@@ -502,7 +502,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083763/2018-22/SameerAhmad_lamave.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064691/tj-website/2018-2022/SameerAhmad_ivpcdw.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sahmad737"}, {
             title: "Github",
@@ -526,7 +526,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083756/2018-22/MayankSrivastava_bphpwt.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064689/tj-website/2018-2022/MayankSrivastava_karplb.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/mayank-srivastav-a733b7192/ "}, {
             title: "Github",
@@ -538,7 +538,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083762/2018-22/SomeshBachani_rkwsqc.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064685/tj-website/2018-2022/SomeshBachani_t4ip1f.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/mwlite/in/somesh-bachani-803233105"}, {
             title: "Github",
@@ -550,7 +550,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083755/2018-22/AyushTiwari_x2t8lo.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064687/tj-website/2018-2022/AyushTiwari_vpn5p0.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/ayushtiwari1028"}, {
             title: "Github",
@@ -562,7 +562,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083761/2018-22/AshwaniTripathi_ktfkqx.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064686/tj-website/2018-2022/AshwaniTripathi_lhhox1.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/betazeon"}, {
             title: "Github",
@@ -574,7 +574,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083771/2018-22/ShreyanshDeep_qpowt3.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064690/tj-website/2018-2022/ShreyanshDeep_slg2wu.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/shreyansh-deep-a4b6b6188"}, {
             title: "Github",
@@ -708,7 +708,7 @@ const TEAM_MEMBERS = [
         id:59
     },
     {
-        Image: " ",
+        Image: "",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sajid-shad-62218a182"}, {
             title: "GitHub",
@@ -744,7 +744,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: " ",
+        Image: "",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/nabhi531"}, {
             title: "GitHub",
@@ -755,7 +755,7 @@ const TEAM_MEMBERS = [
         id:63
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594046402/2017-21/vishesh_tripathi_rlkysr.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064673/tj-website/2017-2021/vishesh_tripathi_akpk1g.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2017-2021"}, {title: "Linkedin", value: "https://www.linkedin.com/mwlite/in/12vishesh"}, {
             title: "GitHub",
@@ -889,4 +889,5 @@ const MEMBER = [
         image:"https://tj-static.s3.ap-south-1.amazonaws.com/etc/muphoto+-+Honey+Sharma+(1).jpg",
     }
 ];
+
 export {TEAM_MEMBERS, ALUMNI, MEMBER}
