@@ -769,7 +769,7 @@ const TEAM_MEMBERS = [
 
 const ALUMNI = [
     {
-        id: 38,
+        id: 65,
         Name: "Honey Sharma",
         email: "honey.singhroi@gmail.com",
         Linkedin: "https://www.linkedin.com/in/honey-sharma-77198314b/",
@@ -781,7 +781,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 39,
+        id: 66,
         Name: "Shivam Mittal",
         email: "shivammittal114@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shivammittal121",
@@ -793,7 +793,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 40,
+        id: 67,
         Name: "Rohith Kandi",
         email: "kandirohith09@gmail.com",
         Linkedin: "https://www.linkedin.com/in/rohith-kandi-77a671108/",
@@ -805,7 +805,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 41,
+        id: 68,
         Name: "Kaustubh",
         email: "kausr2595@gmail.com",
         Linkedin: "https://www.linkedin.com/in/kausr2595/",
@@ -817,7 +817,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 42,
+        id: 69,
         Name: "Aditya Kumar ",
         email: "Aditya12.official@gmail.com ",
         Linkedin: "#",
@@ -829,7 +829,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 43,
+        id: 70,
         Name: "Shivashish Ratnam",
         email: "shivashishratnam@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shivashish-ratnam/",
@@ -841,7 +841,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 44,
+        id: 71,
         Name: "Satya Tripathi",
         email: "satya06.official@gmail.com",
         Linkedin: "#",
@@ -853,7 +853,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 45,
+        id: 72,
         Name: "shashank sharma",
         email: "shashank@thelattice.in",
         Linkedin: "https://www.linkedin.com/in/storytellerr/",
@@ -865,7 +865,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 46,
+        id: 73,
         Name: "Shaurya Chauhan",
         email: "scshaurya@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shauryachauhan/",
