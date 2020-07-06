@@ -454,7 +454,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083852/2019-23/Tarushi_Singh_aoyqkm.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064707/tj-website/2019-2023/Tarushi_Singh_whjaa8.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/mwlite/in/tarushi-singh-901663193"}, {
             title: "Github",
@@ -490,7 +490,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083893/2019-23/nilesh_anand_qvygy5.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064704/tj-website/2019-2023/nilesh_anand_vkmbm9.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/nileshanand16"}, {
             title: "Github",
@@ -514,7 +514,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083851/2019-23/suraj_choudhary_wehbhm.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064707/tj-website/2019-2023/suraj_choudhary_grqgcb.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/suraj-chaudhary-848a63192"}, {
             title: "Github",
@@ -585,7 +585,7 @@ const TEAM_MEMBERS = [
         id:49
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083838/2019-23/rohan_kumar_ljvyum.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064706/tj-website/2019-2023/rohan_kumar_vq3smh.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/rohan-rajput-024bb818a"}, {
             title: "GitHub",
@@ -597,7 +597,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083851/2019-23/mohd_usaid_bue322.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064705/tj-website/2019-2023/mohd_usaid_defpjv.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/mohd-usaid-446927183"}, {
             title: "GitHub",
@@ -609,7 +609,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083845/2019-23/Tanish_pundir_hsi6rh.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064708/tj-website/2019-2023/Tanish_pundir_semrt7.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/tanishq-pundir-a2b665193"}, {
             title: "GitHub",
@@ -621,7 +621,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083842/2019-23/Shreyansh_Singh_ps2qqs.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064707/tj-website/2019-2023/Shreyansh_Singh_gf9bdj.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/shreyansh-singh2107"}, {
             title: "GitHub",
@@ -634,7 +634,7 @@ const TEAM_MEMBERS = [
 
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083836/2019-23/Kartik_kumar_dnx5fn.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064703/tj-website/2019-2023/Kartik_kumar_pjgsol.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/kartik-aggarwal-b29728192/"}, {
             title: "GitHub",
@@ -646,7 +646,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083876/2019-23/Piyush_ChandraTJ_soljq6.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064706/tj-website/2019-2023/Piyush_ChandraTJ_rnixui.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/piyushchandra357/"}, {
             title: "GitHub",
@@ -658,7 +658,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083882/2019-23/Md.__Shahroz_Nasir_pajbq9.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064705/tj-website/2019-2023/Md.__Shahroz_Nasir_amvcop.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/md-shahroz-nasir-a03580199"}, {
             title: "GitHub",
@@ -670,7 +670,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083839/2019-23/Sarthak_Agarwal_mvmf9u.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064712/tj-website/2019-2023/Sarthak_Agarwal_awpwel.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sarthak-agarwal-90a381193"}, {
             title: "GitHub",
@@ -684,7 +684,7 @@ const TEAM_MEMBERS = [
 
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083839/2019-23/akshat_mittal_kdiczs.png",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064702/tj-website/2019-2023/akshat_mittal_qrhhlw.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/akshat-mittal29"}, {
             title: "GitHub",
@@ -697,7 +697,7 @@ const TEAM_MEMBERS = [
 
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083840/2019-23/Shivansh_srivastava_vpj5jl.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064706/tj-website/2019-2023/Shivansh_srivastava_nj8js6.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/shivansh-srivastava-b52a49192/"}, {
             title: "GitHub",
@@ -720,7 +720,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083842/2019-23/Shubham_Satyam_Dubey_znrh1k.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064707/tj-website/2019-2023/Shubham_Satyam_Dubey_x7x4yc.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/shubham-satyam-926059193/"}, {
             title: "GitHub",
@@ -732,7 +732,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083843/2019-23/Suryansh_Pratap_Singh_fivps1.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064707/tj-website/2019-2023/Suryansh_Pratap_Singh_ekfpug.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://linkedin.com/in/surpsi"}, {
             title: "GitHub",
