@@ -753,6 +753,17 @@ const TEAM_MEMBERS = [
         email: "nabhi531@gmail.com",
         Name: "Abhishek Nigam",
         id:63
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594046402/2017-21/vishesh_tripathi_rlkysr.jpg",
+        tilte: "Image",
+        details: [{title: "Batch", value: "2017-2021"}, {title: "Linkedin", value: "https://www.linkedin.com/mwlite/in/12vishesh"}, {
+            title: "GitHub",
+            value: "https://github.com/12VISHESH"
+        }],
+        email: "visheshtripathivns505@gmail.com",
+        Name: "Vishesh Tripathi",
+        id:64
     }
 ];
 
