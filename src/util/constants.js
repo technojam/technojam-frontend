@@ -470,7 +470,7 @@ const TEAM_MEMBERS = [
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/itsadarsh8"}, {
             title: "Github",
-            value: "https://github.com/itsadarsh8/website-pushstart"
+            value: "https://github.com/itsadarsh8"
         }],
         email: "itsadarsh8@gmail.com",
         Name: "Adarsh Dwivedi",
@@ -554,7 +554,7 @@ const TEAM_MEMBERS = [
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/ayushtiwari1028"}, {
             title: "Github",
-            value: "https://www.github.com/Cipher2472"
+            value: "https://www.github.com/ayush0x00"
         }],
         email: "ayushtiwari5747462@gmail.com",
         Name: "Ayush Tiwari",
@@ -732,7 +732,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064707/tj-website/2019-2023/Suryansh_Pratap_Singh_ekfpug.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594298296/2019-23/suryansh_pratap_singh_f4x52a.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://linkedin.com/in/surpsi"}, {
             title: "GitHub",
@@ -744,7 +744,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594298296/2019-23/abhishek_nigam_dfel83.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/nabhi531"}, {
             title: "GitHub",
