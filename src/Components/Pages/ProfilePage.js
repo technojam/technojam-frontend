@@ -19,6 +19,17 @@ const style = {
     }
 };
 
+const handleValue=(title,value)=>{
+    if(title==="Batch"){
+        return value
+    }
+    else{
+        return <a href={value} target="_blank">
+        {value}
+        </a>
+    }
+}
+
 export default class ProfilePage extends React.Component {
     constructor(props) {
         super(props);
@@ -65,7 +76,9 @@ export default class ProfilePage extends React.Component {
                                             {this.state.currentProfile.details.map((detail, index) => (
                                                 <TableRow key={`detail-${index}`}>
                                                     <TableCell component="th" scope="row">{detail.title}</TableCell>
-                                                    <TableCell align="right">{detail.value}</TableCell>
+                                                    <TableCell align="right">
+                                                        {handleValue(detail.title,detail.value)}
+                                                    </TableCell>
                                                 </TableRow>
                                             ))}
                                         </TableBody>
