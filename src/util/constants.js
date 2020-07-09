@@ -901,4 +901,4 @@ const MEMBER = [
     }
 ];
 
-export {TEAM_MEMBERS, ALUMNI, MEMBER}a
+export {TEAM_MEMBERS, ALUMNI, MEMBER}
