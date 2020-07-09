@@ -3,11 +3,11 @@ const TEAM_MEMBERS = [
         Image:
             "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Anubhav+Raj+Singh.jpeg",
         tilte: "Image",
-        details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
-            title: "Detail",
-            value: "Value"
+        details: [{title: "Batch", value: "2016-20"}, {title: "Linkedin", value: "https://www.linkedin.com/in/anubhavraj08/"}, {
+            title: "Github",
+            value: "https://github.com/aanurraj"
         }],
-        email: "team-memeber@technojam.com",
+        email: "anubhavraj.08@gmail.com",
         Name: "Anubhav Raj Singh",
         id: 0
     },
@@ -707,17 +707,17 @@ const TEAM_MEMBERS = [
         Name: "Shivansh srivastava",
         id:59
     },
-    {
-        Image: "",
-        tilte: "Image",
-        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sajid-shad-62218a182"}, {
-            title: "GitHub",
-            value: "https://github.com/SajidEqubal"
-        }],
-        email: "equbalshajid8@gmail.com",
-        Name: "Shajid Equbal",
-        id:60
-    },
+    // {
+    //     Image: "",
+    //     tilte: "Image",
+    //     details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sajid-shad-62218a182"}, {
+    //         title: "GitHub",
+    //         value: "https://github.com/SajidEqubal"
+    //     }],
+    //     email: "equbalshajid8@gmail.com",
+    //     Name: "Shajid Equbal",
+    //     id:60
+    // },
 
     {
         Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064707/tj-website/2019-2023/Shubham_Satyam_Dubey_x7x4yc.jpg",
@@ -764,12 +764,23 @@ const TEAM_MEMBERS = [
         email: "visheshtripathivns505@gmail.com",
         Name: "Vishesh Tripathi",
         id:64
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594304028/2018-22/Anju_Kumari_v9qvck.jpg",
+        tilte: "Image",
+        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/anju-kumari-3271a7179"}, {
+            title: "Github",
+            value: "https://github.com/Anju1415"
+        }],
+        email: "kumarianju.3346@gmail.com",
+        Name: "Anju Kumari",
+        id:65
     }
 ];
 
 const ALUMNI = [
     {
-        id: 65,
+        id: 100,
         Name: "Honey Sharma",
         email: "honey.singhroi@gmail.com",
         Linkedin: "https://www.linkedin.com/in/honey-sharma-77198314b/",
@@ -781,7 +792,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 66,
+        id: 101,
         Name: "Shivam Mittal",
         email: "shivammittal114@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shivammittal121",
@@ -793,7 +804,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 67,
+        id: 102,
         Name: "Rohith Kandi",
         email: "kandirohith09@gmail.com",
         Linkedin: "https://www.linkedin.com/in/rohith-kandi-77a671108/",
@@ -805,7 +816,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 68,
+        id: 103,
         Name: "Kaustubh",
         email: "kausr2595@gmail.com",
         Linkedin: "https://www.linkedin.com/in/kausr2595/",
@@ -817,7 +828,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 69,
+        id: 104,
         Name: "Aditya Kumar ",
         email: "Aditya12.official@gmail.com ",
         Linkedin: "#",
@@ -829,7 +840,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 70,
+        id: 105,
         Name: "Shivashish Ratnam",
         email: "shivashishratnam@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shivashish-ratnam/",
@@ -841,7 +852,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 71,
+        id: 106,
         Name: "Satya Tripathi",
         email: "satya06.official@gmail.com",
         Linkedin: "#",
@@ -853,7 +864,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 72,
+        id: 107,
         Name: "shashank sharma",
         email: "shashank@thelattice.in",
         Linkedin: "https://www.linkedin.com/in/storytellerr/",
@@ -865,7 +876,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 73,
+        id: 108,
         Name: "Shaurya Chauhan",
         email: "scshaurya@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shauryachauhan/",
@@ -890,4 +901,4 @@ const MEMBER = [
     }
 ];
 
-export {TEAM_MEMBERS, ALUMNI, MEMBER}
+export {TEAM_MEMBERS, ALUMNI, MEMBER}a
