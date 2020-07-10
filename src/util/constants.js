@@ -299,7 +299,7 @@ const TEAM_MEMBERS = [
         email: "I.sakshi06@gmail.com",
         Name: "Sakshi Gupta",
         id:25
-    }
+    },
     {
         Image:
             "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Saloni+Mehra.jpg",
