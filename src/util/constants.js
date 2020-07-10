@@ -317,11 +317,11 @@ const TEAM_MEMBERS = [
         Image:
             "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Satyam+Bharti.jpeg",
         tilte: "Image",
-        details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
-            title: "Detail",
-            value: "Value"
+        details: [{title: "Batch", value: "2017-2021"}, {title: "LinkedIn", value: "https://www.linkedin.com/in/satyambharti171/"}, {
+            title: "Github",
+            value: "https://github.com/satyambharti171"
         }],
-        email: "team-memeber@technojam.com",
+        email: "bharti.satyam94724@gmail.com",
         Name: "Satyam Bharti",
         id: 27
     },
