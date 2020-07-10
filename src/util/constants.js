@@ -290,16 +290,15 @@ const TEAM_MEMBERS = [
         id: 24
     },
     {
-        Image:
-            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/sakshi+gupta.jpg",
+        Image: "https://tj-static.s3.ap-south-1.amazonaws.com/Img/sakshi+gupta.jpg",
         tilte: "Image",
-        details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
-            title: "Detail",
-            value: "Value"
+        details: [{title: "Batch", value: "2017-2021"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sakshigupta06"}, {
+            title: "Github",
+            value: "http://www.github.com/sakshigupta06"
         }],
-        email: "team-memeber@technojam.com",
+        email: "I.sakshi06@gmail.com",
         Name: "Sakshi Gupta",
-        id: 25
+        id:25
     },
     {
         Image:
