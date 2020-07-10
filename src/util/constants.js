@@ -774,6 +774,17 @@ const TEAM_MEMBERS = [
         email: "kumarianju.3346@gmail.com",
         Name: "Anju Kumari",
         id:65
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594368850/2019-23/isha_gupta_r5tvzp.jpg",
+        tilte: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/ishagupta20/"}, {
+            title: "Github",
+            value: "https://github.com/Isha2103"
+        }],
+        email: "ishagupta2103@gmail.com",
+        Name: "Isha Gupta",
+        id:66
     }
 ];
 
