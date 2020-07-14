@@ -907,19 +907,7 @@ const ALUMNI = [
             title: "Detail",
             value: "Value"
         }],
-    }
-    {
-        email: "tanishq_agarwal.scsebtech@galgotiasuniversity.edu.in",
-        Name: "Tanishq Agarwal",
-        id: 67,
-	Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594637672/2019-23/tanishq_agarwal_fe7skp.jpg",
-        tilte: "Image",
-        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/tanishq-agarwal-10a9371a0"}, {
-            title: "Github",
-            value: "https://github.com/tanishq-agarwal"
-        }],
-        
-    }	
+   }	
 ];
 
 const MEMBER = [
