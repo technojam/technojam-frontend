@@ -407,7 +407,7 @@ const TEAM_MEMBERS = [
     {
         Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064688/tj-website/2018-2022/AryendraPrakashSingh_zgntyo.jpg",
         tilte: "Image",
-        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/aryendra-singh-441734112"}, {
+        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/prakash-aryendra/"}, {
             title: "Github",
             value: "https://github.com/prakasharyendra"
         }],
