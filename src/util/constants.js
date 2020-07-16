@@ -85,11 +85,11 @@ const TEAM_MEMBERS = [
         Image:
             "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Anshika+Soni.jpg",
         tilte: "Image",
-        details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
-            title: "Detail",
-            value: "Value"
+        details: [{title: "Batch", value: "2017-2021"}, {title: "LinkedIn", value: "https://www.linkedin.com/in/anshikasoni"}, {
+            title: "GitHub",
+            value: "https://github.com/Anshikasoni"
         }],
-        email: "team-memeber@technojam.com",
+        email: "anshikasoni665@gmail.com",
         Name: "Anshika soni",
         id: 7
     },
