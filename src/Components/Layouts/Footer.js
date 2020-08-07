@@ -56,7 +56,7 @@ export default props => (
              
               <a
                
-                href="https://instagram.com/technojam_galgotias"
+                href="https://www.instagram.com/teamtechnojam/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -94,7 +94,7 @@ export default props => (
             >
               <a
                 className="btn btn-social-icon btn-twitter"
-                href=" https://twitter.com/technojam_gu"
+                href="https://twitter.com/technojam_gu"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -108,7 +108,7 @@ export default props => (
             
               <a
                 className="btn btn-social-icon btn-facebook"
-                href="facebook.com/technojam.scse "
+                href="https://www.facebook.com/teamtechnojam"
                 target="_blank"
                 rel="noopener noreferrer"
               >
