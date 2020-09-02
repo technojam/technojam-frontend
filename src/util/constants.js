@@ -3,11 +3,11 @@ const TEAM_MEMBERS = [
         Image:
             "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Anubhav+Raj+Singh.jpeg",
         tilte: "Image",
-        details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
-            title: "Detail",
-            value: "Value"
+        details: [{title: "Batch", value: "2016-20"}, {title: "Linkedin", value: "https://www.linkedin.com/in/anubhavraj08/"}, {
+            title: "Github",
+            value: "https://github.com/aanurraj"
         }],
-        email: "team-memeber@technojam.com",
+        email: "anubhavraj.08@gmail.com",
         Name: "Anubhav Raj Singh",
         id: 0
     },
@@ -85,11 +85,11 @@ const TEAM_MEMBERS = [
         Image:
             "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Anshika+Soni.jpg",
         tilte: "Image",
-        details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
-            title: "Detail",
-            value: "Value"
+        details: [{title: "Batch", value: "2017-2021"}, {title: "LinkedIn", value: "https://www.linkedin.com/in/anshikasoni"}, {
+            title: "GitHub",
+            value: "https://github.com/Anshikasoni"
         }],
-        email: "team-memeber@technojam.com",
+        email: "anshikasoni665@gmail.com",
         Name: "Anshika soni",
         id: 7
     },
@@ -290,16 +290,15 @@ const TEAM_MEMBERS = [
         id: 24
     },
     {
-        Image:
-            "https://tj-static.s3.ap-south-1.amazonaws.com/Img/sakshi+gupta.jpg",
+        Image: "https://tj-static.s3.ap-south-1.amazonaws.com/Img/sakshi+gupta.jpg",
         tilte: "Image",
-        details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
-            title: "Detail",
-            value: "Value"
+        details: [{title: "Batch", value: "2017-2021"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sakshigupta06"}, {
+            title: "Github",
+            value: "http://www.github.com/sakshigupta06"
         }],
-        email: "team-memeber@technojam.com",
+        email: "I.sakshi06@gmail.com",
         Name: "Sakshi Gupta",
-        id: 25
+        id:25
     },
     {
         Image:
@@ -317,11 +316,11 @@ const TEAM_MEMBERS = [
         Image:
             "https://tj-static.s3.ap-south-1.amazonaws.com/Img/Satyam+Bharti.jpeg",
         tilte: "Image",
-        details: [{title: "Detail", value: "Value"}, {title: "Detail", value: "Value"}, {
-            title: "Detail",
-            value: "Value"
+        details: [{title: "Batch", value: "2017-2021"}, {title: "LinkedIn", value: "https://www.linkedin.com/in/satyambharti171/"}, {
+            title: "Github",
+            value: "https://github.com/satyambharti171"
         }],
-        email: "team-memeber@technojam.com",
+        email: "bharti.satyam94724@gmail.com",
         Name: "Satyam Bharti",
         id: 27
     },
@@ -374,7 +373,7 @@ const TEAM_MEMBERS = [
     },
     {
         Image:
-            "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083760/2018-22/LakshyaBansal_gcnnd5.jpg",
+            "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064689/tj-website/2018-2022/LakshyaBansal_g78s0r.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"},{title: "Linkedin", value: "https://www.linkedin.com/in/proghammer/"}, {title: "Github", value: "https://github.com/prog-hammer/"}],
         email: "bansallakshya94128@gmail.com",
@@ -382,7 +381,7 @@ const TEAM_MEMBERS = [
         id: 32
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083332/2018-22/PiyushKumar_h4mcab.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064689/tj-website/2018-2022/PiyushKumar_vzhnop.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/kpiyush04"}, {
             title: "Github",
@@ -394,7 +393,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083755/2018-22/DanishJamal_xl42ko.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064689/tj-website/2018-2022/DanishJamal_ps713q.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/danishjamal104"}, {
             title: "Github",
@@ -406,9 +405,9 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083757/2018-22/AryendraPrakashSingh_f0zvn7.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064688/tj-website/2018-2022/AryendraPrakashSingh_zgntyo.jpg",
         tilte: "Image",
-        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/aryendra-singh-441734112"}, {
+        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/prakash-aryendra/"}, {
             title: "Github",
             value: "https://github.com/prakasharyendra"
         }],
@@ -418,7 +417,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083757/2018-22/AkhilKumarJha_ussont.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064687/tj-website/2018-2022/AkhilKumarJha_sju7lt.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/theakhiljha"}, {
             title: "Github",
@@ -430,7 +429,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083757/2018-22/NamanJain_vjvxdy.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064689/tj-website/2018-2022/NamanJain_ql5b4b.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/naman-jain-b4827a188"}, {
             title: "Github",
@@ -442,7 +441,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083753/2018-22/3NCRY9T3R_j9ihmg.png",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064687/tj-website/2018-2022/3NCRY9T3R_txjebi.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/skyr4"}, {
             title: "Github",
@@ -454,7 +453,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083852/2019-23/Tarushi_Singh_aoyqkm.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064707/tj-website/2019-2023/Tarushi_Singh_whjaa8.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/mwlite/in/tarushi-singh-901663193"}, {
             title: "Github",
@@ -466,11 +465,11 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083751/2018-22/AdarshDwivedi_kpxmvv.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064687/tj-website/2018-2022/AdarshDwivedi_baxwm6.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/itsadarsh8"}, {
             title: "Github",
-            value: "https://github.com/itsadarsh8/website-pushstart"
+            value: "https://github.com/itsadarsh8"
         }],
         email: "itsadarsh8@gmail.com",
         Name: "Adarsh Dwivedi",
@@ -478,7 +477,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083770/2018-22/AnjaliDabas_f1locz.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064687/tj-website/2018-2022/AnjaliDabas_ac4y5q.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/anjali-dabas-4185b6181/"}, {
             title: "Github",
@@ -490,7 +489,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083893/2019-23/nilesh_anand_qvygy5.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064704/tj-website/2019-2023/nilesh_anand_vkmbm9.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/nileshanand16"}, {
             title: "Github",
@@ -502,7 +501,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083763/2018-22/SameerAhmad_lamave.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064691/tj-website/2018-2022/SameerAhmad_ivpcdw.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sahmad737"}, {
             title: "Github",
@@ -514,7 +513,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083851/2019-23/suraj_choudhary_wehbhm.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064707/tj-website/2019-2023/suraj_choudhary_grqgcb.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/suraj-chaudhary-848a63192"}, {
             title: "Github",
@@ -526,7 +525,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083756/2018-22/MayankSrivastava_bphpwt.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064689/tj-website/2018-2022/MayankSrivastava_karplb.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/mayank-srivastav-a733b7192/ "}, {
             title: "Github",
@@ -538,7 +537,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083762/2018-22/SomeshBachani_rkwsqc.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064685/tj-website/2018-2022/SomeshBachani_t4ip1f.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/mwlite/in/somesh-bachani-803233105"}, {
             title: "Github",
@@ -550,11 +549,11 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083755/2018-22/AyushTiwari_x2t8lo.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064687/tj-website/2018-2022/AyushTiwari_vpn5p0.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/ayushtiwari1028"}, {
             title: "Github",
-            value: "https://www.github.com/Cipher2472"
+            value: "https://www.github.com/ayush0x00"
         }],
         email: "ayushtiwari5747462@gmail.com",
         Name: "Ayush Tiwari",
@@ -562,7 +561,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083761/2018-22/AshwaniTripathi_ktfkqx.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064686/tj-website/2018-2022/AshwaniTripathi_lhhox1.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/betazeon"}, {
             title: "Github",
@@ -574,7 +573,7 @@ const TEAM_MEMBERS = [
 
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083771/2018-22/ShreyanshDeep_qpowt3.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064690/tj-website/2018-2022/ShreyanshDeep_slg2wu.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/shreyansh-deep-a4b6b6188"}, {
             title: "Github",
@@ -585,7 +584,7 @@ const TEAM_MEMBERS = [
         id:49
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083838/2019-23/rohan_kumar_ljvyum.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064706/tj-website/2019-2023/rohan_kumar_vq3smh.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/rohan-rajput-024bb818a"}, {
             title: "GitHub",
@@ -597,7 +596,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083851/2019-23/mohd_usaid_bue322.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064705/tj-website/2019-2023/mohd_usaid_defpjv.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/mohd-usaid-446927183"}, {
             title: "GitHub",
@@ -609,7 +608,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083845/2019-23/Tanish_pundir_hsi6rh.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064708/tj-website/2019-2023/Tanish_pundir_semrt7.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/tanishq-pundir-a2b665193"}, {
             title: "GitHub",
@@ -621,7 +620,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083842/2019-23/Shreyansh_Singh_ps2qqs.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064707/tj-website/2019-2023/Shreyansh_Singh_gf9bdj.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/shreyansh-singh2107"}, {
             title: "GitHub",
@@ -634,7 +633,7 @@ const TEAM_MEMBERS = [
 
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083836/2019-23/Kartik_kumar_dnx5fn.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064703/tj-website/2019-2023/Kartik_kumar_pjgsol.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/kartik-aggarwal-b29728192/"}, {
             title: "GitHub",
@@ -646,7 +645,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083876/2019-23/Piyush_ChandraTJ_soljq6.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064706/tj-website/2019-2023/Piyush_ChandraTJ_rnixui.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/piyushchandra357/"}, {
             title: "GitHub",
@@ -658,7 +657,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083882/2019-23/Md.__Shahroz_Nasir_pajbq9.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064705/tj-website/2019-2023/Md.__Shahroz_Nasir_amvcop.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/md-shahroz-nasir-a03580199"}, {
             title: "GitHub",
@@ -670,7 +669,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083839/2019-23/Sarthak_Agarwal_mvmf9u.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064712/tj-website/2019-2023/Sarthak_Agarwal_awpwel.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sarthak-agarwal-90a381193"}, {
             title: "GitHub",
@@ -684,7 +683,7 @@ const TEAM_MEMBERS = [
 
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083839/2019-23/akshat_mittal_kdiczs.png",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064702/tj-website/2019-2023/akshat_mittal_qrhhlw.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/akshat-mittal29"}, {
             title: "GitHub",
@@ -697,7 +696,7 @@ const TEAM_MEMBERS = [
 
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083840/2019-23/Shivansh_srivastava_vpj5jl.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064706/tj-website/2019-2023/Shivansh_srivastava_nj8js6.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/shivansh-srivastava-b52a49192/"}, {
             title: "GitHub",
@@ -707,20 +706,20 @@ const TEAM_MEMBERS = [
         Name: "Shivansh srivastava",
         id:59
     },
-    {
-        Image: " ",
-        tilte: "Image",
-        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sajid-shad-62218a182"}, {
-            title: "GitHub",
-            value: "https://github.com/SajidEqubal"
-        }],
-        email: "equbalshajid8@gmail.com",
-        Name: "Shajid Equbal",
-        id:60
-    },
+    // {
+    //     Image: "",
+    //     tilte: "Image",
+    //     details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sajid-shad-62218a182"}, {
+    //         title: "GitHub",
+    //         value: "https://github.com/SajidEqubal"
+    //     }],
+    //     email: "equbalshajid8@gmail.com",
+    //     Name: "Shajid Equbal",
+    //     id:60
+    // },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083842/2019-23/Shubham_Satyam_Dubey_znrh1k.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064707/tj-website/2019-2023/Shubham_Satyam_Dubey_x7x4yc.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/shubham-satyam-926059193/"}, {
             title: "GitHub",
@@ -732,7 +731,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1593083843/2019-23/Suryansh_Pratap_Singh_fivps1.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594298296/2019-23/suryansh_pratap_singh_f4x52a.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://linkedin.com/in/surpsi"}, {
             title: "GitHub",
@@ -744,7 +743,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: " ",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594298296/2019-23/abhishek_nigam_dfel83.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/nabhi531"}, {
             title: "GitHub",
@@ -755,7 +754,7 @@ const TEAM_MEMBERS = [
         id:63
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594046402/2017-21/vishesh_tripathi_rlkysr.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064673/tj-website/2017-2021/vishesh_tripathi_akpk1g.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2017-2021"}, {title: "Linkedin", value: "https://www.linkedin.com/mwlite/in/12vishesh"}, {
             title: "GitHub",
@@ -764,12 +763,45 @@ const TEAM_MEMBERS = [
         email: "visheshtripathivns505@gmail.com",
         Name: "Vishesh Tripathi",
         id:64
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594304028/2018-22/Anju_Kumari_v9qvck.jpg",
+        tilte: "Image",
+        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/anju-kumari-3271a7179"}, {
+            title: "Github",
+            value: "https://github.com/Anju1415"
+        }],
+        email: "kumarianju.3346@gmail.com",
+        Name: "Anju Kumari",
+        id:65
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594368850/2019-23/isha_gupta_r5tvzp.jpg",
+        tilte: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/ishagupta20/"}, {
+            title: "Github",
+            value: "https://github.com/Isha2103"
+        }],
+        email: "ishagupta2103@gmail.com",
+        Name: "Isha Gupta",
+        id:66
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594637672/2019-23/tanishq_agarwal_fe7skp.jpg",
+        tilte: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/tanishq-agarwal-10a9371a0"}, {
+            title: "Github",
+            value: "https://github.com/tanishq-agarwal"
+        }],
+        email: "tanishq_agarwal.scsebtech@galgotiasuniversity.edu.in",
+        Name: "Tanishq Agarwal",
+        id:67
     }
 ];
 
 const ALUMNI = [
     {
-        id: 38,
+        id: 100,
         Name: "Honey Sharma",
         email: "honey.singhroi@gmail.com",
         Linkedin: "https://www.linkedin.com/in/honey-sharma-77198314b/",
@@ -781,7 +813,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 39,
+        id: 101,
         Name: "Shivam Mittal",
         email: "shivammittal114@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shivammittal121",
@@ -793,7 +825,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 40,
+        id: 102,
         Name: "Rohith Kandi",
         email: "kandirohith09@gmail.com",
         Linkedin: "https://www.linkedin.com/in/rohith-kandi-77a671108/",
@@ -805,7 +837,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 41,
+        id: 103,
         Name: "Kaustubh",
         email: "kausr2595@gmail.com",
         Linkedin: "https://www.linkedin.com/in/kausr2595/",
@@ -817,7 +849,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 42,
+        id: 104,
         Name: "Aditya Kumar ",
         email: "Aditya12.official@gmail.com ",
         Linkedin: "#",
@@ -829,7 +861,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 43,
+        id: 105,
         Name: "Shivashish Ratnam",
         email: "shivashishratnam@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shivashish-ratnam/",
@@ -841,7 +873,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 44,
+        id: 106,
         Name: "Satya Tripathi",
         email: "satya06.official@gmail.com",
         Linkedin: "#",
@@ -853,7 +885,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 45,
+        id: 107,
         Name: "shashank sharma",
         email: "shashank@thelattice.in",
         Linkedin: "https://www.linkedin.com/in/storytellerr/",
@@ -865,7 +897,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 46,
+        id: 108,
         Name: "Shaurya Chauhan",
         email: "scshaurya@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shauryachauhan/",
@@ -875,7 +907,7 @@ const ALUMNI = [
             title: "Detail",
             value: "Value"
         }],
-    }
+   }	
 ];
 
 const MEMBER = [
@@ -889,3 +921,5 @@ const MEMBER = [
         image:"https://tj-static.s3.ap-south-1.amazonaws.com/etc/muphoto+-+Honey+Sharma+(1).jpg",
     }
 ];
+
+export {TEAM_MEMBERS, ALUMNI, MEMBER}
