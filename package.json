@@ -30,7 +30,7 @@
     "react-spinners": "^0.6.1",
     "react-twitter-embed": "^2.0.8",
     "react-vertical-timeline-component": "^2.5.0",
-    "serve": "^11.2.0",
+    "serve": "^11.3.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.4.0",
     "typeface-roboto": "0.0.75",
