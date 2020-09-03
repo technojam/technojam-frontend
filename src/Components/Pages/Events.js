@@ -76,12 +76,25 @@ const Events = () => {
 	const handleClose = () => {
 		setOpen(false);
 	};
+	//button to display amount if ispaid event
+	const renderAmount=(event)=>{
+		if(event.isPaid=="Yes"){
+			return "Amount: "+event.amount
+		}
+		else{
 
+		}
+	}
+	const renderTeamSize=(event)=>{
+		if(event.type=="Team"){
+			return "Team Size: "+event.teamSize;
+		}
+	}
 	useEffect(() => {
 		// console.log('past events are:', paevent);
 		// paevent = events.filter(e => new Date(e.timing) < new Date());
-		setPaevent(events.filter(e => new Date(e.timing) < new Date()));
-		setUpevent(events.filter(e => new Date(e.timing) >= new Date()));
+		setPaevent(events.filter(e => new Date(e.date) < new Date()));
+		setUpevent(events.filter(e => new Date(e.date) >= new Date()));
 		setTimeout(() => {
 			setEventMessage('No events currently available');
 		}, 5000);
@@ -150,7 +163,30 @@ const Events = () => {
 														color='Secondary'
 														component='p'
 													>
-														<b>{new Date(event.timing).toDateString()}</b>
+														<b>{new Date(event.date).toDateString()}</b>
+														<br></br>
+														
+													</Typography>
+													<Typography
+														variant='body2'
+														color='textSecondary'
+														component='p'
+													>
+														<b>Timing: </b>{event.timing}
+														<br></br>
+														<b>Event Type: </b>{event.type}
+														&nbsp;
+														<b>{
+															renderTeamSize(event)
+														}
+														</b>
+														<br></br>
+														<b>Paid Event: </b>{event.isPaid}
+														&nbsp;
+														<b>{
+															renderAmount(event)
+														}
+														</b>
 													</Typography>
 												</CardContent>
 												<CardContent className='card_content_top'>
@@ -163,7 +199,7 @@ const Events = () => {
 															lineHeight: '24px'
 														}}
 													>
-														{event.desciption}
+														{event.description}
 														<br />
 														{event.longDescription}
 													</Typography>
