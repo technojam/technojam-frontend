@@ -57,7 +57,8 @@ const Event = () => {
 		date: '',
 		isPaid:'',
 		amount:"",
-		teamSize: ''
+		teamSize: '',
+		resources:""
 	});
 
 	const handleChange = e => {
@@ -379,6 +380,22 @@ const Event = () => {
 												style={style.form.text}
 												type='number'
 												name='amount'
+												defaultValue='0'
+												onChange={handleChange}
+											/>
+										</FormGroup>
+										<br></br>
+									</Grid>
+								</Grid>
+								<Grid container spacing={3}>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Resources (Link)</label>
+
+											<input
+												style={style.form.text}
+												type='text'
+												name='resources'
 												defaultValue='0'
 												onChange={handleChange}
 											/>

@@ -300,7 +300,7 @@ const Events = () => {
 														color='Secondary'
 														component='p'
 													>
-														<b>{new Date(event.timing).toDateString()}</b>
+														<b>{new Date(event.date).toDateString()}</b>
 													</Typography>
 												</CardContent>
 												<CardContent className='card_content_top'>
@@ -313,7 +313,7 @@ const Events = () => {
 															lineHeight: '24px'
 														}}
 													>
-														{event.desciption}
+														{event.description}
 														<br />
 														{event.longDescription}
 													</Typography>
@@ -333,7 +333,7 @@ const Events = () => {
 														variant='outlined'
 														style={{ marginLeft: '10px' }}
 														target='_blank'
-														href='https://github.com/technojam'
+														href={event.resources}
 													>
 														Resources
 													</Button>
