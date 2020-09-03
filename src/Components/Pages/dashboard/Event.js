@@ -58,7 +58,7 @@ const Event = () => {
 		isPaid:'',
 		amount:"",
 		teamSize: '',
-		resources:""
+		resources:''
 	});
 
 	const handleChange = e => {
@@ -69,17 +69,19 @@ const Event = () => {
 	};
 
 	const handleSubmit=()=>{
-		// const message={
-		// 	"type":"single",
-		// 	"name":"Web D workshop",
-		// 	"description":"2 day workshop covering basic of HTML,CSS and JavaScript",
-		// 	"longDescription":"wilruhsioghrouehuioghufhsodvhsdjfhorufgwrhcfoASDcfcfwejipiopflkwnflkscnvjeno",
-		// 	"capacity":"150",
-		// 	"venue":"Virtual",
-		// 	"timing":"Sunday,Monday Aug 23&24 2020",
-		// 	"isPaid":"false",
-		// 	"amount":"0"
-		// }
+		const message={
+			type:"Single",
+			name:"ML workshop",
+			description:"2 day workshop covering basic of HTML,CSS and JavaScript",
+			capacity:"150",
+			venue:"Virtual",
+			timing:"10:00",
+			date:"2020-08-23",
+			isPaid:"No",
+			teamSize:"0",
+			amount:"0",
+			resources:"https://github.com/technojam/Workshop-Resources/tree/master/2-Day%20Web%20D%20Workshop%20-%2023-24%20AUG%202020"
+		}
 		alert("hello"+JSON.stringify(details))
 		fetch(backendUrl+"/api/events/add",{
 			method:'post',
