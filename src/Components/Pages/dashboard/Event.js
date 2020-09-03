@@ -17,7 +17,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Checkbox from '@material-ui/core/Checkbox';
 import EventTable from './EventTable';
-
+import {backendUrl} from "../../../context/types"
 const style = {
 	marginTop: '112px',
 	form: {
@@ -47,13 +47,18 @@ const Event = () => {
 	const { events } = eventContext;
 
 	const [details, setDetails] = useState({
-		Eventname: '',
-		Date: '',
-		Venue: '',
-		Time: '',
-		Shortdescription: '',
-		EventType: '',
-		TeamSize: ''
+		type: '',
+		name: '',
+		description: '',
+		longDescription:'',
+		capacity:'',
+		venue: '',
+		timing: '',
+		date: '',
+		isPaid:'',
+		amount:"",
+		teamSize: '',
+		resources:''
 	});
 
 	const handleChange = e => {
@@ -62,6 +67,43 @@ const Event = () => {
 			[e.target.name]: e.target.value
 		});
 	};
+
+	const handleSubmit=()=>{
+		const message={
+			type:"Single",
+			name:"ML workshop",
+			description:"2 day workshop covering basic of HTML,CSS and JavaScript",
+			capacity:"150",
+			venue:"Virtual",
+			timing:"10:00",
+			date:"2020-08-23",
+			isPaid:"No",
+			teamSize:"0",
+			amount:"0",
+			resources:"https://github.com/technojam/Workshop-Resources/tree/master/2-Day%20Web%20D%20Workshop%20-%2023-24%20AUG%202020"
+		}
+		alert("hello"+JSON.stringify(details))
+		fetch(backendUrl+"/api/events/add",{
+			method:'post',
+			headers:{
+				"Content-Type":"application/json",
+				"x-auth-token":localStorage.getItem('token')
+			},
+			body:JSON.stringify(details)
+		}).then(response=>{
+			if(response.ok){
+				alert("Event added successfully")
+			}else{
+				var error=new Error('Error'+response.status+':'+response.statusText);
+				error.response=response;
+				throw error;
+			}
+		})
+		.catch(err=>{
+            console.log(err)
+		})
+		
+	}
 
 	return (
 		<section>
@@ -215,7 +257,7 @@ const Event = () => {
 					<Divider></Divider>
 					<ExpansionPanelDetails>
 						<div style={style.form}>
-							<form autoComplete='on'>
+							<form autoComplete='on' onSubmit={handleSubmit}>
 								<Grid container spacing={3}>
 									<Grid item xs={12} md={4}>
 										<FormGroup>
@@ -224,12 +266,12 @@ const Event = () => {
 											<input
 												style={style.form.text}
 												type='text'
-												name='Eventname'
+												name='name'
 												onChange={handleChange}
 											/>
 										</FormGroup>
 										<br></br>
-									</Grid>
+									</Grid>			
 									<Grid item xs={12} md={4}>
 										<FormGroup>
 											<label>Date</label>
@@ -237,7 +279,7 @@ const Event = () => {
 											<input
 												style={style.form.text}
 												type='date'
-												name='Date'
+												name='date'
 												onChange={handleChange}
 											/>
 											<br></br>
@@ -250,7 +292,7 @@ const Event = () => {
 											<input
 												style={style.form.text}
 												type='time'
-												name='Time'
+												name='timing'
 												defaultValue='07:30'
 												onChange={handleChange}
 											/>
@@ -266,7 +308,7 @@ const Event = () => {
 											<input
 												style={style.form.text}
 												type='text'
-												name='Venue'
+												name='venue'
 												onChange={handleChange}
 											/>
 										</FormGroup>
@@ -278,13 +320,11 @@ const Event = () => {
 											<label>Event Type</label>
 											<select
 												style={style.form.text}
-												name='EventType'
+												name='type'
 												onChange={handleChange}
 											>
-												<option value='Workshop'>Workshop</option>
+												<option value='Single'>Single</option>
 												<option value='Team'>Team</option>
-												<option value='Seminar'>Seminar</option>
-												<option value='TechTalks'>Tech-talks</option>
 											</select>
 											<br></br>
 										</FormGroup>
@@ -295,8 +335,8 @@ const Event = () => {
 
 											<input
 												style={style.form.text}
-												type='number'
-												name='TeamSize'
+												type='text'
+												name='teamSize'
 												defaultValue='0'
 												onChange={handleChange}
 											/>
@@ -304,7 +344,67 @@ const Event = () => {
 										<br></br>
 									</Grid>
 								</Grid>
+								<Grid container spacing={3}>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Capacity</label>
 
+											<input
+												style={style.form.text}
+												type='number'
+												name='capacity'
+												defaultValue='0'
+												onChange={handleChange}
+											/>
+										</FormGroup>
+										<br></br>
+									</Grid>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>IsPaid</label>
+
+											<select
+												style={style.form.text}
+												name='isPaid'
+												onChange={handleChange}
+											>
+												<option value='No'>No</option>
+												<option value='Yes'>Yes</option>
+											</select>
+										</FormGroup>
+										<br></br>
+									</Grid>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Amount</label>
+
+											<input
+												style={style.form.text}
+												type='number'
+												name='amount'
+												defaultValue='0'
+												onChange={handleChange}
+											/>
+										</FormGroup>
+										<br></br>
+									</Grid>
+								</Grid>
+								<Grid container spacing={3}>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Resources (Link)</label>
+
+											<input
+												style={style.form.text}
+												type='text'
+												name='resources'
+												defaultValue='0'
+												onChange={handleChange}
+											/>
+										</FormGroup>
+										<br></br>
+									</Grid>
+								</Grid>
 								<FormGroup>
 									<label>Short Description</label>
 
@@ -316,18 +416,14 @@ const Event = () => {
 											maxWidth: '100%'
 										}}
 									>
-										<Editor
-											toolbarClassName='toolbarClassName'
-											wrapperClassName='wrapperClassName'
-											editorClassName='editorClassName'
-										>
+										
 											<input
 												style={style.form.text}
 												type='textarea'
-												name='Shortdescription'
+												name='description'
 												onChange={handleChange}
 											></input>
-										</Editor>
+										
 									</div>
 								</FormGroup>
 
@@ -335,10 +431,11 @@ const Event = () => {
 								<br />
 								<Typography className='align_center'>
 									<Button
+										type="submit"
 										variant='contained'
 										style={{ backgroundColor: '#f50057', color: 'white' }}
 									>
-										Submit <a href='#' target='_blank' />
+										Submit
 									</Button>
 								</Typography>
 							</form>
