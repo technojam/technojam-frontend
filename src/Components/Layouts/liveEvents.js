@@ -1,57 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { MoonLoader } from 'react-spinners';
 
-const EventLabel = props => {
-	return (
-		<div style={nameStyle} onClick={props.toggleOpen}>
-			<span>Live Events</span>
-			<span style={countStyle}>{props.dataFetched ? props.count : null}</span>
-		</div>
-	);
-};
+import EventContext from '../../context/event/eventContext';
 
-const EventContent = props => {
-	return (
-		<div
-			onTransitionEnd={props.toggleShowlist}
-			style={{
-				width: props.open ? '250px' : '0',
-				overflowY: props.list.length ? 'scroll' : 'hidden',
-				...eventContentStyle
-			}}
-		>
-			{props.open &&
-				props.list &&
-				props.showlist &&
-				props.list.map(d => (
-					<li style={eventListsStyle}>
-						<div style={{ display: 'inline-block', width: '70%' }}>
-							<a
-								href='#'
-								style={{
-									margin: '10px 0',
-									color: '#2196F3',
-									textDecoration: 'none'
-								}}
-							>
-								{d.title}
-							</a>
-							<p style={{font:'10',Margin:'0'}}>{d.date}</p>
-							<p style={{font:'10',Margin:'0'}}>{d.venue}</p>
-						</div>
-					</li>
-				))}
-			{!props.dataFetched ? (
-				<MoonLoader
-					sizeUnit={'px'}
-					size={50}
-					color={'#123abc'}
-					loading={!props.dataFetched}
-				/>
-			) : null}
-		</div>
-	);
-};
 
 function LiveEvents() {
 	const [open, setOpen] = useState(false);
@@ -59,24 +10,26 @@ function LiveEvents() {
 	const [dataFetched, setDataFetched] = useState(false);
 	const [list, setList] = useState([]);
 
-	const event_data=[
-		{
-			id: 1,
-			title: 'Dextrix 2.0',
-			feedback: '#',
-			date: '233 November, 2019',
-			venue: ' GU',
-			todo: '#',
-			description:
-				"24 hours hackthon for all."
-		},
-	];
+
+
+	const eventContext = useContext(EventContext);
+	const {events} = eventContext;
+
+
 	useEffect(()=>{
 		setTimeout(()=>{
-			setList(event_data);
+			setList(events.filter(e => new Date(e.date) >= new Date()));
 			setDataFetched(true);
-		})
+		},2000)
 	});
+
+	useEffect(()=>{
+		setDataFetched(false);
+		setTimeout(()=>{
+			setList(events.filter(e => new Date(e.date) >= new Date()));
+			setDataFetched(true);
+		},2000)
+	},[events])
 
 	const toggleOpen=()=>{
 		setOpen(!open)
@@ -108,6 +61,62 @@ export default LiveEvents;
 
 
 
+
+
+const EventLabel = props => {
+	return (
+		<div style={nameStyle} onClick={props.toggleOpen}>
+			<span>Live Events</span>
+			<span style={countStyle}>{props.dataFetched ? props.count : null}</span>
+		</div>
+	);
+};
+
+const EventContent = props => {
+	return (
+		<div
+			onTransitionEnd={props.toggleShowlist}
+			style={{
+				width: props.open ? '250px' : '0',
+				overflowY: props.list.length ? 'scroll' : 'hidden',
+				...eventContentStyle
+			}}
+		>
+			{props.open &&
+				props.list &&
+				props.showlist &&
+				props.list.map(d => (
+					<li style={eventListsStyle}>
+						<div style={{ display: 'inline-block', width: '70%' }}>
+							<a
+								href='/events'
+								style={{
+									margin: '10px 0',
+									color: '#2196F3',
+									textDecoration: 'none'
+								}}
+							>
+								{d.name}
+							</a>
+							<p style={{font:'10',Margin:'0'}}>{d.date}
+								<br>
+								</br>
+								{d.venue}
+							</p>
+						</div>
+					</li>
+				))}
+			{!props.dataFetched ? (
+				<MoonLoader
+					sizeUnit={'px'}
+					size={50}
+					color={'#123abc'}
+					loading={!props.dataFetched}
+				/>
+			) : null}
+		</div>
+	);
+};
 
 
 
