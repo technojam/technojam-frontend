@@ -22,8 +22,15 @@ import FilterListIcon from '@material-ui/icons/FilterList';
 import RefreshIcon from '@material-ui/icons/Refresh';
 import EventContext from '../../../context/event/eventContext';
 import EditIcon from '@material-ui/icons/Edit';
-function createData(cid, name, calories, fat, carbs, protein) {
-	return { cid, name, calories, fat, carbs, protein };
+import ListIcon from '@material-ui/icons/List';
+import GetAppIcon from '@material-ui/icons/GetApp';
+import {backendUrl} from '../../../context/types';
+import axios from 'axios';
+import {CSVLink, CSVDownload} from 'react-csv';
+
+
+function createData(eid, name, venue, timing, date) {
+	return { eid, name, venue, timing, date };
 }
 
 let rows = [];
@@ -92,37 +99,14 @@ function EnhancedTableHead(props) {
 	return (
 		<TableHead>
 			<TableRow>
-				{/* <TableCell padding='checkbox'>
-					<Checkbox
-						indeterminate={numSelected > 0 && numSelected < rowCount}
-						checked={numSelected === rowCount}
-						onChange={onSelectAllClick}
-						inputProps={{ 'aria-label': 'select all desserts' }}
-					/>
-				</TableCell> */}
-				{headCells.map(headCell => (
-					<TableCell
-						key={headCell.id}
-						align={headCell.numeric ? 'right' : 'left'}
-						padding={headCell.disablePadding ? 'checkbox' : 'checkbox'}
-						sortDirection={orderBy === headCell.id ? order : false}
-					>
-						<TableSortLabel
-							active={orderBy === headCell.id}
-							direction={order}
-							onClick={createSortHandler(headCell.id)}
-						>
-							{headCell.label}
-							{orderBy === headCell.id ? (
-								<span className={classes.visuallyHidden}>
-									{order === 'desc' ? 'sorted descending' : 'sorted ascending'}
-								</span>
-							) : null}
-						</TableSortLabel>
-					</TableCell>
-				))}
+				<TableCell>Name</TableCell>
+				<TableCell>Venue</TableCell>
+				<TableCell>Timing</TableCell>
+				<TableCell>Date</TableCell>
 				<TableCell>Edit</TableCell>
 				<TableCell>Delete</TableCell>
+				<TableCell>Generate</TableCell>
+				<TableCell>Download</TableCell>
 			</TableRow>
 		</TableHead>
 	);
@@ -248,6 +232,7 @@ export default function EventTable() {
 	const [page, setPage] = React.useState(0);
 	const [dense, setDense] = React.useState(false);
 	const [rowsPerPage, setRowsPerPage] = React.useState(5);
+	const [attendeeData,setAttendeeData]=React.useState([]);
 
 	const handleRequestSort = (event, property) => {
 		const isDesc = orderBy === property && order === 'desc';
@@ -283,6 +268,18 @@ export default function EventTable() {
 		// deleteContact(selected);
 	};
 
+	const downloadAttendees=(eventId)=>{
+		console.log("genrating data")
+		alert("Do you want to generate attendee data?")
+		var event_data=[]
+		axios.get(backendUrl + '/api/events/participants/'+ eventId)
+			.then(res=>{
+				setAttendeeData(res.data);
+		})
+		console.log("genrated data")
+		alert("your data is now ready you can download it from download button");
+	}
+
 	const setContact = () => {
 		rows = [];
 		events.map(c => {
@@ -291,10 +288,10 @@ export default function EventTable() {
 				createData(
 					c.eid,
 					c.name,
-					c.eid,
 					c.venue,
-					new Date(c.timing).toDateString(),
-					c.desciption
+					c.timing,
+					c.date,
+					
 				)
 			);
 		});
@@ -322,6 +319,7 @@ export default function EventTable() {
 							{stableSort(rows, getSorting(order, orderBy))
 								.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
 								.map((row, index) => {
+									console.log(row);
 									const isItemSelected = isSelected(row.cid);
 									const labelId = `enhanced-table-checkbox-${index}`;
 
@@ -333,24 +331,11 @@ export default function EventTable() {
 											key={index}
 											selected={isItemSelected}
 										>
-											{/* <TableCell padding='checkbox'>
-												<Checkbox
-													checked={isItemSelected}
-													inputProps={{ 'aria-labelledby': labelId }}
-												/>
-											</TableCell> */}
-											<TableCell
-												component='th'
-												id={labelId}
-												scope='row'
-												padding='checkbox'
-											>
-												{row.name}
-											</TableCell>
-											<TableCell align='right'>{row.calories}</TableCell>
-											<TableCell align='right'>{row.fat}</TableCell>
-											<TableCell align='right'>{row.carbs}</TableCell>
-											<TableCell align='right'>{row.protein}</TableCell>
+											<TableCell>{row.name}</TableCell>
+											<TableCell >{row.venue}</TableCell>
+											<TableCell >{row.timing}</TableCell>
+											<TableCell >{row.date}</TableCell>
+											{/* <TableCell align='right'>{row.protein}</TableCell> */}
 											<TableCell padding='checkbox'>
 												<IconButton tooltip='Delete Event'>
 													<EditIcon />
@@ -359,8 +344,20 @@ export default function EventTable() {
 											<TableCell padding='checkbox'>
 												<IconButton tooltip='Delete Event'>
 													<DeleteIcon
-														onClick={() => deleteEvent(row.calories)}
+														onClick={() => deleteEvent(row.eid)}
 													/>
+												</IconButton>
+											</TableCell>
+											<TableCell padding='checkbox'>
+												<IconButton tooltip='Data Generate Event'>
+													<ListIcon 
+														onClick={()=>downloadAttendees(row.eid)}
+													/>
+												</IconButton>
+											</TableCell>
+											<TableCell padding='checkbox'>
+												<IconButton tooltip='Download CSV Event'>
+													<CSVLink data={attendeeData} ><GetAppIcon/></CSVLink>
 												</IconButton>
 											</TableCell>
 										</TableRow>
