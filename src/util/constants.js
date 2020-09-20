@@ -375,7 +375,9 @@ const TEAM_MEMBERS = [
         Image:
             "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594064689/tj-website/2018-2022/LakshyaBansal_g78s0r.jpg",
         tilte: "Image",
-        details: [{title: "Batch", value: "2018-2022"},{title: "Linkedin", value: "https://www.linkedin.com/in/proghammer/"}, {title: "Github", value: "https://github.com/prog-hammer/"}],
+        details: [{title: "Batch", value: "2018-2022"},{title: "Linkedin", value: "https://www.linkedin.com/in/lakshyabansal/"}, {title: "Github", value: "https://github.com/lakshya-20/"},
+        {title: "Position", value: "Web D Lead"}
+    ],
         email: "bansallakshya94128@gmail.com",
         Name: "Lakshya Bansal",
         id: 32
@@ -796,7 +798,9 @@ const TEAM_MEMBERS = [
         email: "tanishq_agarwal.scsebtech@galgotiasuniversity.edu.in",
         Name: "Tanishq Agarwal",
         id:67
-    }
+    },
+    
+
 ];
 
 const ALUMNI = [

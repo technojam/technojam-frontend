@@ -7,6 +7,8 @@ import {
 import {ALUMNI, TEAM_MEMBERS} from '../../util/constants';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import MailIcon from '@material-ui/icons/Mail';
+
 
 const style = {
     container: {
@@ -22,14 +24,22 @@ const style = {
 };
 
 const handleValue=(title,value)=>{
-    if(title==="Batch"){
-        return value
+    if(title==="Batch"||title==="Position"){
+        return <TableRow>
+        <TableCell component="th" scope="row">{title}</TableCell>
+        <TableCell align="right">{value}</TableCell>
+        </TableRow>
     }
-    else if (title=="Github"){ 
-    return <a href= {value}> <GitHubIcon/> </a>       
+
+}
+
+const handleIcons=(title,value)=>{
+    
+    if (title=="Github"){ 
+        return <a href= {value} target="blank"> <GitHubIcon/> </a>       
     }
-    else {
-    return <a href={value}> <LinkedInIcon/> </a>
+    else if(title=="Linkedin"){
+        return <a href={value} target="blank"> <LinkedInIcon/> </a>
     }
 }
 
@@ -60,13 +70,17 @@ export default class ProfilePage extends React.Component {
                         <Grid  justify="space-between">
                             <Grid item lg={2} md={4} xs={4}>
                                 <img src={this.state.currentProfile.Image} style={style.img}/>
+                                
                             </Grid>
                             <Grid item lg={10} md={8} xs={6} style={{marginTop: "4%"}}>
                                 <Typography variant="h2" style={style.name}>
                                     {this.state.currentProfile.Name}
                                 </Typography>
                                 <Typography style={style.name}>
-                                    {this.state.currentProfile.email}
+                                    <a href={"mailto:"+this.state.currentProfile.email}> <MailIcon/> </a>
+                                    {this.state.currentProfile.details.map((detail, index) => (
+                                            handleIcons(detail.title,detail.value)
+                                    ))}
                                 </Typography>
                             </Grid>
                         </Grid>
@@ -77,12 +91,7 @@ export default class ProfilePage extends React.Component {
                                     <Table style={{tableLayout: 'fixed'}}>
                                         <TableBody>
                                             {this.state.currentProfile.details.map((detail, index) => (
-                                                <TableRow key={`detail-${index}`}>
-                                                    <TableCell component="th" scope="row">{detail.title}</TableCell>
-                                                    <TableCell align="right">
-                                                        {handleValue(detail.title,detail.value)}
-                                                    </TableCell>
-                                                </TableRow>
+                                                    handleValue(detail.title,detail.value)
                                             ))}
                                         </TableBody>
                                     </Table>
