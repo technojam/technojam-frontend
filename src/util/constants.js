@@ -731,7 +731,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594298296/2019-23/suryansh_pratap_singh_f4x52a.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600589198/tj-website/2019-2023/suryansh_pratap_singh_a5p2sn.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://linkedin.com/in/surpsi"}, {
             title: "GitHub",
@@ -743,7 +743,7 @@ const TEAM_MEMBERS = [
     },
 
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594298296/2019-23/abhishek_nigam_dfel83.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600589198/tj-website/2019-2023/abhishek_nigam_izivbv.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/nabhi531"}, {
             title: "GitHub",
@@ -765,7 +765,7 @@ const TEAM_MEMBERS = [
         id:64
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594304028/2018-22/Anju_Kumari_v9qvck.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600589356/tj-website/2018-2022/Anju_Kumari_pcgftx.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/anju-kumari-3271a7179"}, {
             title: "Github",
@@ -776,7 +776,7 @@ const TEAM_MEMBERS = [
         id:65
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594368850/2019-23/isha_gupta_r5tvzp.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600589198/tj-website/2019-2023/isha_gupta_h1knnp.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/ishagupta20/"}, {
             title: "Github",
@@ -787,7 +787,7 @@ const TEAM_MEMBERS = [
         id:66
     },
     {
-        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1594637672/2019-23/tanishq_agarwal_fe7skp.jpg",
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600589563/tj-website/2019-2023/tanishq_agarwal_fe7skp_gd0wuk.jpg",
         tilte: "Image",
         details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/tanishq-agarwal-10a9371a0"}, {
             title: "Github",
