@@ -7,6 +7,8 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import '../style.css';
 import { Color } from '../color';
+import {Projects} from '../../util/projects';
+
 
 const sectionStyle = {
    width: '100%',
@@ -53,7 +55,7 @@ const Mentorship = () => {
             <div style={sectionStyle}>
                <div className='mentor_section_div' style={{ paddingTop: '330px' }}>
                   <Typography variant='h3' className='letter_spacing'>
-                     2019 Projects
+                     2020 Projects
                   </Typography>
                   <br />
                   <br />
@@ -91,10 +93,10 @@ const Mentorship = () => {
                         <a href='https://www.linkedin.com/company/technojam/' target='_blank' rel='noopener noreferrer'>
                            <i className='fab fa-linkedin fa-lg' style={{ color: Color.color_twitter }} />
                         </a>&#8194;
-                        <a href='https://www.facebook.com/technojam.scse/?ref=br_rs' target='_blank' rel='noopener noreferrer'>
+                        <a href='https://www.facebook.com/teamtechnojam' target='_blank' rel='noopener noreferrer'>
                            <i className='fab fa-facebook fa-lg' style={{ color: '#33a351' }} />
                         </a>&#8194;
-                        <a href='https://instagram.com/technojam_galgotias' target='_blank' rel='noopener noreferrer'>
+                        <a href='https://www.instagram.com/teamtechnojam/' target='_blank' rel='noopener noreferrer'>
                            <i className='fab fa-instagram fa-lg' style={{ color: '#e44134' }} />
                         </a>&#8194;
                      </Typography>
@@ -106,7 +108,7 @@ const Mentorship = () => {
          <div id='2' style={{ marginTop: '50px' }}>
             <Container maxWidth='lg'>
                <Grid container spacing={3} direction='row' justify='flex-start' alignItems='flex-start'>
-                  {projects.map(project => (
+                  {Projects.map(project => (
                      <Grid item xs={12} sm={6} md={6} key={project.id}>
                         <ExpansionPanel
                            className='card--shadow'
@@ -155,8 +157,9 @@ const Mentorship = () => {
                                  <Typography className='grid_item_typo'>{project.mentor}</Typography>
                               </Grid>
                            </ExpansionPanelDetails>
-
-                           <ExpansionPanelDetails>
+                              {/* Discussion links for the project,
+                              commented as of now */}
+                           {/* <ExpansionPanelDetails>
                               <Grid item md={6} xl={6}>
                                  <Typography variant='h6' className='letter_spacing' style={{ textAlign: 'end' }}>
                                     Discussion
@@ -172,7 +175,7 @@ const Mentorship = () => {
                                     </a>
                                  </Typography>
                               </Grid>
-                           </ExpansionPanelDetails>
+                           </ExpansionPanelDetails> */}
                            <ExpansionPanelDetails>
                               <Grid item md={6} xl={6}>
                                  <Typography variant='h6' className='letter_spacing' style={{ textAlign: 'end' }}>
