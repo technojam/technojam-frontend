@@ -42,6 +42,9 @@ const style = {
       fontSize: '14px',
       fontWeight: '600'
    },
+   button_text:{
+      color:"white"
+   }
 
 };
 
@@ -55,7 +58,7 @@ const Homepage = () => {
       {
          content: "Technology makes it doable for individuals to achieve management over everything, except over technology. Technology is such a lot of fun, however, the likelihood of drowning in it's high. Our goal is to assist, nurture future developers and leaders and build a pool of extremely good school personnel, that is quickly employable by the business and facilitate spur innovation. We help students perceive up-to-date engineering. Explore completely different areas of interest. Produce social connections wherever students with numerous technology experience come together and share knowledge.",
          title: "About us",
-         cta: "./events",
+         cta: "/events",
          buttonname: "Know more",
          backgroundImageUrl: "../../images/mobile.jpg ",
          backgroundImageUrlM: "#"
@@ -95,8 +98,9 @@ const Homepage = () => {
                            </Typography>
                               <br />
                            <Button variant='contained' style={style.button}>
-                              {item.buttonname} <a src={item.cta} target='_blank' rel='noopener noreferrer' />
+                              <a href="aboutus" style={style.button_text}>{item.buttonname}</a>
                            </Button>
+                           
                         </div>
                      </div>
                  
