@@ -9,7 +9,6 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MailIcon from '@material-ui/icons/Mail';
 
-
 const style = {
     container: {
         marginTop: "62px"
@@ -30,7 +29,6 @@ const handleValue=(title,value)=>{
         <TableCell align="right">{value}</TableCell>
         </TableRow>
     }
-
 }
 
 const handleIcons=(title,value)=>{
