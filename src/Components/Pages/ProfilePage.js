@@ -5,6 +5,8 @@ import {
     Grid, Paper, Table, TableRow, TableBody, TableCell
 } from "@material-ui/core";
 import {ALUMNI, TEAM_MEMBERS} from '../../util/constants';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const style = {
     container: {
@@ -23,10 +25,11 @@ const handleValue=(title,value)=>{
     if(title==="Batch"){
         return value
     }
-    else{
-        return <a href={value} target="_blank">
-        {value}
-        </a>
+    else if (title=="Github"){ 
+    return <a href= {value}> <GitHubIcon/> </a>       
+    }
+    else {
+    return <a href={value}> <LinkedInIcon/> </a>
     }
 }
 
