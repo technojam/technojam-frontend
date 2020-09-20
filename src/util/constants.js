@@ -799,7 +799,375 @@ const TEAM_MEMBERS = [
         Name: "Tanishq Agarwal",
         id:67
     },
-    
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610781/tj-website/2018-2022/siddharthRaj_g5ydqk.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/siddharth-raj-439164179"}, {
+            title: "Github",
+            value: "https://www.github.com/sidhearts"
+        }],
+        email: "rajsiddharth21@gmail.com",
+        Name: "Siddharth Raj",
+        id:68
+
+
+    },
+
+
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610779/tj-website/2018-2022/Pulkit_Agrawal_eajic8.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/pulkit-agrawal-695138184"}, {
+            title: "Github",
+            value: "https://github.com/biionyc"
+        }],
+        email: "pulkit.dw44@gmail.com",
+        Name: "Pulkit Agrawal",
+        id:69
+
+
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610779/tj-website/2018-2022/Asthha_Wahal_ohcgb2.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/asthha-wahal-ab15861a2"}, {
+            title: "Github",
+            value: "https://github.com/asthha811"
+        }],
+        email: "wahalasthha@gmail.com",
+        Name: "Asthha Wahal",
+        id:70
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610778/tj-website/2018-2022/Ahmad_Yasir_sl6uu5.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "http://linkedin.com/in/ahmad-yasir"}, {
+            title: "Github",
+            value: "https://github.com/yasirahmad62"
+        }],
+        email: "yasir120916@gmail.com",
+        Name: "Ahmad Yasir",
+        id:71
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610779/tj-website/2018-2022/Chhavi_Tuteja_iwq7d4.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/chhavituteja"}, {
+            title: "Github",
+            value: "https://github.com/chhavituteja"
+        }],
+        email: "chhavituteja08@gmail.com",
+        Name: "Chhavi Tuteja",
+        id:73
+    },
+    // {
+    //     Image: "NULL",
+    //     title: "Image",
+    //     details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/saurabh-kumar-588969194/"}, {
+    //         title: "Github",
+    //         value: "https://github.com/saurabh-surya"
+    //     }],
+    //     email: "saurabh_kumar1@galgotiasuniversity.edu.in",
+    //     Name: "Saurabh Kumar",
+    //     id:74
+    // },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610780/tj-website/2018-2022/SakshiJain_dkeisq.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sakshi-jain-1506"}, {
+            title: "Github",
+            value: "https://github.com/sakshi172015/"
+        }],
+        email: "sakshi.172015@gmail.com",
+        Name: "Sakshi Jain",
+        id:75
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610779/tj-website/2018-2022/GAJANAND_SINGH_sd1gwt.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/gajanandsingh1612/"}, {
+            title: "Github",
+            value: "https://github.com/PRINCE1409"
+        }],
+        email: "gajanand_singh.scsebtech@galgotiasuniversity.edu.iin",
+        Name: "GAJANAND SINGH",
+        id:76
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610779/tj-website/2018-2022/ritik_kumar_srivastava_mnynjn.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https:www.linkedin.com/in/ritik-srivastava-46776a157"}, {
+            title: "Github",
+            value: "https://www.github.com/CyberWake"
+        }],
+        email: "ritikfbd@gmail.com",
+        Name: "Ritik Kumar Srivastava",
+        id:77
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610866/tj-website/2019-2023/Shajid_Equbal_ehoa0u.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sajid-shad-62218a182"}, {
+            title: "Github",
+            value: "https://github.com/SajidEqubal"
+        }],
+        email: "equbalshajid8@gmail.com",
+        Name: "Shajid Equbal",
+        id:79
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610864/tj-website/2019-2023/Kriti_Sharma_p67yuo.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/kriti-s-2001"}, {
+            title: "Github",
+            value: "https://github.com/kriti1976"
+        }],
+        email: "Kriti17.sharma@gmail.com",
+        Name: "Kriti Sharma",
+        id:80
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610866/tj-website/2019-2023/Rudransh_Solanki_w8kdah.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/rudra-singh-b06381199"}, {
+            title: "Github",
+            value: "https://github.com/Rudransh7171"
+        }],
+        email: "rudrasingh7318115@gmail.com",
+        Name: "Rudransh Solanki",
+        id:81
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610864/tj-website/2019-2023/Kush_xaqqpo.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/kush-kaushik-130132185"}, {
+            title: "Github",
+            value: "https://github.com/kushkaushik"
+        }],
+        email: "kushkaushik271@gmail.com",
+        Name: "Kush",
+        id:82
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610862/tj-website/2019-2023/Aditya_Shrivastav_pqazg6.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/aditya-shrivastav-07addy"}, {
+            title: "Github",
+            value: "https://www.github.com/aditya-shrivastav"
+        }],
+        email: "adityashrivastava992001@gmail.com",
+        Name: "Aditya Shrivastav",
+        id:83
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610863/tj-website/2019-2023/ISHITA_MISHRA_tfhovs.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/ishita-mishra-22july"}, {
+            title: "Github",
+            value: "https://github.com/ish2207"
+        }],
+        email: "ishu07.mishra@gmail.com",
+        Name: "Ishita Mishra",
+        id:84
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610865/tj-website/2019-2023/Rishabhkapoor_uwzfvf.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/rishabh--kapoor"}, {
+            title: "Github",
+            value: "https://github.com/Rishabhkapoor"
+        }],
+        email: "rishabhkapoor2001@gmail.com",
+        Name: "Rishabh Kapoor",
+        id:85
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610864/tj-website/2019-2023/Ayush_Verma_y6bz5g.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/ayush-verma-9ba662193"}, {
+            title: "Github",
+            value: "https://www.github.com/Ayushverma408"
+        }],
+        email: "ayushverma462002@gmail.com",
+        Name: "Ayush Verma",
+        id:86
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610862/tj-website/2019-2023/Ashutosh_Gautam_ti1ke1.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/ashutosh-gautam-bb8236194/"}, {
+            title: "Github",
+            value: "https://github.com/altruisticdream"
+        }],
+        email: "ashutoshgautam9628@outlook.com",
+        Name:"Ashutosh Gautam",
+        id:89
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610864/tj-website/2019-2023/Md_Noman_Khan_deos3h.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/noman-khan-3b9407183"}, {
+            title: "Github",
+            value: "https://github.com/noman2002"
+        }],
+        email: "nomn2002@gmail.com",
+        Name: "MD Noman Khan",
+        id:90
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610865/tj-website/2019-2023/Palak_Mishra_zqwuic.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/palak-mishra-937716192/"}, {
+            title: "Github",
+            value: "https://github.com/PalakMishra-eq"
+        }],
+        email: "palakmishra170101@gmail.com",
+        Name: "Palak Mishra",
+        id:91
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610866/tj-website/2019-2023/RitwikSinha_vwgzyf.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/ritwik-sinha-8854a2146/"}, {
+            title: "Github",
+            value: "https://github.com/Ritwik880"
+        }],
+        email: "rittiksinha12@gmail.com",
+        Name: "Ritwik Sinha",
+        id:92
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610862/tj-website/2019-2023/Abhishek_Varshney_j6lkwj.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/abhishek-varshney-4015111a1"}, {
+            title: "Github",
+            value: "https://github.com/Abhishek-7017"
+        }],
+        email: "rabhishekat7500@gmail.com",
+        Name: "Abhishek Varshney",
+        id:95
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610866/tj-website/2019-2023/Saransh_Khulbe_h3nbq2.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/saransh-khulbe-5ab342189/"}, {
+            title: "Github",
+            value: "https://github.com/saranshkhulbe7"
+        }],
+        email: "saranshkhulbe7@gmail.com",
+        Name: "Saransh Khulbe",
+        id:96
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610863/tj-website/2019-2023/Ayushi_Kulshrestha_rfjt1t.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/ayushi-kulshrestha-a71713188"}, {
+            title: "Github",
+            value: "https://github.com/ayushikulshreshta30"
+        }],
+        email: "ayushi.official30@gmail.com",
+        Name: "Ayushi Kulshrestha",
+        id:97
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610867/tj-website/2019-2023/Yashvardhan_Awasthi_gs6vig.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/alphaartrem/"}, {
+            title: "Github",
+            value: "https://github.com/AlphaArtrem"
+        }],
+        email: "yashvardhan_awasthi.scsebtech@galgotiasuniversity.edu.in",
+        Name: "Yashvardhan Awasthi",
+        id:98
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610867/tj-website/2019-2023/Siddharth_Singh_yc3jrb.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/siddharth-singh-1a2094194"}, {
+            title: "Github",
+            value: "https://github.com/sidsinghrajput"
+        }],
+        email: "siddharthsingh2014@gmail.com",
+        Name: "Siddharth Singh",
+        id:99
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610867/tj-website/2019-2023/Udbhav_Singh_Patwal_m7h8xp.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/udbhav-patwal"}, {
+            title: "Github",
+            value: "https://github.com/KazeZeus"
+        }],
+        email: "upatwal9@gmail.com",
+        Name: "Udbhav Singh Patwal",
+        id:100
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610863/tj-website/2019-2023/Kirti_Ahuja_mc3za5.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/kirti-ahuja-2b62721a2"}, {
+            title: "Github",
+            value: "https://github.com/Kirtiahuja/hello-world"
+        }],
+        email: "keertiahuja24@gmail.com",
+        Name: "Kirti Ahuja",
+        id:101
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610862/tj-website/2019-2023/Apoorva_Verma_tdda9o.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "http://linkedin.com/in/apoorva-verma-947663193"}, {
+            title: "Github",
+            value: "https://github.com/apoorvaverma001"
+        }],
+        email: "Workingapoo@gmail.com",
+        Name: "APOORVA VERMA",
+        id:102
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610866/tj-website/2019-2023/Sumati_vfxahz.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/sumati-gupta-487603139"}, {
+            title: "Github",
+            value: "https://github.com/Sumatig"
+        }],
+        email: "sumatig13@gmail.com",
+        Name: "Sumati Gupta",
+        id:103
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610865/tj-website/2019-2023/Ritika_Jaiswal_pkg1t3.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/in/ritika-jaiswal-7b5515191/"}, {
+            title: "Github",
+            value: "https://github.com/18-Ritika"
+        }],
+        email: "jaiswalritika18112000@gmail.com",
+        Name: "Ritika Jaiswal",
+        id:104
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610865/tj-website/2019-2023/Mohit_npku37.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/mwlite/in/mohit-bhatia-9455851a2"}, {
+            title: "Github",
+            value: "https://github.com/mohitbhata12"
+        }],
+        email: "mohitbhatia486@gmail.com",
+        Name: "Mohit Bhatia",
+        id:105
+    },
+    {
+        Image: "https://res.cloudinary.com/dkbr5ohs3/image/upload/v1600610863/tj-website/2019-2023/Abhimanyu_Sharma_xxryjq.jpg",
+        title: "Image",
+        details: [{title: "Batch", value: "2019-2023"}, {title: "Linkedin", value: "https://www.linkedin.com/mwlite/in/abhimanyu-sharma-67a2aa148"}, {
+            title: "Github",
+            value: "http://github.com/abhisharma08"
+        }],
+        email: "aksharma223@gmail.com",
+        Name: "Abhimanyu Sharma",
+        id:106
+    },
 
 ];
 
