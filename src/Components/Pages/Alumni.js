@@ -86,9 +86,10 @@ export default function Team() {
 										<Link className={classes.link}>
 											<TwitterIcon />
 										</Link>
-										<Link className={classes.link}>
+										
+										{/* <Link className={classes.link}>
 											<ChatBox user={member} />
-										</Link>
+										</Link> */}
 									</div>
 								</Card>
 							</Link>
