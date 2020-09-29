@@ -174,9 +174,20 @@ function TopMenu(props) {
 
 	const handleRegister = e => {
 		e.preventDefault();
+		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		re.test(String(email).toLocaleLowerCase);
 		if (name === '' || email === '' || password === '') {
 			setAlert('Please fill in all fields', 'danger');
-		} else {
+		} 
+		else if(name.length <= 3){
+			setAlert('Name should not be of length less than 3.', 'danger');
+		}
+		
+		else if(re.test(email) == false){
+			setAlert('Not a valid email address!', 'danger');
+		}
+		
+		else {
 			console.log('register called');
 			showLoading({ data: true });
 			register({
