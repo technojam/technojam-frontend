@@ -12,21 +12,6 @@ const Users = () => {
 	return (
 		<>
 	<div>Users Component</div>
-	
-		<div>
-		<TableHead>
-			<TableRow>
-				<TableCell>Name</TableCell>
-				<TableCell>Batch</TableCell>
-				<TableCell>Email</TableCell>
-				<TableCell>Github</TableCell>
-				<TableCell>LinkedIn</TableCell>
-				<TableCell>About</TableCell>
-				<TableCell>Generate</TableCell>
-				<TableCell>Download</TableCell>
-			</TableRow>
-		</TableHead>
-		</div>
 		</>
 	);
 };
