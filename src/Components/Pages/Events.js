@@ -218,17 +218,20 @@ const Events = () => {
 														color='secondary'
 														size='small'
 														style={{ marginTop: '5px' }}
-														src={event.register}
-														disabled={
-															user && event.users.indexOf(user.uid) != -1
-																? true
-																: false
-														}
-														onClick={() => handleClickOpen(event)}
+														// src={event.register}
+														// disabled={
+														// 	user && event.users.indexOf(user.uid) != -1
+														// 		? true
+														// 		: false
+														// }
+														// onClick={() => handleClickOpen(event)}
 													>
-														{user && event.users.indexOf(user.uid) != -1
+														{/* {user && event.users.indexOf(user.uid) != -1
 															? 'Registered'
-															: 'Register Now'}
+															: 'Register Now'} */}
+														<a href="https://organize.mlh.io/participants/events/4887-techtober-days" style={{color:'white'}} target="_blank">
+															Register Now	
+														</a> 	
 													</Button>
 												</CardContent>
 											</TimelineEvent>
