@@ -29,10 +29,16 @@ import axios from 'axios';
 import { CSVLink, CSVDownload } from 'react-csv';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
-import { useSpring, animated } from 'react-spring/web.cjs';
 import TextField from '@material-ui/core/TextField';
 import Fade from '@material-ui/core/Fade';
-import { Button, Container } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Divider from '@material-ui/core/Divider';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+
+import { FormGroup } from '@material-ui/core';
 
 
 
@@ -226,6 +232,28 @@ const useStyles = makeStyles(theme => ({
 		width: 1
 	}
 }));
+const style = {
+	marginTop: '112px',
+	form: {
+		padding: '20px',
+		width: '100%',
+		marginLeft: 'auto',
+		marginRight: 'auto',
+		text: {
+			appearance: 'none',
+			width: '100%',
+			padding: '5px',
+			height: '35px',
+			borderRadius: '5px',
+			outline: 'none',
+			border: 'none',
+			background: '#e8ebed',
+			color: '#576366',
+			fontSize: '14px'
+		}
+	}
+};
+
 const useStylesModal = makeStyles((theme) => ({
 	modal: {
 		display: 'flex',
@@ -391,46 +419,192 @@ export default function EventTable() {
 														<Fade in={open}>
 															<div className={classesModal.paper}>
 																<h2 id="transition-modal-title">Edit Event</h2>
-																<form className={classes.root} noValidate autoComplete="off">
-																	<Container maxWidth="lg" style={{display:'flex',flexDirection:'column'}}
-																	>
-																		<TextField
-																			autoFocus
-																			margin='dense'
-																			
-																			label='Name'
-																			type='email'
-																			value={row.name}
-																		/>
-																		<TextField
-																			autoFocus
-																			margin='dense'
-																			label='Venue'
-																			type='text'
-																			value={row.venue}
-																		/>
-																		<TextField
-																			autoFocus
-																			margin='dense'
-																			label='Date'
-																			type='date'
-																			value={row.date}
-																			focused
-																		/>
-																		<TextField
-																			autoFocus
-																			margin='dense'
-																			label='Timing'
-																			type='text'
-																			fullWidth
-																			value={row.timing}
-																		/>
-																		<Button variant="contained" color="primary">Update Event</Button>
-																	</Container>
-																</form>
-															</div>
-														</Fade>
-													</Modal>
+																<div style={style.form}>
+							<form autoComplete='on' >
+								<Grid container spacing={3}>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Event Name</label>
+
+											<input
+												style={style.form.text}
+												type='text'
+												name='name'
+												
+											/>
+										</FormGroup>
+										<br></br>
+									</Grid>			
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Date</label>
+
+											<input
+												style={style.form.text}
+												type='date'
+												name='date'
+												
+											/>
+											<br></br>
+										</FormGroup>
+									</Grid>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Time</label>
+
+											<input
+												style={style.form.text}
+												type='time'
+												name='timing'
+												defaultValue='07:30'
+												
+											/>
+										</FormGroup>
+										<br></br>
+									</Grid>
+								</Grid>
+								<Grid container spacing={3}>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Venue</label>
+
+											<input
+												style={style.form.text}
+												type='text'
+												name='venue'
+										
+											/>
+										</FormGroup>
+										<br></br>
+									</Grid>
+
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Event Type</label>
+											<select
+												style={style.form.text}
+												name='type'
+											>
+												<option value='Single'>Single</option>
+												<option value='Team'>Team</option>
+											</select>
+											<br></br>
+										</FormGroup>
+									</Grid>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Team Size</label>
+
+											<input
+												style={style.form.text}
+												type='text'
+												name='teamSize'
+												defaultValue='0'
+											
+											/>
+										</FormGroup>
+										<br></br>
+									</Grid>
+								</Grid>
+								<Grid container spacing={3}>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Capacity</label>
+
+											<input
+												style={style.form.text}
+												type='number'
+												name='capacity'
+												defaultValue='0'
+												
+											/>
+										</FormGroup>
+										<br></br>
+									</Grid>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>IsPaid</label>
+
+											<select
+												style={style.form.text}
+												name='isPaid'
+												
+											>
+												<option value='No'>No</option>
+												<option value='Yes'>Yes</option>
+											</select>
+										</FormGroup>
+										<br></br>
+									</Grid>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Amount</label>
+
+											<input
+												style={style.form.text}
+												type='number'
+												name='amount'
+												defaultValue='0'
+											
+											/>
+										</FormGroup>
+										<br></br>
+									</Grid>
+								</Grid>
+								<Grid container spacing={3}>
+									<Grid item xs={12} md={4}>
+										<FormGroup>
+											<label>Resources (Link)</label>
+
+											<input
+												style={style.form.text}
+												type='text'
+												name='resources'
+												defaultValue='0'
+											
+											/>
+										</FormGroup>
+										<br></br>
+									</Grid>
+								</Grid>
+								<FormGroup>
+									<label>Short Description</label>
+
+									<div
+										style={{
+											backgroundColor: '#e8ebed',
+											borderRadius: '5px',
+											overflowX: 'hidden',
+											maxWidth: '100%'
+										}}
+									>
+										
+											<input
+												style={style.form.text}
+												type='textarea'
+												name='description'
+												
+											></input>
+										
+									</div>
+								</FormGroup>
+
+								<br></br>
+								<br />
+								<Typography className='align_center'>
+									<Button
+										type="submit"
+										variant='contained'
+										style={{ backgroundColor: '#f50057', color: 'white' }}
+									>
+												Submit
+											</Button>
+										</Typography>
+										</form>
+									</div>
+										</div>
+											</Fade>
+												</Modal>
 												</IconButton>
 											</TableCell>
 											<TableCell padding='checkbox'>
