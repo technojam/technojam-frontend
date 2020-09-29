@@ -416,21 +416,19 @@ export default function EventTable() {
 														BackdropProps={{
 															timeout: 500,
 														}}>
-														<Fade in={open}>
-															<div className={classesModal.paper}>
-																<h2 id="transition-modal-title">Edit Event</h2>
-																<div style={style.form}>
+											<Fade in={open}>
+												<div className={classesModal.paper}>
+											<h2 id="transition-modal-title">Edit Event</h2>
+								<div style={style.form}>
 							<form autoComplete='on' >
 								<Grid container spacing={3}>
 									<Grid item xs={12} md={4}>
 										<FormGroup>
 											<label>Event Name</label>
-
 											<input
 												style={style.form.text}
 												type='text'
-												name='name'
-												
+												name='name'	
 											/>
 										</FormGroup>
 										<br></br>
@@ -442,8 +440,7 @@ export default function EventTable() {
 											<input
 												style={style.form.text}
 												type='date'
-												name='date'
-												
+												name='date'	
 											/>
 											<br></br>
 										</FormGroup>
@@ -456,8 +453,7 @@ export default function EventTable() {
 												style={style.form.text}
 												type='time'
 												name='timing'
-												defaultValue='07:30'
-												
+												defaultValue='07:30'		
 											/>
 										</FormGroup>
 										<br></br>
@@ -467,12 +463,10 @@ export default function EventTable() {
 									<Grid item xs={12} md={4}>
 										<FormGroup>
 											<label>Venue</label>
-
 											<input
 												style={style.form.text}
 												type='text'
 												name='venue'
-										
 											/>
 										</FormGroup>
 										<br></br>
@@ -484,7 +478,7 @@ export default function EventTable() {
 											<select
 												style={style.form.text}
 												name='type'
-											>
+												>
 												<option value='Single'>Single</option>
 												<option value='Team'>Team</option>
 											</select>
@@ -494,13 +488,12 @@ export default function EventTable() {
 									<Grid item xs={12} md={4}>
 										<FormGroup>
 											<label>Team Size</label>
-
 											<input
 												style={style.form.text}
 												type='text'
 												name='teamSize'
 												defaultValue='0'
-											
+
 											/>
 										</FormGroup>
 										<br></br>
@@ -510,13 +503,11 @@ export default function EventTable() {
 									<Grid item xs={12} md={4}>
 										<FormGroup>
 											<label>Capacity</label>
-
 											<input
 												style={style.form.text}
 												type='number'
 												name='capacity'
-												defaultValue='0'
-												
+												defaultValue='0'	
 											/>
 										</FormGroup>
 										<br></br>
@@ -528,7 +519,6 @@ export default function EventTable() {
 											<select
 												style={style.form.text}
 												name='isPaid'
-												
 											>
 												<option value='No'>No</option>
 												<option value='Yes'>Yes</option>
@@ -539,13 +529,11 @@ export default function EventTable() {
 									<Grid item xs={12} md={4}>
 										<FormGroup>
 											<label>Amount</label>
-
 											<input
 												style={style.form.text}
 												type='number'
 												name='amount'
 												defaultValue='0'
-											
 											/>
 										</FormGroup>
 										<br></br>
