@@ -24,9 +24,16 @@ import EventContext from '../../../context/event/eventContext';
 import EditIcon from '@material-ui/icons/Edit';
 import ListIcon from '@material-ui/icons/List';
 import GetAppIcon from '@material-ui/icons/GetApp';
-import {backendUrl} from '../../../context/types';
+import { backendUrl } from '../../../context/types';
 import axios from 'axios';
-import {CSVLink, CSVDownload} from 'react-csv';
+import { CSVLink, CSVDownload } from 'react-csv';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import { useSpring, animated } from 'react-spring/web.cjs';
+import TextField from '@material-ui/core/TextField';
+import Fade from '@material-ui/core/Fade';
+import { Button, Container } from '@material-ui/core';
+
 
 
 function createData(eid, name, venue, timing, date) {
@@ -130,13 +137,13 @@ const useToolbarStyles = makeStyles(theme => ({
 	highlight:
 		theme.palette.type === 'light'
 			? {
-					color: theme.palette.secondary.main,
-					backgroundColor: lighten(theme.palette.secondary.light, 0.85)
-			  }
+				color: theme.palette.secondary.main,
+				backgroundColor: lighten(theme.palette.secondary.light, 0.85)
+			}
 			: {
-					color: theme.palette.text.primary,
-					backgroundColor: theme.palette.secondary.dark
-			  },
+				color: theme.palette.text.primary,
+				backgroundColor: theme.palette.secondary.dark
+			},
 	spacer: {
 		flex: '1 1 100%'
 	},
@@ -164,10 +171,10 @@ const EnhancedTableToolbar = props => {
 						{numSelected} selected
 					</Typography>
 				) : (
-					<Typography variant='h6' id='tableTitle'>
-						Events
-					</Typography>
-				)}
+						<Typography variant='h6' id='tableTitle'>
+							Events
+						</Typography>
+					)}
 			</div>
 			<div className={classes.spacer} />
 			<div className={classes.actions}>
@@ -178,12 +185,12 @@ const EnhancedTableToolbar = props => {
 						</IconButton>
 					</Tooltip>
 				) : (
-					<Tooltip title='Refresh'>
-						<IconButton aria-label='filter list' onClick={onRefreshClicked}>
-							<RefreshIcon />
-						</IconButton>
-					</Tooltip>
-				)}
+						<Tooltip title='Refresh'>
+							<IconButton aria-label='filter list' onClick={onRefreshClicked}>
+								<RefreshIcon />
+							</IconButton>
+						</Tooltip>
+					)}
 			</div>
 		</Toolbar>
 	);
@@ -192,7 +199,6 @@ const EnhancedTableToolbar = props => {
 EnhancedTableToolbar.propTypes = {
 	numSelected: PropTypes.number.isRequired
 };
-
 const useStyles = makeStyles(theme => ({
 	root: {
 		width: '100%',
@@ -220,6 +226,19 @@ const useStyles = makeStyles(theme => ({
 		width: 1
 	}
 }));
+const useStylesModal = makeStyles((theme) => ({
+	modal: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	paper: {
+		backgroundColor: theme.palette.background.paper,
+		// border: '2px solid #000',
+		boxShadow: theme.shadows[5],
+		padding: theme.spacing(2, 4, 3),
+	},
+}));
 
 export default function EventTable() {
 	const classes = useStyles();
@@ -232,7 +251,13 @@ export default function EventTable() {
 	const [page, setPage] = React.useState(0);
 	const [dense, setDense] = React.useState(false);
 	const [rowsPerPage, setRowsPerPage] = React.useState(5);
-	const [attendeeData,setAttendeeData]=React.useState([]);
+	const [attendeeData, setAttendeeData] = React.useState([]);
+	const classesModal = useStylesModal();
+	const [open, setOpen] = React.useState(false);
+
+
+
+
 
 	const handleRequestSort = (event, property) => {
 		const isDesc = orderBy === property && order === 'desc';
@@ -267,18 +292,23 @@ export default function EventTable() {
 		console.log('cids:', selected);
 		// deleteContact(selected);
 	};
+	const editEvent = () => {
+		handleOpen();
+		console.log("Edit is now working")
+	}
 
-	const downloadAttendees=(eventId)=>{
+	const downloadAttendees = (eventId) => {
 		console.log("genrating data")
 		alert("Do you want to generate attendee data?")
-		var event_data=[]
-		axios.get(backendUrl + '/api/events/participants/'+ eventId)
-			.then(res=>{
+		var event_data = []
+		axios.get(backendUrl + '/api/events/participants/' + eventId)
+			.then(res => {
 				setAttendeeData(res.data);
-		})
+			})
 		console.log("genrated data")
 		alert("your data is now ready you can download it from download button");
 	}
+
 
 	const setContact = () => {
 		rows = [];
@@ -291,12 +321,20 @@ export default function EventTable() {
 					c.venue,
 					c.timing,
 					c.date,
-					
 				)
 			);
 		});
 	};
-	return (
+	//Modal
+	const handleOpen = () => {
+		setOpen(true);
+	};
+
+	const handleClose = () => {
+		setOpen(false);
+	};
+
+	return (<>
 		<div className={classes.root}>
 			{events.length > 0 && setContact()}
 			<Paper className={classes.paper}>
@@ -338,7 +376,61 @@ export default function EventTable() {
 											{/* <TableCell align='right'>{row.protein}</TableCell> */}
 											<TableCell padding='checkbox'>
 												<IconButton tooltip='Delete Event'>
-													<EditIcon />
+													<EditIcon onClick={() => editEvent(row.eid)} />
+													<Modal
+														aria-labelledby="transition-modal-title"
+														aria-describedby="transition-modal-description"
+														className={classesModal.modal}
+														open={open}
+														onClose={handleClose}
+														closeAfterTransition
+														BackdropComponent={Backdrop}
+														BackdropProps={{
+															timeout: 500,
+														}}>
+														<Fade in={open}>
+															<div className={classesModal.paper}>
+																<h2 id="transition-modal-title">Edit Event</h2>
+																<form className={classes.root} noValidate autoComplete="off">
+																	<Container maxWidth="lg" style={{display:'flex',flexDirection:'column'}}
+																	>
+																		<TextField
+																			autoFocus
+																			margin='dense'
+																			
+																			label='Name'
+																			type='email'
+																			value={row.name}
+																		/>
+																		<TextField
+																			autoFocus
+																			margin='dense'
+																			label='Venue'
+																			type='text'
+																			value={row.venue}
+																		/>
+																		<TextField
+																			autoFocus
+																			margin='dense'
+																			label='Date'
+																			type='date'
+																			value={row.date}
+																			focused
+																		/>
+																		<TextField
+																			autoFocus
+																			margin='dense'
+																			label='Timing'
+																			type='text'
+																			fullWidth
+																			value={row.timing}
+																		/>
+																		<Button variant="contained" color="primary">Update Event</Button>
+																	</Container>
+																</form>
+															</div>
+														</Fade>
+													</Modal>
 												</IconButton>
 											</TableCell>
 											<TableCell padding='checkbox'>
@@ -350,14 +442,14 @@ export default function EventTable() {
 											</TableCell>
 											<TableCell padding='checkbox'>
 												<IconButton tooltip='Data Generate Event'>
-													<ListIcon 
-														onClick={()=>downloadAttendees(row.eid)}
+													<ListIcon
+														onClick={() => downloadAttendees(row.eid)}
 													/>
 												</IconButton>
 											</TableCell>
 											<TableCell padding='checkbox'>
 												<IconButton tooltip='Download CSV Event'>
-													<CSVLink data={attendeeData} ><GetAppIcon/></CSVLink>
+													<CSVLink data={attendeeData} ><GetAppIcon /></CSVLink>
 												</IconButton>
 											</TableCell>
 										</TableRow>
@@ -392,5 +484,6 @@ export default function EventTable() {
 				label='Dense padding'
 			/>
 		</div>
+	</>
 	);
 }
