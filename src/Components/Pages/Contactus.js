@@ -72,10 +72,34 @@ const Contactus = () => {
 		});
 	};
 
+	const validate = (field, noOfCharacter, regExp) => {
+		if(!field || field.length < noOfCharacter) return false
+    	if (regExp && !regExp.test(field)) return false
+		return true;
+	}
+
 	const submitContact = async e => {
 		console.log('called submit contact');
 		e.preventDefault();
+
+		if(!validate(FirstName, 3)){
+			setAlert("First Name is mandatory and must of length greater than 2", "danger")
+			return;
+		}
+		if(!validate(Email, 3, /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+			setAlert("Should be a valid email address.", "danger")
+			return;
+		}
+		if(!validate(Mobile, 10, /^([0|\+[0-9]{1,5})([7-9][0-9]{9})$/g)){
+			setAlert("Must be a valid contact number", "danger")
+			return;
+		}
+		if(!validate(Reason, 1)){
+			setAlert("Query should not be empty", "danger")
+			return;
+		}
 		showLoading({ data: true });
+
 		let contactData = {
 			name: FirstName + ' ' + LastName,
 			email: Email,
@@ -198,6 +222,7 @@ const Contactus = () => {
 											name='Mobile'
 											value={Mobile}
 											onChange={handleChange}
+											placeholder="with + country code"
 										/>
 									</FormGroup>
 									<FormGroup>
