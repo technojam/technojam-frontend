@@ -1,182 +1,173 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { MoonLoader } from 'react-spinners';
+import React, { useEffect, useState, useContext } from "react";
+import { MoonLoader } from "react-spinners";
 
-import EventContext from '../../context/event/eventContext';
-
+import EventContext from "../../context/event/eventContext";
 
 function LiveEvents() {
-	const [open, setOpen] = useState(false);
-	const [showList, setShowList] = useState(false);
-	const [dataFetched, setDataFetched] = useState(false);
-	const [list, setList] = useState([]);
+  const [open, setOpen] = useState(false);
+  const [showList, setShowList] = useState(false);
+  const [dataFetched, setDataFetched] = useState(false);
+  const [list, setList] = useState([]);
 
+  const eventContext = useContext(EventContext);
+  const { events } = eventContext;
 
+  useEffect(() => {
+    setTimeout(() => {
+      setList(events.filter(e => new Date(e.date) >= new Date()));
+      setDataFetched(true);
+    }, 2000);
+  });
 
-	const eventContext = useContext(EventContext);
-	const {events} = eventContext;
+  useEffect(() => {
+    setDataFetched(false);
+    setTimeout(() => {
+      setList(events.filter(e => new Date(e.date) >= new Date()));
+      setDataFetched(true);
+    }, 2000);
+  }, [events]);
 
+  const toggleOpen = () => {
+    setOpen(!open);
+  };
 
-	useEffect(()=>{
-		setTimeout(()=>{
-			setList(events.filter(e => new Date(e.date) >= new Date()));
-			setDataFetched(true);
-		},2000)
-	});
+  const toggleShowList = () => {
+    setShowList(!showList);
+  };
 
-	useEffect(()=>{
-		setDataFetched(false);
-		setTimeout(()=>{
-			setList(events.filter(e => new Date(e.date) >= new Date()));
-			setDataFetched(true);
-		},2000)
-	},[events])
-
-	const toggleOpen=()=>{
-		setOpen(!open)
-	}
-
-	const toggleShowList=()=>{
-		setShowList(!showList);
-	}
-
-	return (
-		<div style={liveEventStyle}>
-			<EventLabel
-				dataFetched={dataFetched}
-				toggleOpen={toggleOpen}
-				count={list.length}
-			/>
-			<EventContent
-				dataFetched={dataFetched}
-				toggleShowlist={toggleShowList}
-				showlist={showList}
-				open={open}
-				list={list}
-			/>
-		</div>
-	);
+  return (
+    <div style={liveEventStyle}>
+      <EventLabel
+        dataFetched={dataFetched}
+        toggleOpen={toggleOpen}
+        count={list.length}
+      />
+      <EventContent
+        dataFetched={dataFetched}
+        toggleShowlist={toggleShowList}
+        showlist={showList}
+        open={open}
+        list={list}
+      />
+    </div>
+  );
 }
 
 export default LiveEvents;
 
-
-
-
-
 const EventLabel = props => {
-	return (
-		<div style={nameStyle} onClick={props.toggleOpen}>
-			<span>Live Events</span>
-			<span style={countStyle}>{props.dataFetched ? props.count : null}</span>
-		</div>
-	);
+  return (
+    <div style={nameStyle} onClick={props.toggleOpen}>
+      <span>Live Events</span>
+      <span style={countStyle}>{props.dataFetched ? props.count : null}</span>
+    </div>
+  );
 };
 
 const EventContent = props => {
-	return (
-		<div
-			onTransitionEnd={props.toggleShowlist}
-			style={{
-				width: props.open ? '250px' : '0',
-				overflowY: props.list.length ? 'scroll' : 'hidden',
-				...eventContentStyle
-			}}
-		>
-			{props.open &&
-				props.list &&
-				props.showlist &&
-				props.list.map(d => (
-					<li style={eventListsStyle}>
-						<div style={{ display: 'inline-block', width: '70%' }}>
-							<a
-								href='/events'
-								style={{
-									margin: '10px 0',
-									color: '#2196F3',
-									textDecoration: 'none'
-								}}
-							>
-								{d.name}
-							</a>
-							<p style={{font:'10',Margin:'0'}}>{d.date}
-								<br>
-								</br>
-								{d.venue}
-							</p>
-						</div>
-					</li>
-				))}
-			{!props.dataFetched ? (
-				<MoonLoader
-					sizeUnit={'px'}
-					size={50}
-					color={'#123abc'}
-					loading={!props.dataFetched}
-				/>
-			) : null}
-		</div>
-	);
+  return (
+    <div
+      onTransitionEnd={props.toggleShowlist}
+      style={{
+        width: props.open ? "250px" : "0",
+        overflowY: props.list.length ? "scroll" : "hidden",
+        ...eventContentStyle
+      }}
+    >
+      {!props.list.length ? (
+        <div>No events now come back soon</div>
+      ) : (
+        props.open &&
+        props.list &&
+        props.showlist &&
+        props.list.map(d => (
+          <li style={eventListsStyle}>
+            <div style={{ display: "inline-block", width: "70%" }}>
+              <a
+                href="/events"
+                style={{
+                  margin: "10px 0",
+                  color: "#2196F3",
+                  textDecoration: "none"
+                }}
+              >
+                {d.name}
+              </a>
+              <p style={{ font: "10", Margin: "0" }}>
+                {d.date}
+                <br></br>
+                {d.venue}
+              </p>
+            </div>
+          </li>
+        ))
+      )}
+      {!props.dataFetched ? (
+        <MoonLoader
+          sizeUnit={"px"}
+          size={50}
+          color={"#123abc"}
+          loading={!props.dataFetched}
+        />
+      ) : null}
+    </div>
+  );
 };
 
-
-
-
-
-
 const liveEventStyle = {
-	position: 'fixed',
-	right: '0',
-	top: '100px',
-	display: 'flex',
-	zIndex: '999'
+  position: "fixed",
+  right: "0",
+  top: "100px",
+  display: "flex",
+  zIndex: "999"
 };
 
 const nameStyle = {
-	marginTop: '62px',
-	display: 'inline-block',
-	writingMode: 'vertical-rl',
-	background: '#23292e',
-	color: '#fff',
-	padding: '10px',
-	borderRadius: '3px',
-	cursor: 'pointer',
-	Height: '82px',
-	width: '40px'
+  marginTop: "62px",
+  display: "inline-block",
+  writingMode: "vertical-rl",
+  background: "#23292e",
+  color: "#fff",
+  padding: "10px",
+  borderRadius: "3px",
+  cursor: "pointer",
+  Height: "82px",
+  width: "40px"
 };
 
 const countStyle = {
-	marginTop: '62px',
-	position: 'absolute',
-	top: '-10px',
-	left: '-15px',
-	background: '#e53935',
-	width: '20px',
-	height: '20px',
-	textAlign: 'center',
-	writingMode: 'horizontal-tb',
-	borderRadius: '3px',
-	boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)'
+  marginTop: "62px",
+  position: "absolute",
+  top: "-10px",
+  left: "-15px",
+  background: "#e53935",
+  width: "20px",
+  height: "20px",
+  textAlign: "center",
+  writingMode: "horizontal-tb",
+  borderRadius: "3px",
+  boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)"
 };
 
 const eventContentStyle = {
-	marginTop: '62px',
-	display: 'inline-block',
-	float: 'right',
-	transition: 'width 1s',
-	border: '1px solid rgb(238, 238, 238)',
-	background: '#fff',
-	alignItems: 'center',
-	textAlign: 'center',
-	maxHeight: '232px',
-	overflowX: 'hidden'
+  marginTop: "62px",
+  display: "inline-block",
+  float: "right",
+  transition: "width 1s",
+  border: "1px solid rgb(238, 238, 238)",
+  background: "#fff",
+  alignItems: "center",
+  textAlign: "center",
+  maxHeight: "232px",
+  overflowX: "hidden"
 };
 
 const eventListsStyle = {
-	listStyleType: 'none',
-	background: '#fff',
-	fontSize: '14px',
-	borderBottom: '1px solid #EEEEEE',
-	color: 'rgba(0, 0, 0, 0.54)',
-	display: 'flex',
-	padding: '0.5em'
+  listStyleType: "none",
+  background: "#fff",
+  fontSize: "14px",
+  borderBottom: "1px solid #EEEEEE",
+  color: "rgba(0, 0, 0, 0.54)",
+  display: "flex",
+  padding: "0.5em"
 };
