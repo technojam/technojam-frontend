@@ -71,10 +71,7 @@ export default LiveEvents;
 const EventLabel = props => {
 	return (
 		<div 
-			style={{
-				//transform: props.open ? 'translateX(-350px)' : 'translateX(250px)',
-				...nameStyle
-			}} 
+			style={nameStyle} 
 			onClick={props.toggleOpen}
 		>
 			<span>Live Events</span>
