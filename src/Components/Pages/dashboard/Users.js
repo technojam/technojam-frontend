@@ -1,9 +1,7 @@
 import React, { useState,useContext } from 'react';
-import constants from '../../../util/constants';
-import EventContext from '../../../context/event/eventContext';
+
+
 //material ui component
-
-
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
@@ -109,9 +107,6 @@ function EnhancedTableHead(props) {
 		rowCount,
 		onRequestSort
 	} = props;
-	const createSortHandler = property => event => {
-		onRequestSort(event, property);
-	};
 
 	return (
 		<TableHead>
@@ -272,11 +267,8 @@ const useStylesModal = makeStyles((theme) => ({
 }));
 
 
-export default function EventTable() {
+export default function UserTable() {
 	const classes = useStyles();
-	const eventContext = useContext(EventContext);
-	const { events, loadEvents, deleteEvent } = eventContext;
-
 	const [order, setOrder] = React.useState('asc');
 	const [orderBy, setOrderBy] = React.useState('calories');
 	const [selected, setSelected] = React.useState([]);
@@ -297,17 +289,17 @@ export default function EventTable() {
 		setOrderBy(property);
 	};
 
-	const handleChangePage = (event, newPage) => {
+	const handleChangePage = (user, newPage) => {
 		setPage(newPage);
 	};
 
-	const handleChangeRowsPerPage = event => {
-		setRowsPerPage(+event.target.value);
+	const handleChangeRowsPerPage = user => {
+		setRowsPerPage(+user.target.value);
 		setPage(0);
 	};
 
-	const handleChangeDense = event => {
-		setDense(event.target.checked);
+	const handleChangeDense = user => {
+		setDense(user.target.checked);
 	};
 
 	const isSelected = name => selected.indexOf(name) !== -1;
@@ -317,23 +309,6 @@ export default function EventTable() {
 
 	onRefreshClicked = () => {
 		console.log('refreshing list');
-		loadEvents();
-	};
-
-	const setContact = () => {
-		rows = [];
-		events.map(c => {
-			let date = new Date(c.date).getTime();
-			rows.push(
-				createData(
-					c.uid,
-					c.name,
-					c.venue,
-					c.timing,  
-					c.date,
-				)
-			);
-		});
 	};
 
 	onDeleteClicked = () => {
@@ -355,7 +330,6 @@ export default function EventTable() {
 
 	return(<>
 	<div className={classes.root}>
-			{events.length > 0 && setContact()}
 			<Paper className={classes.paper}>
 				<EnhancedTableToolbar numSelected={selected.length} />
 				<div className={classes.tableWrapper}>
@@ -373,19 +347,9 @@ export default function EventTable() {
 							rowCount={rows.length}
 						/>
 						<TableBody>
-							{stableSort(rows, getSorting(order, orderBy))
-								.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-								.map((row, index) => {
-									console.log(row);
-									const isItemSelected = isSelected(row.cid);
-									const labelId = `enhanced-table-checkbox-${index}`;
-									return (
-										<TableRow
+									<TableRow
 											role='checkbox'
-											aria-checked={isItemSelected}
-											tabIndex={-1}
-											key={index}
-											selected={isItemSelected}
+											tabIndex={-1}		
 										>
 											<TableCell>technoTest</TableCell>
 											<TableCell >2019-2023</TableCell>
@@ -394,7 +358,7 @@ export default function EventTable() {
 											<TableCell >https://GithubUrl</TableCell>
 											<TableCell >ProfileUrl</TableCell>
 											<TableCell padding='checkbox'>
-												<IconButton tooltip='Delete Event'>
+												<IconButton tooltip='Delete User'>
 													<EditIcon onClick={() => editUser()} />
 													<Modal
 														aria-labelledby="transition-modal-title"
@@ -514,16 +478,16 @@ export default function EventTable() {
 												</IconButton>
 											</TableCell>
 											<TableCell padding='checkbox'>
-												<IconButton tooltip='Delete Event'>
+												<IconButton tooltip='Delete User'>
 													<DeleteIcon
-														onClick={() => deleteEvent(row.eid)}
+														
 													/>
 												</IconButton>
 											</TableCell>
 											
 										</TableRow>
-									);
-								})}
+									
+							
 							{emptyRows > 0 && (
 								<TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
 									<TableCell colSpan={6} />
