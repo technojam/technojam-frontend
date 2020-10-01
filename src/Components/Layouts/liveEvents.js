@@ -83,7 +83,7 @@ const EventContent = props => {
 			}}
 		>
 			{!props.list.length ? 
-		        <div>No events now come back soon</div>
+		        <div style={noEventListsStyle}>No events now come back soon</div>
 		    : 
 			props.open &&
 				props.list &&
@@ -182,4 +182,10 @@ const eventListsStyle = {
 	color: 'rgba(0, 0, 0, 0.54)',
 	display: 'flex',
 	padding: '0.5em'
+};
+
+const noEventListsStyle = {
+	display: 'inline-block',
+	fontSize: '14px',
+	fontWeight: 'bold'
 };
