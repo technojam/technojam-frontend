@@ -92,10 +92,11 @@ const EventContent = props => {
 				...eventContentStyle
 			}}
 		>
-			{!props.list.length ? 
+			{props.dataFetched && !props.list.length ? 
 		        <div style={noEventContentStyle}>No events now come back soon</div>
 		    : 
 			props.open &&
+				props.dataFetched &&
 				props.list &&
 				props.showlist &&
 				props.list.map(d => (
@@ -174,12 +175,13 @@ const countStyle = {
 
 const eventContentStyle = {
 	marginTop: '62px',
-	display: 'inline-block',
+	display: 'flex',
+	justifyContent: 'center',
+	alignItems: 'center',
 	float: 'right',
 	border: '1px solid rgb(238, 238, 238)',
 	background: '#fff',
 	width: '250px',
-	alignItems: 'center',
 	textAlign: 'center',
 	maxHeight: '232px',
 	overflowX: 'hidden',
