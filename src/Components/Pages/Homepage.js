@@ -168,16 +168,6 @@ const Homepage = () => {
                                                 {item.buttonname}{" "}
                                             </a>
                                         </Button>
-                                        {/* <Button
-                                            variant="contained"
-                                            style={style.button}
-                                        >
-                                            {item.buttonname}{" "}
-                                            <a
-                                                href={item.cta}
-                                                target="_blank"
-                                            />
-                                        </Button> */}
                                     </div>
                                 </div>
                             </Grid>
