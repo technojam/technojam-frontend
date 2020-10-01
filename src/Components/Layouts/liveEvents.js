@@ -40,7 +40,12 @@ function LiveEvents() {
 	}
 
 	return (
-		<div style={liveEventStyle}>
+		<div 
+			style={{
+				transform: open ? 'translate(0px)' : 'translate(250px)', 
+				...liveEventStyle
+			}}
+		>
 			<EventLabel
 				dataFetched={dataFetched}
 				toggleOpen={toggleOpen}
@@ -65,7 +70,13 @@ export default LiveEvents;
 
 const EventLabel = props => {
 	return (
-		<div style={nameStyle} onClick={props.toggleOpen}>
+		<div 
+			style={{
+				//transform: props.open ? 'translateX(-350px)' : 'translateX(250px)',
+				...nameStyle
+			}} 
+			onClick={props.toggleOpen}
+		>
 			<span>Live Events</span>
 			<span style={countStyle}>{props.dataFetched ? props.count : null}</span>
 		</div>
@@ -77,13 +88,12 @@ const EventContent = props => {
 		<div
 			onTransitionEnd={props.toggleShowlist}
 			style={{
-				width: props.open ? '250px' : '0',
 				overflowY: props.list.length ? 'scroll' : 'hidden',
 				...eventContentStyle
 			}}
 		>
 			{!props.list.length ? 
-		        <div style={noEventListsStyle}>No events now come back soon</div>
+		        <div style={noEventContentStyle}>No events now come back soon</div>
 		    : 
 			props.open &&
 				props.list &&
@@ -127,9 +137,10 @@ const EventContent = props => {
 
 
 const liveEventStyle = {
-	position: 'fixed',
-	right: '0',
+	position: 'absolute',
+	right: '0px',
 	top: '100px',
+	transition: 'transform 1s',
 	display: 'flex',
 	zIndex: '999'
 };
@@ -144,7 +155,7 @@ const nameStyle = {
 	borderRadius: '3px',
 	cursor: 'pointer',
 	Height: '82px',
-	width: '40px'
+	width: '40px',
 };
 
 const countStyle = {
@@ -165,13 +176,19 @@ const eventContentStyle = {
 	marginTop: '62px',
 	display: 'inline-block',
 	float: 'right',
-	transition: 'width 1s',
 	border: '1px solid rgb(238, 238, 238)',
 	background: '#fff',
+	width: '250px',
 	alignItems: 'center',
 	textAlign: 'center',
 	maxHeight: '232px',
-	overflowX: 'hidden'
+	overflowX: 'hidden',
+};
+
+const noEventContentStyle = {
+	display: 'inline-block',
+	fontSize: '14px',
+	fontWeight: 'bold'
 };
 
 const eventListsStyle = {
@@ -182,10 +199,4 @@ const eventListsStyle = {
 	color: 'rgba(0, 0, 0, 0.54)',
 	display: 'flex',
 	padding: '0.5em'
-};
-
-const noEventListsStyle = {
-	display: 'inline-block',
-	fontSize: '14px',
-	fontWeight: 'bold'
 };
