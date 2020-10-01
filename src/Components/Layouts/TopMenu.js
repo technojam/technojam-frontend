@@ -123,10 +123,11 @@ function TopMenu(props) {
 		role: 'user',
 		name: 'Guest',
 		email: '',
-		password: ''
+		password: '',
+		confirmPassword: ''
 	});
 
-	const { email, password, role, name } = user1;
+	const { email, password, confirmPassword, role, name } = user1;
 
 	const handleOpen = () => {
 		setOpen(true);
@@ -176,9 +177,12 @@ function TopMenu(props) {
 		e.preventDefault();
 		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		re.test(String(email).toLocaleLowerCase);
-		if (name === '' || email === '' || password === '') {
+		if (name === '' || email === '' || password === '' || confirmPassword === '') {
 			setAlert('Please fill in all fields', 'danger');
 		} 
+		else if (password !== confirmPassword) {
+			setAlert('Passwords do not match');
+		}
 		else if(name.length <= 3){
 			setAlert('Name should not be of length less than 3.', 'danger');
 		}
@@ -524,6 +528,17 @@ function TopMenu(props) {
 										autoComplete='current-password'
 										margin='normal'
 										variant='outlined'
+									/>
+									<TextField
+									id='outlined-password-input'
+									label='confirm password'
+									type='password'
+									name='confirmPassword'
+									value={confirmPassword}
+									onChange={onChange}
+									autoComplete='current-password'
+									margin='normal'
+									variant='outlined'
 									/>
 									<Button
 										variant='contained'
