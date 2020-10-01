@@ -126,7 +126,7 @@ function TopMenu(props) {
 		password: ''
 	});
 
-	const { email, password, role, name } = user1;
+	const { email, password, repeatPassword, role, name } = user1;
 
 	const handleOpen = () => {
 		setOpen(true);
@@ -176,7 +176,7 @@ function TopMenu(props) {
 		e.preventDefault();
 		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		re.test(String(email).toLocaleLowerCase);
-		if (name === '' || email === '' || password === '') {
+		if (name === '' || email === '' || password === '' || repeatPassword === '') {
 			setAlert('Please fill in all fields', 'danger');
 		} 
 		else if(name.length <= 3){
@@ -185,6 +185,10 @@ function TopMenu(props) {
 		
 		else if(re.test(email) == false){
 			setAlert('Not a valid email address!', 'danger');
+		}
+
+		else if(password != repeatPassword){
+			setAlert('The password fields must match!', 'danger');
 		}
 		
 		else {
@@ -522,6 +526,17 @@ function TopMenu(props) {
 										value={password}
 										onChange={onChange}
 										autoComplete='current-password'
+										margin='normal'
+										variant='outlined'
+									/>
+									<TextField
+										id='outlined-repeatPassword-input'
+										label='Repeat the password'
+										type='password'
+										name='repeatPassword'
+										value={repeatPassword}
+										onChange={onChange}
+										autoComplete='current-repeatPassword'
 										margin='normal'
 										variant='outlined'
 									/>
