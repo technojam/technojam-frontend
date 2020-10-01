@@ -65,7 +65,6 @@ const Users = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log('haha');
 		fetch(backendUrl+"/api/team/add",{
 			method:'post',
 			headers:{
