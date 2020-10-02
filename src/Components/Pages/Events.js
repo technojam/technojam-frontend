@@ -130,7 +130,7 @@ const Events = () => {
 							>
 								<h4>Live Events</h4>
 								{upevent.length < 1 ? (
-									<Timeline style={{ border: 'black',width:'400px' }}>
+									<Timeline className="EventSection" style={{ border: 'black',width:'400px' }}>
 										<TimelineEvent>
 											<CardContent>
 												<Typography
