@@ -6,24 +6,9 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import '../style.css';
+import '../Styles/Mentorship.css';
 import { Color } from '../color';
 import {Projects} from '../../util/projects';
-
-
-const sectionStyle = {
-   width: '100%',
-   height: '100vh',
-   backgroundImage: 'url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/pro.jpg)',
-   backgroundRepeat: 'no-repeat',
-   marginTop: '40px',
-   backgroundPositionX: 'center',
-   backgroundSize: 'cover'
-};
-
-/* FIXME: When the target will be decided, remove the rel attribute.
- * It has been added here for security reasons.
- * Reference: https://mathiasbynens.github.io/rel-noopener/
- */
 
 const Mentorship = () => {
    const [projects] = useState([
@@ -52,7 +37,7 @@ const Mentorship = () => {
    return (
       <section>
          <div id='1'>
-            <div style={sectionStyle}>
+            <div className="sectionStyle">
                <div className='mentor_section_div' style={{ paddingTop: '330px' }}>
                   <Typography variant='h3' className='letter_spacing'>
                      2020 Projects

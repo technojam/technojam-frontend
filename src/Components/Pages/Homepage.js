@@ -7,7 +7,7 @@ import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import "../style.css";
 import { Color } from "../color";
-
+import "../Styles/Homepage.css";
 import "../style.css";
 
 const style = {

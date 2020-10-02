@@ -8,19 +8,8 @@ import {ALUMNI, TEAM_MEMBERS} from '../../util/constants';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MailIcon from '@material-ui/icons/Mail';
+import "../Styles/ProfilePage.css";
 
-const style = {
-    container: {
-        marginTop: "62px"
-    },
-    img: {
-        maxWidth: "180px",
-        minWidth: "100px",
-        width: "100%",
-        borderRadius: "50%",
-        marginTop: "10px",
-    }
-};
 
 const handleValue=(title,value)=>{
     if(title==="Batch"||title==="Position"){
@@ -63,18 +52,18 @@ export default class ProfilePage extends React.Component {
             return (<div>No Data Found...</div>);
         } else {
             return (
-                <div style={style.container}>
+                <div className="container">
                     <Container fixed>
                         <Grid  justify="space-between">
                             <Grid item lg={2} md={4} xs={4}>
-                                <img src={this.state.currentProfile.Image} style={style.img}/>
+                                <img src={this.state.currentProfile.Image} className="img"/>
                                 
                             </Grid>
                             <Grid item lg={10} md={8} xs={6} style={{marginTop: "4%"}}>
-                                <Typography variant="h2" style={style.name}>
+                                <Typography variant="h2" className="name">
                                     {this.state.currentProfile.Name}
                                 </Typography>
-                                <Typography style={style.name}>
+                                <Typography className="name">
                                     <a href={"mailto:"+this.state.currentProfile.email}> <MailIcon/> </a>
                                     {this.state.currentProfile.details.map((detail, index) => (
                                             handleIcons(detail.title,detail.value)

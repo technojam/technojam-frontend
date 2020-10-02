@@ -1,0 +1,9 @@
+.sectionStyle {
+    width: '100%';
+    height: '100vh';
+    background-image: 'url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/pro.jpg)';
+    background-repeat: 'no-repeat';
+    margin-top: '40px';
+    background-position-x: 'center';
+    background-size: 'cover'
+ };

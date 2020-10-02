@@ -1,0 +1,29 @@
+.root {
+    flex-grow: 1;
+    margin-top: '100px';
+    margin-bottom: 20;
+    min-height: '580px'
+}
+.card {
+    display: 'flex';
+    flex-direction: 'column';
+    align-items: 'center';
+    padding: '25px 0px';
+    box-shadow: ' 0px 4px 8px rgba(0, 0, 0, 0.25) !important';
+    line-height: '20px'
+}
+.link {
+    text-decoration: 'none';
+    color: '#000';
+    margin: '5px'
+}
+.circle {
+    width: 125;
+    margin: '20px';
+    border-radius: 100;
+    margin: '50px #fff';
+    box-shadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)'
+}
+.name {
+    margin-top: '15px'
+}

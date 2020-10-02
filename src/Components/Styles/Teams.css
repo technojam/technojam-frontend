@@ -1,0 +1,13 @@
+    .root {
+       flex-grow: 1;
+ 
+       margin-top: '100px';
+       margin-bottom: 20;
+       min-height: '580px'
+    }
+
+    .circle {
+        width: 80;
+        border-radius: 40;
+        box-shadow: '1px 4px 6px  rgba(0, 0, 0, 0.5)'
+     };
