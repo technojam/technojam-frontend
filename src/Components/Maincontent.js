@@ -36,6 +36,7 @@ const Maincontent = () => (
 			<Route exact path='/team' component={team} />
 			<Route exact path='/groups' component={groups} />
 			<Route exact path='/profile/:id' component={ProfilePage} />
+			<Route exact path='/alexroute' component={Dashboard} />
 			<LoggedinRoutes exact path='/profile/' component={Profile} />
 			<AdminRoute exact path='/pannel' component={Dashboard} />
 		</Switch>
