@@ -56,8 +56,8 @@ const initialState = {
 };
 
 
-function createData(eid, name, venue, timing, date) {
-	return { eid, name, venue, timing, date };
+function createData(eid, name, venue, timing, date,size,capacity,isPaid,amount,resources,description) {
+	return { eid, name, venue, timing, date,size,capacity,isPaid,amount,resources,description };
 }
 
 let rows = [];
@@ -376,6 +376,12 @@ export default function EventTable() {
 					c.venue,
 					c.timing,
 					c.date,
+					c.size,
+					c.capacity,
+					c.isPaid,
+					c.amount,
+					c.resources,
+					c.description,
 				)
 			);
 		});
