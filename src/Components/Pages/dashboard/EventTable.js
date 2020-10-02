@@ -40,6 +40,20 @@ import CardContent from '@material-ui/core/CardContent';
 
 import { FormGroup } from '@material-ui/core';
 
+const initialState = {
+	type: '',
+	name: '',
+	description: '',
+	longDescription: '',
+	capacity: '',
+	venue: '',
+	timing: '',
+	date: '',
+	isPaid: '',
+	amount: '',
+	teamSize: '',
+	resources: '',
+};
 
 
 function createData(eid, name, venue, timing, date) {
@@ -320,25 +334,16 @@ export default function EventTable() {
 		console.log('cids:', selected);
 		// deleteContact(selected);
 	};
-	const editEvent = () => {
+	const editEvent = (row) => {
 		handleOpen();
+		setDetails({
+			...details,
+			...row
+		});
 		console.log("Edit is now working")
 	}
 
-	const [details, setDetails] = useState({
-		type: '',
-		name: '',
-		description: '',
-		longDescription: '',
-		capacity: '',
-		venue: '',
-		timing: '',
-		date: '',
-		isPaid: '',
-		amount: '',
-		teamSize: '',
-		resources: '',
-	});
+	const [details, setDetails] = useState(initialState);
 
 	const handleChange = (e) => {
 		setDetails({
@@ -382,7 +387,7 @@ export default function EventTable() {
 
 	const handleClose = () => {
 		setOpen(false);
-		setDetails({});
+		setDetails(initialState);
 	};
 
 	return (<>
@@ -427,7 +432,7 @@ export default function EventTable() {
 											{/* <TableCell align='right'>{row.protein}</TableCell> */}
 											<TableCell padding='checkbox'>
 												<IconButton tooltip='Delete Event'>
-													<EditIcon onClick={() => editEvent(row.eid)} />
+													<EditIcon onClick={() => editEvent(row)} />
 													<Modal
 														aria-labelledby="transition-modal-title"
 														aria-describedby="transition-modal-description"
