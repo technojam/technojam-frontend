@@ -118,6 +118,7 @@ function TopMenu(props) {
 	const isOpen = Boolean(anchorEl);
 	const [open, setOpen] = React.useState(false);
 	const [registerOpen, setRegisterOpen] = React.useState(false);
+	const [isNightMode, setIsNightMode] = React.useState(false);
 
 	const [user1, setUser] = React.useState({
 		role: 'user',
@@ -207,11 +208,15 @@ function TopMenu(props) {
 		handleClose1();
 	};
 
+	const handleChangeNightMode = () => {
+		setIsNightMode(!isNightMode);
+	}
+
 	return (
 		<div style={{ color: '#fff' }}>
 			{console.log('show login value:', showLogin)}
 			<AppBar position='fixed'>
-				<Toolbar style={{ backgroundColor: '#24292e' }}>
+				<Toolbar style={{ backgroundColor: isNightMode ? '#24292e' : '#3f51b5' }}>
 					<Hidden mdUp>
 						<ResponsiveDrawer />
 					</Hidden>
@@ -291,7 +296,7 @@ function TopMenu(props) {
 								aria-label='Night Mode'
 								style={{padding:"4px" }}
 								component={Link}
-								to={'/'}
+								onClick={handleChangeNightMode}
 							>
 								<WbIncandescentIcon />
 							</IconButton>
