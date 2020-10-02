@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { lighten, makeStyles } from '@material-ui/core/styles';
@@ -40,10 +40,24 @@ import CardContent from '@material-ui/core/CardContent';
 
 import { FormGroup } from '@material-ui/core';
 
+const initialState = {
+	type: '',
+	name: '',
+	description: '',
+	longDescription: '',
+	capacity: '',
+	venue: '',
+	timing: '',
+	date: '',
+	isPaid: '',
+	amount: '',
+	teamSize: '',
+	resources: '',
+};
 
 
-function createData(eid, name, venue, timing, date) {
-	return { eid, name, venue, timing, date };
+function createData(eid, name, venue, timing, date,size,capacity,isPaid,amount,resources,description) {
+	return { eid, name, venue, timing, date,size,capacity,isPaid,amount,resources,description };
 }
 
 let rows = [];
@@ -320,10 +334,23 @@ export default function EventTable() {
 		console.log('cids:', selected);
 		// deleteContact(selected);
 	};
-	const editEvent = () => {
+	const editEvent = (row) => {
 		handleOpen();
+		setDetails({
+			...details,
+			...row
+		});
 		console.log("Edit is now working")
 	}
+
+	const [details, setDetails] = useState(initialState);
+
+	const handleChange = (e) => {
+		setDetails({
+			...details,
+			[e.target.name]: e.target.value,
+		});
+	};
 
 	const downloadAttendees = (eventId) => {
 		console.log("genrating data")
@@ -349,6 +376,12 @@ export default function EventTable() {
 					c.venue,
 					c.timing,
 					c.date,
+					c.size,
+					c.capacity,
+					c.isPaid,
+					c.amount,
+					c.resources,
+					c.description,
 				)
 			);
 		});
@@ -360,6 +393,7 @@ export default function EventTable() {
 
 	const handleClose = () => {
 		setOpen(false);
+		setDetails(initialState);
 	};
 
 	return (<>
@@ -404,7 +438,7 @@ export default function EventTable() {
 											{/* <TableCell align='right'>{row.protein}</TableCell> */}
 											<TableCell padding='checkbox'>
 												<IconButton tooltip='Delete Event'>
-													<EditIcon onClick={() => editEvent(row.eid)} />
+													<EditIcon onClick={() => editEvent(row)} />
 													<Modal
 														aria-labelledby="transition-modal-title"
 														aria-describedby="transition-modal-description"
@@ -428,11 +462,13 @@ export default function EventTable() {
 											<input
 												style={style.form.text}
 												type='text'
-												name='name'	
+												name='name' 
+												value={details.name || ''}
+												onChange={handleChange}
 											/>
 										</FormGroup>
 										<br></br>
-									</Grid>			
+									</Grid>   
 									<Grid item xs={12} md={4}>
 										<FormGroup>
 											<label>Date</label>
@@ -440,7 +476,9 @@ export default function EventTable() {
 											<input
 												style={style.form.text}
 												type='date'
-												name='date'	
+												name='date' 
+												value={details.date || ''}
+												onChange={handleChange}
 											/>
 											<br></br>
 										</FormGroup>
@@ -453,7 +491,9 @@ export default function EventTable() {
 												style={style.form.text}
 												type='time'
 												name='timing'
-												defaultValue='07:30'		
+												defaultValue='07:30'  
+												value={details.timing || '07:30'}
+												onChange={handleChange}
 											/>
 										</FormGroup>
 										<br></br>
@@ -467,6 +507,8 @@ export default function EventTable() {
 												style={style.form.text}
 												type='text'
 												name='venue'
+												value={details.venue || ''}
+												onChange={handleChange}
 											/>
 										</FormGroup>
 										<br></br>
@@ -478,7 +520,8 @@ export default function EventTable() {
 											<select
 												style={style.form.text}
 												name='type'
-												>
+												onChange={handleChange}
+												value={details.type || 'Single'}>
 												<option value='Single'>Single</option>
 												<option value='Team'>Team</option>
 											</select>
@@ -493,7 +536,8 @@ export default function EventTable() {
 												type='text'
 												name='teamSize'
 												defaultValue='0'
-
+												value={details.teamSize || '0'}
+												onChange={handleChange}
 											/>
 										</FormGroup>
 										<br></br>
@@ -507,7 +551,9 @@ export default function EventTable() {
 												style={style.form.text}
 												type='number'
 												name='capacity'
-												defaultValue='0'	
+												defaultValue='0' 
+												value={details.capacity || '0'}
+												onChange={handleChange}
 											/>
 										</FormGroup>
 										<br></br>
@@ -519,7 +565,8 @@ export default function EventTable() {
 											<select
 												style={style.form.text}
 												name='isPaid'
-											>
+												value={details.isPaid || 'No'}
+												onChange={handleChange}>
 												<option value='No'>No</option>
 												<option value='Yes'>Yes</option>
 											</select>
@@ -534,6 +581,8 @@ export default function EventTable() {
 												type='number'
 												name='amount'
 												defaultValue='0'
+												value={details.amount || '0'}
+												onChange={handleChange}
 											/>
 										</FormGroup>
 										<br></br>
@@ -549,7 +598,8 @@ export default function EventTable() {
 												type='text'
 												name='resources'
 												defaultValue='0'
-											
+												value={details.resources || '0'}
+												onChange={handleChange}
 											/>
 										</FormGroup>
 										<br></br>
@@ -566,11 +616,12 @@ export default function EventTable() {
 											maxWidth: '100%'
 										}}
 									>
-										
 											<input
 												style={style.form.text}
 												type='textarea'
 												name='description'
+												value={details.description || ''}
+												onChange={handleChange}
 												
 											></input>
 										
