@@ -135,7 +135,7 @@ const EventContent = props => {
 
 
 const liveEventStyle = {
-	position: 'absolute',
+	position: 'fixed',
 	right: '0px',
 	top: '100px',
 	transition: 'transform 1s',
