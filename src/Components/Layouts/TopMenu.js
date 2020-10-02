@@ -1,10 +1,10 @@
-import React, { useContext, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Logo from '../../images/logo_small.png';
-import ResponsiveDrawer from './ResponsiveDrawer';
-import Alert from './Alerts';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
+import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../../images/logo_small.png";
+import ResponsiveDrawer from "./ResponsiveDrawer";
+import Alert from "./Alerts";
+import MenuItem from "@material-ui/core/MenuItem";
+import Menu from "@material-ui/core/Menu";
 //material ui component
 import {
 	AppBar,
@@ -12,45 +12,43 @@ import {
 	Button,
 	Badge,
 	IconButton,
-	Hidden
-} from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
-import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
-import PersonIcon from '@material-ui/icons/Person';
-import Tooltip from '@material-ui/core/Tooltip';
-import Modal from '@material-ui/core/Modal';
-import TextField from '@material-ui/core/TextField';
-import Fade from '@material-ui/core/Fade';
-import CloseIcon from '@material-ui/icons/Close';
-import Typography from '@material-ui/core/Typography';
-import AlertContext from '../../context/alert/alertContext';
-import AuthContext from '../../context/auth/authContext';
-import EventContext from '../../context/event/eventContext';
+	Hidden,
+} from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
+import WbIncandescentIcon from "@material-ui/icons/WbIncandescent";
+import PersonIcon from "@material-ui/icons/Person";
+import Tooltip from "@material-ui/core/Tooltip";
+import Modal from "@material-ui/core/Modal";
+import TextField from "@material-ui/core/TextField";
+import Fade from "@material-ui/core/Fade";
+import CloseIcon from "@material-ui/icons/Close";
+import Typography from "@material-ui/core/Typography";
+import AlertContext from "../../context/alert/alertContext";
+import AuthContext from "../../context/auth/authContext";
+import EventContext from "../../context/event/eventContext";
 
-import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-import '../style.css';
+import "../style.css";
+import { ThemeContext } from "../../util/themeContext";
 
-const style = {
-
-
-};
+const style = {};
 
 const modalCardBaseStyle = {
-	position: 'relative',
-	display: 'flex',
-	flexDirection: 'column',
-	padding: '4rem 1rem 3rem',
-	backgroundColor: '#fff',
+	position: "relative",
+	display: "flex",
+	flexDirection: "column",
+	padding: "4rem 1rem 3rem",
+	backgroundColor: "#fff",
 	backgroundImage:
 		'url("https://tj-static.s3.ap-south-1.amazonaws.com/etc/Capture.png")',
-	backgroundSize: '125%',
-	backgroundRepeat: 'no-repeat',
-	backgroundPosition: '160% -12px',
-	borderRadius: '.25rem',
-	boxShadow: '0 0 3rem rgb(36, 41, 46)',
-	outline: 'none'
+	backgroundSize: "125%",
+	backgroundRepeat: "no-repeat",
+	backgroundPosition: "160% -12px",
+	borderRadius: ".25rem",
+	boxShadow: "0 0 3rem rgb(36, 41, 46)",
+	outline: "none",
 };
 
 function TopMenu(props) {
@@ -73,31 +71,32 @@ function TopMenu(props) {
 		loading,
 		showLoading,
 		showLogin,
-		loginDialog
+		loginDialog,
 	} = authContext;
 
 	const { loadEvents } = eventContext;
+	const { theme: currentTheme, toggleTheme } = useContext(ThemeContext);
 
 	useEffect(() => {
 		loadUser();
 		loadEvents();
-		console.log('showLogin:', showLogin);
+		console.log("showLogin:", showLogin);
 		if (isAuthenticated) {
 			// props.history.push('/');
 			setOpen(false);
 			setRegisterOpen(false);
 		}
 
-		if (error === 'Invalid Credentials') {
-			setAlert(error, 'danger');
+		if (error === "Invalid Credentials") {
+			setAlert(error, "danger");
 			clearErrors();
 		}
-		if (error === 'User already exists') {
-			setAlert(error, 'danger');
+		if (error === "User already exists") {
+			setAlert(error, "danger");
 			clearErrors();
 		}
-		if (error === 'Email doesnt exist') {
-			setAlert(error, 'danger');
+		if (error === "Email doesnt exist") {
+			setAlert(error, "danger");
 			clearErrors();
 		}
 		// eslint-disable-next-line
@@ -106,12 +105,12 @@ function TopMenu(props) {
 	const theme = useTheme();
 	const modalCardStyle = { ...modalCardBaseStyle };
 
-	if (useMediaQuery(theme.breakpoints.up('sm'))) {
+	if (useMediaQuery(theme.breakpoints.up("sm"))) {
 		modalCardStyle.width = 400;
-		modalCardStyle.padding = '4rem 2rem 3rem';
+		modalCardStyle.padding = "4rem 2rem 3rem";
 	} else {
-		modalCardStyle.width = '80%';
-		modalCardStyle.maxWidth = 'calc(100% - 2rem)';
+		modalCardStyle.width = "80%";
+		modalCardStyle.maxWidth = "calc(100% - 2rem)";
 	}
 
 	const [anchorEl, setAnchorEl] = React.useState(null);
@@ -120,10 +119,10 @@ function TopMenu(props) {
 	const [registerOpen, setRegisterOpen] = React.useState(false);
 
 	const [user1, setUser] = React.useState({
-		role: 'user',
-		name: 'Guest',
-		email: '',
-		password: ''
+		role: "user",
+		name: "Guest",
+		email: "",
+		password: "",
 	});
 
 	const { email, password, repeatPassword, role, name } = user1;
@@ -145,59 +144,57 @@ function TopMenu(props) {
 		setRegisterOpen(false);
 	};
 
-	const handleMenu = event => {
-		console.log('handle menu called');
+	const handleMenu = (event) => {
+		console.log("handle menu called");
 		setAnchorEl(event.currentTarget);
 	};
 
 	const handleClose1 = () => {
 		setAnchorEl(null);
 	};
-	const onChange = e => {
+	const onChange = (e) => {
 		// console.log(`onChange called:${e.target.name},${e.target.value}`);
 		setUser({ ...user1, [e.target.name]: e.target.value });
 	};
 
-	const handleLogin = e => {
+	const handleLogin = (e) => {
 		e.preventDefault();
-		if (email === '' || password === '') {
-			setAlert('Please fill in all fields', 'danger');
+		if (email === "" || password === "") {
+			setAlert("Please fill in all fields", "danger");
 		} else {
-			console.log('login called');
+			console.log("login called");
 			showLoading({ data: true });
 			login({
 				email,
-				password
+				password,
 			});
 		}
 	};
 
-	const handleRegister = e => {
+	const handleRegister = (e) => {
 		e.preventDefault();
 		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		re.test(String(email).toLocaleLowerCase);
-		if (name === '' || email === '' || password === '' || repeatPassword === '') {
-			setAlert('Please fill in all fields', 'danger');
-		} 
-		else if(name.length <= 3){
-			setAlert('Name should not be of length less than 3.', 'danger');
-		}
-		
-		else if(re.test(email) == false){
-			setAlert('Not a valid email address!', 'danger');
-		}
-
-		else if(password != repeatPassword){
-			setAlert('The password fields must match!', 'danger');
-		}
-		
-		else {
-			console.log('register called');
+		if (
+			name === "" ||
+			email === "" ||
+			password === "" ||
+			repeatPassword === ""
+		) {
+			setAlert("Please fill in all fields", "danger");
+		} else if (name.length <= 3) {
+			setAlert("Name should not be of length less than 3.", "danger");
+		} else if (re.test(email) == false) {
+			setAlert("Not a valid email address!", "danger");
+		} else if (password != repeatPassword) {
+			setAlert("The password fields must match!", "danger");
+		} else {
+			console.log("register called");
 			showLoading({ data: true });
 			register({
 				name,
 				email,
-				password
+				password,
 			});
 		}
 	};
@@ -208,25 +205,25 @@ function TopMenu(props) {
 	};
 
 	return (
-		<div style={{ color: '#fff' }}>
-			{console.log('show login value:', showLogin)}
-			<AppBar position='fixed'>
-				<Toolbar style={{ backgroundColor: '#24292e' }}>
+		<div style={{ color: "#fff" }}>
+			{console.log("show login value:", showLogin)}
+			<AppBar position="fixed">
+				<Toolbar style={{ backgroundColor: "#24292e" }}>
 					<Hidden mdUp>
 						<ResponsiveDrawer />
 					</Hidden>
-					<Grid alignItems='flex-start' justify='flex-start'>
-						<Button color='inherit' component={Link} to={'/'}>
+					<Grid alignItems="flex-start" justify="flex-start">
+						<Button color="inherit" component={Link} to={"/"}>
 							<img
 								src={Logo}
-								alt='TechnoJam.tech'
-								height='50px'
-								align='center'
+								alt="TechnoJam.tech"
+								height="50px"
+								align="center"
 							/>
 							<Hidden smDown>
 								<Typography
-									className='topMenu_typo_name'
-									style={{ fontSize: '14px' }}
+									className="topMenu_typo_name"
+									style={{ fontSize: "14px" }}
 								>
 									TECHNOJAM
 								</Typography>
@@ -234,78 +231,121 @@ function TopMenu(props) {
 						</Button>
 					</Grid>
 					<Hidden smDown>
-						<div className='topMenu_wrapper'>
+						<div className="topMenu_wrapper">
 							<Grid
-								alignItems='flex-end'
-								justify='flex-end'
+								alignItems="flex-end"
+								justify="flex-end"
 								spacing={800}
-								style={{ marginLeft: '75px' }}
+								style={{ marginLeft: "75px" }}
 							>
-								<Button style={{ style }} component={Link} to={'/events'}>
-									<Typography className='topMenu_typo_name'>Events</Typography>
+								<Button
+									style={{ style }}
+									component={Link}
+									to={"/events"}
+								>
+									<Typography className="topMenu_typo_name">
+										Events
+									</Typography>
 								</Button>
 								<Badge
-									style={{ marginBottom: '30px', marginRight: '5px' }}
-									badgeContent={'New'}
-									color='secondary'
+									style={{
+										marginBottom: "30px",
+										marginRight: "5px",
+									}}
+									badgeContent={"New"}
+									color="secondary"
 								></Badge>
 
-								<Button style={{ style }} component={Link} to={'/achievements'}>
-									<Typography className='topMenu_typo_name'>
+								<Button
+									style={{ style }}
+									component={Link}
+									to={"/achievements"}
+								>
+									<Typography className="topMenu_typo_name">
 										Achievements
 									</Typography>
 								</Button>
-								<Button style={{ style }} component={Link} to={'/team'}>
-									{' '}
-									<Typography className='topMenu_typo_name'>Team</Typography>
+								<Button
+									style={{ style }}
+									component={Link}
+									to={"/team"}
+								>
+									{" "}
+									<Typography className="topMenu_typo_name">
+										Team
+									</Typography>
 								</Button>
-								<Button style={{ style }} component={Link} to={'/alumni'}>
-									<Typography className='topMenu_typo_name'>Alumni</Typography>
+								<Button
+									style={{ style }}
+									component={Link}
+									to={"/alumni"}
+								>
+									<Typography className="topMenu_typo_name">
+										Alumni
+									</Typography>
 								</Button>
 
-								<Button style={{ style }} component={Link} to={'/mentorship'}>
-									<Typography className='topMenu_typo_name'>
+								<Button
+									style={{ style }}
+									component={Link}
+									to={"/mentorship"}
+								>
+									<Typography className="topMenu_typo_name">
 										Mentorship
 									</Typography>
 								</Button>
-								<Button style={{ style }} component={Link} to={'/groups'}>
-									<Typography className='topMenu_typo_name'>Groups</Typography>
+								<Button
+									style={{ style }}
+									component={Link}
+									to={"/groups"}
+								>
+									<Typography className="topMenu_typo_name">
+										Groups
+									</Typography>
 								</Button>
-								<Button style={{ style }} component={Link} to={'/aboutus'}>
-									<Typography className='topMenu_typo_name'>
+								<Button
+									style={{ style }}
+									component={Link}
+									to={"/aboutus"}
+								>
+									<Typography className="topMenu_typo_name">
 										About Us
 									</Typography>
 								</Button>
-								<Button style={{ style }} component={Link} to={'/contactus'}>
-									<Typography className='topMenu_typo_name'>
+								<Button
+									style={{ style }}
+									component={Link}
+									to={"/contactus"}
+								>
+									<Typography className="topMenu_typo_name">
 										Contact Us
 									</Typography>
 								</Button>
 							</Grid>
 						</div>
 					</Hidden>
-					<div style={{ marginLeft: 'auto' }}>
-						<Tooltip title='Night Mode' >
+					<div style={{ marginLeft: "auto" }}>
+						<Tooltip title="Night Mode">
 							<IconButton
-								color='inherit'
-								aria-label='Night Mode'
-								style={{padding:"4px" }}
+								color="inherit"
+								aria-label="Night Mode"
+								style={{ padding: "4px" }}
 								component={Link}
-								to={'/'}
+								onClick={toggleTheme}
 							>
 								<WbIncandescentIcon />
 							</IconButton>
 						</Tooltip>
-						<Tooltip title='Our Projects'>
+						<Tooltip title="Our Projects">
 							<a
-								className=' btn-social-icon btn-github'
-								href='https://github.com/technojam'
-								target='_blank'
-								rel='noopener noreferrer'
+								className=" btn-social-icon btn-github"
+								href="https://github.com/technojam"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
 								<i
-									className='fab fa-github fa-lg'
-									style={{ color: '#fcfcfc',padding:'4px' }}
+									className="fab fa-github fa-lg"
+									style={{ color: "#fcfcfc", padding: "4px" }}
 								></i>
 							</a>
 						</Tooltip>
@@ -323,47 +363,51 @@ function TopMenu(props) {
 						</Tooltip> */}
 						<React.Fragment>
 							<IconButton
-								aria-label='account of current user'
-								aria-controls='menu-appbar'
-								aria-haspopup='true'
+								aria-label="account of current user"
+								aria-controls="menu-appbar"
+								aria-haspopup="true"
 								onClick={handleMenu}
-								color='inherit'
-								style={{padding:"4px" }}
+								color="inherit"
+								style={{ padding: "4px" }}
 							>
 								<PersonIcon />
-								<Typography className='topMenu_typo_name'>
+								<Typography className="topMenu_typo_name">
 									{/* {console.log('user:', user)} */}
 									{user ? user.name : name}
 								</Typography>
 							</IconButton>
 							<Menu
-								id='menu-appbar'
+								id="menu-appbar"
 								anchorEl={anchorEl}
 								anchorOrigin={{
-									vertical: 'bottom',
-									horizontal: 'right'
+									vertical: "bottom",
+									horizontal: "right",
 								}}
 								keepMounted
 								transformOrigin={{
-									vertical: 'bottom',
-									horizontal: 'right'
+									vertical: "bottom",
+									horizontal: "right",
 								}}
 								open={isOpen}
 								onClose={handleClose1}
 							>
 								{!isAuthenticated ? (
 									<span>
-										<MenuItem onClick={() => handleOpen()}>Login</MenuItem>
-										<MenuItem onClick={() => handleRegisterOpen()}>
+										<MenuItem onClick={() => handleOpen()}>
+											Login
+										</MenuItem>
+										<MenuItem
+											onClick={() => handleRegisterOpen()}
+										>
 											Register
 										</MenuItem>
 									</span>
 								) : (
 									<div>
-										{user && user.role == 'admin' ? (
+										{user && user.role == "admin" ? (
 											<MenuItem
 												component={Link}
-												to='/pannel'
+												to="/pannel"
 												onClick={() => handleClose1()}
 											>
 												Dashboard
@@ -371,12 +415,16 @@ function TopMenu(props) {
 										) : null}
 										<MenuItem
 											component={Link}
-											to='/profile'
+											to="/profile"
 											onClick={() => handleClose1()}
 										>
 											View Profile
 										</MenuItem>
-										<MenuItem onClick={() => handleLogout()}>Logout</MenuItem>
+										<MenuItem
+											onClick={() => handleLogout()}
+										>
+											Logout
+										</MenuItem>
 									</div>
 								)}
 							</Menu>
@@ -385,9 +433,9 @@ function TopMenu(props) {
 							open={showLogin || open}
 							onClose={handleClose}
 							style={{
-								display: 'flex',
-								alignItems: 'center',
-								justifyContent: 'center'
+								display: "flex",
+								alignItems: "center",
+								justifyContent: "center",
 							}}
 						>
 							<Fade in={showLogin || open}>
@@ -395,64 +443,64 @@ function TopMenu(props) {
 									<Alert />
 									<img
 										src={Logo}
-										alt='TechnoJam.tech'
+										alt="TechnoJam.tech"
 										style={{
-											position: 'absolute',
-											top: '0',
-											left: '50%',
-											width: '100px',
-											transform: 'translate(-50%, -50%)'
+											position: "absolute",
+											top: "0",
+											left: "50%",
+											width: "100px",
+											transform: "translate(-50%, -50%)",
 										}}
 									/>
 
 									<IconButton
-										aria-label='close'
+										aria-label="close"
 										onClick={handleClose}
 										style={{
-											position: 'absolute',
-											top: '.5rem',
-											right: '.5rem'
+											position: "absolute",
+											top: ".5rem",
+											right: ".5rem",
 										}}
 									>
 										<CloseIcon />
 									</IconButton>
 									<TextField
-										id='outlined-email-input'
-										label='Email'
-										type='email'
-										name='email'
+										id="outlined-email-input"
+										label="Email"
+										type="email"
+										name="email"
 										value={email}
 										onChange={onChange}
-										autoComplete='email'
-										margin='normal'
-										variant='outlined'
+										autoComplete="email"
+										margin="normal"
+										variant="outlined"
 									/>
 									<TextField
-										id='outlined-password-input'
-										label='Password'
-										type='password'
-										name='password'
+										id="outlined-password-input"
+										label="Password"
+										type="password"
+										name="password"
 										value={password}
 										onChange={onChange}
-										autoComplete='current-password'
-										margin='normal'
-										variant='outlined'
+										autoComplete="current-password"
+										margin="normal"
+										variant="outlined"
 									/>
 									<Button
-										variant='contained'
-										color='primary'
-										size='large'
+										variant="contained"
+										color="primary"
+										size="large"
 										onClick={handleLogin}
-										to={'/login'}
+										to={"/login"}
 										disabled={loading}
-										style={{ marginTop: '16px' }}
+										style={{ marginTop: "16px" }}
 									>
 										Login
 									</Button>
-									<div style={{ marginTop: '10px' }}>
+									<div style={{ marginTop: "10px" }}>
 										<p>Dont't have an account?</p>
 										<Link
-											style={{ color: '#007791' }}
+											style={{ color: "#007791" }}
 											onClick={handleRegisterOpen}
 										>
 											Sign up
@@ -465,9 +513,9 @@ function TopMenu(props) {
 							open={registerOpen}
 							onClose={handleClose}
 							style={{
-								display: 'flex',
-								alignItems: 'center',
-								justifyContent: 'center'
+								display: "flex",
+								alignItems: "center",
+								justifyContent: "center",
 							}}
 						>
 							<Fade in={registerOpen}>
@@ -475,79 +523,79 @@ function TopMenu(props) {
 									<Alert />
 									<img
 										src={Logo}
-										alt='TechnoJam.tech'
+										alt="TechnoJam.tech"
 										style={{
-											position: 'absolute',
-											top: '0',
-											left: '50%',
-											width: '100px',
-											transform: 'translate(-50%, -50%)'
+											position: "absolute",
+											top: "0",
+											left: "50%",
+											width: "100px",
+											transform: "translate(-50%, -50%)",
 										}}
 									/>
 
 									<IconButton
-										aria-label='close'
+										aria-label="close"
 										onClick={handleClose}
 										style={{
-											position: 'absolute',
-											top: '.5rem',
-											right: '.5rem'
+											position: "absolute",
+											top: ".5rem",
+											right: ".5rem",
 										}}
 									>
 										<CloseIcon />
 									</IconButton>
 									<TextField
-										id='outlined-email-input'
-										label='Name'
-										type='text'
-										name='name'
+										id="outlined-email-input"
+										label="Name"
+										type="text"
+										name="name"
 										value={name}
 										onChange={onChange}
-										autoComplete='name'
-										margin='normal'
-										variant='outlined'
+										autoComplete="name"
+										margin="normal"
+										variant="outlined"
 									/>
 									<TextField
-										id='outlined-email-input'
-										label='Email'
-										type='email'
-										name='email'
+										id="outlined-email-input"
+										label="Email"
+										type="email"
+										name="email"
 										value={email}
 										onChange={onChange}
-										autoComplete='email'
-										margin='normal'
-										variant='outlined'
+										autoComplete="email"
+										margin="normal"
+										variant="outlined"
 									/>
 									<TextField
-										id='outlined-password-input'
-										label='password'
-										type='password'
-										name='password'
+										id="outlined-password-input"
+										label="password"
+										type="password"
+										name="password"
 										value={password}
 										onChange={onChange}
-										autoComplete='current-password'
-										margin='normal'
-										variant='outlined'
+										autoComplete="current-password"
+										margin="normal"
+										variant="outlined"
 									/>
 									<TextField
-										id='outlined-repeatPassword-input'
-										label='Repeat the password'
-										type='password'
-										name='repeatPassword'
+										id="outlined-repeatPassword-input"
+										label="Repeat the password"
+										type="password"
+										name="repeatPassword"
 										value={repeatPassword}
 										onChange={onChange}
-										autoComplete='current-repeatPassword'
-										margin='normal'
-										variant='outlined'
+										autoComplete="current-repeatPassword"
+										margin="normal"
+										variant="outlined"
 									/>
 									<Button
-										variant='contained'
-										color='primary'
-										size='large'
+										variant="contained"
+										color="primary"
+										size="large"
 										onClick={handleRegister}
 										disabled={loading}
-										to={'/login'}
-										style={{ marginTop: '16px' }}
+										to={"/login"}
+										style={{ marginTop: "16px" }}
 									>
 										Register
 									</Button>
