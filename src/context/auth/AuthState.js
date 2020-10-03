@@ -88,7 +88,7 @@ const AuthState = props => {
 			try {
 				const res = await axios.delete(
 					backendUrl + '/api/contact',
-					{ data : { cids: cids } },
+					{ cids: cids },
 					config
 				);
 				console.log('contacts from server:', res.data);

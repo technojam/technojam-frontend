@@ -388,7 +388,7 @@ const TEAM_MEMBERS = [
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/kpiyush04"}, {
             title: "Github",
             value: "https://www.github.com/kpiyush04"
-        },{title: "Position", value: "DSC Lead"}],
+        }],
         email: "pkumar22122001@gmail.com",
         Name: "Piyush Kumar",
         id:33
@@ -400,7 +400,7 @@ const TEAM_MEMBERS = [
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/danishjamal104"}, {
             title: "Github",
             value: "https://www.github.com/danishjamal104"
-        },{title: "Position", value: "TechnoJam Lead"}],
+        }],
         email: "danishjamal.104@gmail.com",
         Name: "Danish Jamal",
         id:34
@@ -484,7 +484,7 @@ const TEAM_MEMBERS = [
         details: [{title: "Batch", value: "2018-2022"}, {title: "Linkedin", value: "https://www.linkedin.com/in/anjali-dabas-4185b6181/"}, {
             title: "Github",
             value: "https://www.github.com/anjalidabas1999"
-        },{title: "Position", value: "Women In Tech Lead"}],
+        }],
         email: "anjalidabas1999@gmail.com",
         Name: "Anjali",
         id:41
@@ -1173,7 +1173,7 @@ const TEAM_MEMBERS = [
 
 const ALUMNI = [
     {
-        id: 200,
+        id: 100,
         Name: "Honey Sharma",
         email: "honey.singhroi@gmail.com",
         Linkedin: "https://www.linkedin.com/in/honey-sharma-77198314b/",
@@ -1185,7 +1185,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 201,
+        id: 101,
         Name: "Shivam Mittal",
         email: "shivammittal114@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shivammittal121",
@@ -1197,7 +1197,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 202,
+        id: 102,
         Name: "Rohith Kandi",
         email: "kandirohith09@gmail.com",
         Linkedin: "https://www.linkedin.com/in/rohith-kandi-77a671108/",
@@ -1209,7 +1209,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 203,
+        id: 103,
         Name: "Kaustubh",
         email: "kausr2595@gmail.com",
         Linkedin: "https://www.linkedin.com/in/kausr2595/",
@@ -1221,7 +1221,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 204,
+        id: 104,
         Name: "Aditya Kumar ",
         email: "Aditya12.official@gmail.com ",
         Linkedin: "#",
@@ -1233,7 +1233,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 205,
+        id: 105,
         Name: "Shivashish Ratnam",
         email: "shivashishratnam@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shivashish-ratnam/",
@@ -1245,7 +1245,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 206,
+        id: 106,
         Name: "Satya Tripathi",
         email: "satya06.official@gmail.com",
         Linkedin: "#",
@@ -1257,7 +1257,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 207,
+        id: 107,
         Name: "shashank sharma",
         email: "shashank@thelattice.in",
         Linkedin: "https://www.linkedin.com/in/storytellerr/",
@@ -1269,7 +1269,7 @@ const ALUMNI = [
         }],
     },
     {
-        id: 208,
+        id: 108,
         Name: "Shaurya Chauhan",
         email: "scshaurya@gmail.com",
         Linkedin: "https://www.linkedin.com/in/shauryachauhan/",
