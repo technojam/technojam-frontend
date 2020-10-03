@@ -1,30 +1,26 @@
-import React, { Component, Link, useState, useContext } from 'react';
-import { Editor } from 'react-draft-wysiwyg';
+import React, { useState, useContext } from 'react';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-
+import AddEvent from './AddEvent';
+import FormSubmitted from './FormSubmitted';
 //material ui component
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import { FormGroup, Button } from '@material-ui/core';
-import AuthContext from './../../../context/auth/authContext';
 import EventContext from './../../../context/event/eventContext';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Checkbox from '@material-ui/core/Checkbox';
 import EventTable from './EventTable';
-import {backendUrl} from "../../../context/types"
+import {backendUrl} from "../../../context/types";
+
 const style = {
 	marginTop: '112px',
 	form: {
 		padding: '20px',
 		width: '100%',
-		marginLeft: 'auto',
-		marginRight: 'auto',
 		text: {
 			appearance: 'none',
 			width: '100%',
@@ -41,13 +37,13 @@ const style = {
 };
 
 const Event = () => {
-	const authContext = useContext(AuthContext);
 	const eventContext = useContext(EventContext);
-	const { user } = authContext;
 	const { events } = eventContext;
+	const [formComplete, setFormComplete ] = useState();
+	const [formSubmitted, setFormSubmitted] = useState(false);
 
 	const [details, setDetails] = useState({
-		type: '',
+		type: 'single',
 		name: '',
 		description: '',
 		longDescription:'',
@@ -55,54 +51,101 @@ const Event = () => {
 		venue: '',
 		timing: '',
 		date: '',
-		isPaid:'',
-		amount:"",
+		isPaid:'no',
+		amount: 0,
 		teamSize: '',
 		resources:''
 	});
 
 	const handleChange = e => {
+		if (
+			details.amount !== '' && 
+			details.capacity !== '' && 
+			details.name !== '' && 
+			details.description !== '' && 
+			details.venue !== '' && 
+			details.timing !== '' &&
+			details.date !== '' &&
+			details.teamSize !== '' &&
+			details.resources !== ''
+		) {
+			setFormComplete(true);
+		}
 		setDetails({
 			...details,
 			[e.target.name]: e.target.value
 		});
 	};
 
-	const handleSubmit=()=>{
-		const message={
-			type:"Single",
-			name:"ML workshop",
-			description:"2 day workshop covering basic of HTML,CSS and JavaScript",
-			capacity:"150",
-			venue:"Virtual",
-			timing:"10:00",
-			date:"2020-08-23",
-			isPaid:"No",
-			teamSize:"0",
-			amount:"0",
-			resources:"https://github.com/technojam/Workshop-Resources/tree/master/2-Day%20Web%20D%20Workshop%20-%2023-24%20AUG%202020"
-		}
-		alert("hello"+JSON.stringify(details))
-		fetch(backendUrl+"/api/events/add",{
-			method:'post',
-			headers:{
-				"Content-Type":"application/json",
-				"x-auth-token":localStorage.getItem('token')
-			},
-			body:JSON.stringify(details)
-		}).then(response=>{
-			if(response.ok){
-				alert("Event added successfully")
-			}else{
-				var error=new Error('Error'+response.status+':'+response.statusText);
-				error.response=response;
-				throw error;
+	const handleEventType = (event, newType) => {
+		setDetails({
+			...details,
+			'type': newType});
+	};
+
+	const handleIsPaid = (event, newType) => {
+		setDetails({
+			...details,
+			'isPaid': newType});
+	};
+
+	const handleSubmit=(e)=>{
+		e.preventDefault();
+		if(
+			details.amount === '' || 
+			details.capacity === '' || 
+			details.name === '' || 
+			details.description === '' || 
+			details.venue === '' || 
+			details.timing === '' ||
+			details.date === '' ||
+			details.teamSize === '' ||
+			details.resources === ''
+			) {
+				setFormComplete(false);
+				console.log('fields not complete')
+			} else {
+				setFormComplete(true);
+				setFormSubmitted(true);
+				// alert("hello"+JSON.stringify(details))
+				fetch(backendUrl+"/api/events/add",{
+					method:'post',
+					headers:{
+						"Content-Type":"application/json",
+						"x-auth-token":localStorage.getItem('token')
+					},
+					body:JSON.stringify(details)
+				}).then(response=>{
+					if(response.ok){
+						alert("Event added successfully")
+					}else{
+						var error=new Error('Error'+response.status+':'+response.statusText);
+						error.response=response;
+						throw error;
+					}
+				})
+				.catch(err=>{
+					console.log(err)
+				})
 			}
-		})
-		.catch(err=>{
-            console.log(err)
-		})
-		
+	}
+
+	const handleAdditional = () => {
+		setFormSubmitted(false);
+		setDetails({
+			type: 'single',
+			name: '',
+			description: '',
+			longDescription:'',
+			capacity:'',
+			venue: '',
+			timing: '',
+			date: '',
+			isPaid:'no',
+			amount: 0,
+			teamSize: '',
+			resources:''
+		});
 	}
 
 	return (
@@ -258,192 +301,19 @@ const Event = () => {
 					<ExpansionPanelDetails>
 						<div style={style.form}>
 							<form autoComplete='on' onSubmit={handleSubmit}>
-								<Grid container spacing={3}>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Event Name</label>
-
-											<input
-												style={style.form.text}
-												type='text'
-												name='name'
-												onChange={handleChange}
-											/>
-										</FormGroup>
-										<br></br>
-									</Grid>			
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Date</label>
-
-											<input
-												style={style.form.text}
-												type='date'
-												name='date'
-												onChange={handleChange}
-											/>
-											<br></br>
-										</FormGroup>
-									</Grid>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Time</label>
-
-											<input
-												style={style.form.text}
-												type='time'
-												name='timing'
-												defaultValue='07:30'
-												onChange={handleChange}
-											/>
-										</FormGroup>
-										<br></br>
-									</Grid>
-								</Grid>
-								<Grid container spacing={3}>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Venue</label>
-
-											<input
-												style={style.form.text}
-												type='text'
-												name='venue'
-												onChange={handleChange}
-											/>
-										</FormGroup>
-										<br></br>
-									</Grid>
-
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Event Type</label>
-											<select
-												style={style.form.text}
-												name='type'
-												onChange={handleChange}
-											>
-												<option value='Single'>Single</option>
-												<option value='Team'>Team</option>
-											</select>
-											<br></br>
-										</FormGroup>
-									</Grid>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Team Size</label>
-
-											<input
-												style={style.form.text}
-												type='text'
-												name='teamSize'
-												defaultValue='0'
-												onChange={handleChange}
-											/>
-										</FormGroup>
-										<br></br>
-									</Grid>
-								</Grid>
-								<Grid container spacing={3}>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Capacity</label>
-
-											<input
-												style={style.form.text}
-												type='number'
-												name='capacity'
-												defaultValue='0'
-												onChange={handleChange}
-											/>
-										</FormGroup>
-										<br></br>
-									</Grid>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>IsPaid</label>
-
-											<select
-												style={style.form.text}
-												name='isPaid'
-												onChange={handleChange}
-											>
-												<option value='No'>No</option>
-												<option value='Yes'>Yes</option>
-											</select>
-										</FormGroup>
-										<br></br>
-									</Grid>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Amount</label>
-
-											<input
-												style={style.form.text}
-												type='number'
-												name='amount'
-												defaultValue='0'
-												onChange={handleChange}
-											/>
-										</FormGroup>
-										<br></br>
-									</Grid>
-								</Grid>
-								<Grid container spacing={3}>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Resources (Link)</label>
-
-											<input
-												style={style.form.text}
-												type='text'
-												name='resources'
-												defaultValue='0'
-												onChange={handleChange}
-											/>
-										</FormGroup>
-										<br></br>
-									</Grid>
-								</Grid>
-								<FormGroup>
-									<label>Short Description</label>
-
-									<div
-										style={{
-											backgroundColor: '#e8ebed',
-											borderRadius: '5px',
-											overflowX: 'hidden',
-											maxWidth: '100%'
-										}}
-									>
-										
-											<input
-												style={style.form.text}
-												type='textarea'
-												name='description'
-												onChange={handleChange}
-											></input>
-										
-									</div>
-								</FormGroup>
-
-								<br></br>
-								<br />
-								<Typography className='align_center'>
-									<Button
-										type="submit"
-										variant='contained'
-										style={{ backgroundColor: '#f50057', color: 'white' }}
-									>
-										Submit
-									</Button>
-								</Typography>
+								{!formSubmitted ?
+									<AddEvent 
+									handleChange={(e) => handleChange(e)} 
+									details={details} 
+									handleEventType={(e, newType) => handleEventType(e, newType)}
+									handleIsPaid={(e, newType) => handleIsPaid(e, newType)}
+									formComplete={formComplete}
+									/>
+									: <FormSubmitted handleAdditional={handleAdditional}/>
+								}
+									
 							</form>
 						</div>
-
-						{/* <Grid item md={6} xl={6}>
-							<Typography className='grid_item_typo'></Typography>
-						</Grid> */}
 					</ExpansionPanelDetails>
 				</ExpansionPanel>
 			</div>
