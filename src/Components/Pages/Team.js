@@ -4,23 +4,13 @@ import { Link } from "react-router-dom";
 import { TEAM_MEMBERS } from "../../util/constants";
 
 // material ui component
-import { makeStyles } from "@material-ui/core/styles";
+import { useStyles } from "../Styles/Team.styles";
 import Grid from "@material-ui/core/Grid";
 import Tooltip from "@material-ui/core/Tooltip";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import "../style.css";
 import { ThemeContext } from "../../util/themeContext";
-
-const useStyles = makeStyles({
-	root: {
-		flexGrow: 1,
-
-		marginTop: "100px",
-		marginBottom: 20,
-		minHeight: "580px",
-	},
-});
 
 const circle = {
 	width: 80,
