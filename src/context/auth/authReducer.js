@@ -9,7 +9,9 @@ import {
 	LOGOUT,
 	CLEAR_ERRORS,
 	SHOW_LOADING,
-	LOGIN_DIALOG
+	LOGIN_DIALOG,
+	VERIFICATION_SUCCESS,
+	VERIFICATION_FAIL
 } from '../types';
 
 export default (state, action) => {
@@ -43,6 +45,8 @@ export default (state, action) => {
 		case REGISTER_FAIL:
 		case AUTH_ERROR:
 		case LOGIN_FAIL:
+		case VERIFICATION_SUCCESS:
+		case VERIFICATION_FAIL:
 		case LOGOUT:
 			localStorage.removeItem('token');
 			return {

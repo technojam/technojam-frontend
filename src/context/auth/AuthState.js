@@ -16,7 +16,9 @@ import {
 	SHOW_LOADING,
 	backendUrl,
 	DELETE_CONTACT,
-	LOGIN_DIALOG
+	LOGIN_DIALOG,
+	VERIFICATION_SUCCESS,
+	VERIFICATION_FAIL
 } from '../types';
 
 const AuthState = props => {
@@ -152,6 +154,32 @@ const AuthState = props => {
 		}
 	};
 
+	//Verfify Account
+	const verify = async email => {	
+		console.log("Herion")
+		const config = {
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		};
+
+		try {
+			const res = await axios.post(backendUrl + '/api/verification/resend', email, config);
+
+			dispatch({
+				type: VERIFICATION_SUCCESS,
+				payload: res.data
+			});
+
+			//loadUser();
+		} catch (err) {
+			dispatch({
+				type: VERIFICATION_FAIL,
+				payload: err.response.data.msg
+			});
+		}
+	};
+
 	// Logout
 	const logout = () => dispatch({ type: LOGOUT });
 
@@ -177,6 +205,7 @@ const AuthState = props => {
 				deleteContact,
 				login,
 				logout,
+				verify,
 				clearErrors,
 				showLoading,
 				loginDialog

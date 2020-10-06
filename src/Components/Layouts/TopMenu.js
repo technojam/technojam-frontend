@@ -62,6 +62,7 @@ function TopMenu(props) {
 		register,
 		logout,
 		loadUser,
+		verify,
 		loadContact,
 		error,
 		clearErrors,
@@ -99,6 +100,18 @@ function TopMenu(props) {
 			setAlert(error, "danger");
 			clearErrors();
 		}
+		if(error==='Your account has not been verified'){
+			setAlert(error,'danger');
+			clearErrors();
+		}
+		if(error==='Account Created! Please check your mail to confirm account.'){
+			setAlert(error,'danger');
+			clearErrors();
+		}
+		if(error==='Please check your mail to verify account.'){
+			setAlert(error,'danger');
+			clearErrors();
+		}
 		// eslint-disable-next-line
 	}, [error, isAuthenticated, props.history]);
 
@@ -117,7 +130,7 @@ function TopMenu(props) {
 	const isOpen = Boolean(anchorEl);
 	const [open, setOpen] = React.useState(false);
 	const [registerOpen, setRegisterOpen] = React.useState(false);
-
+	const [verifyOpen, setVerifyOpen] = React.useState(false);
 	const [user1, setUser] = React.useState({
 		role: "user",
 		name: "Guest",
@@ -130,18 +143,28 @@ function TopMenu(props) {
 	const handleOpen = () => {
 		setOpen(true);
 		setAnchorEl(null);
+		setVerifyOpen(false);
 	};
 
 	const handleRegisterOpen = () => {
 		setOpen(false);
 		setRegisterOpen(true);
 		setAnchorEl(null);
+		setVerifyOpen(false);
+	};
+	const handleVerifyOpen = () => {
+		setOpen(false);
+		setRegisterOpen(false);
+		setAnchorEl(null);
+		setVerifyOpen(true);
 	};
 
 	const handleClose = () => {
 		setOpen(false);
 		loginDialog(false);
 		setRegisterOpen(false);
+		setVerifyOpen(false);
+		setUser({name:"Guest",email:"",password:""});
 	};
 
 	const handleMenu = (event) => {
@@ -196,9 +219,31 @@ function TopMenu(props) {
 				email,
 				password,
 			});
+			setTimeout(()=>{
+				setUser({name:"Guest",email:"",password:""});
+				setRegisterOpen(false);
+			},20000)
+			
 		}
 	};
 
+	const handleVerify =e=>{
+		e.preventDefault();
+		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		if (email === '') {
+			setAlert('Please provide an email.', 'danger');
+		} 
+		else if(re.test(email) == false){
+			setAlert('Not a valid email address!', 'danger');
+		}
+		else {
+			console.log('verify called');
+			//showLoading({ data: true });
+			verify ({
+				email
+			});
+		}
+	}
 	const handleLogout = () => {
 		logout();
 		handleClose1();
@@ -505,7 +550,75 @@ function TopMenu(props) {
 										>
 											Sign up
 										</Link>
+
+										<Link
+											style={{ color: '#007791',float:"right" }}
+											onClick={handleVerifyOpen}
+										>
+											Verify Account
+										</Link>
 									</div>
+								</div>
+							</Fade>
+						</Modal>
+						<Modal
+							open={verifyOpen}
+							onClose={handleClose}
+							style={{
+								display: 'flex',
+								alignItems: 'center',
+								justifyContent: 'center'
+							}}
+						>
+							<Fade in={verifyOpen}>
+								<div style={modalCardStyle}>
+									<Alert />
+									<img
+										src={Logo}
+										alt='TechnoJam.tech'
+										style={{
+											position: 'absolute',
+											top: '0',
+											left: '50%',
+											width: '100px',
+											transform: 'translate(-50%, -50%)'
+										}}
+									/>
+
+									<IconButton
+										aria-label='close'
+										onClick={handleClose}
+										style={{
+											position: 'absolute',
+											top: '.5rem',
+											right: '.5rem'
+										}}
+									>
+										<CloseIcon />
+									</IconButton>
+									<TextField
+										id='outlined-email-input'
+										label='Email'
+										type='email'
+										name='email'
+										value={email}
+										onChange={onChange}
+										autoComplete='email'
+										margin='normal'
+										variant='outlined'
+									/>
+									<Button
+										variant='contained'
+										color='primary'
+										size='large'
+										onClick={handleVerify}
+										to={'/login'}
+										disabled={loading}
+										style={{ marginTop: '16px' }}
+									>
+										Verify
+									</Button>
+									
 								</div>
 							</Fade>
 						</Modal>
