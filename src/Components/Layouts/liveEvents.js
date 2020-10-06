@@ -40,7 +40,12 @@ function LiveEvents() {
 	}
 
 	return (
-		<div style={liveEventStyle}>
+		<div 
+			style={{
+				transform: open ? 'translate(0px)' : 'translate(250px)', 
+				...liveEventStyle
+			}}
+		>
 			<EventLabel
 				dataFetched={dataFetched}
 				toggleOpen={toggleOpen}
@@ -65,7 +70,10 @@ export default LiveEvents;
 
 const EventLabel = props => {
 	return (
-		<div style={nameStyle} onClick={props.toggleOpen}>
+		<div 
+			style={nameStyle} 
+			onClick={props.toggleOpen}
+		>
 			<span>Live Events</span>
 			<span style={countStyle}>{props.dataFetched ? props.count : null}</span>
 		</div>
@@ -77,12 +85,15 @@ const EventContent = props => {
 		<div
 			onTransitionEnd={props.toggleShowlist}
 			style={{
-				width: props.open ? '250px' : '0',
 				overflowY: props.list.length ? 'scroll' : 'hidden',
 				...eventContentStyle
 			}}
 		>
-			{props.open &&
+			{props.dataFetched && !props.list.length ? 
+		        <div style={noEventContentStyle}>No events now come back soon</div>
+		    : 
+			props.open &&
+				props.dataFetched &&
 				props.list &&
 				props.showlist &&
 				props.list.map(d => (
@@ -125,8 +136,9 @@ const EventContent = props => {
 
 const liveEventStyle = {
 	position: 'fixed',
-	right: '0',
+	right: '0px',
 	top: '100px',
+	transition: 'transform 1s',
 	display: 'flex',
 	zIndex: '999'
 };
@@ -141,7 +153,7 @@ const nameStyle = {
 	borderRadius: '3px',
 	cursor: 'pointer',
 	Height: '82px',
-	width: '40px'
+	width: '40px',
 };
 
 const countStyle = {
@@ -160,15 +172,22 @@ const countStyle = {
 
 const eventContentStyle = {
 	marginTop: '62px',
-	display: 'inline-block',
+	display: 'flex',
+	justifyContent: 'center',
+	alignItems: 'center',
 	float: 'right',
-	transition: 'width 1s',
 	border: '1px solid rgb(238, 238, 238)',
 	background: '#fff',
-	alignItems: 'center',
+	width: '250px',
 	textAlign: 'center',
 	maxHeight: '232px',
-	overflowX: 'hidden'
+	overflowX: 'hidden',
+};
+
+const noEventContentStyle = {
+	display: 'inline-block',
+	fontSize: '14px',
+	fontWeight: 'bold'
 };
 
 const eventListsStyle = {

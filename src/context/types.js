@@ -1,4 +1,6 @@
-export const backendUrl = 'https://radiant-thicket-94737.herokuapp.com'||'http://localhost:4000';
+
+export const backendUrl = 'https://radiant-thicket-94737.herokuapp.com' || 'http://localhost:4000';
+
 export const SET_ALERT = 'SET_ALERT';
 export const REMOVE_ALERT = 'REMOVE_ALERT';
 export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
@@ -24,6 +26,5 @@ export const DELETE_CONTACT = 'DELETE_CONTACT';
 //events
 export const EVENT_LOADED = 'EVENT_LOADED';
 export const EVENT_LOAD_ERROR = 'EVENT_LOAD_ERROR';
-export const EVENT_UPDATE_ERROR = 'EVENT_UPDATE_ERROR';
 export const REGISTER_FOR_EVENT = 'REGISTER_FOR_EVENT';
 export const DELETE_EVENT = 'DELETE_EVENT';

@@ -8,7 +8,6 @@ import {
 	REGISTER_FOR_EVENT,
 	DELETE_EVENT,
 	EVENT_LOAD_ERROR,
-	EVENT_UPDATE_ERROR,
 	backendUrl
 } from '../types';
 
@@ -70,31 +69,11 @@ const EventState = props => {
 		}
 	};
 
-	const updateEvent = async newEvent => {
-		
-		console.log('updateEvent called with eid:', newEvent.eid);
-		newEvent = JSON.stringify(newEvent);
-
-		try {
-			const res = await axios.put(backendUrl + `/api/events/update/${newEvent.eid}`,
-				newEvent,{
-					headers: {
-						'Content-Type': 'application/json',
-					}
-				});
-			console.log('res: ', res.data);
-		}
-		catch (err) {
-			dispatch({ type: EVENT_UPDATE_ERROR });
-		}
-	}
-
 	return (
 		<EventContext.Provider
 			value={{
 				events: state.events,
 				loadEvents,
-				updateEvent,
 				deleteEvent,
 				registerForEvent
 			}}
