@@ -1,5 +1,4 @@
-export const backendUrl =  'http://localhost:4000'||'https://radiant-thicket-94737.herokuapp.com/';
-
+export const backendUrl = 'https://radiant-thicket-94737.herokuapp.com'||'http://localhost:4000';
 export const SET_ALERT = 'SET_ALERT';
 export const REMOVE_ALERT = 'REMOVE_ALERT';
 export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
@@ -9,6 +8,9 @@ export const AUTH_ERROR = 'AUTH_ERROR';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAIL = 'LOGIN_FAIL';
 export const LOGOUT = 'LOGOUT';
+export const VERIFICATION_SUCCESS ='VERIFICATION_SUCCESS';
+export const VERIFICATION_FAIL ='VERIFICATION_FAIL';    
+
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 export const SHOW_LOADING = 'SHOW_LOADING';
 export const LOGIN_DIALOG = 'LOGIN_DIALOG';

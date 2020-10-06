@@ -179,6 +179,9 @@
 	.MuiTypography-body1 {
 		font-size: 12px !important;
 	}
+	.EventSection {
+        width: 100% !important;
+    }
 }
 
 .one {
