@@ -29,6 +29,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Switch from '@material-ui/core/Switch';
 import RefreshIcon from '@material-ui/icons/Refresh';
+import GithubIcon from '@material-ui/icons/GitHub'
+import LinkedIn from '@material-ui/icons/LinkedIn'
 import clsx from 'clsx';
 
 
@@ -354,8 +356,8 @@ export default function UserTable() {
 											<TableCell>technoTest</TableCell>
 											<TableCell >2019-2023</TableCell>
 											<TableCell >technotest12.phy@gmail.com</TableCell>
-											<TableCell >https://LinkedInUrl</TableCell>
-											<TableCell >https://GithubUrl</TableCell>
+											<TableCell ><a href=""><IconButton><LinkedIn/></IconButton></a></TableCell>
+											<TableCell ><a href=""><IconButton><GithubIcon/></IconButton></a></TableCell>
 											<TableCell >ProfileUrl</TableCell>
 											<TableCell padding='checkbox'>
 												<IconButton tooltip='Delete User'>
