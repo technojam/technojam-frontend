@@ -9,7 +9,7 @@ import "../style.css";
 import { Color } from "../color";
 import { Projects } from "../../util/projects";
 import { ThemeContext } from "../../util/themeContext";
-import styled from "styled-components";
+import Mentorship from "../Styles/Mentorship.styles";
 /* FIXME: When the target will be decided, remove the rel attribute.
  * It has been added here for security reasons.
  * Reference: https://mathiasbynens.github.io/rel-noopener/
@@ -17,24 +17,6 @@ import styled from "styled-components";
 
 const Mentorship = () => {
 	const { theme: currentTheme } = useContext(ThemeContext);
-	const Background = styled.div`
-		width: 100%;
-		background-repeat: no-repeat;
-		margin-top: 40px;
-		color: ${currentTheme === "light" ? "black" : "white"};
-		&:after {
-			z-index: -5;
-			content: "";
-			background-image: url(https://tj-static.s3.ap-south-1.amazonaws.com/etc/pro.jpg);
-			filter: invert(${currentTheme === "dark" ? 1 : 0});
-			width: 100%;
-			height: 100vh;
-			position: absolute;
-			top: 0;
-			background-position-x: center;
-			background-size: cover;
-		}
-	`;
 
 	const [projects] = useState([
 		{
@@ -64,7 +46,7 @@ const Mentorship = () => {
 	return (
 		<section>
 			<div id="1">
-				<Background>
+				<Mentorship>
 					<div
 						className="mentor_section_div"
 						style={{ paddingTop: "330px" }}
@@ -172,7 +154,7 @@ const Mentorship = () => {
 							</Typography>
 						</div>
 					</div>
-				</Background>
+				</Mentorship>
 			</div>
 
 			<div id="2" style={{ marginTop: "50px" }}>
