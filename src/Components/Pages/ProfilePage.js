@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
     Container,
     Typography,
@@ -8,6 +8,7 @@ import {ALUMNI, TEAM_MEMBERS} from '../../util/constants';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MailIcon from '@material-ui/icons/Mail';
+import { ThemeContext } from "../../util/themeContext";
 
 const style = {
     container: {
@@ -19,6 +20,9 @@ const style = {
         width: "100%",
         borderRadius: "50%",
         marginTop: "10px",
+    },
+    nameDark:{
+        color:"#b3b3b3"
     }
 };
 
@@ -42,6 +46,7 @@ const handleIcons=(title,value)=>{
 }
 
 export default class ProfilePage extends React.Component {
+    static contextType = ThemeContext
     constructor(props) {
         super(props);
         this.state = {
@@ -56,6 +61,8 @@ export default class ProfilePage extends React.Component {
             currentProfile = ALUMNI.filter(member => member.id.toString() === profileID)[0];
         }
         this.setState({currentProfile: currentProfile});
+        this.darkmodeActive = this.context.theme === 'dark' ? "darkmode-active":'';
+        
     }
 
     render() {
@@ -71,7 +78,7 @@ export default class ProfilePage extends React.Component {
                                 
                             </Grid>
                             <Grid item lg={10} md={8} xs={6} style={{marginTop: "4%"}}>
-                                <Typography variant="h2" style={style.name}>
+                                <Typography variant="h2" style={this.darkmodeActive ? style.nameDark : style.name}>
                                     {this.state.currentProfile.Name}
                                 </Typography>
                                 <Typography style={style.name}>
