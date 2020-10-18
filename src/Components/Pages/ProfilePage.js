@@ -61,8 +61,7 @@ export default class ProfilePage extends React.Component {
             currentProfile = ALUMNI.filter(member => member.id.toString() === profileID)[0];
         }
         this.setState({currentProfile: currentProfile});
-        this.darkmodeActive = this.context.theme === 'dark' ? "darkmode-active":'';
-        
+        this.darkmodeActive = this.context.theme === 'dark' ? true:false;
     }
 
     render() {
