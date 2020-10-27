@@ -31,7 +31,7 @@ import ContactTable from './ContactTable';
 import Event from './Event';
 import Main from './Main';
 import Team from './Team';
-import Users from './Users';
+import Users from './users/Users'
 import Profile from './Profile'
 
 function Copyright() {
