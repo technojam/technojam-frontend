@@ -113,6 +113,7 @@ function TopMenu(props) {
 			setAlert(error,'danger');
 			clearErrors();
 		}
+		
 		// eslint-disable-next-line
 	}, [error, isAuthenticated, props.history]);
 
@@ -267,9 +268,15 @@ function TopMenu(props) {
 		else {
 			console.log('reset password called');
 			//showLoading({ data: true });
+			setAlert(`Reset Password Email Sent Successfully to ${email}`, 'success');
 			resetPass ({
 				email
 			});
+			setTimeout(()=>{
+				handleClose()
+			},3000)
+			setUser({ ...user1, ["email"]: "" });
+			
 		}
 	}
 	const handleLogout = () => {
@@ -571,19 +578,26 @@ function TopMenu(props) {
 										Login
 									</Button>
 									<div style={{ marginTop: "10px" }}>
-										<p>Dont't have an account?</p>
+										<p style={{float:"left" }}>Dont't have an account?</p>
 										<Link
-											style={{ color: "#007791" }}
+											style={{ color: "#007791",float:"right" }}
 											onClick={handleRegisterOpen}
 										>
 											Sign up
 										</Link>
-
+									</div>
+									<div style={{ marginTop: "10px" }}>
 										<Link
 											style={{ color: '#007791',float:"right" }}
 											onClick={handleVerifyOpen}
 										>
 											Verify Account
+										</Link>
+										<Link
+											style={{ color: '#007791',float:"left" }}
+											onClick={handlePassResetOpen}
+										>
+											Forgot Password?
 										</Link>
 									</div>
 								</div>
@@ -645,6 +659,67 @@ function TopMenu(props) {
 										style={{ marginTop: '16px' }}
 									>
 										Verify
+									</Button>
+									
+								</div>
+							</Fade>
+						</Modal>
+						<Modal
+							open={passResetOpen}
+							onClose={handleClose}
+							style={{
+								display: 'flex',
+								alignItems: 'center',
+								justifyContent: 'center'
+							}}
+						>
+							<Fade in={passResetOpen}>
+								<div style={modalCardStyle}>
+									<Alert />
+									<img
+										src={Logo}
+										alt='TechnoJam.tech'
+										style={{
+											position: 'absolute',
+											top: '0',
+											left: '50%',
+											width: '100px',
+											transform: 'translate(-50%, -50%)'
+										}}
+									/>
+
+									<IconButton
+										aria-label='close'
+										onClick={handleClose}
+										style={{
+											position: 'absolute',
+											top: '.5rem',
+											right: '.5rem'
+										}}
+									>
+										<CloseIcon />
+									</IconButton>
+									<TextField
+										id='outlined-email-input'
+										label='Email'
+										type='email'
+										name='email'
+										value={email}
+										onChange={onChange}
+										autoComplete='email'
+										margin='normal'
+										variant='outlined'
+									/>
+									<Button
+										variant='contained'
+										color='primary'
+										size='large'
+										onClick={handlePassReset}
+										to={'/login'}
+										disabled={loading}
+										style={{ marginTop: '16px' }}
+									>
+										Reset Password
 									</Button>
 									
 								</div>
