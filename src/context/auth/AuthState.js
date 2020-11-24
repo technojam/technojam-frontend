@@ -18,7 +18,9 @@ import {
 	DELETE_CONTACT,
 	LOGIN_DIALOG,
 	VERIFICATION_SUCCESS,
-	VERIFICATION_FAIL
+	VERIFICATION_FAIL,
+	PASS_RESET_SUCCESS,
+	PASS_RESET_FAIL
 } from '../types';
 
 const AuthState = props => {
@@ -156,7 +158,7 @@ const AuthState = props => {
 
 	//Verfify Account
 	const verify = async email => {	
-		console.log("Herion")
+		//console.log("Herion")
 		const config = {
 			headers: {
 				'Content-Type': 'application/json'
@@ -175,6 +177,33 @@ const AuthState = props => {
 		} catch (err) {
 			dispatch({
 				type: VERIFICATION_FAIL,
+				payload: err.response.data.msg
+			});
+		}
+	};
+
+
+	//reset password
+	const resetPass = async email => {	
+		console.log("Herion")
+		const config = {
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		};
+
+		try {
+			const res = await axios.post(backendUrl + '/api/reset/send', email, config);
+
+			dispatch({
+				type: PASS_RESET_SUCCESS,
+				payload: res.data
+			});
+
+			//loadUser();
+		} catch (err) {
+			dispatch({
+				type: PASS_RESET_FAIL,
 				payload: err.response.data.msg
 			});
 		}
@@ -206,6 +235,7 @@ const AuthState = props => {
 				login,
 				logout,
 				verify,
+				resetPass,
 				clearErrors,
 				showLoading,
 				loginDialog

@@ -63,6 +63,7 @@ function TopMenu(props) {
 		logout,
 		loadUser,
 		verify,
+		resetPass,
 		loadContact,
 		error,
 		clearErrors,
@@ -131,6 +132,7 @@ function TopMenu(props) {
 	const [open, setOpen] = React.useState(false);
 	const [registerOpen, setRegisterOpen] = React.useState(false);
 	const [verifyOpen, setVerifyOpen] = React.useState(false);
+	const [passResetOpen, setPassResetOpen] = React.useState(false);
 	const [user1, setUser] = React.useState({
 		role: "user",
 		name: "Guest",
@@ -159,11 +161,20 @@ function TopMenu(props) {
 		setVerifyOpen(true);
 	};
 
+	const handlePassResetOpen=()=>{
+		setOpen(false);
+		setRegisterOpen(false);
+		setAnchorEl(null);
+		setVerifyOpen(false);
+		setPassResetOpen(true);
+	}
+
 	const handleClose = () => {
 		setOpen(false);
 		loginDialog(false);
 		setRegisterOpen(false);
 		setVerifyOpen(false);
+		setPassResetOpen(false);
 		setUser({name:"Guest",email:"",password:""});
 	};
 
@@ -240,6 +251,23 @@ function TopMenu(props) {
 			console.log('verify called');
 			//showLoading({ data: true });
 			verify ({
+				email
+			});
+		}
+	}
+	const handlePassReset =e=>{
+		e.preventDefault();
+		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		if (email === '') {
+			setAlert('Please provide an email.', 'danger');
+		} 
+		else if(re.test(email) == false){
+			setAlert('Not a valid email address!', 'danger');
+		}
+		else {
+			console.log('reset password called');
+			//showLoading({ data: true });
+			resetPass ({
 				email
 			});
 		}
