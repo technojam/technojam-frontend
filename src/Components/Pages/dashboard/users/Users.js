@@ -29,6 +29,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Switch from '@material-ui/core/Switch';
 import RefreshIcon from '@material-ui/icons/Refresh';
+import GithubIcon from '@material-ui/icons/GitHub'
+import LinkedIn from '@material-ui/icons/LinkedIn'
 import clsx from 'clsx';
 
 
@@ -39,6 +41,7 @@ import TableSortLabel from '@material-ui/core/TableSortLabel';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
+import UserModal from './UserModal';
 
 
 
@@ -231,43 +234,32 @@ const useStyles = makeStyles(theme => ({
 		width: 1
 	}
 }));
-const style = {
-	marginTop: '112px',
-	form: {
-		padding: '20px',
-		width: '100%',
-		marginLeft: 'auto',
-		marginRight: 'auto',
-		text: {
-			appearance: 'none',
-			width: '100%',
-			padding: '5px',
-			height: '35px',
-			borderRadius: '5px',
-			outline: 'none',
-			border: 'none',
-			background: '#e8ebed',
-			color: '#576366',
-			fontSize: '14px'
-		}
-	}
-};
-const useStylesModal = makeStyles((theme) => ({
-	modal: {
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	paper: {
-		backgroundColor: theme.palette.background.paper,
-		// border: '2px solid #000',
-		boxShadow: theme.shadows[5],
-		padding: theme.spacing(2, 4, 3),
-	},
-}));
 
 
 export default function UserTable() {
+	//Dummy users data with 2 records
+	const object = [
+		{
+			_id: "1",
+			name : "technoTest",
+			batch: "2019-2023",
+			email: "technotest12.phy@gmail.com",
+			linkedin: "linkedin",
+			github: "github",
+			image: "image",
+			year: 1,
+		},
+		{
+			_id: "2",
+			name : "technoTest2",
+			batch: "2018-2022",
+			email: "technotest123.phy@gmail.com",
+			linkedin: "linkedin2",
+			github: "github2",
+			image: "image2",
+			year: 2
+		}
+	]
 	const classes = useStyles();
 	const [order, setOrder] = React.useState('asc');
 	const [orderBy, setOrderBy] = React.useState('calories');
@@ -276,11 +268,8 @@ export default function UserTable() {
 	const [dense, setDense] = React.useState(false);
 	const [rowsPerPage, setRowsPerPage] = React.useState(5);
 	const [attendeeData, setAttendeeData] = React.useState([]);
-	const classesModal = useStylesModal();
 	const [open, setOpen] = React.useState(false);
-
-
-
+	const [id, setId] = React.useState("")
 
 
 	const handleRequestSort = (users, property) => {
@@ -315,12 +304,12 @@ export default function UserTable() {
 		console.log('cids:', selected);
 		// deleteContact(selected);
 	};
-	const editUser = () => {
-		handleOpen();
-		console.log("Edit is now working")
+	const editUser = (id) => {
+		handleOpen(id);
 	}
 	//Modal
-	const handleOpen = () => {
+	const handleOpen = (id) => {
+		setId(id)
 		setOpen(true);
 	};
 
@@ -347,147 +336,37 @@ export default function UserTable() {
 							rowCount={rows.length}
 						/>
 						<TableBody>
-									<TableRow
-											role='checkbox'
-											tabIndex={-1}		
-										>
-											<TableCell>technoTest</TableCell>
-											<TableCell >2019-2023</TableCell>
-											<TableCell >technotest12.phy@gmail.com</TableCell>
-											<TableCell >https://LinkedInUrl</TableCell>
-											<TableCell >https://GithubUrl</TableCell>
-											<TableCell >ProfileUrl</TableCell>
-											<TableCell padding='checkbox'>
-												<IconButton tooltip='Delete User'>
-													<EditIcon onClick={() => editUser()} />
-													<Modal
-														aria-labelledby="transition-modal-title"
-														aria-describedby="transition-modal-description"
-														className={classesModal.modal}
-														open={open}
-														onClose={handleClose}
-														closeAfterTransition
-														BackdropComponent={Backdrop}
-														BackdropProps={{
-															timeout: 500,
-														}}>
-											<Fade in={open}>
-												<div className={classesModal.paper}>
-											<h2 id="transition-modal-title">Edit User</h2>
-								<div style={style.form}>
-							<form autoComplete='on' >
-								<Grid container spacing={3}>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Name</label>
-											<input
-												style={style.form.text}
-												type='text'
-												name='name'	
-											/>
-										</FormGroup>
-										<br></br>
-									</Grid>			
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Batch</label>
-
-											<input
-												style={style.form.text}
-												type='text'
-												name='date'	
-											/>
-											<br></br>
-										</FormGroup>
-									</Grid>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Email</label>
-
-											<input
-												style={style.form.text}
-												type='email'
-												name='timing'		
-											/>
-										</FormGroup>
-										<br></br>
-									</Grid>
-								</Grid>
-								<Grid container spacing={3}>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>LinkedIn Profile</label>
-											<input
-												style={style.form.text}
-												type='text'
-												name='venue'
-											/>
-										</FormGroup>
-										<br></br>
-									</Grid>
-
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>GitHub Profile</label>
-											<input
-												style={style.form.text}
-												type='text'
-												name='venue'
-											/>
-											<br></br>
-										</FormGroup>
-									</Grid>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Profile</label>
-											<input
-												style={style.form.text}
-												type='text'
-												name='teamSize'
-											/>
-										</FormGroup>
-									</Grid>
-									<Grid item xs={12} md={4}>
-										<FormGroup>
-											<label>Year</label>
-											<input
-												style={style.form.text}
-												type='number'
-												name='teamSize'
-											/>
-										</FormGroup>
-										<br></br>
-									</Grid>
-								</Grid>
-								
-								<br></br>
-								<br />
-								<Typography className='align_center'>
-									<Button
-										type="submit"
-										variant='contained'
-										style={{ backgroundColor: '#f50057', color: 'white' }}>
-												Submit
-											</Button>
-										</Typography>
-										</form>
-									</div>
-										</div>
-											</Fade>
-												</Modal>
-												</IconButton>
-											</TableCell>
-											<TableCell padding='checkbox'>
-												<IconButton tooltip='Delete User'>
-													<DeleteIcon
-														
-													/>
-												</IconButton>
-											</TableCell>
-											
-										</TableRow>
-									
-							
+							{/* Mapping the data and displaying into each tablecell accordingly */}
+							{
+								object.map((item) => (
+									<TableRow key={item._id} role='checkbox'>
+										<TableCell>{item.name}</TableCell>
+										<TableCell >{item.batch}</TableCell>
+										<TableCell >{item.email}</TableCell>
+										<TableCell ><a href=""><IconButton><LinkedIn/></IconButton></a></TableCell>
+										<TableCell ><a href=""><IconButton><GithubIcon/></IconButton></a></TableCell>
+										<TableCell >{item.image}</TableCell>
+										<TableCell padding='checkbox'>
+											<IconButton tooltip='Delete User' onClick={() => editUser(item._id)}>
+												<EditIcon />
+											</IconButton>
+											{/* the below conditional rendering handles the opening or modal with specific data */}
+											{
+												open && id === item._id ? (
+													<UserModal object={item} open={open} handleClose={handleClose} />
+												) : (
+													null
+												)
+											}
+										</TableCell>
+										<TableCell padding='checkbox'>
+											<IconButton tooltip='Delete User'>
+												<DeleteIcon	/>
+											</IconButton>
+										</TableCell>
+									</TableRow>
+								))
+							}		
 							{emptyRows > 0 && (
 								<TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
 									<TableCell colSpan={6} />
@@ -519,10 +398,5 @@ export default function UserTable() {
 		</div>
 	</>
 	);
-
-
-
-
-
 
 }//end
