@@ -11,7 +11,9 @@ import {
 	SHOW_LOADING,
 	LOGIN_DIALOG,
 	VERIFICATION_SUCCESS,
-	VERIFICATION_FAIL
+	VERIFICATION_FAIL,
+	PASS_RESET_SUCCESS,
+	PASS_RESET_FAIL
 } from '../types';
 
 export default (state, action) => {
@@ -47,6 +49,8 @@ export default (state, action) => {
 		case LOGIN_FAIL:
 		case VERIFICATION_SUCCESS:
 		case VERIFICATION_FAIL:
+		case PASS_RESET_SUCCESS:
+		case PASS_RESET_FAIL:
 		case LOGOUT:
 			localStorage.removeItem('token');
 			return {
